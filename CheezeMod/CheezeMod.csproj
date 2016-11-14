@@ -114,6 +114,7 @@
     <Compile Include="Items\Materials\GuardianEssence.cs" />
     <Compile Include="Items\Materials\HallowedBolt.cs" />
     <Compile Include="Items\Materials\HellstoneBolt.cs" />
+    <Compile Include="Items\Materials\HistoricEssence.cs" />
     <Compile Include="Items\Materials\IronBolt.cs" />
     <Compile Include="Items\Materials\LuminiteBolt.cs" />
     <Compile Include="Items\Materials\MeteoriteBolt.cs" />
@@ -468,6 +469,7 @@
     <Content Include="Items\Materials\GuardianEssence.png" />
     <Content Include="Items\Materials\HallowedBolt.png" />
     <Content Include="Items\Materials\HellstoneBolt.png" />
+    <Content Include="Items\Materials\HistoricEssence.png" />
     <Content Include="Items\Materials\IronBolt.png" />
     <Content Include="Items\Materials\LuminiteBolt.png" />
     <Content Include="Items\Materials\MeteoriteBolt.png" />

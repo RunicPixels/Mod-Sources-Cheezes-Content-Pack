@@ -11,7 +11,7 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 NOTE: It's recommended to restart Terraria after installing or updating the mod before generating a new world for the new features to be generated as smoothly as possible!
 
 Changelog:
-v1.1 - Guardian and Historican's Arsenal
+v1.1 - Guardian and Historic Arsenal
 Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle and Stick inspired by the game FlyFF. These can be obtained by utilizing a new drop from skeletron, namely Guardian Essence.
 Added Historic Axe, Pickaxe, Sword
 Added Pearlwood Axe and Pickaxe.
@@ -20,6 +20,7 @@ Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Critical Damage Multiplier for hold items and equipments.
 Improved The High Noon.
 Updated Chronicle Sword sprite.
+Optimized mod for working together in the future.
 
 v1.0.2.1 - Very hot fix.
 Added Skull Halberd and Bone Kunai.
