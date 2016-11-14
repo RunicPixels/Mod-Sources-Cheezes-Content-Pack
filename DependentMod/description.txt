@@ -1,0 +1,1 @@
+An example mod with a dependency on both another mod and a dll file.

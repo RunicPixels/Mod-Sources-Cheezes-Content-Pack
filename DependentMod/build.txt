@@ -1,0 +1,7 @@
+author = bluemagic123
+modReferences = ExampleMod
+dllReferences = BadUtils
+homepage = http://forums.terraria.org/index.php?threads/1-3-tmodloader-a-modding-api.23726/
+hideCode = false
+hideResources = false
+includeSource = true
