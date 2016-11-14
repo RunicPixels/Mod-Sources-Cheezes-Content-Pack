@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Angle.cs" />
@@ -75,6 +76,8 @@
     <Compile Include="Dusts\Sparkle.cs" />
     <Compile Include="Dusts\WhiteLightCircle.cs" />
     <Compile Include="Dusts\YellowLight.cs" />
+    <Compile Include="Items\Accessory\GoreNecklace.cs" />
+    <Compile Include="Items\Accessory\MentalNecklace.cs" />
     <Compile Include="Items\Accessory\PeisionNecklace.cs" />
     <Compile Include="Items\Accessory\StarlightNecklace.cs" />
     <Compile Include="Items\Accessory\StarlightVeil.cs" />
@@ -420,8 +423,12 @@
     <Content Include="Gores\Organic\ThyrranoidArm.png" />
     <Content Include="Gores\Organic\ThyrranoidBelly.png" />
     <Content Include="Gores\Organic\ThyrranoidEye.png" />
+    <Content Include="Items\Accessory\GoreNecklace.png" />
+    <Content Include="Items\Accessory\GoreNecklace_Neck.png" />
+    <Content Include="Items\Accessory\MentalNecklace.png" />
+    <Content Include="Items\Accessory\MentalNecklace_Neck.png" />
     <Content Include="Items\Accessory\PeisionNecklace.png" />
-    <Content Include="Items\Accessory\PeisionNeclace_Neck.png" />
+    <Content Include="Items\Accessory\PeisionNecklace_Neck.png" />
     <Content Include="Items\Accessory\StarlightNecklace.png" />
     <Content Include="Items\Accessory\StarlightNecklace_Neck.png" />
     <Content Include="Items\Accessory\StarlightVeil.png" />
