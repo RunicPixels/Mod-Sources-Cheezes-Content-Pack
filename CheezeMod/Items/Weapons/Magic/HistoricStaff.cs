@@ -6,31 +6,32 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Weapons.Magic
 {
-    public class GuardianWand : ModItem
+    public class HistoricStaff : ModItem
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Wand";
-            item.damage = 25;
+            item.name = "Historic Staff";
+            item.damage = 42;
             item.magic = true;
-            item.mana = 6;
+            item.mana = 23;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "An wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.";
+            item.toolTip = "An staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +57% critical damage and chance when hold.";
             Item.staff[item.type] = true;
-            item.useTime = 25;
-            item.useAnimation = 25;
+            item.reuseDelay = 50;
+            item.useTime = 50;
+            item.useAnimation = 50;
             item.useStyle = 5;
-            item.channel = true;
+            item.crit = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 2;
-            item.value = 25000;
-            item.rare = 2;
-            item.useSound = 8;
-            item.autoReuse = false;
-            item.shoot = mod.ProjectileType("PsychicBomb");
-            item.shootSpeed = 7f;
+            item.value = 75000;
+            item.rare = 4;
+            item.useSound = 43;
+            item.autoReuse = true;
+            item.shoot = mod.ProjectileType("WindFieldCast");
+            item.shootSpeed = 15f;
         }
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
@@ -47,8 +48,8 @@ namespace CheezeMod.Items.Weapons.Magic
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddIngredient(ItemID.WandofSparking);
+            recipe.AddIngredient(null, "HistoricEssence", 5);
+            recipe.AddIngredient(ItemID.AquaScepter);
             recipe.AddTile(18);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -58,9 +59,8 @@ namespace CheezeMod.Items.Weapons.Magic
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.12f; // This number here changes the multiplier
-                player.statManaMax2 += 15;
-                
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.05f; // This number here changes the multiplier
+                player.statManaMax2 += (int)((player.statManaMax2) * 0.2f);
             }
         }
     }

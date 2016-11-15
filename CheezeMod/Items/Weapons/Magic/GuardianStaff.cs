@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = 25000;
             item.rare = 2;
-            item.useSound = 12;
+            item.useSound = 20;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("FlameGeyser");
             item.shootSpeed = 10f;
