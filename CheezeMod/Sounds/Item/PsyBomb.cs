@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework.Audio;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Sounds.Custom
+namespace CheezeMod.Sounds.Item
 {
 	public class PsyBomb : ModSound
 	{

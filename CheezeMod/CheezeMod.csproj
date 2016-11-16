@@ -178,6 +178,7 @@
     <Compile Include="Items\Weapons\Magic\ThornBlast.cs" />
     <Compile Include="Items\Weapons\Magic\TrueChaosTheory.cs" />
     <Compile Include="Items\Weapons\Other\GuardianKnuckle.cs" />
+    <Compile Include="Items\Weapons\Other\HistoricKnuckle.cs" />
     <Compile Include="Items\Weapons\Other\OnePunchGlove.cs" />
     <Compile Include="Items\Weapons\Other\SaxtonHalesFist.cs" />
     <Compile Include="Items\Weapons\Ratchet\BlitzCannon.cs" />
@@ -386,22 +387,23 @@
     <Compile Include="Projectiles\Thrown\WoodenKunai.cs" />
     <Compile Include="Projectiles\Yoyo\GuardianYoyo.cs" />
     <Compile Include="Projectiles\Yoyo\HistoricYoyo.cs" />
-    <Compile Include="Sounds\Custom\PsyBomb.cs" />
-    <Compile Include="Sounds\Custom\Wind.cs" />
     <Compile Include="Sounds\Custom\Wind2.cs" />
     <Compile Include="Sounds\Item\BahSwing.cs" />
     <Compile Include="Sounds\Item\Chopper.cs" />
-    <Compile Include="Sounds\Item\GuardianWand.cs" />
+    <Compile Include="Sounds\Item\Fire.cs" />
     <Compile Include="Sounds\Item\LavaGun.cs" />
     <Compile Include="Sounds\Item\LiquidNitrogenGun.cs" />
     <Compile Include="Sounds\Item\Moo.cs" />
     <Compile Include="Sounds\Item\Moo2.cs" />
     <Compile Include="Sounds\Item\MooSwing.cs" />
     <Compile Include="Sounds\Item\PistolReload.cs" />
+    <Compile Include="Sounds\Item\PsyBomb.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump01.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump02.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump03.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump04.cs" />
+    <Compile Include="Sounds\Item\Wind.cs" />
+    <Compile Include="Sounds\Item\Wind2.cs" />
     <Compile Include="Sounds\NPCHit\ThyrranoidHit.cs" />
     <Compile Include="Sounds\NPCkilled\ThyrranoidDie.cs" />
     <Compile Include="Tiles\CheezeMonsterBanner.cs" />
@@ -546,6 +548,7 @@
     <Content Include="Items\Weapons\Magic\ThornBlast.png" />
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
     <Content Include="Items\Weapons\Other\GuardianKnuckle.png" />
+    <Content Include="Items\Weapons\Other\HistoricKnuckle.png" />
     <Content Include="Items\Weapons\Other\OnePunchGlove.png" />
     <Content Include="Items\Weapons\Other\SaxtonHalesFist.png" />
     <Content Include="Items\Weapons\Ratchet\blitzcannon.png" />
@@ -755,21 +758,23 @@
     <Content Include="Projectiles\Thrown\WoodenKunai.png" />
     <Content Include="Projectiles\Yoyo\GuardianYoyo.png" />
     <Content Include="Projectiles\Yoyo\HistoricYoyo.png" />
-    <Content Include="Sounds\Custom\PsyBomb.wav" />
-    <Content Include="Sounds\Custom\Wind.wav" />
     <Content Include="Sounds\Custom\Wind2.wav" />
     <Content Include="Sounds\Item\BahSwing.wav" />
     <Content Include="Sounds\Item\Chopper.wav" />
+    <Content Include="Sounds\Item\Fire.wav" />
     <Content Include="Sounds\Item\LavaGun.wav" />
     <Content Include="Sounds\Item\LiquidNitrogenGun.wav" />
     <Content Include="Sounds\Item\Moo.wav" />
     <Content Include="Sounds\Item\Moo2.wav" />
     <Content Include="Sounds\Item\MooSwing.wav" />
     <Content Include="Sounds\Item\PistolReload.wav" />
+    <Content Include="Sounds\Item\PsyBomb.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump01.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump02.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump03.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump04.wav" />
+    <Content Include="Sounds\Item\Wind.wav" />
+    <Content Include="Sounds\Item\Wind2.wav" />
     <Content Include="Sounds\NPCHit\ThyrranoidHit.wav" />
     <Content Include="Sounds\NPCkilled\ThyrranoidDie.wav" />
     <Content Include="Tiles\CheezeMonsterBanner.png" />
@@ -808,6 +813,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

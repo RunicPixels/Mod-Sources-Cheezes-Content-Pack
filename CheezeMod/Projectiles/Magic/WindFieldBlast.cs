@@ -12,14 +12,14 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.name = "Wind Field";
-            projectile.width = 190;
+            projectile.width = 180;
             projectile.height = 50;
             projectile.magic = true;
             projectile.friendly = true;
             projectile.scale = 1f;
-            projectile.penetrate = 30;
+            projectile.penetrate = 25;
             projectile.Opacity = 0f;
-            projectile.timeLeft = 150;
+            projectile.timeLeft = 180;
             aiType = ProjectileID.Bullet;
         }
 

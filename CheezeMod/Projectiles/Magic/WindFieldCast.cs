@@ -34,7 +34,7 @@ namespace CheezeMod.Projectiles.Magic
 
         public override void Kill(int timeLeft)
         {
-            Main.PlaySound(SoundLoader.customSoundType,projectile.position,SoundLoader.GetSoundSlot(SoundType.Custom, "Sounds/Custom/Wind"));
+            Main.PlaySound(SoundLoader.customSoundType,projectile.position,SoundLoader.GetSoundSlot(SoundType.Custom, "Sounds/Custom/Wind2"));
             for (int i = 0; i < 9; i++) { }
             {
                 if (Main.rand.Next(3) == 0)

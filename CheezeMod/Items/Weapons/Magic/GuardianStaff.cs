@@ -26,10 +26,10 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = 25000;
             item.rare = 2;
-            item.useSound = 20;
-            item.autoReuse = true;
+            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Fire");
+            item.autoReuse = false;
             item.shoot = mod.ProjectileType("FlameGeyser");
-            item.shootSpeed = 10f;
+            item.shootSpeed = 12f;
         }
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
