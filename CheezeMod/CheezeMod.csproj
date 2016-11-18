@@ -544,6 +544,7 @@
     <Content Include="Items\Weapons\Magic\GuardianStaff.png" />
     <Content Include="Items\Weapons\Magic\GuardianWand.png" />
     <Content Include="Items\Weapons\Magic\HistoricStaff.png" />
+    <Content Include="Items\Weapons\Magic\HistoricWand.png" />
     <Content Include="Items\Weapons\Magic\StarBlitz.png" />
     <Content Include="Items\Weapons\Magic\ThornBlast.png" />
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
