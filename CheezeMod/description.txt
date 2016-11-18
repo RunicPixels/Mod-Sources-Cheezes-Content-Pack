@@ -19,11 +19,11 @@ Added "Sword of the Silver Sword" also a weapon with a very silly name from the 
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Critical Damage Multiplier for hold items and equipments.
 Improved The High Noon.
-Reduced unneccesary files and thus the mod file size.
-
-Updated Chronicle Sword sprite.
+Improved Chronicle Sword sprite.
+Some flame projectiles are now affected by water.
 Minor Bugfixes.
-Optimized mod for working together in the future.
+Reduced unneccesary files and thus the mod file size.
+Published mod on GitHub for public access.
 
 v1.0.2.1 - Very hot fix.
 Added Skull Halberd and Bone Kunai.

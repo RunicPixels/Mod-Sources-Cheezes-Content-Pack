@@ -8,17 +8,20 @@ namespace CheezeMod.Projectiles.Magic
 {
     public class PsychicBomb : ModProjectile
     {
-        int bounceCount = 0;
+        private bool exploded = false;
+        private bool explodedParticles = false;
+        public int bounceCount = 0;
+        public float maxSize = 3f;
         public override void SetDefaults()
         {
             projectile.name = "PsychicBomb";
             projectile.width = 20;
             projectile.height = 20;
-            projectile.Opacity = 0.2f;
+            projectile.Opacity = 0.4f;
             projectile.magic = true;
             projectile.friendly = true;
-            projectile.scale = 1.2f;
-            projectile.penetrate = 5;
+            projectile.scale = 1f;
+            projectile.penetrate = 6;
             projectile.timeLeft = 180;
             aiType = ProjectileID.Bullet;
         }
@@ -43,12 +46,62 @@ namespace CheezeMod.Projectiles.Magic
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.oldVelocity.X * 0.4f + (Main.rand.NextFloat() - 1 * 0.4f), projectile.oldVelocity.Y * 0.4f + (Main.rand.NextFloat() - 1 * 0.4f));
                 Main.dust[dust].scale = 0.5f;
             }
+            if (projectile.scale >= maxSize)
+            {
+                
+                if (projectile.timeLeft == 5) {
+                    for (int i = 0; i < (int)projectile.scale * 8; i++)
+                    {
+                        if (Main.rand.Next(4) == 0)
+                        {
+                            Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                        }
+                        if (Main.rand.Next(3) == 0)
+                        {
+                            Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                        }
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                        }
+                    }
+                    projectile.hide = true;
+                }
+                if (projectile.timeLeft > 10) {
+                    projectile.timeLeft = 10;
+                }
+            }
+            if(explodedParticles)
+            {
+                for (int i = 0; i < (int)projectile.scale * 3; i++)
+                {
+                    if (Main.rand.Next(4) == 0)
+                    {
+                        Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                    }
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                    }
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
+                    }
+                }
+                explodedParticles = false;
+            }
+            if (exploded) {
+                projectile.scale += maxSize / 20f; ;
+                projectile.velocity *= 0.75f;
+                projectile.Opacity += 0.01f;
+            }
+
         }
 
         public override void Kill(int timeLeft)
         {
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
-            for (int i = 0; i < (int)projectile.scale * 9; i++) {
+            /*for (int i = 0; i < (int)projectile.scale * 9; i++) {
                 if (Main.rand.Next(4) == 0)
                 {
                     Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() -1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() -1);
@@ -61,7 +114,7 @@ namespace CheezeMod.Projectiles.Magic
                 {
                     Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.velocity.X * 0.4f + Main.rand.NextFloat() -1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() -1);
                 }
-            }
+            }*/
         }
 
     public override bool OnTileCollide(Vector2 oldVelocity)
@@ -69,7 +122,8 @@ namespace CheezeMod.Projectiles.Magic
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             if (bounceCount <= 0)
             {
-                projectile.Kill();
+                exploded = true;
+                explodedParticles = true;
             }
             else
             {
@@ -88,12 +142,10 @@ namespace CheezeMod.Projectiles.Magic
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
+            exploded = true;
+            explodedParticles = true;
             Player player = Main.player[(int)projectile.ai[1]];
-            projectile.scale *= 1.2f;
-            projectile.velocity *= 0.4f;
-            projectile.timeLeft = 60;
-            projectile.Opacity += 0.1f;
-            projectile.damage = (int)(projectile.damage * 0.95f);
+
             if (Main.rand.Next(6) == 0)
             {
                 target.AddBuff(BuffID.ShadowFlame, 180);
