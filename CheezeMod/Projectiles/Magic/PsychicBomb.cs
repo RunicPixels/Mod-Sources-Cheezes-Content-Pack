@@ -66,9 +66,13 @@ namespace CheezeMod.Projectiles.Magic
                         }
                     }
                     projectile.hide = true;
+                    projectile.width = (int)(projectile.width * maxSize);
+                    projectile.height = (int)(projectile.height * maxSize);
+                    projectile.knockBack *= 3f;
                 }
                 if (projectile.timeLeft > 10) {
                     projectile.timeLeft = 10;
+
                 }
             }
             if(explodedParticles)
@@ -91,7 +95,7 @@ namespace CheezeMod.Projectiles.Magic
                 explodedParticles = false;
             }
             if (exploded) {
-                projectile.scale += maxSize / 20f; ;
+                projectile.scale += maxSize / 20f;
                 projectile.velocity *= 0.75f;
                 projectile.Opacity += 0.01f;
             }

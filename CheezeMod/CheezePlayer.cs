@@ -14,11 +14,13 @@ namespace CheezeMod
 	{
 		public bool starlit = false;
         public bool flyffhistoric = true;
+        public bool downfall = false;
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
         public float magicCritMultiplier = 0.0f; // Magic Crit Multiplier, percentage that will be added onto the critical damage.
         public float thrownCritMultiplier = 0.0f; // Thrown Crit Multiplier, percentage that will be added onto the critical damage.
+        
         //public float castingTime = 0.9f;
 
         //private bool didAlterUseTime = false;
@@ -64,9 +66,13 @@ namespace CheezeMod
                 }
             }
         }
-        /*public override void PreUpdateBuffs()
+        public override void PreUpdateBuffs()
         {
-            if (player.inventory[player.selectedItem].magic == true)
+            if(downfall)
+            {
+                player.velocity.Y -= 4;
+            }
+           /* if (player.inventory[player.selectedItem].magic == true)
             {
                 if (player.inventory[player.selectedItem].useAnimation >= 5 && !didAlterUseAnimation)
                 {
@@ -83,9 +89,9 @@ namespace CheezeMod
                     player.inventory[player.selectedItem].reuseDelay = (int)(player.inventory[player.selectedItem].reuseDelay * castingTime);
                     didAlterReUse = true;
                 }
-            }
+            */
         }
-
+        /*
         public override void PostUpdateBuffs()
         {
             if (player.inventory[player.selectedItem].magic == true)
@@ -153,6 +159,7 @@ namespace CheezeMod
         {
             this.starlit = false;
             this.flyffhistoric = false;
+            this.downfall = false;
             this.critMultiplier = 1.00f;
             this.meleeCritMultiplier = 0.0f;
             this.rangedCritMultiplier = 0.0f;
