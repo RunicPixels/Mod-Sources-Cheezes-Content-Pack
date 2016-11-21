@@ -63,6 +63,15 @@ namespace CheezeMod.Items.Weapons.Magic
                 ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.05f; // This number here changes the multiplier
                 player.statManaMax2 += (int)((player.statManaMax2) * 0.2f);
             }
+            HoldStats(player);
+        }
+        public override void HoldItem(Player player)
+        {
+            HoldStats(player);
+        }
+        public void HoldStats(Player player)
+        {
+            //Damage Function.
         }
     }
 }

@@ -175,6 +175,7 @@
     <Compile Include="Items\Weapons\Magic\GuardianStaff.cs" />
     <Compile Include="Items\Weapons\Magic\GuardianWand.cs" />
     <Compile Include="Items\Weapons\Magic\HistoricStaff.cs" />
+    <Compile Include="Items\Weapons\Magic\HistoricWand.cs" />
     <Compile Include="Items\Weapons\Magic\StarBlitz.cs" />
     <Compile Include="Items\Weapons\Magic\ThornBlast.cs" />
     <Compile Include="Items\Weapons\Magic\TrueChaosTheory.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="Items\Weapons\Swords\GuardianBigSword.cs" />
     <Compile Include="Items\Weapons\Swords\GuardianSword.cs" />
     <Compile Include="Items\Weapons\Swords\Hercules.cs" />
+    <Compile Include="Items\Weapons\Swords\HistoricBigSword.cs" />
     <Compile Include="Items\Weapons\Swords\HistoricSword.cs" />
     <Compile Include="Items\Weapons\Swords\NietonoNoShana.cs" />
     <Compile Include="Items\Weapons\Swords\PurpleLaserSaber.cs" />
@@ -292,6 +294,7 @@
     <Compile Include="Projectiles\Magic\HugeEarthBoulder.cs" />
     <Compile Include="Projectiles\Magic\InfernoFireBlast.cs" />
     <Compile Include="Projectiles\Magic\MiniFireBlast.cs" />
+    <Compile Include="Projectiles\Magic\SpiritBomb.cs" />
     <Compile Include="Projectiles\Magic\PsychicBomb.cs" />
     <Compile Include="Projectiles\Magic\SprayWaterBlast.cs" />
     <Compile Include="Projectiles\Magic\StarStorm.cs" />
@@ -621,6 +624,7 @@
     <Content Include="Items\Weapons\Swords\GuardianBigSword.png" />
     <Content Include="Items\Weapons\Swords\GuardianSword.png" />
     <Content Include="Items\Weapons\Swords\Hercules.png" />
+    <Content Include="Items\Weapons\Swords\HistoricBigSword.png" />
     <Content Include="Items\Weapons\Swords\HistoricSword.png" />
     <Content Include="Items\Weapons\Swords\NietonoNoShana.png" />
     <Content Include="Items\Weapons\Swords\PurpleLasersaber.png" />
@@ -666,6 +670,7 @@
     <Content Include="Projectiles\Magic\HugeEarthBoulder.png" />
     <Content Include="Projectiles\Magic\InfernoFireBlast.png" />
     <Content Include="Projectiles\Magic\MiniFireBlast.png" />
+    <Content Include="Projectiles\Magic\SpiritBomb.png" />
     <Content Include="Projectiles\Magic\PsychicBomb.png" />
     <Content Include="Projectiles\Magic\SprayWaterBlast.png" />
     <Content Include="Projectiles\Magic\StarStorm.png" />

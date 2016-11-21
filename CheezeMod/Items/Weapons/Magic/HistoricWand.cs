@@ -6,31 +6,33 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Weapons.Magic
 {
-    public class GuardianWand : ModItem
+    public class HistoricWand : ModItem
     {
+        int baseDamage = 20;
+        float damageMultiplier = 0.09f;
         public override void SetDefaults()
         {
-            item.name = "Guardian Wand";
-            item.damage = 30;
+            item.name = "Historic Wand";
+            item.damage = baseDamage;
             item.magic = true;
-            item.mana = 6;
+            item.mana = 9;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "An wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.";
+            item.toolTip = "An wand that is an historic artifact of Madrigal. \nShoots a penetrating Spirit Bomb that inflics ShadowFlame.\nDeals Damage based on your remaining Mana. \n+25 Max mana when hold. \n +14% critical damage when hold.";
             Item.staff[item.type] = true;
-            item.useTime = 40;
-            item.useAnimation = 40;
+            item.useTime = 38;
+            item.useAnimation = 38;
             item.useStyle = 5;
             item.channel = true;
             item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 2;
-            item.value = 25000;
-            item.rare = 2;
+            item.knockBack = 4;
+            item.value = 75000;
+            item.rare = 5;
             item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PsyBomb");
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("PsychicBomb");
-            item.shootSpeed = 7f;
+            item.shoot = mod.ProjectileType("SpiritBomb");
+            item.shootSpeed = 10f;
         }
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
@@ -44,10 +46,15 @@ namespace CheezeMod.Items.Weapons.Magic
             return true;
         }
 
+        public override void PostReforge()
+        {
+            base.PostReforge();
+            baseDamage = item.damage;
+        }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GuardianEssence", 5);
+            recipe.AddIngredient(null, "HistoricEssence", 5);
             recipe.AddIngredient(ItemID.WandofSparking);
             recipe.AddTile(18);
             recipe.SetResult(this);
@@ -58,19 +65,19 @@ namespace CheezeMod.Items.Weapons.Magic
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.12f; // This number here changes the multiplier
-                player.statManaMax2 += 15;
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.14f; // This number here changes the multiplier
+                player.statManaMax2 += 25;
 
             }
             HoldStats(player);
         }
-        public override void HoldItem(Player player)
+        public override void HoldItem(Player player) // Syncs weapon damage when held in hand to prevent abuse.
         {
             HoldStats(player);
         }
         public void HoldStats(Player player)
         {
-            // Equal to functions.
+            item.damage = baseDamage+(int)(player.statMana * damageMultiplier);
         }
     }
 }
