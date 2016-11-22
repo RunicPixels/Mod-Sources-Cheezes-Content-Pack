@@ -33,10 +33,10 @@ namespace CheezeMod.Projectiles.Ranged
 
         public override void AI()
         {
-            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.6f, 0.6f, 0f);
+            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.6f, 0f, 0.6f);
             if (Main.rand.Next(7) == 0)
             {
-                int dust = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, mod.DustType("LiquidIchor"), projectile.oldVelocity.X * 0.1f, projectile.oldVelocity.Y * 0.1f);
+                int dust = Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, mod.DustType("LiquidGravity"), projectile.oldVelocity.X * 0.1f, projectile.oldVelocity.Y * 0.1f);
                 Main.dust[dust].noGravity = true;
             }
         }
@@ -52,7 +52,7 @@ namespace CheezeMod.Projectiles.Ranged
         {
             for (int k = 0; k < 4; k++)
             {
-                Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, mod.DustType("LiquidIchor"), projectile.oldVelocity.X * 0.3f, projectile.oldVelocity.Y * -0.3f);
+                Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, mod.DustType("LiquidGravity"), projectile.oldVelocity.X * 0.3f, projectile.oldVelocity.Y * -0.3f);
             }
         }
 

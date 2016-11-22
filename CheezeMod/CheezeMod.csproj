@@ -68,6 +68,7 @@
     <Compile Include="Dusts\GraniteDust.cs" />
     <Compile Include="Dusts\GreenLight.cs" />
     <Compile Include="Dusts\LiquidCursedFlame.cs" />
+    <Compile Include="Dusts\LiquidGravity.cs" />
     <Compile Include="Dusts\LiquidIchor.cs" />
     <Compile Include="Dusts\LiquidNitrogen.cs" />
     <Compile Include="Dusts\OrangeLight.cs" />
@@ -410,7 +411,6 @@
     <Compile Include="Sounds\Item\SaxtonHaleJump03.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump04.cs" />
     <Compile Include="Sounds\Item\Wind.cs" />
-    <Compile Include="Sounds\Item\Wind2.cs" />
     <Compile Include="Sounds\NPCHit\ThyrranoidHit.cs" />
     <Compile Include="Sounds\NPCkilled\ThyrranoidDie.cs" />
     <Compile Include="Tiles\CheezeMonsterBanner.cs" />
@@ -429,6 +429,7 @@
     <Content Include="Dusts\GraniteDust.png" />
     <Content Include="Dusts\GreenLight.png" />
     <Content Include="Dusts\LiquidCursedFlame.png" />
+    <Content Include="Dusts\LiquidGravity.png" />
     <Content Include="Dusts\LiquidIchor.png" />
     <Content Include="Dusts\LiquidNitrogen.png" />
     <Content Include="Dusts\OrangeLight.png" />
@@ -787,7 +788,6 @@
     <Content Include="Sounds\Item\SaxtonHaleJump03.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump04.wav" />
     <Content Include="Sounds\Item\Wind.wav" />
-    <Content Include="Sounds\Item\Wind2.wav" />
     <Content Include="Sounds\NPCHit\ThyrranoidHit.wav" />
     <Content Include="Sounds\NPCkilled\ThyrranoidDie.wav" />
     <Content Include="Tiles\CheezeMonsterBanner.png" />
