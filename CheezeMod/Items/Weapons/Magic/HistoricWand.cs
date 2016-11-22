@@ -66,18 +66,17 @@ namespace CheezeMod.Items.Weapons.Magic
             if (player.inventory[player.selectedItem] == this.item)
             {
                 ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.14f; // This number here changes the multiplier
-                player.statManaMax2 += 25;
-
+                player.statManaMax2 += 25; // Increases maximum mana by 25.
             }
-            HoldStats(player);
+            HoldStats(player); // Stat increases when item is being hold.
         }
         public override void HoldItem(Player player) // Syncs weapon damage when held in hand to prevent abuse.
         {
-            HoldStats(player);
+            HoldStats(player); // Stat increases when item is being hold.
         }
         public void HoldStats(Player player)
         {
-            item.damage = baseDamage+(int)(player.statMana * damageMultiplier);
+            item.damage = baseDamage+(int)(player.statMana * damageMultiplier); // Damage is base damage plus the players mana times the damage multiplier.
         }
     }
 }
