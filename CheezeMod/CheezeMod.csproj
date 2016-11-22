@@ -411,7 +411,6 @@
     <Compile Include="Sounds\Item\SaxtonHaleJump03.cs" />
     <Compile Include="Sounds\Item\SaxtonHaleJump04.cs" />
     <Compile Include="Sounds\Item\Wind.cs" />
-    <Compile Include="Sounds\Item\Wind2.cs" />
     <Compile Include="Sounds\NPCHit\ThyrranoidHit.cs" />
     <Compile Include="Sounds\NPCkilled\ThyrranoidDie.cs" />
     <Compile Include="Tiles\CheezeMonsterBanner.cs" />
@@ -789,7 +788,6 @@
     <Content Include="Sounds\Item\SaxtonHaleJump03.wav" />
     <Content Include="Sounds\Item\SaxtonHaleJump04.wav" />
     <Content Include="Sounds\Item\Wind.wav" />
-    <Content Include="Sounds\Item\Wind2.wav" />
     <Content Include="Sounds\NPCHit\ThyrranoidHit.wav" />
     <Content Include="Sounds\NPCkilled\ThyrranoidDie.wav" />
     <Content Include="Tiles\CheezeMonsterBanner.png" />
