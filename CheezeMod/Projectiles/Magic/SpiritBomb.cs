@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Magic
 {
-    public class PsychicBomb : ModProjectile
+    public class SpiritBomb : ModProjectile
     {
         private bool exploded = false;
         private bool explodedParticles = false;
@@ -14,24 +14,24 @@ namespace CheezeMod.Projectiles.Magic
         public float maxSize = 3f;
         public override void SetDefaults()
         {
-            projectile.name = "PsychicBomb";
+            projectile.name = "SpiritBomb";
             projectile.width = 20;
             projectile.height = 20;
-            projectile.Opacity = 0.4f;
+            projectile.Opacity = 0.5f;
             projectile.magic = true;
             projectile.friendly = true;
             projectile.scale = 1f;
-            projectile.penetrate = 6;
+            projectile.penetrate = 7;
             projectile.timeLeft = 180;
             aiType = ProjectileID.Bullet;
         }
 
         public override void AI()
         {
-            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.75f, 1f, 0.5f);
+            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.75f, 0.5f, 0.75f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
-            if (Main.rand.Next(5) == 0)
+            if (Main.rand.Next(4) == 0)
             {
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.oldVelocity.X * 0.2f + (Main.rand.NextFloat() - 1 * 0.2f), projectile.oldVelocity.Y * 0.2f + (Main.rand.NextFloat() - 1 * 0.2f));
                 Main.dust[dust].scale = 0.5f;
@@ -41,7 +41,7 @@ namespace CheezeMod.Projectiles.Magic
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 114, projectile.oldVelocity.X * 0.3f + (Main.rand.NextFloat() - 1 * 0.3f), projectile.oldVelocity.Y * 0.3f + (Main.rand.NextFloat() - 1 * 0.3f));
                 Main.dust[dust].scale = 0.5f;
             }
-            if (Main.rand.Next(4) == 0)
+            if (Main.rand.Next(5) == 0)
             {
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.oldVelocity.X * 0.4f + (Main.rand.NextFloat() - 1 * 0.4f), projectile.oldVelocity.Y * 0.4f + (Main.rand.NextFloat() - 1 * 0.4f));
                 Main.dust[dust].scale = 0.5f;
@@ -52,7 +52,7 @@ namespace CheezeMod.Projectiles.Magic
                 if (projectile.timeLeft == 5) {
                     for (int i = 0; i < (int)projectile.scale * 8; i++)
                     {
-                        if (Main.rand.Next(4) == 0)
+                        if (Main.rand.Next(2) == 0)
                         {
                             Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                         }
@@ -60,7 +60,7 @@ namespace CheezeMod.Projectiles.Magic
                         {
                             Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                         }
-                        if (Main.rand.Next(2) == 0)
+                        if (Main.rand.Next(4) == 0)
                         {
                             Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                         }
@@ -70,8 +70,8 @@ namespace CheezeMod.Projectiles.Magic
                     projectile.height = (int)(projectile.height * maxSize);
                     projectile.knockBack *= 3f;
                 }
-                if (projectile.timeLeft > 10) {
-                    projectile.timeLeft = 10;
+                if (projectile.timeLeft > 12) {
+                    projectile.timeLeft = 12;
 
                 }
             }
@@ -79,7 +79,7 @@ namespace CheezeMod.Projectiles.Magic
             {
                 for (int i = 0; i < (int)projectile.scale * 3; i++)
                 {
-                    if (Main.rand.Next(4) == 0)
+                    if (Main.rand.Next(2) == 0)
                     {
                         Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                     }
@@ -87,7 +87,7 @@ namespace CheezeMod.Projectiles.Magic
                     {
                         Dust.NewDust(projectile.position, projectile.width, projectile.height, 112, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                     }
-                    if (Main.rand.Next(2) == 0)
+                    if (Main.rand.Next(4) == 0)
                     {
                         Dust.NewDust(projectile.position, projectile.width, projectile.height, 111, projectile.velocity.X * 0.4f + Main.rand.NextFloat() - 1, projectile.velocity.Y * 0.4f + Main.rand.NextFloat() - 1);
                     }
@@ -95,9 +95,9 @@ namespace CheezeMod.Projectiles.Magic
                 explodedParticles = false;
             }
             if (exploded) {
-                projectile.scale += maxSize / 20f;
+                projectile.scale += maxSize / 15f;
                 projectile.velocity *= 0.75f;
-                projectile.Opacity += 0.01f;
+                projectile.Opacity += 0.02f;
             }
 
         }

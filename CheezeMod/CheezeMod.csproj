@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Angle.cs" />
     <Compile Include="Buffs\CheeseFed.cs" />
+    <Compile Include="Buffs\DownFall.cs" />
     <Compile Include="Buffs\Starlit.cs" />
     <Compile Include="CheezeItem.cs" />
     <Compile Include="CheezeMod.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Items\Weapons\Magic\GuardianStaff.cs" />
     <Compile Include="Items\Weapons\Magic\GuardianWand.cs" />
     <Compile Include="Items\Weapons\Magic\HistoricStaff.cs" />
+    <Compile Include="Items\Weapons\Magic\HistoricWand.cs" />
     <Compile Include="Items\Weapons\Magic\StarBlitz.cs" />
     <Compile Include="Items\Weapons\Magic\ThornBlast.cs" />
     <Compile Include="Items\Weapons\Magic\TrueChaosTheory.cs" />
@@ -194,6 +196,7 @@
     <Compile Include="Items\Weapons\Ratchet\Lancer.cs" />
     <Compile Include="Items\Weapons\Ratchet\LavaGun.cs" />
     <Compile Include="Items\Weapons\Ratchet\LiquidCursedFlameGun.cs" />
+    <Compile Include="Items\Weapons\Ratchet\LiquidGravityGun.cs" />
     <Compile Include="Items\Weapons\Ratchet\LiquidIchorGun.cs" />
     <Compile Include="Items\Weapons\Ratchet\LiquidNitrogenGun.cs" />
     <Compile Include="Items\Weapons\Ratchet\MegaBombGlove.cs" />
@@ -243,6 +246,7 @@
     <Compile Include="Items\Weapons\Swords\GuardianBigSword.cs" />
     <Compile Include="Items\Weapons\Swords\GuardianSword.cs" />
     <Compile Include="Items\Weapons\Swords\Hercules.cs" />
+    <Compile Include="Items\Weapons\Swords\HistoricBigSword.cs" />
     <Compile Include="Items\Weapons\Swords\HistoricSword.cs" />
     <Compile Include="Items\Weapons\Swords\NietonoNoShana.cs" />
     <Compile Include="Items\Weapons\Swords\PurpleLaserSaber.cs" />
@@ -277,6 +281,7 @@
     <Compile Include="Items\Weapons\Yoyo\HistoricYoyo.cs" />
     <Compile Include="NPCs\Bonefish.cs" />
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
+    <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\GraniteWanderer.cs" />
     <Compile Include="NPCs\Protopet.cs" />
     <Compile Include="NPCs\Robonoid.cs" />
@@ -289,6 +294,7 @@
     <Compile Include="Projectiles\Magic\HugeEarthBoulder.cs" />
     <Compile Include="Projectiles\Magic\InfernoFireBlast.cs" />
     <Compile Include="Projectiles\Magic\MiniFireBlast.cs" />
+    <Compile Include="Projectiles\Magic\SpiritBomb.cs" />
     <Compile Include="Projectiles\Magic\PsychicBomb.cs" />
     <Compile Include="Projectiles\Magic\SprayWaterBlast.cs" />
     <Compile Include="Projectiles\Magic\StarStorm.cs" />
@@ -348,6 +354,7 @@
     <Compile Include="Projectiles\Ranged\Lancer.cs" />
     <Compile Include="Projectiles\Ranged\LavaGun.cs" />
     <Compile Include="Projectiles\Ranged\LiquidCursedFlameGun.cs" />
+    <Compile Include="Projectiles\Ranged\LiquidGravityGun.cs" />
     <Compile Include="Projectiles\Ranged\LiquidIchorGun.cs" />
     <Compile Include="Projectiles\Ranged\LiquidNitrogenGun.cs" />
     <Compile Include="Projectiles\Ranged\MegaHeavyBouncer.cs" />
@@ -413,6 +420,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Buffs\CheeseFed.png" />
+    <Content Include="Buffs\DownFall.png" />
     <Content Include="Buffs\Starlit.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
@@ -544,6 +552,7 @@
     <Content Include="Items\Weapons\Magic\GuardianStaff.png" />
     <Content Include="Items\Weapons\Magic\GuardianWand.png" />
     <Content Include="Items\Weapons\Magic\HistoricStaff.png" />
+    <Content Include="Items\Weapons\Magic\HistoricWand.png" />
     <Content Include="Items\Weapons\Magic\StarBlitz.png" />
     <Content Include="Items\Weapons\Magic\ThornBlast.png" />
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
@@ -564,6 +573,7 @@
     <Content Include="Items\Weapons\Ratchet\Lancer.png" />
     <Content Include="Items\Weapons\Ratchet\LavaGun.png" />
     <Content Include="Items\Weapons\Ratchet\LiquidCursedFlameGun.png" />
+    <Content Include="Items\Weapons\Ratchet\LiquidGravityGun.png" />
     <Content Include="Items\Weapons\Ratchet\LiquidIchorGun.png" />
     <Content Include="Items\Weapons\Ratchet\LiquidNitrogenGun.png" />
     <Content Include="Items\Weapons\Ratchet\MegaBombGlove.png" />
@@ -614,6 +624,7 @@
     <Content Include="Items\Weapons\Swords\GuardianBigSword.png" />
     <Content Include="Items\Weapons\Swords\GuardianSword.png" />
     <Content Include="Items\Weapons\Swords\Hercules.png" />
+    <Content Include="Items\Weapons\Swords\HistoricBigSword.png" />
     <Content Include="Items\Weapons\Swords\HistoricSword.png" />
     <Content Include="Items\Weapons\Swords\NietonoNoShana.png" />
     <Content Include="Items\Weapons\Swords\PurpleLasersaber.png" />
@@ -659,6 +670,7 @@
     <Content Include="Projectiles\Magic\HugeEarthBoulder.png" />
     <Content Include="Projectiles\Magic\InfernoFireBlast.png" />
     <Content Include="Projectiles\Magic\MiniFireBlast.png" />
+    <Content Include="Projectiles\Magic\SpiritBomb.png" />
     <Content Include="Projectiles\Magic\PsychicBomb.png" />
     <Content Include="Projectiles\Magic\SprayWaterBlast.png" />
     <Content Include="Projectiles\Magic\StarStorm.png" />
@@ -719,6 +731,7 @@
     <Content Include="Projectiles\Ranged\Lancer.png" />
     <Content Include="Projectiles\Ranged\LavaGun.png" />
     <Content Include="Projectiles\Ranged\LiquidCursedFlameGun.png" />
+    <Content Include="Projectiles\Ranged\LiquidGravityGun.png" />
     <Content Include="Projectiles\Ranged\LiquidIchorGun.png" />
     <Content Include="Projectiles\Ranged\LiquidNitrogenGun.png" />
     <Content Include="Projectiles\Ranged\MegaHeavyBouncer.png" />

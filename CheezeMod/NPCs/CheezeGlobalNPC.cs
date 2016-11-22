@@ -9,6 +9,24 @@ namespace CheezeMod.NPCs
 {
 	public class CheezeGlobalNPC : GlobalNPC
 	{
+        public override void ResetEffects(NPC npc)
+        {
+            npc.GetModInfo<CheezeNPCInfo>(mod).downfall = false;
+        }
+        public override void DrawEffects(NPC npc, ref Color drawColor)
+        {
+            if (npc.GetModInfo<CheezeNPCInfo>(mod).downfall == true)
+            {
+                if (npc.boss == false && npc.noTileCollide == false)
+                {
+                    npc.noGravity = false;
+                    npc.velocity.Y += 2;
+                    npc.velocity.Y *= 0.85f;
+                    drawColor.R /= 2;
+                    drawColor.G /= 2;
+                }
+            }
+        }
         public override void NPCLoot(NPC npc)
         {
             // Biomes //

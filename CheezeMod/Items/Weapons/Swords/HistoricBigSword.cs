@@ -6,24 +6,24 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Weapons.Swords
 {
-    public class GuardianBigSword : ModItem
+    public class HistoricBigSword : ModItem
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Big Sword";
-            item.damage = 42;
+            item.name = "Historic Big Sword";
+            item.damage = 62;
             item.melee = true;
-            item.width = 54;
-            item.height = 54;
-            item.toolTip = "An two handed sword used by the guardians of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+3 Defense when holding.";
+            item.width = 78;
+            item.height = 78;
+            item.toolTip = "An two handed sword that is an historic artifact of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+5 Defense when holding. \nInflicts enemies with Dryad's Bane.";
             item.crit = 15;
-            item.scale = 1.25f;
-            item.useTime = 40;
-            item.useAnimation = 40;
+            item.scale = 1f;
+            item.useTime = 38;
+            item.useAnimation = 38;
             item.useStyle = 1;
-            item.knockBack = 7;
-            item.value = 25000;
-            item.rare = 2;
+            item.knockBack = 9;
+            item.value = 75000;
+            item.rare = 4;
             item.useSound = 1;
             item.autoReuse = false;
         }
@@ -31,8 +31,8 @@ namespace CheezeMod.Items.Weapons.Swords
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddRecipeGroup("CheezeMod:EvilSwords");
+            recipe.AddIngredient(null, "HistoricEssence", 5);
+            recipe.AddIngredient(ItemID.BreakerBlade, 5);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -51,7 +51,8 @@ namespace CheezeMod.Items.Weapons.Swords
             if (player.inventory[player.selectedItem] == this.item)
             {
                 player.statLifeMax2 += 15;
-                player.statDefense += 3;
+                player.statDefense += 5;
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).flyffhistoric = true; // Dryad debuff on enemy for 1 sec.
             }
         }
     }

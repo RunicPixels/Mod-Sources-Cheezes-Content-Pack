@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CheezeMod;
 
 namespace CheezeMod.Items.Weapons.Magic
 {
@@ -11,13 +12,13 @@ namespace CheezeMod.Items.Weapons.Magic
         public override void SetDefaults()
         {
             item.name = "Historic Staff";
-            item.damage = 35;
+            item.damage = 55; 
             item.magic = true;
             item.mana = 24;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "An staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +57% critical damage and chance when hold.";
+            item.toolTip = "An staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +5% critical damage and chance when hold.";
             Item.staff[item.type] = true;
             item.reuseDelay = 50;
             item.useTime = 55;
@@ -31,7 +32,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.useSound = 43;
             item.autoReuse = false;
             item.shoot = mod.ProjectileType("WindFieldCast");
-            item.shootSpeed = 15f;
+            item.shootSpeed = 10f;
         }
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
@@ -62,6 +63,15 @@ namespace CheezeMod.Items.Weapons.Magic
                 ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.05f; // This number here changes the multiplier
                 player.statManaMax2 += (int)((player.statManaMax2) * 0.2f);
             }
+            HoldStats(player);
+        }
+        public override void HoldItem(Player player)
+        {
+            HoldStats(player);
+        }
+        public void HoldStats(Player player)
+        {
+            //Damage Function.
         }
     }
 }

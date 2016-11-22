@@ -28,6 +28,12 @@ namespace CheezeMod.Projectiles.Magic
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 1f, 0.7f, 0.2f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+            bool waterFlag = Collision.WetCollision(projectile.position, projectile.width, projectile.height);
+            if (waterFlag)
+            {
+                projectile.scale -= 0.1f;
+                projectile.timeLeft -= 25;
+            }
             if (Main.rand.Next(3) == 0)
             {
                 Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("YellowLight"), projectile.oldVelocity.X * 0.4f, projectile.oldVelocity.Y * 0.4f);
@@ -91,7 +97,7 @@ namespace CheezeMod.Projectiles.Magic
             Player player = Main.player[(int)projectile.ai[1]];
             if (Main.rand.Next(2) == 0)
             {
-                target.AddBuff(BuffID.OnFire, 300);
+                target.AddBuff(BuffID.OnFire, 330);
             }
         }
     }
