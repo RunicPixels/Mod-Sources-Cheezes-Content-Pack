@@ -14,7 +14,7 @@ namespace CheezeMod.Items.Materials
 			item.height = 22;
 			item.maxStack = 999;
 			AddTooltip("An historic relic from Madrigal");
-			item.value = CheezeItem.historicPrice;
+			item.value = CheezeItem.historicPrice / 10;
 			item.rare = CheezeItem.historicRarity-1;
 		}
 	}
