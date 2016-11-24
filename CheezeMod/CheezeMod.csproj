@@ -140,6 +140,7 @@
     <Compile Include="Items\Placeable\Banner\RobonoidBanner.cs" />
     <Compile Include="Items\Placeable\Banner\TyhrranoidBanner.cs" />
     <Compile Include="Items\Placeable\MegaCorpVendor.cs" />
+    <Compile Include="Items\Tools\HistoricAmbidextrousAxe.cs" />
     <Compile Include="Items\Tools\GuardianAmbidextrousAxe.cs" />
     <Compile Include="Items\Tools\GuardianAxe.cs" />
     <Compile Include="Items\Tools\GuardianPickaxe.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Items\Weapons\Spears\TungstenHalberd.cs" />
     <Compile Include="Items\Weapons\Spears\WoodenPitchfork.cs" />
     <Compile Include="Items\Weapons\Sticks\GuardianStick.cs" />
+    <Compile Include="Items\Weapons\Sticks\HistoricStick.cs" />
     <Compile Include="Items\Weapons\Swords\AdminSword.cs" />
     <Compile Include="Items\Weapons\Swords\Baconomnomnom.cs" />
     <Compile Include="Items\Weapons\Swords\BlueLasersaber.cs" />
@@ -526,6 +528,7 @@
     <Content Include="Items\Tools\GuardianAmbidextrousAxe.png" />
     <Content Include="Items\Tools\GuardianAxe.png" />
     <Content Include="Items\Tools\GuardianPickaxe.png" />
+    <Content Include="Items\Tools\HistoricAmbidextrousAxe.png" />
     <Content Include="Items\Tools\HistoricAxe.png" />
     <Content Include="Items\Tools\HistoricPickaxe.png" />
     <Content Include="Items\Tools\PearlwoodAxe.png" />
@@ -615,6 +618,7 @@
     <Content Include="Items\Weapons\Spears\TungstenHalberd.png" />
     <Content Include="Items\Weapons\Spears\WoodenPitchfork.png" />
     <Content Include="Items\Weapons\Sticks\GuardianStick.png" />
+    <Content Include="Items\Weapons\Sticks\HistoricStick.png" />
     <Content Include="Items\Weapons\Swords\AdminSword.png" />
     <Content Include="Items\Weapons\Swords\Baconomnomnom.png" />
     <Content Include="Items\Weapons\Swords\BlueLasersaber.png" />

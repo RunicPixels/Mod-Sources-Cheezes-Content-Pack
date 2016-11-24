@@ -15,6 +15,17 @@ namespace CheezeMod
     {
         public static int defaultHalberdHeight = 48;
         public static int defaultHalberdWidth = 46;
-    }
 
+
+        public static String[] guardianList =
+        {
+            "GuardianSword","GuardianAxe","GuardianBigSword","GuardianAmbidextrousAxe","GuardianPickaxe","GuardianStick","GuardianKnuckle","GuardianBow","GuardianYoyo","GuardianWand","GuardianStaff"
+        };
+        public static int guardianPrice = 25000;
+        public static String[] historicList =
+        {
+            "HistoricSword","HistoricAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","HistoricBow","HistoricYoyo","HistoricWand","HistoricStaff"
+        };
+        public static int historicPrice = 75000;
+    }
 }

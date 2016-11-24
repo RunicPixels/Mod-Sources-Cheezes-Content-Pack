@@ -22,7 +22,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.useAnimation = 40;
             item.useStyle = 1;
             item.knockBack = 7;
-            item.value = 25000;
+            item.value = CheezeItem.guardianPrice;
             item.rare = 2;
             item.useSound = 1;
             item.autoReuse = false;

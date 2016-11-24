@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -7,8 +6,16 @@ using CheezeMod;
 
 namespace CheezeMod.NPCs
 {
-	public class CheezeGlobalNPC : GlobalNPC
+    public class CheezeGlobalNPC : GlobalNPC
 	{
+        private static int flyffMax()
+        {
+            return 3 + Main.rand.Next(2);
+        }
+        private static bool flyffChance(int drawTimes)
+        {
+            return Main.rand.Next(3) + drawTimes == 0;
+        }
         public override void ResetEffects(NPC npc)
         {
             npc.GetModInfo<CheezeNPCInfo>(mod).downfall = false;
@@ -119,7 +126,7 @@ namespace CheezeMod.NPCs
 
             if (npc.type == NPCID.AngryBones || npc.type == NPCID.AngryBonesBig || npc.type == NPCID.AngryBonesBigHelmet || npc.type == NPCID.AngryBonesBigMuscle)
             {
-                if (Main.rand.Next(150) == 0) // 0.67% chance.
+                if (Main.rand.Next(140) == 0) // 0.7% chance.
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Bonemerang"), 1);
                 }
@@ -192,12 +199,41 @@ namespace CheezeMod.NPCs
             }
 
             // Bosses //
-
             if(npc.type == NPCID.SkeletronHead)
             {
-                for (int i = 0; i < Main.rand.Next(10) + 5; i++)
+                int drawChance = 0;
+                for (int i = 0; i < Main.rand.Next(3); i++) 
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianEssence"), 1);
+                }
+                for(int i = 0; i < flyffMax(); i++)
+                {
+                    if(flyffChance(drawChance))
+                    {
+                        int selection = Main.rand.Next(CheezeItem.guardianList.Length);
+                        string selectedWeapon = CheezeItem.guardianList[selection];
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
+                        drawChance++;
+                    }
+                }
+            }
+
+            if (npc.type == NPCID.WallofFlesh)
+            {
+                int drawChance = 0;
+                for (int i = 0; i < Main.rand.Next(3); i++)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), 1);
+                }
+                for (int i = 0; i < flyffMax(); i++)
+                {
+                    if (flyffChance(drawChance))
+                    {
+                        int selection = Main.rand.Next(CheezeItem.historicList.Length);
+                        string selectedWeapon = CheezeItem.historicList[selection];
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
+                        drawChance++;
+                    }
                 }
             }
             //Hardmode Mech Bosses

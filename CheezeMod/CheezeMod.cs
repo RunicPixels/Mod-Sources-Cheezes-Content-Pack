@@ -22,6 +22,11 @@ namespace CheezeMod
             };
         }
 
+        public static int BooleanToInt(bool parameter)
+        {
+            if (parameter == true) return 1;
+            else return 0;
+        }
         // SPAWNING //
 
         //spawning helper methods imported from bluemagic123's Example Mod.

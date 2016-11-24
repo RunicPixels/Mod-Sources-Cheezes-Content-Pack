@@ -11,15 +11,17 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 NOTE: It's recommended to restart Terraria after installing or updating the mod before generating a new world for the new features to be generated as smoothly as possible!
 
 Changelog:
-v1.1 - Guardian and Historic Arsenal
-Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle and Stick inspired by the game FlyFF. These can be obtained by utilizing a new drop from skeletron, namely Guardian Essence.
-Added Historic Axe, Pickaxe, Sword
+v1.1 - An update that flies for fun.
+Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Skeletron.
+Added Historic Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Wall of Flesh.
 Added Pearlwood Axe and Pickaxe.
 Added "Sword of the Silver Sword" also a weapon with a very silly name from the game FlyFF.
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
+Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Critical Damage Multiplier for hold items and equipments.
 Improved The High Noon.
 Improved Chronicle Sword sprite.
+Tons of code improvements.
 Some flame projectiles are now affected by water.
 Minor Bugfixes.
 Reduced unneccesary files and thus the mod file size.
