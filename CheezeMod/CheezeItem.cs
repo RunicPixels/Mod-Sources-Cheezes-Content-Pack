@@ -22,10 +22,12 @@ namespace CheezeMod
             "GuardianSword","GuardianAxe","GuardianBigSword","GuardianAmbidextrousAxe","GuardianPickaxe","GuardianStick","GuardianKnuckle","GuardianBow","GuardianYoyo","GuardianWand","GuardianStaff"
         };
         public static int guardianPrice = 25000;
+        public static int guardianRarity = 2;
         public static String[] historicList =
         {
             "HistoricSword","HistoricAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","HistoricBow","HistoricYoyo","HistoricWand","HistoricStaff"
         };
-        public static int historicPrice = 75000;
+        public static int historicPrice = guardianPrice * 3;
+        public static int historicRarity = 4;
     }
 }

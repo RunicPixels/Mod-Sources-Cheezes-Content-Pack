@@ -14,8 +14,8 @@ namespace CheezeMod.Items.Materials
 			item.height = 20;
 			item.maxStack = 999;
 			AddTooltip("The spirit of the guardians from Madrigal");
-			item.value = 3000;
-			item.rare = 1;
+			item.value = CheezeItem.guardianPrice / 10;
+			item.rare = CheezeItem.guardianRarity - 1;
 		}
 	}
 }

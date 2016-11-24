@@ -28,7 +28,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 2;
             item.value = CheezeItem.historicPrice;
-            item.rare = 4;
+            item.rare = CheezeItem.historicRarity;
             item.useSound = 43;
             item.autoReuse = false;
             item.shoot = mod.ProjectileType("WindFieldCast");

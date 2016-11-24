@@ -23,7 +23,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.useStyle = 1;
             item.knockBack = 9;
             item.value = CheezeItem.historicPrice;
-            item.rare = 4;
+            item.rare = CheezeItem.historicRarity;
             item.useSound = 1;
             item.autoReuse = false;
         }

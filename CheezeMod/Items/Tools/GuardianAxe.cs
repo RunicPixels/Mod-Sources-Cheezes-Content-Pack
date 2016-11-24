@@ -23,8 +23,8 @@ namespace CheezeMod.Items.Tools
 			item.axe = 19;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 25000;
-			item.rare = 2;
+			item.value = CheezeItem.guardianPrice;
+			item.rare = CheezeItem.guardianRarity;
 			item.useSound = 1;
 			item.autoReuse = true;
 		}

@@ -27,8 +27,8 @@ namespace CheezeMod.Items.Weapons.Magic
             item.channel = true;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 4;
-            item.value = 75000;
-            item.rare = 5;
+            item.value = CheezeItem.historicPrice;
+            item.rare = CheezeItem.historicRarity;
             item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PsyBomb");
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("SpiritBomb");

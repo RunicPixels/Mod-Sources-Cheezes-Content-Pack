@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Yoyo
 			item.noUseGraphic = true;
 			item.useTurn = true;
             item.value = CheezeItem.historicPrice;
-            item.rare = 4;
+            item.rare = CheezeItem.historicRarity;
             item.crit = 15;
             item.shoot = mod.ProjectileType("HistoricYoyo");
             item.channel = true;

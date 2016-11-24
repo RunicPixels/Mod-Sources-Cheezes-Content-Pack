@@ -25,8 +25,8 @@ namespace CheezeMod.Items.Weapons.Other
             item.scale = 1.1f;
             item.damage = 48;
             item.knockBack = 6f;
-            item.rare = 4;
-            item.value = 75000;
+            item.rare = CheezeItem.historicRarity;
+            item.value = CheezeItem.historicPrice;
         }
         public override void AddRecipes()
         {

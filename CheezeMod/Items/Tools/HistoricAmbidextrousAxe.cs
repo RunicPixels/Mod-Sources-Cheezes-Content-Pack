@@ -23,7 +23,7 @@ namespace CheezeMod.Items.Tools
 			item.useStyle = 1;
 			item.knockBack = 8;
 			item.value = CheezeItem.historicPrice;
-            item.rare = 2;
+            item.rare = CheezeItem.historicRarity;
 			item.useSound = 1;
 			item.autoReuse = false;
 		}

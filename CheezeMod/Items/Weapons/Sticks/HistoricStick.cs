@@ -29,7 +29,7 @@ namespace CheezeMod.Items.Weapons.Sticks
 			item.useTurn = true;
 			item.useStyle = 5;
             item.value = CheezeItem.historicPrice;
-            item.rare = 4;
+            item.rare = CheezeItem.historicRarity;
             item.shootSpeed = 4f;
 		}
         public override void AddRecipes()

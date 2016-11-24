@@ -24,8 +24,8 @@ namespace CheezeMod.Items.Weapons.Magic
             item.useStyle = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 2;
-            item.value = 25000;
-            item.rare = 2;
+            item.value = CheezeItem.guardianPrice;
+            item.rare = CheezeItem.guardianRarity;
             item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Fire");
             item.autoReuse = false;
             item.shoot = mod.ProjectileType("FlameGeyser");
