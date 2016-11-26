@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Tools
 			item.melee = true;
             item.width = 86;
 			item.height = 86;
-			item.toolTip = "An enourmous axe used by the guardians of Madrigal. \n Inflicts Dryad's bane on your opponent. \n+10% HP when holding. \n+11% Defense when holding.";
+			item.toolTip = "An enourmous axe used by the guardians of Madrigal.\n+11% HP when holding.\n+5 defense when holding.\nInflicts Dryad's bane on your opponent.";
             item.scale = 1f;
             item.useTime = 64;
 			item.useAnimation = 64;
@@ -50,8 +50,8 @@ namespace CheezeMod.Items.Tools
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                player.statLifeMax2 += 10;
-                player.statDefense += 4;
+                player.statLifeMax2 += (int)(player.statLifeMax2 * 0.11f);
+                player.statDefense += 5;
             }
         }
     }

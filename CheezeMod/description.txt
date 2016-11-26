@@ -1,6 +1,6 @@
 Cheeze's Conent Pack is a mod that adds a variety of content to Terraria.
 
-As of right now the mod includes several tools, an armor set, a few new armor parts, a few accessories, a new generated ore, 100+ weapons, lots of materials, several monsters and a crafting station.
+As of right now the mod includes several tools, an armor set, a few new armor parts, a few accessories, a new generated ore, 125+ weapons, lots of materials, several monsters and a crafting station.
 • There's content spread over hardmode and pre-hardmode.
 • New content spread over a variety of biomes, places and events.
 • Stacked Items crafted at a heavy work bench to save chest space.
