@@ -28,6 +28,25 @@ namespace CheezeMod
             if (parameter == true) return 1;
             else return 0;
         }
+
+        public static float CalculateSpread(float spreadInput, float speedX, float speedY, char XorY)
+        {
+            float spread = spreadInput * 0.0174f; // degrees converted to radians
+            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
+            double baseAngle = Math.Atan2(speedX, speedY);
+            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
+            float randomSpeed = Main.rand.NextFloat() * 0.05f + 0.975f;
+            speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
+            speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
+            if(XorY == 'X')
+            {
+                return speedX;
+            }
+            else
+            {
+                return speedY;
+            } 
+        }
         #endregion
         // SPAWNING //
         #region SpawnInfo

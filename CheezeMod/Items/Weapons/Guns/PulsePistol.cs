@@ -71,12 +71,9 @@ namespace CheezeMod.Items.Weapons.Guns
                 shotPastReload = false;
                 return false;
             }
-            float spread = 7f * 0.0174f; // 7 degrees converted to radians
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double baseAngle = Math.Atan2(speedX, speedY);
-            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
-            speedX = baseSpeed * (float)Math.Sin(randomAngle);
-            speedY = baseSpeed * (float)Math.Cos(randomAngle);
+            float spread = 7f; // 7 degrees
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             magazineSize--;
             SetMagazineToolTip();
             if (type == ProjectileID.Bullet)
