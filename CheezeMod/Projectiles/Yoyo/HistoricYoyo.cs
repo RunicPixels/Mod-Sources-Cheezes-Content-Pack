@@ -41,5 +41,11 @@ namespace CheezeMod.Projectiles.Yoyo
             }
             Lighting.AddLight((int)projectile.Center.X / 16, (int)projectile.Center.Y / 16, 0.3f, 0.5f, 0.3f);
         }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.DryadsWardDebuff, 60);
+            base.OnHitNPC(target, damage, knockback, crit);
+        }
     }
 }

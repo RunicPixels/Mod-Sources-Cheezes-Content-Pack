@@ -11,6 +11,7 @@ namespace CheezeMod.Items.Vanilla
 		{
 			if (item.type == ItemID.Shuriken)
 			{
+                if (item.maxStack < 999) item.maxStack = 999;
                 item.ammo = ProjectileID.Shuriken;
 			}
 		}

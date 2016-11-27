@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Vanilla
 		{
 			if (item.type == ItemID.StickyGrenade)
 			{
-                item.maxStack = 999;
+                if(item.maxStack < 999) item.maxStack = 999;
                 item.ammo = ProjectileID.Grenade;
 			}
 		}

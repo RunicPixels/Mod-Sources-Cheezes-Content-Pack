@@ -210,6 +210,7 @@
     <Compile Include="Items\Weapons\Ratchet\Multistar.cs" />
     <Compile Include="Items\Weapons\Ratchet\PulseRifle.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBlitzEruptor.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraBombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraGoldWalloper.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraHeavyLancer.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraVaporizer.cs" />
@@ -589,6 +590,7 @@
     <Content Include="Items\Weapons\Ratchet\Multistar.png" />
     <Content Include="Items\Weapons\Ratchet\PulseRifle.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBlitzEruptor.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraBombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\UltraGoldWalloper.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraVaporizer.png" />

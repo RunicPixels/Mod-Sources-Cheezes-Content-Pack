@@ -10,11 +10,13 @@ namespace CheezeMod.NPCs
     {
         private static int flyffMax()
         {
-            return 3 + Main.rand.Next(2);
+            if (Main.expertMode) return 4 + Main.rand.Next(4);
+            else return 3 + Main.rand.Next(2);
         }
         private static bool flyffChance(int drawTimes)
         {
-            return Main.rand.Next(3) + drawTimes == 0;
+            if(Main.expertMode) return Main.rand.Next(8) + drawTimes <= 2;
+            else return Main.rand.Next(5) + drawTimes <= 1;
         }
         public override void ResetEffects(NPC npc)
         {
@@ -207,11 +209,19 @@ namespace CheezeMod.NPCs
             {
                 if (npc.type == NPCID.SkeletronHead)
                 {
+                    bool ironOrMeteoriteBolt = false;
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        ironOrMeteoriteBolt = true;
+                    }
                     int drawChance = 0;
                     for (int i = 0; i < Main.rand.Next(3); i++)
                     {
                         Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianEssence"), 1);
                     }
+                    if (ironOrMeteoriteBolt)Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MeteoriteBolt"), Main.rand.Next(3) + 1);
+                    else Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), Main.rand.Next(3) + 1);
+                    
                     for (int i = 0; i < flyffMax(); i++)
                     {
                         if (flyffChance(drawChance))
@@ -229,8 +239,9 @@ namespace CheezeMod.NPCs
                     int drawChance = 0;
                     for (int i = 0; i < Main.rand.Next(3); i++)
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), 1);
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), Main.rand.Next(3));
                     }
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     for (int i = 0; i < flyffMax(); i++)
                     {
                         if (flyffChance(drawChance))
@@ -293,11 +304,18 @@ namespace CheezeMod.NPCs
             {
                 if (context == "bossBag" && arg == ItemID.SkeletronBossBag)
                 {
+                    bool ironOrMeteoriteBolt = false;
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        ironOrMeteoriteBolt = true;
+                    }
                     int drawChance = 0;
-                    for (int i = 0; i < Main.rand.Next(3); i++)
+                    for (int i = 0; i < 1+Main.rand.Next(4); i++)
                     {
                         player.QuickSpawnItem(mod.ItemType("GuardianEssence"), Main.rand.Next(3));
                     }
+                    if (ironOrMeteoriteBolt)player.QuickSpawnItem(mod.ItemType("IronBolt"), Main.rand.Next(50) + 10);
+                    else player.QuickSpawnItem(mod.ItemType("MeteoriteBolt"), Main.rand.Next(50) + 10);
                     for (int i = 0; i < flyffMax(); i++)
                     {
                         if (flyffChance(drawChance))
@@ -312,10 +330,12 @@ namespace CheezeMod.NPCs
                 if (context == "bossBag" && arg == ItemID.WallOfFleshBossBag)
                 {
                     int drawChance = 0;
-                    for (int i = 0; i < Main.rand.Next(3); i++)
+                    for (int i = 0; i < 1+Main.rand.Next(4); i++)
                     {
                         player.QuickSpawnItem(mod.ItemType("HistoricEssence"), Main.rand.Next(3));
                     }
+                    player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
+                    
                     for (int i = 0; i < flyffMax(); i++)
                     {
                         if (flyffChance(drawChance))
@@ -327,7 +347,7 @@ namespace CheezeMod.NPCs
                         }
                     }
                 }
-                if (context == "bossBag" && arg == ItemID.SkeletronBossBag || arg == ItemID.DestroyerBossBag || arg == ItemID.TwinsBossBag)
+                if (context == "bossBag" && arg == ItemID.SkeletronPrimeBossBag || arg == ItemID.DestroyerBossBag || arg == ItemID.TwinsBossBag)
                 {
                     player.QuickSpawnItem(mod.ItemType("HallowedBolt"), Main.rand.Next(50) + 10);
                 }
