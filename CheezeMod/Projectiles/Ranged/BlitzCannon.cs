@@ -18,7 +18,7 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.penetrate = 1;
-            projectile.timeLeft = 50;
+            projectile.timeLeft = 40 + Main.rand.Next(25);
             projectile.scale = 1f;
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;

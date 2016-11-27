@@ -44,8 +44,11 @@ namespace CheezeMod.Items.Weapons.Ratchet
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             float spread = 30f; // 30 degrees
-            for (int i = 0; i <= 2 + Main.rand.Next(2); i++)
+            float baseX = speedX;
+            float baseY = speedY;
+            for (int i = 0; i <= 3 + Main.rand.Next(2); i++)
             {
+
                 speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
                 speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y'); ;
                 if (type == ProjectileID.Bullet || type == mod.ProjectileType("BlitzGun"))
@@ -56,7 +59,10 @@ namespace CheezeMod.Items.Weapons.Ratchet
                     damage *= (int)1.3;
                 }
                 Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                speedX = baseX;
+                speedY = baseY;
             }
+            type = 0;
             return true;
         }
     }

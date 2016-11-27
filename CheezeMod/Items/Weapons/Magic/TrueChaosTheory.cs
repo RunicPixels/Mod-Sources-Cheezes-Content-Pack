@@ -35,6 +35,8 @@ namespace CheezeMod.Items.Weapons.Magic
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             float spread = 2f; // 2 degrees
+            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
+            double baseAngle = Math.Atan2(speedX, speedY);
             speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
             speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             if (Main.rand.Next(4) == 0)

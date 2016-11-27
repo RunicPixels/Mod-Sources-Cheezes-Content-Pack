@@ -19,6 +19,7 @@ Added "Sword of the Silver Sword" also a weapon with a very silly name from the 
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Critical Damage Multiplier for hold items and equipments.
+Changed all expert boss drops to treasure bags.
 Improved The High Noon.
 Improved Chronicle Sword sprite.
 Tons of code improvements.

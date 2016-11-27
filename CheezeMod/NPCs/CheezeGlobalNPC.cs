@@ -7,7 +7,7 @@ using CheezeMod;
 namespace CheezeMod.NPCs
 {
     public class CheezeGlobalNPC : GlobalNPC
-	{
+    {
         private static int flyffMax()
         {
             return 3 + Main.rand.Next(2);
@@ -37,6 +37,7 @@ namespace CheezeMod.NPCs
         public override void NPCLoot(NPC npc)
         {
             // Biomes //
+            #region Biomes
             // Granite
 
             if (npc.type == NPCID.GraniteGolem || npc.type == 483) // 483 is the ID of Granite Elemental.
@@ -55,7 +56,7 @@ namespace CheezeMod.NPCs
             // Marble
 
             if (npc.type == NPCID.Medusa || npc.type == NPCID.GreekSkeleton)
-            { 
+            {
                 for (int i = 0; i <= 5; i++) // 6 times.
                 {
                     if (Main.rand.Next(5) == 0) // 20% chance.
@@ -68,16 +69,15 @@ namespace CheezeMod.NPCs
 
             //Meteor
 
-            if(npc.type == NPCID.MeteorHead)
+            if (npc.type == NPCID.MeteorHead)
             {
                 if (Main.rand.Next(5) == 0) // 20% chance.
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MeteoriteBolt"), Main.rand.Next(3)+1);
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MeteoriteBolt"), Main.rand.Next(3) + 1);
                 }
             }
-            
-            //Underworld
 
+            //Underworld
             if (npc.type == NPCID.Hellbat || npc.type == NPCID.Demon || npc.type == NPCID.LavaSlime || npc.type == NPCID.FireImp || npc.type == NPCID.VoodooDemon || npc.type == NPCID.Lavabat || npc.type == NPCID.RedDevil) // All pre-hardmode Underworld monsters
             {
                 if (Main.rand.Next(10) == 0) // 10% chance.
@@ -121,7 +121,6 @@ namespace CheezeMod.NPCs
 
                 }
             }
-
             //Dungeon
 
             if (npc.type == NPCID.AngryBones || npc.type == NPCID.AngryBonesBig || npc.type == NPCID.AngryBonesBigHelmet || npc.type == NPCID.AngryBonesBigMuscle)
@@ -132,7 +131,7 @@ namespace CheezeMod.NPCs
                 }
             }
 
-            if(npc.type == NPCID.Paladin)
+            if (npc.type == NPCID.Paladin)
             {
                 if (Main.rand.Next(10) == 0) // 10% chance.
                 {
@@ -147,8 +146,11 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Kaboomerang"), 1);
                 }
             }
+            #endregion
 
-            //Invasions//
+            //Invasions //
+            #region Invasions
+
             //Goblin Army
 
             if (npc.type == 26 || npc.type == 27 || npc.type == 28 || npc.type == 29 || npc.type == 111)
@@ -163,7 +165,7 @@ namespace CheezeMod.NPCs
 
             if (npc.type == NPCID.PirateShip)
             {
-                for(int i = 0; i< Main.rand.Next(20) + 1; i++)
+                for (int i = 0; i < Main.rand.Next(20) + 1; i++)
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ShipWreckage"), 1);
                 }
@@ -184,7 +186,7 @@ namespace CheezeMod.NPCs
             }
             if (npc.type == NPCID.ThePossessed || npc.type == NPCID.Eyezor || npc.type == NPCID.Fritz)
             {
-                if(Main.rand.NextFloat() >= 0.99)
+                if (Main.rand.NextFloat() >= 0.99)
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TornHeroBook"), 1);
                 }
@@ -197,73 +199,81 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.BrokenHeroSword, 1);
                 }
             }
+            #endregion
 
             // Bosses //
-            if(npc.type == NPCID.SkeletronHead)
+            #region Bosses
+            if (Main.expertMode == false)
             {
-                int drawChance = 0;
-                for (int i = 0; i < Main.rand.Next(3); i++) 
+                if (npc.type == NPCID.SkeletronHead)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianEssence"), 1);
-                }
-                for(int i = 0; i < flyffMax(); i++)
-                {
-                    if(flyffChance(drawChance))
+                    int drawChance = 0;
+                    for (int i = 0; i < Main.rand.Next(3); i++)
                     {
-                        int selection = Main.rand.Next(CheezeItem.guardianList.Length);
-                        string selectedWeapon = CheezeItem.guardianList[selection];
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
-                        drawChance++;
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianEssence"), 1);
+                    }
+                    for (int i = 0; i < flyffMax(); i++)
+                    {
+                        if (flyffChance(drawChance))
+                        {
+                            int selection = Main.rand.Next(CheezeItem.guardianList.Length);
+                            string selectedWeapon = CheezeItem.guardianList[selection];
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
+                            drawChance++;
+                        }
                     }
                 }
-            }
 
-            if (npc.type == NPCID.WallofFlesh)
-            {
-                int drawChance = 0;
-                for (int i = 0; i < Main.rand.Next(3); i++)
+                if (npc.type == NPCID.WallofFlesh)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), 1);
-                }
-                for (int i = 0; i < flyffMax(); i++)
-                {
-                    if (flyffChance(drawChance))
+                    int drawChance = 0;
+                    for (int i = 0; i < Main.rand.Next(3); i++)
                     {
-                        int selection = Main.rand.Next(CheezeItem.historicList.Length);
-                        string selectedWeapon = CheezeItem.historicList[selection];
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
-                        drawChance++;
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), 1);
+                    }
+                    for (int i = 0; i < flyffMax(); i++)
+                    {
+                        if (flyffChance(drawChance))
+                        {
+                            int selection = Main.rand.Next(CheezeItem.historicList.Length);
+                            string selectedWeapon = CheezeItem.historicList[selection];
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
+                            drawChance++;
+                        }
                     }
                 }
-            }
-            //Hardmode Mech Bosses
-            if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism || npc.type == NPCID.TheDestroyer || npc.type == NPCID.SkeletronPrime)
-            {
-                if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism)
+                //Hardmode Mech Bosses
+                if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism || npc.type == NPCID.TheDestroyer || npc.type == NPCID.SkeletronPrime)
                 {
-                    for (int i = 0; i < Main.rand.Next(25) + 5; i++)
+                    if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism)
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HallowedBolt"), 1);
+                        for (int i = 0; i < Main.rand.Next(25) + 5; i++)
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HallowedBolt"), 1);
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < Main.rand.Next(50) + 10; i++)
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HallowedBolt"), 1);
+                        }
                     }
                 }
-                else
+
+                if (npc.type == NPCID.MoonLordCore)
                 {
                     for (int i = 0; i < Main.rand.Next(50) + 10; i++)
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HallowedBolt"), 1);
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminiteBolt"), 1);
                     }
                 }
             }
-
-            if (npc.type == NPCID.MoonLordCore)
-            {
-                for (int i = 0; i < Main.rand.Next(50) + 10; i++)
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminiteBolt"), 1);
-                }
-            }
+            #endregion
 
             // Other //
+            #region Other
+
 
             // Herpaderp
 
@@ -272,6 +282,58 @@ namespace CheezeMod.NPCs
                 if (Main.rand.NextFloat() >= 0.9f)
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Cheese"), 1);
+                }
+            }
+            #endregion
+        }
+        // Boss Bags //
+        public class BossBags : GlobalItem
+        {
+            public override void OpenVanillaBag(string context, Player player, int arg)
+            {
+                if (context == "bossBag" && arg == ItemID.SkeletronBossBag)
+                {
+                    int drawChance = 0;
+                    for (int i = 0; i < Main.rand.Next(3); i++)
+                    {
+                        player.QuickSpawnItem(mod.ItemType("GuardianEssence"), Main.rand.Next(3));
+                    }
+                    for (int i = 0; i < flyffMax(); i++)
+                    {
+                        if (flyffChance(drawChance))
+                        {
+                            int selection = Main.rand.Next(CheezeItem.guardianList.Length);
+                            string selectedWeapon = CheezeItem.guardianList[selection];
+                            player.QuickSpawnItem(mod.ItemType(selectedWeapon), 1);
+                            drawChance++;
+                        }
+                    }
+                }
+                if (context == "bossBag" && arg == ItemID.WallOfFleshBossBag)
+                {
+                    int drawChance = 0;
+                    for (int i = 0; i < Main.rand.Next(3); i++)
+                    {
+                        player.QuickSpawnItem(mod.ItemType("HistoricEssence"), Main.rand.Next(3));
+                    }
+                    for (int i = 0; i < flyffMax(); i++)
+                    {
+                        if (flyffChance(drawChance))
+                        {
+                            int selection = Main.rand.Next(CheezeItem.historicList.Length);
+                            string selectedWeapon = CheezeItem.historicList[selection];
+                            player.QuickSpawnItem(mod.ItemType(selectedWeapon), 1);
+                            drawChance++;
+                        }
+                    }
+                }
+                if (context == "bossBag" && arg == ItemID.SkeletronBossBag || arg == ItemID.DestroyerBossBag || arg == ItemID.TwinsBossBag)
+                {
+                    player.QuickSpawnItem(mod.ItemType("HallowedBolt"), Main.rand.Next(50) + 10);
+                }
+                if (context == "bossBag" && arg == ItemID.MoonLordBossBag)
+                {
+                    player.QuickSpawnItem(mod.ItemType("LuminiteBolt"), Main.rand.Next(50) + 10);
                 }
             }
         }
