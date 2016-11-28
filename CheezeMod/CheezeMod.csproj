@@ -212,6 +212,7 @@
     <Compile Include="Items\Weapons\Ratchet\UltraBlitzEruptor.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraGoldWalloper.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraHeavyBouncer.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraHeavyLancer.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraVaporizer.cs" />
     <Compile Include="Items\Weapons\Ratchet\Vaporizer.cs" />
@@ -370,6 +371,7 @@
     <Compile Include="Projectiles\Ranged\PulseGun.cs" />
     <Compile Include="Projectiles\Ranged\PulseRifle.cs" />
     <Compile Include="Projectiles\Ranged\UltraBlitzEruptor.cs" />
+    <Compile Include="Projectiles\Ranged\UltraHeavyBouncer.cs" />
     <Compile Include="Projectiles\Ranged\UltraHeavyLancer.cs" />
     <Compile Include="Projectiles\Ranged\UltraVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\Vaporizer.cs" />
@@ -592,6 +594,7 @@
     <Content Include="Items\Weapons\Ratchet\UltraBlitzEruptor.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\UltraGoldWalloper.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraHeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraVaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\Vaporizer.png" />
@@ -750,6 +753,7 @@
     <Content Include="Projectiles\Ranged\PulseGun.png" />
     <Content Include="Projectiles\Ranged\PulseRifle.png" />
     <Content Include="Projectiles\Ranged\UltraBlitzEruptor.png" />
+    <Content Include="Projectiles\Ranged\UltraHeavyBouncer.png" />
     <Content Include="Projectiles\Ranged\UltraHeavyLancer.png" />
     <Content Include="Projectiles\Ranged\UltraVaporizer.png" />
     <Content Include="Projectiles\Ranged\Vaporizer.png" />

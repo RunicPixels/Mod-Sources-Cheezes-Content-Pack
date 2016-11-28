@@ -19,10 +19,10 @@ Added "Sword of the Silver Sword" also a weapon with a very silly name from the 
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
+Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.
 Added Critical Damage Multiplier for hold items and equipments.
 Changed all expert boss drops to treasure bags.
-Improved The High Noon.
-Improved Chronicle Sword sprite.
+Improved a lot of weapons.
 Tons of code improvements.
 Some flame projectiles are now affected by water.
 Minor Bugfixes.
