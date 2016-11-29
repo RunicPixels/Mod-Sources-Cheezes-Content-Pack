@@ -12,12 +12,12 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.name = "Chopper";
-            projectile.width = 22;
-            projectile.height = 22;
+            projectile.width = 20;
+            projectile.height = 20;
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.timeLeft = 300;
-            projectile.scale = 1f;
+            projectile.scale = 0.9f;
             projectile.penetrate = 4;
             aiType = ProjectileID.Shuriken;
         }
