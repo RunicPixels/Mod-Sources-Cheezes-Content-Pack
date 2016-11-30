@@ -53,13 +53,9 @@ namespace CheezeMod.Items.Weapons.Bows
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            float spread = 2f * 0.0174f;//2 degrees converted to radians
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double baseAngle = Math.Atan2(speedX, speedY);
-            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
-            float randomSpeed = Main.rand.NextFloat() * 0.2f + 0.95f;
-            speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
-            speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
+            float spread = 3f;//3 degrees
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             if (type == 1)
             {
                 if (Main.rand.Next(5) <= 0) // 1/5 chance to become a Unholy Arrow

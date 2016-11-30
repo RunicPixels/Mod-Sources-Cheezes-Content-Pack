@@ -140,6 +140,7 @@
     <Compile Include="Items\Placeable\Banner\RobonoidBanner.cs" />
     <Compile Include="Items\Placeable\Banner\TyhrranoidBanner.cs" />
     <Compile Include="Items\Placeable\MegaCorpVendor.cs" />
+    <Compile Include="Items\Tools\HistoricAmbidextrousAxe.cs" />
     <Compile Include="Items\Tools\GuardianAmbidextrousAxe.cs" />
     <Compile Include="Items\Tools\GuardianAxe.cs" />
     <Compile Include="Items\Tools\GuardianPickaxe.cs" />
@@ -209,8 +210,11 @@
     <Compile Include="Items\Weapons\Ratchet\Multistar.cs" />
     <Compile Include="Items\Weapons\Ratchet\PulseRifle.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBlitzEruptor.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraBombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraGoldWalloper.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraHeavyBouncer.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraHeavyLancer.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraMultiStar.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraVaporizer.cs" />
     <Compile Include="Items\Weapons\Ratchet\Vaporizer.cs" />
     <Compile Include="Items\Weapons\Ratchet\Walloper.cs" />
@@ -237,6 +241,7 @@
     <Compile Include="Items\Weapons\Spears\TungstenHalberd.cs" />
     <Compile Include="Items\Weapons\Spears\WoodenPitchfork.cs" />
     <Compile Include="Items\Weapons\Sticks\GuardianStick.cs" />
+    <Compile Include="Items\Weapons\Sticks\HistoricStick.cs" />
     <Compile Include="Items\Weapons\Swords\AdminSword.cs" />
     <Compile Include="Items\Weapons\Swords\Baconomnomnom.cs" />
     <Compile Include="Items\Weapons\Swords\BlueLasersaber.cs" />
@@ -367,7 +372,9 @@
     <Compile Include="Projectiles\Ranged\PulseGun.cs" />
     <Compile Include="Projectiles\Ranged\PulseRifle.cs" />
     <Compile Include="Projectiles\Ranged\UltraBlitzEruptor.cs" />
+    <Compile Include="Projectiles\Ranged\UltraHeavyBouncer.cs" />
     <Compile Include="Projectiles\Ranged\UltraHeavyLancer.cs" />
+    <Compile Include="Projectiles\Ranged\UltraMultiStar.cs" />
     <Compile Include="Projectiles\Ranged\UltraVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\Vaporizer.cs" />
     <Compile Include="Projectiles\Thrown\AdamantiteKunai.cs" />
@@ -526,6 +533,7 @@
     <Content Include="Items\Tools\GuardianAmbidextrousAxe.png" />
     <Content Include="Items\Tools\GuardianAxe.png" />
     <Content Include="Items\Tools\GuardianPickaxe.png" />
+    <Content Include="Items\Tools\HistoricAmbidextrousAxe.png" />
     <Content Include="Items\Tools\HistoricAxe.png" />
     <Content Include="Items\Tools\HistoricPickaxe.png" />
     <Content Include="Items\Tools\PearlwoodAxe.png" />
@@ -586,8 +594,11 @@
     <Content Include="Items\Weapons\Ratchet\Multistar.png" />
     <Content Include="Items\Weapons\Ratchet\PulseRifle.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBlitzEruptor.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraBombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\UltraGoldWalloper.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraHeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyLancer.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraMultiStar.png" />
     <Content Include="Items\Weapons\Ratchet\UltraVaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\Vaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\Walloper.png" />
@@ -615,6 +626,7 @@
     <Content Include="Items\Weapons\Spears\TungstenHalberd.png" />
     <Content Include="Items\Weapons\Spears\WoodenPitchfork.png" />
     <Content Include="Items\Weapons\Sticks\GuardianStick.png" />
+    <Content Include="Items\Weapons\Sticks\HistoricStick.png" />
     <Content Include="Items\Weapons\Swords\AdminSword.png" />
     <Content Include="Items\Weapons\Swords\Baconomnomnom.png" />
     <Content Include="Items\Weapons\Swords\BlueLasersaber.png" />
@@ -744,7 +756,9 @@
     <Content Include="Projectiles\Ranged\PulseGun.png" />
     <Content Include="Projectiles\Ranged\PulseRifle.png" />
     <Content Include="Projectiles\Ranged\UltraBlitzEruptor.png" />
+    <Content Include="Projectiles\Ranged\UltraHeavyBouncer.png" />
     <Content Include="Projectiles\Ranged\UltraHeavyLancer.png" />
+    <Content Include="Projectiles\Ranged\UltraMultiStar.png" />
     <Content Include="Projectiles\Ranged\UltraVaporizer.png" />
     <Content Include="Projectiles\Ranged\Vaporizer.png" />
     <Content Include="Projectiles\Thrown\AdamantiteKunai.png" />

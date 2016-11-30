@@ -22,8 +22,8 @@ namespace CheezeMod.Items.Weapons.Swords
             item.useAnimation = 22;
             item.useStyle = 1;
             item.knockBack = 4;
-            item.value = 75000;
-            item.rare = 4;
+            item.value = CheezeItem.historicPrice;
+            item.rare = CheezeItem.historicRarity;
             item.useSound = 1;
             item.autoReuse = true;
         }

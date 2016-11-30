@@ -25,17 +25,18 @@ namespace CheezeMod.Items.Weapons.Sticks
 			item.useSound = 1;
 			item.noMelee = true;
             item.noUseGraphic = false;
+            item.autoReuse = false;
 			item.useTurn = true;
 			item.useStyle = 5;
-            item.value = 25000;
-            item.rare = 2;
+            item.value = CheezeItem.guardianPrice;
+            item.rare = CheezeItem.guardianRarity;
             item.shootSpeed = 4f;
 		}
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddIngredient(ItemID.HealingPotion, 10);
+            recipe.AddIngredient(ItemID.LesserHealingPotion, 10);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

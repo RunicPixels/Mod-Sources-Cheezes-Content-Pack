@@ -51,13 +51,13 @@ namespace CheezeMod.Items.Weapons.Guns
             float spread = 0f;
             if (player.altFunctionUse == 2)
             {
-                spread = 20f * 0.0174f; // 20 degrees converted to radians
+                spread = 22f; // 22 degrees
             }
             float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
             double baseAngle = Math.Atan2(speedX, speedY);
             double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
-            speedX = baseSpeed * (float)Math.Sin(randomAngle);
-            speedY = baseSpeed * (float)Math.Cos(randomAngle);
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             item.useAnimation = item.useTime;
             item.reuseDelay = item.useTime;
             return true;

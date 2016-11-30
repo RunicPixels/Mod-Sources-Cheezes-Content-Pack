@@ -15,6 +15,23 @@ namespace CheezeMod
     {
         public static int defaultHalberdHeight = 48;
         public static int defaultHalberdWidth = 46;
-    }
 
+        #region FlyffStatsInfo
+        public static String[] guardianList =
+        {
+            "GuardianSword","GuardianAxe","GuardianBigSword","GuardianAmbidextrousAxe","GuardianPickaxe","GuardianStick","GuardianKnuckle","GuardianBow","GuardianYoyo","GuardianWand","GuardianStaff"
+        };
+        public static String[] historicList =
+        {
+            "HistoricSword","HistoricAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","HistoricBow","HistoricYoyo","HistoricWand","HistoricStaff"
+        };
+
+        public static int guardianPrice = 25000;
+        public static int historicPrice = guardianPrice * 3;
+
+
+        public static int guardianRarity = 2;
+        public static int historicRarity = 4;
+        #endregion
+    }
 }

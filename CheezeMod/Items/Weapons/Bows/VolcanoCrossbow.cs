@@ -53,14 +53,10 @@ namespace CheezeMod.Items.Weapons.Bows
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            float spread = 12f * 0.0174f; // 12 degrees converted to radians
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double baseAngle = Math.Atan2(speedX, speedY);
-            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
-            float randomSpeed = Main.rand.NextFloat() * 0.67f + 0.67f;
-            speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
-            speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
-            if (type == 1)
+            float spread = 12.5f; // 12.5 degrees
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+            if (type == 1) // If normal wooden arrow
             {
                 if (Main.rand.Next(3) <= 0) // 1/3 chance to become a hellfire arrow
                 {
@@ -70,6 +66,13 @@ namespace CheezeMod.Items.Weapons.Bows
                 {
                     type = 2;
 
+                }
+            }
+            else if(type == 2) // If flaming arrow
+            {
+                if (Main.rand.Next(2) <= 0) // 1/2 chance to become a hellfire arrow
+                {
+                    type = 41;
                 }
             }
             return true;

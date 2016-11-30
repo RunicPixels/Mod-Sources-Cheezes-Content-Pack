@@ -14,5 +14,4 @@ C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Input.Touch.xml
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.dll
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.pdb
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\CheezeMod.dll.CodeAnalysisLog.xml
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\CheezeMod.dll.lastcodeanalysissucceeded
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.csprojResolveAssemblyReference.cache

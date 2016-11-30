@@ -21,9 +21,35 @@ namespace CheezeMod
                 AutoloadSounds = true
             };
         }
+        // MATH //
+        #region MathInfo
+        public static int BooleanToInt(bool parameter)
+        {
+            if (parameter == true) return 1;
+            else return 0;
+        }
 
+        public static float CalculateSpread(float spreadInput, float speedX, float speedY, char XorY)
+        {
+            float spread = spreadInput * 0.0174f; // degrees converted to radians
+            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
+            double baseAngle = Math.Atan2(speedX, speedY);
+            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
+            float randomSpeed = Main.rand.NextFloat() * 0.05f + 0.975f;
+            speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
+            speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
+            if(XorY == 'X')
+            {
+                return speedX;
+            }
+            else
+            {
+                return speedY;
+            } 
+        }
+        #endregion
         // SPAWNING //
-
+        #region SpawnInfo
         //spawning helper methods imported from bluemagic123's Example Mod.
         public static bool NoInvasion(NPCSpawnInfo spawnInfo)
         {
@@ -69,13 +95,14 @@ namespace CheezeMod
         //Spawning Zones for NPC imported from Main Terraria Method//
         public static double HellLayer = (float)((Main.maxTilesY - 204) * 16);
         public static double CavernLayer = Main.rockLayer * 16.0 + ((double)(1080 / 2 + 16.0));
-
+        #endregion
         // CRAFTING //
-
-            // Methods related to Stacked Blocks
+        #region CraftingInfo
+        // Methods related to Stacked Blocks
         public static int stackedBlockNumber = 111;
         public static int blockBaseValue = 18;
 
+        // New Recipe Groups //
         public override void AddRecipeGroups()
         {
             //Alternative Ores//
@@ -156,10 +183,10 @@ namespace CheezeMod
 
             //Rotten Chunk/Vertebrae//
             RecipeGroup EvilLeather = new RecipeGroup(() => Lang.misc[37] + " " + GetItem("Rotten Chunk/Vertebrae").item.name, new int[]
-{
+            {
                 ItemID.RottenChunk,
                 ItemID.Vertebrae
-});
+            });
             RecipeGroup.RegisterGroup("CheezeMod:EvilLeather", EvilLeather);
 
             //Ebonkoi/Hemopiranha//
@@ -220,6 +247,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:MythSwords", MythSwords);
         }
 
+        // New Recipes //
         public override void AddRecipes()
         {
             // Jungle Related Recipes //
@@ -521,5 +549,6 @@ namespace CheezeMod
             recipe.SetResult(ItemID.LightningBoots);
             recipe.AddRecipe();
         }
+        #endregion
     }
 }

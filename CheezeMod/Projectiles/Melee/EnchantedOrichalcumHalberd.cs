@@ -11,7 +11,7 @@ namespace CheezeMod.Projectiles.Melee
 	{
 		public override void SetDefaults()
 		{
-			projectile.name = "Enchanted Orichalcum Halberd";
+			projectile.name = "Enhanced Orichalcum Halberd";
 			projectile.width = 20;
             projectile.height = 20;
 			projectile.scale = 1.1f;

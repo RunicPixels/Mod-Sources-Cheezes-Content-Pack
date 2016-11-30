@@ -20,7 +20,7 @@ namespace CheezeMod.Items.Accessory
 			item.height = 32;
 			item.toolTip = "What's HP?";
 			item.toolTip2 = "Increases Max Health by 25, melee crit damage by 10%, and defense by 3.";
-			item.value = 10000;
+			item.value = 12500;
 			item.rare = 2;
 			item.accessory = true;
             item.defense = 3;

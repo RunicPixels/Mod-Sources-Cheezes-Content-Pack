@@ -1,8 +1,8 @@
 author = Cheezemaniac
-version = 1.0.2.1
+version = 1.1
 displayName = Cheeze's Content Pack
 homepage = http://forums.terraria.org/index.php?threads/cheezes-content-pack.40676/
 hideCode = false
 hideResources = false
-includeSource = false
+includeSource = true
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*

@@ -29,6 +29,8 @@ namespace CheezeMod.Projectiles.Ranged
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.5f, 1.1f, 0.3f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+            // projectile.velocity.X = CheezeMod.CalculateSpread(30f, projectile.velocity.X, projectile.velocity.Y, 'X');
+            // projectile.velocity.Y = CheezeMod.CalculateSpread(30f, projectile.velocity.X, projectile.velocity.Y, 'Y');
             if (Main.rand.Next(4) == 0)
             {
                 int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, 57, projectile.velocity.X, projectile.velocity.Y, 255, default(Color), 1.2f);

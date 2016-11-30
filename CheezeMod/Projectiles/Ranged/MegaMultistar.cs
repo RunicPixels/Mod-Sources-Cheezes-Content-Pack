@@ -8,17 +8,17 @@ namespace CheezeMod.Projectiles.Ranged
 {
     public class MegaMultistar : ModProjectile
     {
-        int maxBounces = 0;
+        int maxBounces = 1;
         public override void SetDefaults()
         {
             projectile.name = "MegaMultistar";
-            projectile.width = 22;
-            projectile.height = 22;
+            projectile.width = 24;
+            projectile.height = 24;
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.timeLeft = 100;
-            projectile.scale = 1f;
-            projectile.penetrate = 1;
+            projectile.scale = 1.1f;
+            projectile.penetrate = 2;
             aiType = ProjectileID.Shuriken;
         }
 

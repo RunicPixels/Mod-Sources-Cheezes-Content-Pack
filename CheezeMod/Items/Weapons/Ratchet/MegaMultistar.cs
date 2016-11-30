@@ -16,7 +16,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.width = 38;
             item.scale = 0.6f;
 			item.height = 24;
-			item.toolTip = "Throw a twice splitting, bouncing shuriken, uses Shuriken as ammo.";
+			item.toolTip = "Throw a double splitting shuriken, uses Shuriken as ammo.";
             item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
             item.useTime = 45;
             item.useAnimation = 45;

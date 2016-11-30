@@ -26,8 +26,8 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.channel = true;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 1;
-            item.value = 250000;
-            item.rare = 6;
+            item.value = 640000;
+            item.rare = 10;
             item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("LiquidGravityGun");
