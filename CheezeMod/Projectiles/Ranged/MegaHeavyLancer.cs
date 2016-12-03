@@ -82,6 +82,21 @@ namespace CheezeMod.Projectiles.Ranged
                 Main.dust[num1].noGravity = true;
                 Main.dust[num1].velocity *= 0.1f;
             }
+            for (int k = 0; k < 1 + Main.rand.Next(1); k++)
+            {
+                int num1 = Gore.NewGore(projectile.Center, new Vector2(Main.rand.Next(4) - 2, Main.rand.Next(4) - 2), GoreID.ChimneySmoke1);
+                Main.gore[num1].timeLeft = Main.rand.Next(15) + 10;
+            }
+            for (int k = 0; k < 1 + Main.rand.Next(1); k++)
+            {
+                int num1 = Gore.NewGore(projectile.Center, new Vector2(Main.rand.Next(4) - 2, Main.rand.Next(4) - 2), GoreID.ChimneySmoke2);
+                Main.gore[num1].timeLeft = Main.rand.Next(15) + 10;
+            }
+            for (int k = 0; k < 1 + Main.rand.Next(1); k++)
+            {
+                int num1 = Gore.NewGore(projectile.Center, new Vector2(Main.rand.Next(4) - 2, Main.rand.Next(4) - 2), GoreID.ChimneySmoke3);
+                Main.gore[num1].timeLeft = Main.rand.Next(15) + 10;
+            }
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
         }
     }

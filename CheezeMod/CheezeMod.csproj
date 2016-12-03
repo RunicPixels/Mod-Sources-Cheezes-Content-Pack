@@ -193,6 +193,7 @@
     <Compile Include="Items\Weapons\Ratchet\Chopper.cs" />
     <Compile Include="Items\Weapons\Ratchet\GoldBombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\GoldWalloper.cs" />
+    <Compile Include="Items\Weapons\Ratchet\GravityBomb.cs" />
     <Compile Include="Items\Weapons\Ratchet\HeavyBouncer.cs" />
     <Compile Include="Items\Weapons\Ratchet\HeavyLancer.cs" />
     <Compile Include="Items\Weapons\Ratchet\Lancer.cs" />
@@ -357,6 +358,7 @@
     <Compile Include="Projectiles\Ranged\Bouncer.cs" />
     <Compile Include="Projectiles\Ranged\BouncerFragment.cs" />
     <Compile Include="Projectiles\Ranged\Chopper.cs" />
+    <Compile Include="Projectiles\Ranged\GravityBomb.cs" />
     <Compile Include="Projectiles\Ranged\HeavyBouncer.cs" />
     <Compile Include="Projectiles\Ranged\HeavyBouncerFragment.cs" />
     <Compile Include="Projectiles\Ranged\HeavyLancer.cs" />
@@ -586,6 +588,7 @@
     <Content Include="Items\Weapons\Ratchet\Chopper.png" />
     <Content Include="Items\Weapons\Ratchet\GoldBombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\GoldWalloper.png" />
+    <Content Include="Items\Weapons\Ratchet\GravityBomb.png" />
     <Content Include="Items\Weapons\Ratchet\HeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\HeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\Lancer.png" />
@@ -750,6 +753,7 @@
     <Content Include="Projectiles\Ranged\Bouncer2.png" />
     <Content Include="Projectiles\Ranged\BouncerFragment.png" />
     <Content Include="Projectiles\Ranged\Chopper.png" />
+    <Content Include="Projectiles\Ranged\GravityBomb.png" />
     <Content Include="Projectiles\Ranged\HeavyBouncer.png" />
     <Content Include="Projectiles\Ranged\HeavyBouncerFragment.png" />
     <Content Include="Projectiles\Ranged\HeavyLancer.png" />
