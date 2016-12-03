@@ -257,6 +257,7 @@
     <Compile Include="Items\Weapons\Swords\NietonoNoShana.cs" />
     <Compile Include="Items\Weapons\Swords\PurpleLaserSaber.cs" />
     <Compile Include="Items\Weapons\Swords\RedLaserSaber.cs" />
+    <Compile Include="Items\Weapons\Swords\StoneBroadsword.cs" />
     <Compile Include="Items\Weapons\Swords\SunStrike.cs" />
     <Compile Include="Items\Weapons\Swords\SwordOfTheSilverSword.cs" />
     <Compile Include="Items\Weapons\Swords\WhiteLasersaber.cs" />
@@ -289,6 +290,7 @@
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
     <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\GraniteWanderer.cs" />
+    <Compile Include="NPCs\MoltenEye.cs" />
     <Compile Include="NPCs\Protopet.cs" />
     <Compile Include="NPCs\Robonoid.cs" />
     <Compile Include="NPCs\Tyhrranoid.cs" />
@@ -642,6 +644,7 @@
     <Content Include="Items\Weapons\Swords\NietonoNoShana.png" />
     <Content Include="Items\Weapons\Swords\PurpleLasersaber.png" />
     <Content Include="Items\Weapons\Swords\RedLasersaber.png" />
+    <Content Include="Items\Weapons\Swords\StoneBroadsword.png" />
     <Content Include="Items\Weapons\Swords\SunStrike.png" />
     <Content Include="Items\Weapons\Swords\SwordOfTheSilverSword.png" />
     <Content Include="Items\Weapons\Swords\WhiteLasersaber.png" />
@@ -672,6 +675,7 @@
     <Content Include="Items\Weapons\Yoyo\HistoricYoyo.png" />
     <Content Include="NPCs\Bonefish.png" />
     <Content Include="NPCs\GraniteWanderer.png" />
+    <Content Include="NPCs\MoltenEye.png" />
     <Content Include="NPCs\Protopet.png" />
     <Content Include="NPCs\Robonoid.png" />
     <Content Include="NPCs\Tyhrranoid.png" />

@@ -58,7 +58,7 @@ namespace CheezeMod.Items.Weapons.Swords
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient("Red Phasesaber");
+            recipe.AddIngredient(ItemID.RedPhasesaber);
             recipe.AddIngredient(ItemID.Ectoplasm, 8);
             recipe.AddIngredient(ItemID.Keybrand);
             recipe.AddTile(134);

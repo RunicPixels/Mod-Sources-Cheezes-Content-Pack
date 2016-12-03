@@ -47,6 +47,9 @@ namespace CheezeMod.Tiles
                 case 4:
                     item = "BonefishBanner";
                     break;
+                case 5:
+                    item = "MoltenEyeBanner";
+                    break;
                 default:
 					return;
 			}
@@ -76,6 +79,9 @@ namespace CheezeMod.Tiles
                         break;
                     case 4:
                         type = "Bonefish";
+                        break;
+                    case 5:
+                        type = "MoltenEye";
                         break;
                     default:
 						return;

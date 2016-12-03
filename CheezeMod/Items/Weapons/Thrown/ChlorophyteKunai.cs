@@ -62,6 +62,6 @@ namespace CheezeMod.Items.Weapons.Thrown
         /*public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
             Lighting.AddLight(new Vector2(item.position.X, item.position.Y), 0.2f, 0.4f, 0.2f);
-        } Broken in latest version */
+        }*/
     }
 }

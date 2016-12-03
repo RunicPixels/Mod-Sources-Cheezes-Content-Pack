@@ -13,18 +13,19 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
+            npc.CloneDefaults(NPCID.Piranha);
             npc.name = "Bonefish";
             npc.displayName = "Bonefish";
             npc.width = 26;
-            npc.height = 40;
-            npc.life = 35;
-            npc.lifeMax = 35;
+            npc.height = 20;
+            npc.life = 36;
+            npc.lifeMax = 36;
             npc.damage = 35;
             npc.defense = 5;
             npc.soundHit = 2;
             npc.soundKilled = 2;
-            npc.value = 150f;
-            npc.aiStyle = 3;
+            npc.value = 200f;
+            npc.aiStyle = 16;
             banner = npc.type;
             bannerItem = mod.ItemType("BonefishBanner");
             Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Piranha];
@@ -34,7 +35,7 @@ namespace CheezeMod.NPCs
 
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
-            return (spawnInfo.water && spawnInfo.player.ZoneDungeon) ? 0f : 0f;
+            return (spawnInfo.water && spawnInfo.player.ZoneDungeon) ? 1f : 0.0f;
         }
 
         public override void HitEffect(int hitDirection, double damage)

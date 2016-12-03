@@ -17,6 +17,7 @@ Added Historic Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoy
 Added Pearlwood Axe and Pickaxe.
 Added "Sword of the Silver Sword" also a weapon with a very silly name from the game FlyFF.
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
+Added two new monsters, one is found in the Underworld, the other is found in the Dungeon, both are pre-hardmode.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
 Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.

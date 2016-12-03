@@ -35,14 +35,7 @@ namespace CheezeMod.NPCs
 
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
-            if (Main.hardMode)
-            {
-                return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? 0.1f : 0f;
-            }
-            else
-            {
-                return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? 0.2f : 0f;
-            }
+            return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? ((Main.hardMode) ? 0.1f : 0.2f) : 0f;
         }
 
         public override void HitEffect(int hitDirection, double damage)

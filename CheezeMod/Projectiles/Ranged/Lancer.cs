@@ -12,8 +12,8 @@ namespace CheezeMod.Projectiles.Ranged
         {
             projectile.CloneDefaults(ProjectileID.Bullet);
             projectile.name = "Lancer shot";
-            projectile.width = 15;
-            projectile.height = 10;
+            projectile.width = 11;
+            projectile.height = 11;
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.penetrate = 1;
