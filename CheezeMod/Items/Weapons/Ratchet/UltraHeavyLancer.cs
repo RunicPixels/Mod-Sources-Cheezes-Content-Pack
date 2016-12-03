@@ -16,7 +16,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.width = 64;
 			item.height = 30;
             item.scale = 0.8f;
-            item.toolTip = "'My barrel runs hot!', 55% Chance not to consume ammo. Converts normal bullets into Ultra Heavy Lancer shots which inflict cursed flames, ichor and midas, as well as a chance to explode.";
+            item.toolTip = "'My barrel runs hot!', 55% Chance not to consume ammo.\nConverts normal bullets into Ultra Heavy Lancer shots which inflict cursed flames, ichor and midas with random explosions.";
             item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
             item.useTime = 5;
             item.useAnimation = 5;

@@ -9,7 +9,7 @@ using CheezeMod.Items;
 
 namespace CheezeMod.NPCs
 {
-    public class MoltenEye : ModNPC
+    public class DragonEye : ModNPC
     {
         private float attackCool
         {
@@ -24,26 +24,24 @@ namespace CheezeMod.NPCs
         }
         public override void SetDefaults()
         {
-            npc.name = "MoltenEye";
-            npc.displayName = "Molten Eye";
+            npc.name = "DragonEye";
+            npc.displayName = "Dragon Eye";
             npc.width = 32;
             npc.height = 30;
-            npc.scale = 1.2f;
-            npc.life = 60;
-            npc.lifeMax = 60;
-            npc.damage = 40;
-            npc.defense = 25;
+            npc.scale = 1.1f;
+            npc.life = 50;
+            npc.lifeMax = 50;
+            npc.damage = 30;
+            npc.defense = 20;
             npc.soundHit = 1;
             npc.soundKilled = 1;
-            npc.value = 150f;
-            npc.lavaImmune = true;
-            npc.buffImmune[24] = true;
-            npc.buffImmune[39] = true;
+            npc.value = 120f;
+            npc.buffImmune[20] = true;
             npc.buffImmune[31] = false;
             npc.knockBackResist = 0.75f;
             npc.aiStyle = 2;
             banner = npc.type;
-            bannerItem = mod.ItemType("MoltenEyeBanner");
+            bannerItem = mod.ItemType("DragonEyeBanner");
             Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.DemonEye];
             animationType = NPCID.DemonEye;
             attackCool = 200f;
@@ -51,16 +49,13 @@ namespace CheezeMod.NPCs
 
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
-            return (CheezeMod.NormalSpawn(spawnInfo)) && (spawnInfo.spawnTileY > CheezeMod.HellLayer - 10) ? Main.hardMode ? 0.075f : 0.175f : 0f;
+            Player player = spawnInfo.player;
+            return (CheezeMod.NormalSpawn(spawnInfo)) && player.ZoneJungle ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.175f : 0f;
         }
 
         public override void AI()
         {
             Player player = Main.player[npc.target];
-            Lighting.AddLight(npc.position, 1f, 0.7f, 0.2f);
-            if(Main.rand.Next(4) == 0) {
-                Dust.NewDust(npc.position, npc.width, npc.height, DustID.Fire, 2.5f * (float)npc.direction, -2.5f, 0, default(Color), 1.3f);
-            }
             if (npc.localAI[0] == 0f)
             {
                 int damage = npc.damage / 2;
@@ -77,15 +72,11 @@ namespace CheezeMod.NPCs
                     {
                         delta = new Vector2(0f, 15f);
                     }
-                    if (Main.expertMode)
+                    if (Main.expertMode && Collision.CanHit(npc.position,npc.width,npc.height,player.position,player.width,player.height) && Math.Abs(player.Center.X - npc.Center.X) < 900 && Math.Abs(player.Center.Y - npc.Center.Y) < 900)
                     {
-                        damage = (int)(damage / Main.expertDamage);
-                    }
-                    if (Main.expertMode && Math.Abs(player.Center.X - npc.Center.X) < 900 && Math.Abs(player.Center.Y - npc.Center.Y) < 900)
-                    {
+                        Projectile.NewProjectile(npc.Center.X, npc.Center.Y, delta.X/2, delta.Y/2, ProjectileID.Stinger, damage, 3f, Main.myPlayer);
+                        Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 17);
                         attackCool = 200f + 200f * (float)npc.life / (float)npc.lifeMax + (float)Main.rand.Next(200);
-                        NPC.NewNPC((int)npc.Center.X, (int)npc.Center.Y, NPCID.BurningSphere);
-                        Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 20);
                     }
                     else
                     {
@@ -103,40 +94,33 @@ namespace CheezeMod.NPCs
                 Vector2 pos;
                 for (int k = 0; k < 20; k++)
                 {
-                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.Fire, 2.5f * (float)hitDirection, -2.5f, 0, default(Color), 1f);
+                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, 2.5f * (float)hitDirection, -2.5f, 0, default(Color), 0.7f);
                     pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
                     if (Main.rand.Next(3) >= 1)
                     {
-                        Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Magmatic/MoltenTail"), 1f);
+                        Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Organic/DragonEyeTail"), 1f);
                     }
                     else
                     {
-                        Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Magmatic/MoltenBody"), 1f);
+                        Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Organic/DragonEyeBody"), 1f);
                     }
                 }
                 for (int k = 0; k < 1; k++)
                 {
                     pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
-                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Magmatic/MoltenEye"), 1f);
+                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Organic/DragonEye"), 1f);
                 }
             }
             else
             {
                 for (int k = 0; k < damage / npc.lifeMax * 50.0; k++)
                 {
-                    Dust.NewDust(npc.position, npc.width, npc.height, 63, (float)hitDirection, -1f, 0, default(Color), 0.7f);
+                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.Grass, (float)hitDirection, -1f, 0, default(Color), 0.7f);
                 }
             }
         }
         public override void NPCLoot()
         {
-            for (int i = 0; i < 9; i++) // For giving a 0-8 amount of Iron Bolt on drop.
-            {
-                if (Main.rand.Next(2) == 0)
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), 1);
-                }
-            }
             if (Main.rand.Next(12) == 0)
             {
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.BlackLens, 1);
@@ -147,15 +131,15 @@ namespace CheezeMod.NPCs
             }
             else if (Main.rand.Next(4) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TopazLens"), 1);
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SapphireLens"), 1);
             }
             else if (Main.rand.Next(3) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RubyLens"), 1);
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DiamondLens"), 1);
             }
             else if (Main.rand.Next(2) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AmethystLens"), 1);
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("EmeraldLens"), 1);
             }
         }
     }

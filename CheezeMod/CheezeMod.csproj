@@ -289,6 +289,7 @@
     <Compile Include="NPCs\Bonefish.cs" />
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
     <Compile Include="NPCs\CheezeNPCInfo.cs" />
+    <Compile Include="NPCs\DragonEye.cs" />
     <Compile Include="NPCs\GraniteWanderer.cs" />
     <Compile Include="NPCs\MoltenEye.cs" />
     <Compile Include="NPCs\Protopet.cs" />
@@ -452,9 +453,15 @@
     <Content Include="Gores\Bone\BoneTail.png" />
     <Content Include="Gores\Granite\GraniteArm.png" />
     <Content Include="Gores\Granite\GraniteHead.png" />
+    <Content Include="Gores\Magmatic\MoltenBody.png" />
+    <Content Include="Gores\Magmatic\MoltenEye.png" />
+    <Content Include="Gores\Magmatic\MoltenTail.png" />
     <Content Include="Gores\Mechanic\RobonoidArm.png" />
     <Content Include="Gores\Mechanic\RobonoidBelly.png" />
     <Content Include="Gores\Mechanic\RobonoidEye.png" />
+    <Content Include="Gores\Organic\DragonEye.png" />
+    <Content Include="Gores\Organic\DragonEyeBody.png" />
+    <Content Include="Gores\Organic\DragonEyeTail.png" />
     <Content Include="Gores\Organic\ThyrranoidArm.png" />
     <Content Include="Gores\Organic\ThyrranoidBelly.png" />
     <Content Include="Gores\Organic\ThyrranoidEye.png" />
@@ -674,6 +681,7 @@
     <Content Include="Items\Weapons\Yoyo\GuardianYoyo.png" />
     <Content Include="Items\Weapons\Yoyo\HistoricYoyo.png" />
     <Content Include="NPCs\Bonefish.png" />
+    <Content Include="NPCs\DragonEye.png" />
     <Content Include="NPCs\GraniteWanderer.png" />
     <Content Include="NPCs\MoltenEye.png" />
     <Content Include="NPCs\Protopet.png" />
