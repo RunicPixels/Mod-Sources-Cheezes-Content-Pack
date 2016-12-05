@@ -27,7 +27,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.knockBack = 1;
 			item.value = 165000;
 			item.rare = 3;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
             item.autoReuse = true;
 			item.shoot = mod.ProjectileType("LiquidNitrogenGun");
             item.shootSpeed = 1f;

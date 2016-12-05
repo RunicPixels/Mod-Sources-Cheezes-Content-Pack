@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.knockBack = 5;
             item.value = 750000;
             item.rare = 10;
-            item.useSound = 19;
+            item.UseSound = SoundID.Item19;
             item.autoReuse = false;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 5f;

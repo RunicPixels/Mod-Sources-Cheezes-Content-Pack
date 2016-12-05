@@ -33,8 +33,8 @@ namespace CheezeMod.NPCs
             npc.lifeMax = 60;
             npc.damage = 40;
             npc.defense = 25;
-            npc.soundHit = 1;
-            npc.soundKilled = 1;
+            npc.HitSound = SoundID.NPCHit1;
+            npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 150f;
             npc.lavaImmune = true;
             npc.buffImmune[24] = true;

@@ -25,10 +25,16 @@ namespace CheezeMod.Items.Armor
             player.thrownCost33 = true;
         }
 
-        public override void ArmorSetShadows(Player player, ref bool longTrail, ref bool smallPulse, ref bool largePulse, ref bool shortTrail)
+        /*public override void ArmorSetShadows(Player player, ref bool longTrail, ref bool smallPulse, ref bool largePulse, ref bool shortTrail)
         {
             longTrail = true;
             base.ArmorSetShadows(player, ref longTrail, ref smallPulse, ref largePulse, ref shortTrail);
+        }
+*/
+        public override void ArmorSetShadows(Player player)
+        {
+            player.armorEffectDrawShadow = true;
+            base.ArmorSetShadows(player);
         }
         public override void SetDefaults()
 		{

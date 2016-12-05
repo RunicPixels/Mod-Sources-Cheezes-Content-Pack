@@ -51,7 +51,6 @@ namespace CheezeMod.NPCs
                     {
                         Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GraniteShard"), 1);
                     }
-
                 }
             }
 
@@ -65,7 +64,6 @@ namespace CheezeMod.NPCs
                     {
                         Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RelicFragment"), 1);
                     }
-
                 }
             }
 

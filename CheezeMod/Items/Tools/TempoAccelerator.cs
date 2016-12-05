@@ -21,7 +21,7 @@ namespace CheezeMod.Items.Tools
 			item.useStyle = 5;
 			item.value = 10000;
 			item.rare = 11;
-			item.useSound = 9;
+            item.UseSound = SoundID.Item9;
 			item.autoReuse = false;
 		}
         public override bool UseItem(Player player)

@@ -20,7 +20,7 @@ namespace CheezeMod.Items.Weapons.Yoyo
             item.useTime = 10;
             item.useAnimation = 10;
             item.autoReuse = true;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.useStyle = 5;
 			item.noMelee = true;
 			item.noUseGraphic = true;

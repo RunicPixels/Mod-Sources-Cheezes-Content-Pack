@@ -25,11 +25,11 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.knockBack = 1;
 			item.value = 30000;
 			item.rare = 2;
-			item.useSound = 11;
+            item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 6f;
-			item.useAmmo = ProjectileID.Bullet;
+			item.useAmmo = AmmoID.Bullet;
         }
 
         public override void AddRecipes()

@@ -14,7 +14,7 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.name = "Sword of the Silver Sword";
             item.toolTip = "That's a lot of sword.";
             item.useTime = 48;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.melee = true;
             item.width = 58;
             item.height = 60;

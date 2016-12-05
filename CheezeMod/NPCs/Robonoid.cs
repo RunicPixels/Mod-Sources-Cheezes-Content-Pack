@@ -21,8 +21,8 @@ namespace CheezeMod.NPCs
             npc.lifeMax = 60;
             npc.damage = 49;
             npc.defense = 35;
-            npc.soundHit = 4;
-            npc.soundKilled = mod.GetSoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/ThyrranoidDie");
+            npc.HitSound = SoundID.NPCHit4;
+            npc.DeathSound = mod.GetLegacySoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/ThyrranoidDie");
             npc.value = 450f;
             npc.knockBackResist = 0.35f;
             npc.aiStyle = 3;
@@ -76,33 +76,11 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), 1);
                 }
             }
-            if (Main.rand.Next(75) == 0)
+            if (Main.rand.Next(15) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GoldWalloper"), 1);
-            }
-            if (Main.rand.Next(75) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GoldBombGlove"), 1);
-            }
-            if (Main.rand.Next(125) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HeavyLancer"), 1);
-            }
-            if (Main.rand.Next(125) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HeavyBouncer"), 1);
-            }
-            if (Main.rand.Next(125) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BlitzCannon"), 1);
-            }
-            if (Main.rand.Next(125) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Vaporizer"), 1);
-            }
-            if (Main.rand.Next(125) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LiquidNitrogenGun"), 1);
+                int selection = Main.rand.Next(CheezeItem.ratchetTier2List.Length);
+                string selectedWeapon = CheezeItem.ratchetTier2List[selection];
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
             }
         }
     }

@@ -17,8 +17,8 @@ namespace CheezeMod.NPCs
             npc.lifeMax = 34;
             npc.damage = 10;
             npc.defense = 5;
-            npc.soundHit = 1;
-            npc.soundKilled = 48;
+            npc.HitSound = SoundID.NPCHit1;
+            npc.DeathSound = SoundID.NPCDeath48;
             npc.value = 150f;
             npc.scale = 0.7f;
             npc.knockBackResist = 0.6f;
@@ -73,9 +73,11 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(50) == 0)
+            if (Main.rand.Next(25) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BombGlove"), 1);
+                int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
+                string selectedWeapon = CheezeItem.ratchetTier1List[selection];
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
             }
             for (int i = 0; i < 6; i++) // For giving a 0-5 amount of Meteorite Bolt on drop.
             {

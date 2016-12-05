@@ -18,7 +18,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.height = 50;
             item.useTime = 25;
             item.useAnimation = 25;
-            item.useSound = 15;
+            item.UseSound = SoundID.Item15;
             item.shootSpeed = 17f;
             item.melee = true;
             item.alpha = 0;
@@ -30,8 +30,6 @@ namespace CheezeMod.Items.Weapons.Swords
             item.scale = 1.3f;
             item.autoReuse = true;
         }
-
-        public bool projOnSwing = true;
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {

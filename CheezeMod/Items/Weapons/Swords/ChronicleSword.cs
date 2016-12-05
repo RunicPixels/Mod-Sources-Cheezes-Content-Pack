@@ -24,13 +24,11 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.value = 500000;
             item.scale = 1f;
 			item.rare = 8;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.shoot = 10;
             item.shootSpeed = 12f;
 		}
-
-        public bool projOnSwing = true;
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

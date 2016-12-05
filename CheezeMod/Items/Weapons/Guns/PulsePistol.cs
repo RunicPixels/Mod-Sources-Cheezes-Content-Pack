@@ -34,11 +34,11 @@ namespace CheezeMod.Items.Weapons.Guns
             item.knockBack = 1;
             item.value = 180001;
             item.rare = 5;
-            item.useSound = 114;
+            item.UseSound = SoundID.Item114;
             item.autoReuse = true;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 15f;
-            item.useAmmo = ProjectileID.Bullet;
+            item.useAmmo = AmmoID.Bullet;
         }
 
         public override void AddRecipes()
@@ -54,7 +54,7 @@ namespace CheezeMod.Items.Weapons.Guns
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            item.useSound = 114;
+            item.UseSound = SoundID.Item114;
             if (magazineSize <= 2)
             {
                 Reload(player);
@@ -110,7 +110,7 @@ namespace CheezeMod.Items.Weapons.Guns
             item.useTime = ReloadTime;
             item.useAnimation = ReloadTime;
             magazineSize = maxMagazineSize;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PistolReload");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PistolReload");
             SetMagazineToolTip();
         }
         public void SetMagazineToolTip()

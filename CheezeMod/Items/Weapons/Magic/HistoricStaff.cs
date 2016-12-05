@@ -29,7 +29,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = CheezeItem.historicPrice;
             item.rare = CheezeItem.historicRarity;
-            item.useSound = 43;
+            item.UseSound = SoundID.Item43;
             item.autoReuse = false;
             item.shoot = mod.ProjectileType("WindFieldCast");
             item.shootSpeed = 10f;

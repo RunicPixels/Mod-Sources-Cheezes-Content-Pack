@@ -24,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.value = 250000;
             item.scale = 1f;
 			item.rare = 8;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shootSpeed = 12f;
 		}
@@ -58,16 +58,16 @@ namespace CheezeMod.Items.Weapons.Swords
         {
             if (Main.rand.Next(1500) == 0)
             {
-                item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/BahSwing");
+                item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/BahSwing");
             }
 
             else if (Main.rand.Next(750) == 0)
             {
-                item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/MooSwing");
+                item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/MooSwing");
             }
             else
             {
-                item.useSound = 1;
+                item.UseSound = SoundID.Item1;
             }
             return base.UseItem(player);
         }

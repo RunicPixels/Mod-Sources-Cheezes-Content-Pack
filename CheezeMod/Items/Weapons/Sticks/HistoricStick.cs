@@ -23,7 +23,7 @@ namespace CheezeMod.Items.Weapons.Sticks
 			item.useAnimation = 36;
             item.autoReuse = false;
 			item.knockBack = 5.2f;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
 			item.noMelee = true;
             item.noUseGraphic = false;
 			item.useTurn = true;
@@ -48,7 +48,7 @@ namespace CheezeMod.Items.Weapons.Sticks
                 item.useStyle = 1;
                 item.shoot = 0;
                 item.mana = 0;
-                item.useSound = 1;
+                item.UseSound = SoundID.Item1;
                 item.noMelee = false;
                 item.noUseGraphic = false;
                 item.autoReuse = true;
@@ -67,7 +67,7 @@ namespace CheezeMod.Items.Weapons.Sticks
                 item.noMelee = true;
                 item.useStyle = 5;
                 item.mana = 50;
-                item.useSound = 9;
+                item.UseSound = SoundID.Item9;
                 return true;
             }
             return false;

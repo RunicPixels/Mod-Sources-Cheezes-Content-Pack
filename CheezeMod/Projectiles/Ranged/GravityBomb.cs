@@ -9,7 +9,7 @@ namespace CheezeMod.Projectiles.Ranged
     public class GravityBomb : ModProjectile
     {
         public bool canExplode = true;
-        int bonusTime = 25;
+        int bonusTime = 30;
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
@@ -61,19 +61,12 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.velocity.Y = 0;
             projectile.position.X = projectile.position.X + (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y + (float)(projectile.height / 2);
-            projectile.width = 96;
-            projectile.height = 96;
+            projectile.width = 128;
+            projectile.height = 128;
             projectile.penetrate = 30;
             projectile.position.X = projectile.position.X - (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y - (float)(projectile.height / 2);
             projectile.knockBack = 8f;
-            for (int k = 0; k < 12; k++)
-            {
-                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, 6, Main.rand.Next(10) - 5, Main.rand.Next(10) - 5, 255, default(Color), 4f);
-                Main.dust[num1].noGravity = true;
-                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
-                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
-            }
             for (int k = 0; k < 4+ Main.rand.Next(2); k++)
             {
                 int num1 = Gore.NewGore(projectile.Center, new Vector2 (Main.rand.Next(4) - 2, Main.rand.Next(4) - 2), GoreID.ChimneySmoke1);
@@ -103,6 +96,7 @@ namespace CheezeMod.Projectiles.Ranged
                 Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
                 Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
             }
+            Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/GravityBomb"));
             projectile.hide = true;
             projectile.timeLeft = bonusTime;
             projectile.extraUpdates = bonusTime;

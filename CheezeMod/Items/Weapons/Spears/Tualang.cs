@@ -22,7 +22,7 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.useTime = 41;
 			item.useAnimation = 41;
 			item.knockBack = 5.2f;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
 			item.noMelee = true;
 			item.noUseGraphic = true;
 			item.useTurn = true;

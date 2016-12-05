@@ -22,8 +22,8 @@ namespace CheezeMod.NPCs
             npc.lifeMax = 36;
             npc.damage = 35;
             npc.defense = 5;
-            npc.soundHit = 2;
-            npc.soundKilled = 2;
+            npc.HitSound = SoundID.NPCHit2;
+            npc.DeathSound = SoundID.NPCDeath2;
             npc.value = 200f;
             npc.aiStyle = 16;
             banner = npc.type;

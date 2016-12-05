@@ -24,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.value = 250000;
             item.scale = 1f;
 			item.rare = 6;
-			item.useSound = 59;
+            item.UseSound = SoundID.Item59;
 			item.autoReuse = true;
             item.shootSpeed = 12f;
 		}

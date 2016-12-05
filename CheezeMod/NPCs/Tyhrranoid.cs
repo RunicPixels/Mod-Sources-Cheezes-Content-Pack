@@ -21,8 +21,8 @@ namespace CheezeMod.NPCs
             npc.lifeMax = 34;
             npc.damage = 10;
             npc.defense = 5;
-            npc.soundHit = mod.GetSoundSlot(SoundType.NPCHit, "Sounds/NPCHit/ThyrranoidHit");
-            npc.soundKilled = mod.GetSoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/ThyrranoidDie");
+            npc.HitSound = mod.GetLegacySoundSlot(SoundType.NPCHit, "Sounds/NPCHit/ThyrranoidHit");
+            npc.DeathSound = mod.GetLegacySoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/ThyrranoidDie");
             npc.value = 150f;
             npc.knockBackResist = 0.5f;
             npc.aiStyle = 3;
@@ -76,9 +76,11 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(50) == 0)
+            if (Main.rand.Next(75) == 0)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Walloper"), 1);
+                int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
+                string selectedWeapon = CheezeItem.ratchetTier1List[selection];
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType(selectedWeapon), 1);
             }
             if (Main.rand.Next(5) == 0)
             {

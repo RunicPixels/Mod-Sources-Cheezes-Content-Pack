@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = CheezeItem.guardianPrice;
             item.rare = CheezeItem.guardianRarity;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Fire");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/Fire");
             item.autoReuse = false;
             item.shoot = mod.ProjectileType("FlameGeyser");
             item.shootSpeed = 12f;

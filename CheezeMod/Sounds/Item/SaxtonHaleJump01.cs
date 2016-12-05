@@ -6,11 +6,11 @@ namespace CheezeMod.Sounds.Item
 {
 	public class SaxtonHalejump01 : ModSound
 	{
-		public override void PlaySound(ref SoundEffectInstance soundInstance, float volume, float pan, SoundType type)
+		public override SoundEffectInstance PlaySound(ref SoundEffectInstance soundInstance, float volume, float pan, SoundType type)
 		{
 			soundInstance = sound.CreateInstance();
 			soundInstance.Volume = volume * .2f;
-			Main.PlaySoundInstance(soundInstance);
-		}
+            return soundInstance;
+        }
 	}
 }

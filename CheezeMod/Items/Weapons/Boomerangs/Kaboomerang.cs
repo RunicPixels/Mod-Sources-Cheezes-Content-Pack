@@ -23,7 +23,7 @@ namespace CheezeMod.Items.Weapons.Boomerangs
             item.useTime = 22;
 			item.useAnimation = 22;
 			item.knockBack = 10f;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
 			item.noMelee = true;
 			item.noUseGraphic = true;
 			item.useTurn = true;

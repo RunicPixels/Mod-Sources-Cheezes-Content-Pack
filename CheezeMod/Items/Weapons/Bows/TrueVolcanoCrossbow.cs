@@ -27,10 +27,11 @@ namespace CheezeMod.Items.Weapons.Bows
 			item.value = 250000;
 			item.rare = 3;
             item.crit = 5;
-			item.useSound = 5;
+            item.UseSound = SoundID.Item5;
 			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 12f;
+            item.useAmmo = AmmoID.Arrow;
         }
 
         public override void AddRecipes()

@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = 25000;
             item.rare = 1;
-            item.useSound = 12;
+            item.UseSound = SoundID.Item12;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("BlueLaserStaff");
             item.shootSpeed = 23f;

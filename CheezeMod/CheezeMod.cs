@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using CheezeMod.Items;
 using CheezeMod.NPCs;
-
+using System.Drawing;
 
 namespace CheezeMod
 {
@@ -21,7 +21,7 @@ namespace CheezeMod
                 AutoloadSounds = true
             };
         }
-        // MATH //
+        // MATH and DRAWING //
         #region MathInfo
         public static int BooleanToInt(bool parameter)
         {
@@ -47,6 +47,7 @@ namespace CheezeMod
                 return speedY;
             } 
         }
+
         #endregion
         // SPAWNING //
         #region SpawnInfo

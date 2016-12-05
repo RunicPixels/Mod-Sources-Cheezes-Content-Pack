@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 5;
             item.value = 250000;
             item.rare = 8;
-            item.useSound = 8;
+            item.UseSound = SoundID.Item8;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("HugeEarthBoulder");
             item.shootSpeed = 9f;

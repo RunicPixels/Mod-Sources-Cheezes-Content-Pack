@@ -27,7 +27,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 2;
             item.value = CheezeItem.guardianPrice;
             item.rare = CheezeItem.guardianRarity;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PsyBomb");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PsyBomb");
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("PsychicBomb");
             item.shootSpeed = 7f;

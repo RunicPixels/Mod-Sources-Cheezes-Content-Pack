@@ -27,7 +27,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.knockBack = 1;
 			item.value = 33000;
 			item.rare = 2;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/LavaGun");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/LavaGun");
             item.autoReuse = true;
 			item.shoot = mod.ProjectileType("LavaGun");
             item.shootSpeed = 0f;

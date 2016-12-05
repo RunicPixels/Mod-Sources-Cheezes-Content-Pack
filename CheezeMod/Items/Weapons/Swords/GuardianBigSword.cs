@@ -24,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.knockBack = 7;
             item.value = CheezeItem.guardianPrice;
             item.rare = CheezeItem.guardianRarity;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.autoReuse = false;
         }
 

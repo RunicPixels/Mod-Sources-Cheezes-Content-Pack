@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 5;
             item.value = 25000;
             item.rare = 2;
-            item.useSound = 9;
+            item.UseSound = SoundID.Item9;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("StarStorm");
             item.shootSpeed = 10f;

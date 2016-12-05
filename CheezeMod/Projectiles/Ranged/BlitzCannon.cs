@@ -8,7 +8,7 @@ namespace CheezeMod.Projectiles.Ranged
 {
     public class BlitzCannon : ModProjectile
     {
-
+        bool extraUpdate = true;
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BulletHighVelocity);
@@ -18,7 +18,7 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.penetrate = 1;
-            projectile.timeLeft = 40 + Main.rand.Next(25);
+            projectile.timeLeft = 40;
             projectile.scale = 1f;
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
@@ -27,6 +27,11 @@ namespace CheezeMod.Projectiles.Ranged
 
         public override void AI()
         {
+            if (extraUpdate)
+            {
+                projectile.timeLeft += Main.rand.Next(25);
+                extraUpdate = false;
+            }
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.2f, 0.7f, 1f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;

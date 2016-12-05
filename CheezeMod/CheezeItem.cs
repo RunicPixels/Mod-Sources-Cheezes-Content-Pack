@@ -33,5 +33,15 @@ namespace CheezeMod
         public static int guardianRarity = 2;
         public static int historicRarity = 4;
         #endregion
+        #region RatchetStatsInfo 
+        public static String[] ratchetTier1List =
+        {
+            "BombGlove","Walloper","Lancer","GravityBomb","Chopper","LavaGun","Bouncer","BlitzGun","PulseRifle"
+        };
+        public static String[] ratchetTier2List =
+        {
+            "GoldBombGlove","GoldWalloper","HeavyLancer","Multistar","LiquidNitrogenGun","HeavyBouncer","BlitzCannon","Vaporizer"
+        };
+        #endregion
     }
 }

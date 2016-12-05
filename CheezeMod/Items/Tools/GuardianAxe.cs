@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Tools
 			item.knockBack = 6;
 			item.value = CheezeItem.guardianPrice;
 			item.rare = CheezeItem.guardianRarity;
-			item.useSound = 1;
+            item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
 

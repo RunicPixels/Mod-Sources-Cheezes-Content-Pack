@@ -12,7 +12,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
         public override void SetDefaults()
         {
             item.name = "Liquid Gravity Gun";
-            item.damage = 15;
+            item.damage = 30;
             item.ranged = true;
             item.width = 64;
             item.height = 30;
@@ -20,15 +20,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.channel = true;
             item.toolTip = "Converts Flares into liquid gravity, which inflicts shadow flames, ichor and pulls your enemies dow..";
             item.toolTip2 = "Inspired by Ratchet and Clank: Going Commando.";
-            item.useTime = 3;
-            item.useAnimation = 9;
+            item.useTime = 2;
+            item.useAnimation = 8;
             item.useStyle = 5;
             item.channel = true;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 1;
             item.value = 640000;
             item.rare = 10;
-            item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("LiquidGravityGun");
             item.shootSpeed = 1f;
@@ -44,9 +44,16 @@ namespace CheezeMod.Items.Weapons.Ratchet
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "LiquidNitrogenGun");
-            recipe.AddIngredient(null, "HallowedBolt", 50);
-            recipe.AddIngredient(ItemID.LivingIchorBlock, 20);
+            recipe.AddIngredient(null, "LiquidIchorGun");
+            recipe.AddIngredient(null, "LuminiteBolt", 50);
+            recipe.AddIngredient(ItemID.PortalGun);
+            recipe.AddTile(null, "MegaCorpVendor");
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "LiquidCursedFlameGun");
+            recipe.AddIngredient(null, "LuminiteBolt", 50);
+            recipe.AddIngredient(ItemID.PortalGun);
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -56,7 +63,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
         public override bool ConsumeAmmo(Player p)
         {
             ammoCounter++;
-            return ammoCounter % 12 == 0; // 93.3% not to consume ammo.
+            return ammoCounter % 15 == 0; // 93.3% not to consume ammo.
         }
     }
 }

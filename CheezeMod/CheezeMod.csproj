@@ -78,6 +78,7 @@
     <Compile Include="Dusts\Sparkle.cs" />
     <Compile Include="Dusts\WhiteLightCircle.cs" />
     <Compile Include="Dusts\YellowLight.cs" />
+    <Compile Include="Gores\Explosions\GravityBomb.cs" />
     <Compile Include="Items\Accessory\GoreNecklace.cs" />
     <Compile Include="Items\Accessory\MentalNecklace.cs" />
     <Compile Include="Items\Accessory\PeisionNecklace.cs" />
@@ -281,6 +282,7 @@
     <Compile Include="Items\Weapons\Thrown\PlatinumKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\SilverKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\StarlightKunai.cs" />
+    <Compile Include="Items\Weapons\Thrown\StoneKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\TinKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\TitaniumKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\TungstenKunai.cs" />
@@ -411,6 +413,7 @@
     <Compile Include="Sounds\Item\BahSwing.cs" />
     <Compile Include="Sounds\Item\Chopper.cs" />
     <Compile Include="Sounds\Item\Fire.cs" />
+    <Compile Include="Sounds\Item\GravityBomb.cs" />
     <Compile Include="Sounds\Item\LavaGun.cs" />
     <Compile Include="Sounds\Item\LiquidNitrogenGun.cs" />
     <Compile Include="Sounds\Item\Moo.cs" />
@@ -453,6 +456,7 @@
     <Content Include="Dusts\YellowLight.png" />
     <Content Include="Gores\Bone\BoneFishHead.png" />
     <Content Include="Gores\Bone\BoneTail.png" />
+    <Content Include="Gores\Explosions\GravityBomb.png" />
     <Content Include="Gores\Granite\GraniteArm.png" />
     <Content Include="Gores\Granite\GraniteHead.png" />
     <Content Include="Gores\Magmatic\MoltenBody.png" />
@@ -677,6 +681,7 @@
     <Content Include="Items\Weapons\Thrown\PlatinumKunai.png" />
     <Content Include="Items\Weapons\Thrown\SilverKunai.png" />
     <Content Include="Items\Weapons\Thrown\StarlightKunai.png" />
+    <Content Include="Items\Weapons\Thrown\StoneKunai.png" />
     <Content Include="Items\Weapons\Thrown\TinKunai.png" />
     <Content Include="Items\Weapons\Thrown\TitaniumKunai.png" />
     <Content Include="Items\Weapons\Thrown\TungstenKunai.png" />
@@ -806,6 +811,7 @@
     <Content Include="Sounds\Item\BahSwing.wav" />
     <Content Include="Sounds\Item\Chopper.wav" />
     <Content Include="Sounds\Item\Fire.wav" />
+    <Content Include="Sounds\Item\GravityBomb.wav" />
     <Content Include="Sounds\Item\LavaGun.wav" />
     <Content Include="Sounds\Item\LiquidNitrogenGun.wav" />
     <Content Include="Sounds\Item\Moo.wav" />
@@ -842,11 +848,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\SteamApps\common\Terraria\Microsoft.Xna.Framework.Xact.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="Terraria">
       <HintPath>D:\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
-    <Reference Include="tModLoader">
-      <HintPath>D:\Steam\SteamApps\common\Terraria\tModLoader.exe</HintPath>
+    <Reference Include="tModLoaderBeta">
+      <HintPath>D:\Steam\SteamApps\common\Terraria\tModLoaderBeta.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

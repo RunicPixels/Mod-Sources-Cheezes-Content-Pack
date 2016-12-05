@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.toolTip = "Shoots out Sunstrikes to ingite your enemies.";
             item.toolTip2 = "Also provides one second of either 'rage' or 'endurance' on direct hit.";
             item.useTime = 48;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.melee = true;
             item.width = 64;
             item.height = 64;

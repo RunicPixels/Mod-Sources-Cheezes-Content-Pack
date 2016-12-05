@@ -9,23 +9,29 @@ namespace CheezeMod.Projectiles.Magic
     public class MiniFireBlast : ModProjectile
     {
         int bounceCount = 3;
+        bool extraUpdate = true;
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BallofFire);
             projectile.name = "Mini Fire Blast";
-            projectile.width = 20;
+            projectile.width = 24;
             projectile.height = 24;
             projectile.magic = true;
             projectile.friendly = true;
             projectile.scale = 0.3f;
             projectile.hide = true;
             projectile.penetrate = 1;
-            projectile.timeLeft = 150 + Main.rand.Next(60);
+            projectile.timeLeft = 180;
             aiType = ProjectileID.BallofFire;
         }
 
         public override void AI()
         {
+            if(extraUpdate)
+            {
+                projectile.timeLeft += Main.rand.Next(30);
+                extraUpdate = false;
+            }
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 1f, 0.7f, 0.2f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
@@ -69,7 +75,7 @@ namespace CheezeMod.Projectiles.Magic
             }
         }
 
-    public override bool OnTileCollide(Vector2 oldVelocity)
+        public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             if (bounceCount <= 0 && Main.rand.Next(3) >= 1)

@@ -17,7 +17,7 @@ namespace CheezeMod.Items.Consumables
 			item.value = 24000;
 			item.rare = 8;
             item.useStyle = 2;
-            item.useSound = 2;
+            item.UseSound = SoundID.Item2;
             item.consumable = true;
 		}
         public override bool UseItem(Player player)
@@ -26,11 +26,11 @@ namespace CheezeMod.Items.Consumables
             player.AddBuff(mod.BuffType("CheeseFed"), 300);
             if (Main.rand.Next(100) == 0)
             {
-                item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Moo");
+                item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, ("Sounds/Item/Moo"));
             }
             else
             {
-                item.useSound = 2;
+                item.UseSound = SoundID.Item2;
             }
             return true;
         }

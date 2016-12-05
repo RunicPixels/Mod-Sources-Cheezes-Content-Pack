@@ -12,6 +12,7 @@ NOTE: It's recommended to restart Terraria after installing or updating the mod 
 
 Changelog:
 v1.1 - An update that flies for fun.
+Updated for tModLoader 0.9
 Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Skeletron.
 Added Historic Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Wall of Flesh.
 Added Pearlwood Axe and Pickaxe.
@@ -20,6 +21,7 @@ Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added three new monsters, one is found in the Underworld, one is found in the Jungle, the other is found in the Dungeon, all are pre-hardmode.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
+Adedd Gravity Bomb, a powerful early game ranged explosive weapon.
 Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.
 Added Ultra Multistar which, like the bouncer just keeps splitting, also updated the Mega Multistar.
 Added Critical Damage Multiplier for hold items and equipments.

@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.knockBack = 5;
             item.value = 25000;
             item.rare = 2;
-            item.useSound = 8;
+            item.UseSound = SoundID.Item8;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("ThornBlast");
             item.shootSpeed = 9f;

@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Other
 			item.damage = 195;
             item.crit = 20;
             item.knockBack = 8f;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.rare = 7;
             item.value = 400000;
 		}
@@ -62,7 +62,7 @@ namespace CheezeMod.Items.Weapons.Other
                 player.velocity.X += player.direction * 0.5f;
                 
             }
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             return base.UseItem(player);
         }
         public override bool AltFunctionUse(Player player)
@@ -71,19 +71,19 @@ namespace CheezeMod.Items.Weapons.Other
             {
                 if (Main.rand.Next(4) == 0)
                 {
-                    item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump01");
+                    item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump01");
                 }
                 else if (Main.rand.Next(3) == 0)
                 {
-                    item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump02");
+                    item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump02");
                 }
                 else if (Main.rand.Next(2) == 0)
                 {
-                    item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump03");
+                    item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump03");
                 }
                 else
                 {
-                    item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump04");
+                    item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump04");
                 }
                 player.position.Y -= 1.5f;
                 player.velocity.Y = -15f;
