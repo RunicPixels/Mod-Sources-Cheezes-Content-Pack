@@ -9,7 +9,7 @@ namespace CheezeMod.Sounds.NPCHit
         public override SoundEffectInstance PlaySound(ref SoundEffectInstance soundInstance, float volume, float pan, SoundType type)
 		{
             soundInstance = sound.CreateInstance();
-            soundInstance.Volume = volume * .8f;
+            soundInstance.Volume = volume * 1f;
             return soundInstance;
         }
 	}

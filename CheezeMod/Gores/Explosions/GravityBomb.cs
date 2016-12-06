@@ -4,18 +4,20 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Gores.Explosions
 {
-	public class GravityBomb : ModGore
-	{
+    public class GravityBomb : ModGore
+    {
         Vector2 baseGorePosition;
-		public override void OnSpawn(Gore gore)
-		{
-			gore.numFrames = 3;
-			gore.frame = 1;
+        int goreFrame;
+        public override void OnSpawn(Gore gore)
+        {
+            gore.numFrames = 3;
+            gore.frame = 1;
             gore.sticky = true;
             gore.light = 1f;
-            gore.timeLeft = 0;
+            gore.timeLeft = 12;
             gore.scale = 1f;
             baseGorePosition = gore.position;
+            goreFrame = 0;
         }
         public override bool Update(Gore gore)
         {
@@ -23,13 +25,13 @@ namespace CheezeMod.Gores.Explosions
             gore.velocity.Y = 0f;
             gore.scale += 0.07f;
             gore.position = baseGorePosition;
-            if (gore.timeLeft - Gore.goreTime <= -6)
+            if (goreFrame >= 6)
             {
                 gore.frame = 2;
                 gore.frameCounter = 2;
                 gore.alpha = 127;
             }
-            else if (gore.timeLeft - Gore.goreTime <= -3)
+            else if (goreFrame >= 3)
             {
                 gore.frame = 1;
                 gore.frameCounter = 1;
@@ -39,12 +41,13 @@ namespace CheezeMod.Gores.Explosions
                 gore.frame = 0;
                 gore.frameCounter = 0;
             }
-            if(gore.timeLeft - Gore.goreTime <= -12)
+            if (goreFrame >= 12)
             {
                 gore.active = false;
                 gore.light -= 0.1f;
                 return false;
             }
+            goreFrame++;
             return true;
         }
     }

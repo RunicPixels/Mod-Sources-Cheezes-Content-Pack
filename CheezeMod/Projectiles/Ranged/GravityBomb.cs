@@ -59,6 +59,7 @@ namespace CheezeMod.Projectiles.Ranged
             Main.PlaySound(2, projectile.position, 62);
             projectile.velocity.X = 0;
             projectile.velocity.Y = 0;
+            Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/GravityBomb"));
             projectile.position.X = projectile.position.X + (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y + (float)(projectile.height / 2);
             projectile.width = 128;
@@ -96,7 +97,6 @@ namespace CheezeMod.Projectiles.Ranged
                 Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
                 Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
             }
-            Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/GravityBomb"));
             projectile.hide = true;
             projectile.timeLeft = bonusTime;
             projectile.extraUpdates = bonusTime;
