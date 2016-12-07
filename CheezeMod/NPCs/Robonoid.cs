@@ -76,7 +76,7 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), 1);
                 }
             }
-            if (Main.rand.Next(15) == 0)
+            if (Main.rand.Next(10) == 0)
             {
                 int selection = Main.rand.Next(CheezeItem.ratchetTier2List.Length);
                 string selectedWeapon = CheezeItem.ratchetTier2List[selection];

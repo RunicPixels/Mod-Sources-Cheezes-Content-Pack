@@ -10,8 +10,8 @@ namespace CheezeMod.Gores.Explosions
         int goreFrame;
         public override void OnSpawn(Gore gore)
         {
-            gore.numFrames = 3;
-            gore.frame = 1;
+            gore.numFrames = 4;
+            gore.frame = 0;
             gore.sticky = true;
             gore.light = 1f;
             gore.timeLeft = 12;
@@ -25,7 +25,13 @@ namespace CheezeMod.Gores.Explosions
             gore.velocity.Y = 0f;
             gore.scale += 0.07f;
             gore.position = baseGorePosition;
-            if (goreFrame >= 6)
+            if (goreFrame >= 12)
+            {
+                gore.frame = 3;
+                gore.frameCounter = 3;
+                gore.alpha = 31;
+            }
+            else if (goreFrame >= 6)
             {
                 gore.frame = 2;
                 gore.frameCounter = 2;
@@ -41,7 +47,7 @@ namespace CheezeMod.Gores.Explosions
                 gore.frame = 0;
                 gore.frameCounter = 0;
             }
-            if (goreFrame >= 12)
+            if (goreFrame >= 13)
             {
                 gore.active = false;
                 gore.light -= 0.1f;

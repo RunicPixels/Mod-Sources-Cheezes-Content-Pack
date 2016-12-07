@@ -27,8 +27,17 @@ namespace CheezeMod.Projectiles.Ranged
         {
             if (Main.rand.Next(20) == 0)
             {
-                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("ShortSparkle"), projectile.oldVelocity.X * 0.1f, projectile.oldVelocity.Y * 0.1f);
+                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("WhiteLightCircle"), Main.rand.Next(10) - 5, Main.rand.Next(10) - 5);
                 Main.dust[num1].noGravity = true;
+                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
+                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
+            }
+            if (Main.rand.Next(20) == 0)
+            {
+                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("BlueLight"), Main.rand.Next(10) - 5, Main.rand.Next(10) - 5);
+                Main.dust[num1].noGravity = true;
+                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
+                Main.dust[num1].velocity.X = Main.rand.NextFloat() * 5 - 2.5f;
             }
             if (projectile.timeLeft == 1 && canExplode)
             {
@@ -62,8 +71,8 @@ namespace CheezeMod.Projectiles.Ranged
             Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/GravityBomb"));
             projectile.position.X = projectile.position.X + (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y + (float)(projectile.height / 2);
-            projectile.width = 128;
-            projectile.height = 128;
+            projectile.width = 140;
+            projectile.height = 140;
             projectile.penetrate = 30;
             projectile.position.X = projectile.position.X - (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y - (float)(projectile.height / 2);

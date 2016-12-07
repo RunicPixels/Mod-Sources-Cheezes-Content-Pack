@@ -1,4 +1,4 @@
-author = Cheezemaniac
+author = Cheezegami
 version = 1.1
 displayName = Cheeze's Content Pack
 homepage = http://forums.terraria.org/index.php?threads/cheezes-content-pack.40676/

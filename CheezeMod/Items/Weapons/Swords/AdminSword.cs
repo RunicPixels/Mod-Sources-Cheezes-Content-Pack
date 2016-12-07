@@ -16,7 +16,7 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.width = 118;
 			item.height = 138;
             item.crit = 46;
-			item.toolTip = "Seems legit.";
+			item.toolTip = "Seems legit..., I mean seriously, you're not supposed to have this!";
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = 1;

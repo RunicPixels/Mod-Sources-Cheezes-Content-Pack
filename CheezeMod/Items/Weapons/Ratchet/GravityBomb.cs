@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Gravity Bomb";
-			item.damage = 40;
+			item.damage = 46;
 			item.ranged = true;
 			item.width = 56;
 			item.height = 40;

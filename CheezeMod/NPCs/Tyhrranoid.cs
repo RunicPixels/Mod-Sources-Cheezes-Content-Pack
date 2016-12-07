@@ -17,10 +17,10 @@ namespace CheezeMod.NPCs
             npc.displayName = "Tyhrranoid";
             npc.width = 26;
             npc.height = 40;
-            npc.life = 34;
-            npc.lifeMax = 34;
+            npc.life = 33;
+            npc.lifeMax = 33;
             npc.damage = 10;
-            npc.defense = 5;
+            npc.defense = 4;
             npc.HitSound = mod.GetLegacySoundSlot(SoundType.NPCHit, "Sounds/NPCHit/ThyrranoidHit");
             npc.DeathSound = mod.GetLegacySoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/ThyrranoidDie");
             npc.value = 150f;
@@ -76,7 +76,7 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(75) == 0)
+            if (Main.rand.Next(30) == 0)
             {
                 int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
                 string selectedWeapon = CheezeItem.ratchetTier1List[selection];

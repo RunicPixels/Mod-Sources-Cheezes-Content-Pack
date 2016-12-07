@@ -17,7 +17,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.width = 40;
             item.height = 40;
             item.toolTip = "Nature has gone to chaos.";
-            item.toolTip2 = "Shoots 4 different elemental spells at random.";
+            item.toolTip2 = "Shoots 4 different elemental spells at random. \nThe Spells are:\nFire Blast.\nWater Bolt\nWind Strike\nand Earth Boulder";
             item.channel = true;
             item.useTime = 26;
             item.useAnimation = 26;

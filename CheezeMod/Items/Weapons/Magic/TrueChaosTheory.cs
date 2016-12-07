@@ -17,7 +17,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.width = 40;
             item.height = 40;
             item.toolTip = "Nature has gone to true chaos.";
-            item.toolTip = "Spells gain aditional effects compared to the default Chaos Theory.";
+            item.toolTip = "Spells gain aditional effects compared to the default Chaos Theory. \nThe Spells are:\nInferno Blast.\nWaterfall Bolt\nTriple Wind Strike\nand Earth Avalanche";
             item.channel = true;
             item.useTime = 25;
             item.useAnimation = 25;

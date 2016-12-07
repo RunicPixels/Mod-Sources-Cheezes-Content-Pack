@@ -101,9 +101,12 @@ namespace CheezeMod.NPCs
             if (npc.life <= 0)
             {
                 Vector2 pos;
-                for (int k = 0; k < 20; k++)
+                for (int i = 0; i < 10; i++)
                 {
-                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.Fire, 2.5f * (float)hitDirection, -2.5f, 0, default(Color), 1f);
+                    for (int j = 0; j < 2; j++)
+                    {
+                        Dust.NewDust(npc.position, npc.width, npc.height, DustID.Fire, 2.5f * (float)hitDirection, -2.5f, 0, default(Color), 1f);
+                    }
                     pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
                     if (Main.rand.Next(3) >= 1)
                     {

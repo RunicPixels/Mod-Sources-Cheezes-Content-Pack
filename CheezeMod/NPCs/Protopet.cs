@@ -44,16 +44,16 @@ namespace CheezeMod.NPCs
                     Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, 2.5f * (float)hitDirection, -2.5f, 0, default(Color), 0.7f);
                 }
 
-                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/ProtopetBelly"), 1f);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Organic/ProtoOrb"), 1f);
                 for (int k = 0; k < 5; k++)
                 {
                     Vector2 pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
-                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/ProtopetArm"), 1f);
+                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Organic/ProtoTeeth"), 1f);
                 }
-                for (int k = 0; k < 3; k++)
+                for (int k = 0; k < 4; k++)
                 {
                     Vector2 pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
-                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/ProtopetEye"), 1f);
+                    Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/Organic/ProtoFur"), 1f);
                 }
             }
             else
@@ -73,7 +73,7 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(25) == 0)
+            if (Main.rand.Next(4) == 0)
             {
                 int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
                 string selectedWeapon = CheezeItem.ratchetTier1List[selection];

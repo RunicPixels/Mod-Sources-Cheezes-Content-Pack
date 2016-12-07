@@ -19,7 +19,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.useTime = 25;
             item.useAnimation = 25;
             item.UseSound = SoundID.Item15;
-            item.shootSpeed = 17f;
+            item.shootSpeed = 9.5f;
             item.melee = true;
             item.alpha = 0;
             item.damage = 101;
