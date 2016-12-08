@@ -73,7 +73,7 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(4) == 0)
+            if (Main.rand.Next(5) == 0)
             {
                 int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
                 string selectedWeapon = CheezeItem.ratchetTier1List[selection];
