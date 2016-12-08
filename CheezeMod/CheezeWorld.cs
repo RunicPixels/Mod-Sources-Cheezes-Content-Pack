@@ -13,6 +13,7 @@ namespace CheezeMod
 {
     public class CheezeWorld : ModWorld
     {
+        public static int secondTimer = 0;
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
             int CheezeShinies = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
@@ -26,6 +27,12 @@ namespace CheezeMod
                     }
                 }
             }));
+        }
+        public override void PostUpdate()
+        {
+            secondTimer++;
+            if (secondTimer >= 60) secondTimer = 0;
+            base.PostUpdate();
         }
     }
 }

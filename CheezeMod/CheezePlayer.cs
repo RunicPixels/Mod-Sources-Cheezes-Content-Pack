@@ -13,21 +13,43 @@ namespace CheezeMod
 	public class CheezePlayer : ModPlayer
 	{
 		public bool starlit = false;
-        public bool flyffhistoric = true;
+        public bool flyffhistoric = false;
+        public bool flyffangelic = false;
+        public bool angelsBane = false;
+        public bool superAngel = false;
         public bool downfall = false;
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
         public float magicCritMultiplier = 0.0f; // Magic Crit Multiplier, percentage that will be added onto the critical damage.
         public float thrownCritMultiplier = 0.0f; // Thrown Crit Multiplier, percentage that will be added onto the critical damage.
-        
-        //public float castingTime = 0.9f;
+                                                  //public float castingTime = 0.9f;
 
         //private bool didAlterUseTime = false;
         //private bool didAlterUseAnimation = false;
         //private bool didAlterReUse = false;
-        
 
+        public override void ResetEffects() // Resets effects back to normal after each cast, helps effects to go off when needed and prevents them from stacking infinite times.
+        {
+            this.starlit = false;
+            this.flyffhistoric = false;
+            this.flyffangelic = false;
+            this.downfall = false;
+            this.angelsBane = false;
+            this.superAngel = false;
+            this.critMultiplier = 1.00f;
+            this.meleeCritMultiplier = 0.0f;
+            this.rangedCritMultiplier = 0.0f;
+            this.magicCritMultiplier = 0.0f;
+            this.thrownCritMultiplier = 0.0f;
+            //this.castingTime = 0.9f;
+        }
+
+        public override void UpdateDead()
+        {
+            angelsBane = false;
+            downfall = false;
+        }
 
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
         {
@@ -39,7 +61,27 @@ namespace CheezeMod
             {
                 target.AddBuff(BuffID.DryadsWardDebuff, 60);
             }
+            if (this.flyffangelic == true)
+            {
+                player.AddBuff(mod.BuffType("AngelsBane"), 300);
+            }
         }
+        public override void OnHitPvp(Item item, Player target, int damage, bool crit)
+        {
+            if (this.starlit == true)
+            {
+                player.AddBuff(mod.BuffType("Starlit"), 240);
+            }
+            if (this.flyffhistoric == true)
+            {
+                target.AddBuff(BuffID.DryadsWardDebuff, 60);
+            }
+            if (this.flyffangelic == true)
+            {
+                target.AddBuff(mod.BuffType("AngelsBane"), 300);
+            }
+        }
+
         public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
         {
             if (crit == true)
@@ -66,34 +108,70 @@ namespace CheezeMod
                 }
             }
         }
+
+        public override void UpdateBadLifeRegen()
+        {
+            if (angelsBane) {
+                if (player.position.Y <= Main.worldSurface * 1f)
+                {
+                    player.lifeRegen -= (Main.expertMode == true) ?  24 : 12;
+                    Dust.NewDust(player.position, player.width, player.height, mod.DustType("YellowLight"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+
+                }
+                else
+                {
+                    player.lifeRegen -= (Main.expertMode == true) ? 16 : 8;
+                }
+            }
+        }
+
         public override void PreUpdateBuffs()
         {
-            if(downfall)
+            if (downfall)
             {
                 player.velocity.Y -= 4;
             }
-           /* if (player.inventory[player.selectedItem].magic == true)
-            {
-                if (player.inventory[player.selectedItem].useAnimation >= 5 && !didAlterUseAnimation)
-                {
-                    player.inventory[player.selectedItem].useAnimation = (int)(player.inventory[player.selectedItem].useAnimation * castingTime);
-                    didAlterUseAnimation = true;
-                }
-                if (player.inventory[player.selectedItem].useTime >= 5 && !didAlterUseTime)
-                {
-                    player.inventory[player.selectedItem].useTime = (int)(player.inventory[player.selectedItem].useTime * castingTime);
-                    didAlterUseTime = true;
-                }
-                if (player.inventory[player.selectedItem].reuseDelay >= 1 && !didAlterReUse)
-                {
-                    player.inventory[player.selectedItem].reuseDelay = (int)(player.inventory[player.selectedItem].reuseDelay * castingTime);
-                    didAlterReUse = true;
-                }
-            */
+            /* if (player.inventory[player.selectedItem].magic == true)
+             {
+                 if (player.inventory[player.selectedItem].useAnimation >= 5 && !didAlterUseAnimation)
+                 {
+                     player.inventory[player.selectedItem].useAnimation = (int)(player.inventory[player.selectedItem].useAnimation * castingTime);
+                     didAlterUseAnimation = true;
+                 }
+                 if (player.inventory[player.selectedItem].useTime >= 5 && !didAlterUseTime)
+                 {
+                     player.inventory[player.selectedItem].useTime = (int)(player.inventory[player.selectedItem].useTime * castingTime);
+                     didAlterUseTime = true;
+                 }
+                 if (player.inventory[player.selectedItem].reuseDelay >= 1 && !didAlterReUse)
+                 {
+                     player.inventory[player.selectedItem].reuseDelay = (int)(player.inventory[player.selectedItem].reuseDelay * castingTime);
+                     didAlterReUse = true;
+                 }
+             */
         }
-        /*
+
+        public override void DrawEffects(PlayerDrawInfo drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
+        {
+            if (angelsBane)
+            {
+                //if (Main.rand.Next(3) == 0)
+               // {
+                //    Dust.NewDust(player.position, player.width, player.height, DustID.AncientLight, player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+               // }
+                r *= 2f;
+                g *= 2f;
+                b *= 2f;
+                fullBright = true;
+            }
+            base.DrawEffects(drawInfo, ref r, ref g, ref b, ref a, ref fullBright);
+        }
+
         public override void PostUpdateBuffs()
         {
+
+
+            /*
             if (player.inventory[player.selectedItem].magic == true)
             {
                 if (didAlterUseAnimation)
@@ -111,8 +189,8 @@ namespace CheezeMod
                     player.inventory[player.selectedItem].reuseDelay = (int)(player.inventory[player.selectedItem].reuseDelay / castingTime);
                     didAlterReUse = false;
                 }
-            }
-        } */
+            }*/
+        } 
 
         public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
         {
@@ -124,6 +202,10 @@ namespace CheezeMod
                 }
             }
             if (this.flyffhistoric == true)
+            {
+                target.AddBuff(BuffID.DryadsWardDebuff, 60);
+            }
+            if (this.flyffangelic == true)
             {
                 target.AddBuff(BuffID.DryadsWardDebuff, 60);
             }
@@ -153,19 +235,6 @@ namespace CheezeMod
                     damage = (int)(damage * critMultiplier); // Damage gets amplified by the crit multiplier.
                 }
             }
-        }
-
-        public override void ResetEffects() // Resets effects back to normal after each cast, helps effects to go off when needed and prevents them from stacking infinite times.
-        {
-            this.starlit = false;
-            this.flyffhistoric = false;
-            this.downfall = false;
-            this.critMultiplier = 1.00f;
-            this.meleeCritMultiplier = 0.0f;
-            this.rangedCritMultiplier = 0.0f;
-            this.magicCritMultiplier = 0.0f;
-            this.thrownCritMultiplier = 0.0f;
-            //this.castingTime = 0.9f;
         }
     }
 }

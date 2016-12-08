@@ -2,7 +2,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CheezeMod;
 
 namespace CheezeMod.NPCs
 {
@@ -33,6 +32,26 @@ namespace CheezeMod.NPCs
                     npc.velocity.Y *= 0.85f;
                     drawColor.R /= 2;
                     drawColor.G /= 2;
+                }
+            }
+            if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
+            {
+                if (Main.rand.Next(3) == 0)
+                {
+                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.SparksMech, npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+                    drawColor.B /= 2;
+                }
+                if (CheezeWorld.secondTimer == 0)
+                {
+                    if(npc.position.Y < Main.worldSurface)
+                    {
+                        npc.life -= 10;
+                    }
+                    else
+                    {
+                        npc.life -= 5;
+                    }
+                    
                 }
             }
         }
