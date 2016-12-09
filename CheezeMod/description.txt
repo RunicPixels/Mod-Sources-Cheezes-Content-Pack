@@ -13,25 +13,33 @@ NOTE: It's recommended to restart Terraria after installing or updating the mod 
 Changelog:
 v1.1 - An update that flies for fun.
 Updated for tModLoader 0.9
+[Flyff]
 Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Skeletron.
 Added Historic Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Wall of Flesh.
-Added Pearlwood Axe and Pickaxe.
 Added "Sword of the Silver Sword" also a weapon with a very silly name from the game FlyFF.
 Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
+Added Critical Damage Multiplier for hold items and equipments.
+
+[Ratchet & Clank]
 Added three new monsters, one is found in the Underworld, one is found in the Jungle, the other is found in the Dungeon, all are pre-hardmode.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
-Adedd Gravity Bomb, a powerful early game ranged explosive weapon.
 Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.
 Added Ultra Multistar which, like the bouncer just keeps splitting, also updated the Mega Multistar.
-Added Critical Damage Multiplier for hold items and equipments.
+Added Gravity Bomb, a powerful early game ranged explosive weapon.
+Added Agents of Doom, a devastating new summoning item.
+
+[Other]
+Added Pearlwood Axe and Pickaxe.
 Changed all expert boss drops to treasure bags.
-Improved a lot of weapons.
 Tons of code improvements.
 Some flame projectiles are now affected by water.
-Minor Bugfixes.
-Reduced unneccesary files and thus the mod file size.
+Some quality improvements to (older) weapons.
+Minor bugfixes and balancing.
+Reduced some unneccesary files and thus the mod file size.
+Reintroduced the glow of certain kunai's lying in the world.
 Published mod on GitHub for public access and version control.
+
 
 v1.0.2.1 - Very hot fix.
 Added Skull Halberd and Bone Kunai.

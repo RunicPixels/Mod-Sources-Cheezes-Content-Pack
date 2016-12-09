@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Angle.cs" />
+    <Compile Include="Buffs\AgentOfDoom.cs" />
+    <Compile Include="Buffs\AngelsBane.cs" />
     <Compile Include="Buffs\CheeseFed.cs" />
     <Compile Include="Buffs\DownFall.cs" />
     <Compile Include="Buffs\Starlit.cs" />
@@ -192,6 +194,7 @@
     <Compile Include="Items\Weapons\Ratchet\BombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\Bouncer.cs" />
     <Compile Include="Items\Weapons\Ratchet\Chopper.cs" />
+    <Compile Include="Items\Weapons\Ratchet\GloveOfDoom.cs" />
     <Compile Include="Items\Weapons\Ratchet\GoldBombGlove.cs" />
     <Compile Include="Items\Weapons\Ratchet\GoldWalloper.cs" />
     <Compile Include="Items\Weapons\Ratchet\GravityBomb.cs" />
@@ -384,6 +387,10 @@
     <Compile Include="Projectiles\Ranged\UltraMultiStar.cs" />
     <Compile Include="Projectiles\Ranged\UltraVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\Vaporizer.cs" />
+    <Compile Include="Projectiles\Summoning\Agent.cs" />
+    <Compile Include="Projectiles\Summoning\AgentOfDoom.cs" />
+    <Compile Include="Projectiles\Summoning\HoverShooter.cs" />
+    <Compile Include="Projectiles\Summoning\Minion.cs" />
     <Compile Include="Projectiles\Thrown\AdamantiteKunai.cs" />
     <Compile Include="Projectiles\Thrown\BoneKunai.cs" />
     <Compile Include="Projectiles\Thrown\ChlorophyteKunai.cs" />
@@ -403,6 +410,7 @@
     <Compile Include="Projectiles\Thrown\SilverKunai.cs" />
     <Compile Include="Projectiles\Thrown\StarlightKunai.cs" />
     <Compile Include="Projectiles\Thrown\StarStorm3.cs" />
+    <Compile Include="Projectiles\Thrown\StoneKunai.cs" />
     <Compile Include="Projectiles\Thrown\TinKunai.cs" />
     <Compile Include="Projectiles\Thrown\TitaniumKunai.cs" />
     <Compile Include="Projectiles\Thrown\TungstenKunai.cs" />
@@ -434,6 +442,10 @@
     <Compile Include="Tiles\StarlightOre.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Buffs\AgentofDoom.png" />
+    <Content Include="Buffs\AngelsBane.png" />
+    <Content Include="Buffs\BlankDebuff.png" />
+    <Content Include="Buffs\BuffTemplate.png" />
     <Content Include="Buffs\CheeseFed.png" />
     <Content Include="Buffs\DownFall.png" />
     <Content Include="Buffs\Starlit.png" />
@@ -590,6 +602,7 @@
     <Content Include="Items\Weapons\Ratchet\BombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\Bouncer.png" />
     <Content Include="Items\Weapons\Ratchet\Chopper.png" />
+    <Content Include="Items\Weapons\Ratchet\GloveOfDoom.png" />
     <Content Include="Items\Weapons\Ratchet\GoldBombGlove.png" />
     <Content Include="Items\Weapons\Ratchet\GoldWalloper.png" />
     <Content Include="Items\Weapons\Ratchet\GravityBomb.png" />
@@ -782,6 +795,7 @@
     <Content Include="Projectiles\Ranged\UltraMultiStar.png" />
     <Content Include="Projectiles\Ranged\UltraVaporizer.png" />
     <Content Include="Projectiles\Ranged\Vaporizer.png" />
+    <Content Include="Projectiles\Summoning\AgentOfDoom.png" />
     <Content Include="Projectiles\Thrown\AdamantiteKunai.png" />
     <Content Include="Projectiles\Thrown\BoneKunai.png" />
     <Content Include="Projectiles\Thrown\ChlorophyteKunai.png" />
@@ -801,6 +815,7 @@
     <Content Include="Projectiles\Thrown\SilverKunai.png" />
     <Content Include="Projectiles\Thrown\StarlightKunai.png" />
     <Content Include="Projectiles\Thrown\StarStorm3.png" />
+    <Content Include="Projectiles\Thrown\StoneKunai.png" />
     <Content Include="Projectiles\Thrown\TinKunai.png" />
     <Content Include="Projectiles\Thrown\TitaniumKunai.png" />
     <Content Include="Projectiles\Thrown\TungstenKunai.png" />

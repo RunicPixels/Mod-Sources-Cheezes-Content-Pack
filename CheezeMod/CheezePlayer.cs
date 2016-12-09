@@ -18,6 +18,7 @@ namespace CheezeMod
         public bool angelsBane = false;
         public bool superAngel = false;
         public bool downfall = false;
+        public bool agentMinion = false;
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
@@ -37,6 +38,7 @@ namespace CheezeMod
             this.downfall = false;
             this.angelsBane = false;
             this.superAngel = false;
+            this.agentMinion = false;
             this.critMultiplier = 1.00f;
             this.meleeCritMultiplier = 0.0f;
             this.rangedCritMultiplier = 0.0f;

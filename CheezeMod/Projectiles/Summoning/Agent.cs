@@ -2,9 +2,9 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace ExampleMod.Projectiles.Minions
+namespace CheezeMod.Projectiles.Summoning
 {
-	public abstract class HoverShooter : Minion
+	public abstract class Agent : Minion
 	{
 		protected float idleAccel = 0.05f;
 		protected float spacingMult = 1f;

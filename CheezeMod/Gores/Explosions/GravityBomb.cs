@@ -29,13 +29,13 @@ namespace CheezeMod.Gores.Explosions
             {
                 gore.frame = 3;
                 gore.frameCounter = 3;
-                gore.alpha = 31;
+                gore.alpha += 15;
             }
             else if (goreFrame >= 6)
             {
                 gore.frame = 2;
                 gore.frameCounter = 2;
-                gore.alpha = 127;
+                gore.alpha +=25;
             }
             else if (goreFrame >= 3)
             {

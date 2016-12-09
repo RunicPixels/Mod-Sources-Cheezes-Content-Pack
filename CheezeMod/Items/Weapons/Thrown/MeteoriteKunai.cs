@@ -42,9 +42,9 @@ namespace CheezeMod.Items.Weapons.Thrown
 			recipe.AddRecipe();
 		}
 
-        /*public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
-                {
-                    Lighting.AddLight(new Vector2(item.position.X, item.position.Y), 0.4f, 0.3f, 0.2f);
-                } Broken in latest version */
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Lighting.AddLight(new Vector2(item.position.X, item.position.Y), 0.4f, 0.3f, 0.2f);
+        }
     }
 }
