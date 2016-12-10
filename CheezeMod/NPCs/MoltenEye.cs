@@ -51,7 +51,7 @@ namespace CheezeMod.NPCs
 
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
-            return (CheezeMod.NormalSpawn(spawnInfo)) && (spawnInfo.spawnTileY > CheezeMod.HellLayer - 10) ? Main.hardMode ? 0.075f : 0.175f : 0f;
+            return (CheezeMod.NormalSpawn(spawnInfo)) && !Main.dayTime && (spawnInfo.spawnTileY > CheezeMod.HellLayer - 10) ? Main.hardMode ? 0.075f : 0.175f : 0f;
         }
 
         public override void AI()

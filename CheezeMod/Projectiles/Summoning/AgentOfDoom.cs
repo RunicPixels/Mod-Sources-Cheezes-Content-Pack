@@ -5,7 +5,6 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Summoning
 {
-	//ported from my tAPI mod because I'm lazy
 	public class AgentOfDoom : ModProjectile
 	{
 		public override void SetDefaults()
@@ -15,15 +14,16 @@ namespace CheezeMod.Projectiles.Summoning
 			projectile.netImportant = true;
 			projectile.name = "Agent of Doom";
 			projectile.friendly = true;
-            projectile.height = 30;
-            projectile.width = 30;
+            projectile.height = 29;
+            projectile.width = 20;
+            projectile.scale = 0.9f;
             Main.projFrames[projectile.type] = 6;
 			Main.projPet[projectile.type] = true;
             drawOriginOffsetY = -10;
 			projectile.minion = true;
 			projectile.minionSlots = 1;
 			projectile.penetrate = -1;
-			projectile.timeLeft = 18000;
+			projectile.timeLeft = 360000;
             aiType = ProjectileID.BabySlime;
 			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
             ProjectileID.Sets.Homing[projectile.type] = true;

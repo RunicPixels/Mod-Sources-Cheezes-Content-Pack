@@ -1,12 +1,15 @@
 Cheeze's Conent Pack is a mod that adds a variety of content to Terraria.
 
-As of right now the mod includes several tools, an armor set, a few new armor parts, a few accessories, a new generated ore, 125+ weapons, lots of materials, several monsters and a crafting station.
+As of right now the mod includes several tools, an armor set, a few new armor parts, a few accessories, a new generated ore, 100+ weapons, lots of materials, several monsters and a crafting station.
 • There's content spread over hardmode and pre-hardmode.
 • New content spread over a variety of biomes, places and events.
 • Stacked Items crafted at a heavy work bench to save chest space.
-• A bunch of references to other games like Ratchet & Clank and Overwatch.
+• A ton of content related to other games like Ratchet & Clank, FlyFF and Overwatch.
+• Variants to certain vanilla monsters with useful loot.
 • Lots of new, fun and unique weapons are available.
+• Tiered Kunai's and Halberds.
 • Alternative ways to get certain vanilla items.
+• Several Quality of Life improvements.
 
 NOTE: It's recommended to restart Terraria after installing or updating the mod before generating a new world for the new features to be generated as smoothly as possible!
 
@@ -21,7 +24,7 @@ Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Critical Damage Multiplier for hold items and equipments.
 
 [Ratchet & Clank]
-Added three new monsters, one is found in the Underworld, one is found in the Jungle, the other is found in the Dungeon, all are pre-hardmode.
+Added Three new monsters, one is found in the Underworld, one is found in the Jungle, the other is found in the Dungeon, all are pre-hardmode.
 Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
 Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
 Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.

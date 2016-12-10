@@ -16,7 +16,7 @@ namespace CheezeMod.Projectiles.Summoning
 		protected float shootSpeed;
 		protected int shoot;
 
-		public virtual void CreateDust()
+        public virtual void CreateDust()
 		{
 		}
 
@@ -191,7 +191,8 @@ namespace CheezeMod.Projectiles.Summoning
 							}
 							shootVel.Normalize();
 							shootVel *= shootSpeed;
-							int proj = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootVel.X, shootVel.Y, shoot, projectile.damage, projectile.knockBack, Main.myPlayer, 0f, 0f);
+                            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 12);
+                            int proj = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootVel.X, shootVel.Y, shoot, projectile.damage, projectile.knockBack, Main.myPlayer, 0f, 0f);
 							Main.projectile[proj].timeLeft = 300;
 							Main.projectile[proj].netUpdate = true;
 							projectile.netUpdate = true;

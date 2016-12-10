@@ -50,7 +50,7 @@ namespace CheezeMod.NPCs
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
             Player player = spawnInfo.player;
-            return (CheezeMod.NormalSpawn(spawnInfo)) && player.ZoneJungle ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.175f : 0f;
+            return (CheezeMod.NormalSpawn(spawnInfo)) && player.ZoneJungle && !Main.dayTime ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.175f : 0f;
         }
 
         public override void AI()

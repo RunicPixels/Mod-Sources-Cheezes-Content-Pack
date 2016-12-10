@@ -14,7 +14,7 @@ namespace CheezeMod.Projectiles.Yoyo
             projectile.name = "Historic Yoyo";
             projectile.penetrate = -1;
             projectile.width = 28;
-            projectile.height = 32;
+            projectile.height = 28;
             projectile.scale = 1.1f;
             projectile.melee = true;
             projectile.friendly = true;

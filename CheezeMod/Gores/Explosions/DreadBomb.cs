@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Gores.Explosions
 {
-    public class GravityBomb : ModGore
+    public class DreadBomb : ModGore
     {
         Vector2 baseGorePosition;
         int goreFrame;

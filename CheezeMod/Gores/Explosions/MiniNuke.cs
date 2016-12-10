@@ -4,17 +4,19 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Gores.Explosions
 {
-    public class GravityBomb : ModGore
+    public class MiniNuke : ModGore
     {
         Vector2 baseGorePosition;
         int goreFrame;
         public override void OnSpawn(Gore gore)
         {
-            gore.numFrames = 4;
+            gore.numFrames = 7;
+            gore.rotation = 0f;
             gore.frame = 0;
             gore.sticky = true;
-            gore.timeLeft = 12;
-            gore.scale = 1f;
+            gore.timeLeft = 36;
+            gore.scale = 1.1f;
+            gore.rotation *= 0f;
             baseGorePosition = gore.position;
             goreFrame = 0;
         }
@@ -22,19 +24,35 @@ namespace CheezeMod.Gores.Explosions
         {
             gore.velocity.X = 0f;
             gore.velocity.Y = 0f;
-            gore.scale += 0.07f;
+            gore.rotation *= 0f;
             gore.position = baseGorePosition;
-            if (goreFrame >= 12)
+            if (goreFrame >= 25)
+            {
+                gore.frame = 6;
+                gore.frameCounter = 6;
+                gore.alpha += 1;
+            }
+            else if (goreFrame >= 21)
+            {
+                gore.frame = 5;
+                gore.frameCounter = 5;
+                gore.alpha += 1;
+            }
+            else if (goreFrame >= 17)
+            {
+                gore.frame = 4;
+                gore.frameCounter = 4;
+                gore.alpha += 1;
+            }
+            else if (goreFrame >= 13)
             {
                 gore.frame = 3;
                 gore.frameCounter = 3;
-                gore.alpha += 15;
             }
-            else if (goreFrame >= 6)
+            else if (goreFrame >= 7)
             {
                 gore.frame = 2;
                 gore.frameCounter = 2;
-                gore.alpha +=25;
             }
             else if (goreFrame >= 3)
             {
@@ -46,7 +64,7 @@ namespace CheezeMod.Gores.Explosions
                 gore.frame = 0;
                 gore.frameCounter = 0;
             }
-            if (goreFrame >= 13)
+            if (goreFrame >= 30)
             {
                 gore.active = false;
                 gore.light -= 0.1f;

@@ -6,39 +6,41 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Weapons.Ratchet
 {
-	public class GloveOfDoom : ModItem
+	public class MegaGloveOfDread : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Glove of Doom";
-			item.damage = 15;
+			item.name = "Mega Glove of Dread";
+			item.damage = 45;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
-            item.mana = 8;
-            item.toolTip = "Summons an agent of doom to fight for you.";
+            item.mana = 18;
+            item.toolTip = "Summons an mega agent of dread to fight for you, these now also shoot your enemies with lasers.";
             item.toolTip2 = "Originally from Ratchet and Clank.";
-            item.useTime = 35;
-            item.useAnimation = 35;
+            item.useTime = 25;
+            item.useAnimation = 25;
 			item.useStyle = 1;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;
-			item.value = 40000;
-			item.rare = 2;
+			item.value = 540000;
+			item.rare = 6;
             item.UseSound = SoundID.Item19;
 			item.autoReuse = false;
-			item.shoot = mod.ProjectileType("AgentOfDoom"); //idk why but all the guns in the vanilla source have this
+			item.shoot = mod.ProjectileType("MegaAgentOfDread"); //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 3f;
             item.buffTime = 360000;
-            item.buffType = mod.BuffType("AgentOfDoom");
+            item.buffType = mod.BuffType("MegaAgentOfDread");
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "IronBolt", 50);
-            recipe.AddRecipeGroup("CheezeMod:EvilLeather", 10);
+            recipe.AddIngredient(null, "HallowedBolt", 50);
+            recipe.AddIngredient(ItemID.SoulofSight, 2);
+            recipe.AddIngredient(null, "GloveOfDread");
+            recipe.AddIngredient(ItemID.SpiderStaff);
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
