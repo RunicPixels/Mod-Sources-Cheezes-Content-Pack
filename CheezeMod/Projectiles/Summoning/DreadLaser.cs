@@ -11,6 +11,7 @@ namespace CheezeMod.Projectiles.Summoning
         public override void SetDefaults()
         {
             projectile.name = "Dread Laser";
+            projectile.damage = 20;
             projectile.width = 10;
             projectile.height = 8;
             projectile.scale = 0.6f;

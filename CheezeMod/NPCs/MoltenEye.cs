@@ -40,7 +40,7 @@ namespace CheezeMod.NPCs
             npc.buffImmune[24] = true;
             npc.buffImmune[39] = true;
             npc.buffImmune[31] = false;
-            npc.knockBackResist = 0.75f;
+            npc.knockBackResist = 0.9f;
             npc.aiStyle = 2;
             banner = npc.type;
             bannerItem = mod.ItemType("MoltenEyeBanner");

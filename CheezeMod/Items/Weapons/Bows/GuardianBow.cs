@@ -16,8 +16,8 @@ namespace CheezeMod.Items.Weapons.Bows
             item.width = 18;
             item.height = 42;
             item.toolTip = "A bow used by the guardians of Madrigal. \n+15% Critical Chance. \n+21% Increased Critical Damage. \n+Autofire.";
-            item.useTime = 26;
-            item.useAnimation = 26;
+            item.useTime = 28;
+            item.useAnimation = 28;
             item.useStyle = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 2;
@@ -27,7 +27,7 @@ namespace CheezeMod.Items.Weapons.Bows
             item.autoReuse = true;
             item.UseSound = SoundID.Item5;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
-            item.shootSpeed = 11f;
+            item.shootSpeed = 10f;
             item.useAmmo = AmmoID.Arrow;
         }
 

@@ -30,7 +30,9 @@ Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game 
 Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.
 Added Ultra Multistar which, like the bouncer just keeps splitting, also updated the Mega Multistar.
 Added Gravity Bomb, a powerful early game ranged explosive weapon.
+ - As well as it's upgrade the Mini Nuke, Torgue approves.
 Added Agents of Doom, a devastating new summoning item.
+ - Also added the upgraded variants, the Agents of Dread and the Mega Agents of Dread, these have some devastating firepower.
 
 [Other]
 Added Pearlwood Axe and Pickaxe.
@@ -42,7 +44,6 @@ Minor bugfixes and balancing.
 Reduced some unneccesary files and thus the mod file size.
 Reintroduced the glow of certain kunai's lying in the world.
 Published mod on GitHub for public access and version control.
-
 
 v1.0.2.1 - Very hot fix.
 Added Skull Halberd and Bone Kunai.

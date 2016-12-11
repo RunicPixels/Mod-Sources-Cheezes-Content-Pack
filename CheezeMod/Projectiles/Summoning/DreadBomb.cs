@@ -14,6 +14,7 @@ namespace CheezeMod.Projectiles.Summoning
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
             projectile.name = "Dread Bomb";
+            projectile.damage = 59;
             projectile.width = 18;
             projectile.height = 18;
             projectile.ranged = true;

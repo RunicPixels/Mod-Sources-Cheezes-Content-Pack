@@ -21,7 +21,7 @@ namespace CheezeMod.NPCs
             npc.DeathSound = SoundID.NPCDeath48;
             npc.value = 150f;
             npc.scale = 0.7f;
-            npc.knockBackResist = 0.6f;
+            npc.knockBackResist = 0.9f;
             npc.aiStyle = 3;
             banner = npc.type;
             bannerItem = mod.ItemType("ProtopetBanner");

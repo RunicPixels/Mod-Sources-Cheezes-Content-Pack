@@ -10,7 +10,7 @@ namespace CheezeMod.Buffs
 		public override void SetDefaults()
 		{
 			Main.buffName[Type] = "Angels Bane";
-			Main.buffTip[Type] = "Cursed by the Angels of Madrigal, losing 5 hp every second, deals twice as much damage when above the surface layer.";
+			Main.buffTip[Type] = "Cursed by the Angels of Madrigal, losing hp.";
 			Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;

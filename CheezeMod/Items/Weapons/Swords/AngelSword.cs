@@ -11,19 +11,19 @@ namespace CheezeMod.Items.Weapons.Swords
         public override void SetDefaults()
         {
             item.name = "Angel Sword";
-            item.damage = 40;
+            item.damage = 68;
             item.melee = true;
             item.width = 44;
             item.height = 44;
-            item.toolTip = "An sword that once used by the angels of Madrigal. \n+12% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Angel's Bane on enemy hit.";
+            item.toolTip = "An sword that once used by the angels of Madrigal. \n+13% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Angel's Bane on enemy hit.";
             item.crit = 12;
             item.scale = 1.1f;
-            item.useTime = 22;
-            item.useAnimation = 22;
+            item.useTime = 20;
+            item.useAnimation = 20;
             item.useStyle = 1;
-            item.knockBack = 4;
-            item.value = CheezeItem.historicPrice;
-            item.rare = CheezeItem.historicRarity;
+            item.knockBack = 5;
+            item.value = CheezeItem.angelPrice;
+            item.rare = CheezeItem.angelRarity;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }
@@ -50,10 +50,10 @@ namespace CheezeMod.Items.Weapons.Swords
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.12f; // This number here changes the multiplier
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.13f; // This number here changes the multiplier
                 ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).flyffangelic = true; // Angel debuff on enemy for 1 sec.
-                player.maxRunSpeed *= 1.12f;
-                player.jumpSpeedBoost *= 1.12f;
+                player.maxRunSpeed *= 1.13f;
+                player.jumpSpeedBoost *= 1.13f;
             }
         }
     }

@@ -164,9 +164,11 @@
     <Compile Include="Items\Vanilla\HappyGrenade.cs" />
     <Compile Include="Items\Vanilla\Shuriken.cs" />
     <Compile Include="Items\Vanilla\StickyGrenade.cs" />
+    <Compile Include="Items\Weapons\Ammo\Rocket0.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Bonemerang.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Kaboomerang.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Star Chakram.cs" />
+    <Compile Include="Items\Weapons\Bows\AngelBow.cs" />
     <Compile Include="Items\Weapons\Bows\DemonCrossbow.cs" />
     <Compile Include="Items\Weapons\Bows\GuardianBow.cs" />
     <Compile Include="Items\Weapons\Bows\HistoricBow.cs" />
@@ -218,6 +220,7 @@
     <Compile Include="Items\Weapons\Ratchet\MegaHeavyLancer.cs" />
     <Compile Include="Items\Weapons\Ratchet\MegaMultistar.cs" />
     <Compile Include="Items\Weapons\Ratchet\MegaVaporizer.cs" />
+    <Compile Include="Items\Weapons\Ratchet\MiniNuke.cs" />
     <Compile Include="Items\Weapons\Ratchet\Multistar.cs" />
     <Compile Include="Items\Weapons\Ratchet\PulseRifle.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBlitzEruptor.cs" />
@@ -254,6 +257,7 @@
     <Compile Include="Items\Weapons\Sticks\GuardianStick.cs" />
     <Compile Include="Items\Weapons\Sticks\HistoricStick.cs" />
     <Compile Include="Items\Weapons\Swords\AdminSword.cs" />
+    <Compile Include="Items\Weapons\Swords\AngelSword.cs" />
     <Compile Include="Items\Weapons\Swords\Baconomnomnom.cs" />
     <Compile Include="Items\Weapons\Swords\BlueLasersaber.cs" />
     <Compile Include="Items\Weapons\Swords\Cheeselicious.cs" />
@@ -386,6 +390,7 @@
     <Compile Include="Projectiles\Ranged\MegaVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\MiniNuke.cs" />
     <Compile Include="Projectiles\Ranged\MultiStar.cs" />
+    <Compile Include="Projectiles\Ranged\Rocket0.cs" />
     <Compile Include="Projectiles\Ranged\PulseGun.cs" />
     <Compile Include="Projectiles\Ranged\PulseRifle.cs" />
     <Compile Include="Projectiles\Ranged\UltraBlitzEruptor.cs" />
@@ -584,9 +589,12 @@
     <Content Include="Items\Tools\StarlightHammer.png" />
     <Content Include="Items\Tools\StarlightPaxel.png" />
     <Content Include="Items\Tools\TempoAccelerator.png" />
+    <Content Include="Items\Weapons\Ammo\Rocket0.png" />
     <Content Include="Items\Weapons\Boomerangs\Bonemerang.png" />
     <Content Include="Items\Weapons\Boomerangs\Kaboomerang.png" />
     <Content Include="Items\Weapons\Boomerangs\StarChakram.png" />
+    <Content Include="Items\Weapons\Bows\AngelBow.png" />
+    <Content Include="Items\Weapons\Bows\AngelBow3.png" />
     <Content Include="Items\Weapons\Bows\DemonCrossbow.png" />
     <Content Include="Items\Weapons\Bows\GuardianBow.png" />
     <Content Include="Items\Weapons\Bows\HistoricBow.png" />
@@ -638,6 +646,7 @@
     <Content Include="Items\Weapons\Ratchet\MegaHeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\MegaMultistar.png" />
     <Content Include="Items\Weapons\Ratchet\MegaVaporizer.png" />
+    <Content Include="Items\Weapons\Ratchet\MiniNuke.png" />
     <Content Include="Items\Weapons\Ratchet\Multistar.png" />
     <Content Include="Items\Weapons\Ratchet\PulseRifle.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBlitzEruptor.png" />
@@ -675,6 +684,7 @@
     <Content Include="Items\Weapons\Sticks\GuardianStick.png" />
     <Content Include="Items\Weapons\Sticks\HistoricStick.png" />
     <Content Include="Items\Weapons\Swords\AdminSword.png" />
+    <Content Include="Items\Weapons\Swords\AngelSword.png" />
     <Content Include="Items\Weapons\Swords\Baconomnomnom.png" />
     <Content Include="Items\Weapons\Swords\BlueLasersaber.png" />
     <Content Include="Items\Weapons\Swords\Cheeselicious.png" />
@@ -808,6 +818,7 @@
     <Content Include="Projectiles\Ranged\MultiStar.png" />
     <Content Include="Projectiles\Ranged\PulseGun.png" />
     <Content Include="Projectiles\Ranged\PulseRifle.png" />
+    <Content Include="Projectiles\Ranged\Rocket0.png" />
     <Content Include="Projectiles\Ranged\UltraBlitzEruptor.png" />
     <Content Include="Projectiles\Ranged\UltraHeavyBouncer.png" />
     <Content Include="Projectiles\Ranged\UltraHeavyLancer.png" />

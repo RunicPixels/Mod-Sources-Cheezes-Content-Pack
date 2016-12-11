@@ -16,7 +16,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.melee = true;
             item.width = 34;
             item.height = 36;
-            item.useTime = 100;
+            item.useTime = 50;
             item.useAnimation = item.useTime;
             item.toolTip = "'One Punch is all you need.'";
             item.scale = 0.8f;

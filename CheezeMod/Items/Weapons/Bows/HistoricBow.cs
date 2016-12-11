@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Bows
         public override void SetDefaults()
         {
             item.name = "Historic Bow";
-            item.damage = 18;
+            item.damage = 36;
             item.ranged = true;
             item.width = 50;
             item.height = 60;
@@ -21,7 +21,7 @@ namespace CheezeMod.Items.Weapons.Bows
             item.useStyle = 5;
             item.scale = 0.8f;
             item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 2;
+            item.knockBack = 3;
             item.value = CheezeItem.historicPrice;
             item.rare = CheezeItem.historicRarity;
             item.crit = 17;

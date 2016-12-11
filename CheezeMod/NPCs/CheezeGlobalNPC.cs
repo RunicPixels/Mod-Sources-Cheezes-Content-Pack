@@ -7,6 +7,8 @@ namespace CheezeMod.NPCs
 {
     public class CheezeGlobalNPC : GlobalNPC
     {
+        // ====== // Custom Functions \\ ====== \\
+        #region CustomFunctions
         private static int flyffMax()
         {
             if (Main.expertMode) return 4 + Main.rand.Next(4);
@@ -17,10 +19,17 @@ namespace CheezeMod.NPCs
             if(Main.expertMode) return Main.rand.Next(8) + drawTimes <= 2;
             else return Main.rand.Next(5) + drawTimes <= 1;
         }
+        #endregion
+
+        // ====== // Override Functions \\ ====== \\
+        #region MonsterEffects
+
         public override void ResetEffects(NPC npc)
         {
             npc.GetModInfo<CheezeNPCInfo>(mod).downfall = false;
+            npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane = false;
         }
+
         public override void DrawEffects(NPC npc, ref Color drawColor)
         {
             if (npc.GetModInfo<CheezeNPCInfo>(mod).downfall == true)
@@ -36,25 +45,47 @@ namespace CheezeMod.NPCs
             }
             if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
             {
-                if (Main.rand.Next(3) == 0)
+                if (npc.position.Y < Main.worldSurface)
                 {
-                    Dust.NewDust(npc.position, npc.width, npc.height, DustID.SparksMech, npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
-                    drawColor.B /= 2;
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("WhiteLightCircle"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+                        drawColor.B /= 2;
+                    }
                 }
-                if (CheezeWorld.secondTimer == 0)
+                else
                 {
-                    if(npc.position.Y < Main.worldSurface)
+                    if (Main.rand.Next(3) == 0)
                     {
-                        npc.life -= 10;
+                        Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("YellowLight"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+                        drawColor.B /= 2;
                     }
-                    else
-                    {
-                        npc.life -= 5;
-                    }
-                    
                 }
+
             }
         }
+        public override void UpdateLifeRegen(NPC npc, ref int damage)
+        {
+            if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
+            {
+                if (npc.position.Y < (float)Main.worldSurface)
+                {
+                    npc.lifeRegen = 0;
+                    npc.lifeRegen -= 20;
+                    npc.lifeRegenExpectedLossPerSecond = 20;
+                }
+                else
+                {
+                    npc.lifeRegen = 0;
+                    npc.lifeRegen -= 10;
+                    npc.lifeRegenExpectedLossPerSecond = 10;
+                }
+
+            }
+        }
+        #endregion
+        #region MonsterLoot
+        // == Monster Drops == \\
         public override void NPCLoot(NPC npc)
         {
             // Biomes //
@@ -256,7 +287,7 @@ namespace CheezeMod.NPCs
                     int drawChance = 0;
                     for (int i = 0; i < Main.rand.Next(3); i++)
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), Main.rand.Next(3));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AngelEssence"), Main.rand.Next(3));
                     }
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     for (int i = 0; i < flyffMax(); i++)
@@ -314,7 +345,7 @@ namespace CheezeMod.NPCs
             }
             #endregion
         }
-        // Boss Bags //
+        // == Boss Bags == \\
         public class BossBags : GlobalItem
         {
             public override void OpenVanillaBag(string context, Player player, int arg)
@@ -349,7 +380,7 @@ namespace CheezeMod.NPCs
                     int drawChance = 0;
                     for (int i = 0; i < 1+Main.rand.Next(4); i++)
                     {
-                        player.QuickSpawnItem(mod.ItemType("HistoricEssence"), Main.rand.Next(3));
+                        player.QuickSpawnItem(mod.ItemType("AngelEssence"), Main.rand.Next(3));
                     }
                     player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     
@@ -374,5 +405,6 @@ namespace CheezeMod.NPCs
                 }
             }
         }
+        #endregion
     }
 }

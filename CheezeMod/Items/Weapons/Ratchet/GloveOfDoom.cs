@@ -38,7 +38,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "IronBolt", 50);
-            recipe.AddRecipeGroup("CheezeMod:EvilLeather", 10);
+            recipe.AddIngredient(ItemID.SlimeStaff);
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

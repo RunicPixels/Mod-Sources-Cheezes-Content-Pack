@@ -72,7 +72,7 @@ namespace CheezeMod
             }
             if (this.flyffangelic == true)
             {
-                player.AddBuff(mod.BuffType("AngelsBane"), 300);
+                target.AddBuff(mod.BuffType("AngelsBane"), 600);
             }
         }
         public override void OnHitPvp(Item item, Player target, int damage, bool crit)
@@ -87,7 +87,7 @@ namespace CheezeMod
             }
             if (this.flyffangelic == true)
             {
-                target.AddBuff(mod.BuffType("AngelsBane"), 300);
+                target.AddBuff(mod.BuffType("AngelsBane"), 600);
             }
         }
 
@@ -118,14 +118,57 @@ namespace CheezeMod
             }
         }
 
+        public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
+        {
+            if (proj.melee)
+            {
+                if (this.starlit == true)
+                {
+                    player.AddBuff(mod.BuffType("Starlit"), 200);
+                }
+            }
+            if (this.flyffhistoric == true)
+            {
+                target.AddBuff(BuffID.DryadsWardDebuff, 450);
+            }
+            if (this.flyffangelic == true)
+            {
+                target.AddBuff(mod.BuffType("AngelsBane"), 450);
+            }
+        }
+        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit)
+        {
+            if (crit == true)
+            {
+                if (proj.melee == true) // Melee Crit
+                {
+                    damage = (int)(damage * (critMultiplier + meleeCritMultiplier)); // Damage gets amplified by the crit multiplier.
+                }
+                else if (proj.ranged == true) // Ranged Crit
+                {
+                    damage = (int)(damage * (critMultiplier + rangedCritMultiplier));
+                }
+                else if (proj.magic == true) // Magic Crit
+                {
+                    damage = (int)(damage * (critMultiplier + magicCritMultiplier));
+                }
+                else if (proj.thrown == true) // Thrown Crit
+                {
+                    damage = (int)(damage * (critMultiplier + thrownCritMultiplier));
+                }
+                else
+                {
+                    damage = (int)(damage * critMultiplier); // Damage gets amplified by the crit multiplier.
+                }
+            }
+        }
+
         public override void UpdateBadLifeRegen()
         {
             if (angelsBane) {
                 if (player.position.Y <= Main.worldSurface * 1f)
                 {
                     player.lifeRegen -= (Main.expertMode == true) ?  24 : 12;
-                    Dust.NewDust(player.position, player.width, player.height, mod.DustType("YellowLight"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
-
                 }
                 else
                 {
@@ -165,13 +208,21 @@ namespace CheezeMod
             if (angelsBane)
             {
                 //if (Main.rand.Next(3) == 0)
-               // {
+                // {
                 //    Dust.NewDust(player.position, player.width, player.height, DustID.AncientLight, player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
-               // }
+                // }
                 r *= 2f;
                 g *= 2f;
-                b *= 2f;
+                b /= 2f;
                 fullBright = true;
+                if (player.position.Y <= Main.worldSurface)
+                {
+                    Dust.NewDust(player.position, player.width, player.height, mod.DustType("WhiteLightCircle"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+                }
+                else
+                {
+                    Dust.NewDust(player.position, player.width, player.height, mod.DustType("YellowLight"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+                }
             }
             base.DrawEffects(drawInfo, ref r, ref g, ref b, ref a, ref fullBright);
         }
@@ -200,50 +251,5 @@ namespace CheezeMod
                 }
             }*/
         } 
-
-        public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
-        {
-            if (proj.melee)
-            {
-                if (this.starlit == true)
-                {
-                    player.AddBuff(mod.BuffType("Starlit"), 200);
-                }
-            }
-            if (this.flyffhistoric == true)
-            {
-                target.AddBuff(BuffID.DryadsWardDebuff, 60);
-            }
-            if (this.flyffangelic == true)
-            {
-                target.AddBuff(BuffID.DryadsWardDebuff, 60);
-            }
-        }
-        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit)
-        {
-            if (crit == true)
-            {
-                if (proj.melee == true) // Melee Crit
-                {
-                    damage = (int)(damage * (critMultiplier + meleeCritMultiplier)); // Damage gets amplified by the crit multiplier.
-                }
-                else if (proj.ranged == true) // Ranged Crit
-                {
-                    damage = (int)(damage * (critMultiplier + rangedCritMultiplier));
-                }
-                else if (proj.magic == true) // Magic Crit
-                {
-                    damage = (int)(damage * (critMultiplier + magicCritMultiplier));
-                }
-                else if (proj.thrown == true) // Thrown Crit
-                {
-                    damage = (int)(damage * (critMultiplier + thrownCritMultiplier));
-                }
-                else
-                {
-                    damage = (int)(damage * critMultiplier); // Damage gets amplified by the crit multiplier.
-                }
-            }
-        }
     }
 }
