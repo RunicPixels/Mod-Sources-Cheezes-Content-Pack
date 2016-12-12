@@ -63,6 +63,7 @@
     <Compile Include="Buffs\DownFall.cs" />
     <Compile Include="Buffs\MegaAgentOfDread.cs" />
     <Compile Include="Buffs\Starlit.cs" />
+    <Compile Include="Buffs\UltraAgentOfDread.cs" />
     <Compile Include="CheezeItem.cs" />
     <Compile Include="CheezeMod.cs" />
     <Compile Include="CheezePlayer.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Dusts\LiquidNitrogen.cs" />
     <Compile Include="Dusts\OrangeLight.cs" />
     <Compile Include="Dusts\PurpleLight.cs" />
+    <Compile Include="Dusts\RedLight.cs" />
     <Compile Include="Dusts\RedSparkle.cs" />
     <Compile Include="Dusts\ShortSparkle.cs" />
     <Compile Include="Dusts\Sparkle.cs" />
@@ -225,6 +227,7 @@
     <Compile Include="Items\Weapons\Ratchet\PulseRifle.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBlitzEruptor.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraBombGlove.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraGloveOfDread.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraGoldWalloper.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraHeavyBouncer.cs" />
     <Compile Include="Items\Weapons\Ratchet\UltraHeavyLancer.cs" />
@@ -404,10 +407,13 @@
     <Compile Include="Projectiles\Summoning\AgentOfDread.cs" />
     <Compile Include="Projectiles\Summoning\DreadBomb.cs" />
     <Compile Include="Projectiles\Summoning\DreadLaser.cs" />
+    <Compile Include="Projectiles\Summoning\DreadNuke.cs" />
     <Compile Include="Projectiles\Summoning\HoverShooter.cs" />
     <Compile Include="Projectiles\Summoning\MegaAgentOfDread.cs" />
     <Compile Include="Projectiles\Summoning\MegaDreadLaser.cs" />
     <Compile Include="Projectiles\Summoning\Minion.cs" />
+    <Compile Include="Projectiles\Summoning\UltraAgentOfDread.cs" />
+    <Compile Include="Projectiles\Summoning\UltraDreadLaser.cs" />
     <Compile Include="Projectiles\Thrown\AdamantiteKunai.cs" />
     <Compile Include="Projectiles\Thrown\BoneKunai.cs" />
     <Compile Include="Projectiles\Thrown\ChlorophyteKunai.cs" />
@@ -468,6 +474,7 @@
     <Content Include="Buffs\DownFall.png" />
     <Content Include="Buffs\MegaAgentOfDread.png" />
     <Content Include="Buffs\Starlit.png" />
+    <Content Include="Buffs\UltraAgentOfDread.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
     <Content Include="Dusts\BlueLight.png" />
@@ -480,6 +487,7 @@
     <Content Include="Dusts\LiquidNitrogen.png" />
     <Content Include="Dusts\OrangeLight.png" />
     <Content Include="Dusts\PurpleLight.png" />
+    <Content Include="Dusts\RedLight.png" />
     <Content Include="Dusts\RedSparkle.png" />
     <Content Include="Dusts\ShortSparkle.png" />
     <Content Include="Dusts\Sparkle.png" />
@@ -651,6 +659,7 @@
     <Content Include="Items\Weapons\Ratchet\PulseRifle.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBlitzEruptor.png" />
     <Content Include="Items\Weapons\Ratchet\UltraBombGlove.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraGloveOfDread.png" />
     <Content Include="Items\Weapons\Ratchet\UltraGoldWalloper.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyLancer.png" />
@@ -829,8 +838,11 @@
     <Content Include="Projectiles\Summoning\AgentOfDread.png" />
     <Content Include="Projectiles\Summoning\DreadBomb.png" />
     <Content Include="Projectiles\Summoning\DreadLaser.png" />
+    <Content Include="Projectiles\Summoning\DreadNuke.png" />
     <Content Include="Projectiles\Summoning\MegaAgentOfDread.png" />
     <Content Include="Projectiles\Summoning\MegaDreadLaser.png" />
+    <Content Include="Projectiles\Summoning\UltraAgentOfDread.png" />
+    <Content Include="Projectiles\Summoning\UltraDreadLaser.png" />
     <Content Include="Projectiles\Thrown\AdamantiteKunai.png" />
     <Content Include="Projectiles\Thrown\BoneKunai.png" />
     <Content Include="Projectiles\Thrown\ChlorophyteKunai.png" />
@@ -902,8 +914,9 @@
     <Reference Include="Terraria">
       <HintPath>D:\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
-    <Reference Include="tModLoaderBeta">
-      <HintPath>D:\Steam\SteamApps\common\Terraria\tModLoaderBeta.exe</HintPath>
+    <Reference Include="tModLoader, Version=1.3.3.3, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam\SteamApps\common\Terraria\tModLoader.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

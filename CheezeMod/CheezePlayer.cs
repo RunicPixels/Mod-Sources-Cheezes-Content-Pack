@@ -21,6 +21,7 @@ namespace CheezeMod
         public bool agentMinion = false;
         public bool agentDreadMinion = false;
         public bool agentMegaDreadMinion = false;
+        public bool agentUltraDreadMinion = false;
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
@@ -43,6 +44,7 @@ namespace CheezeMod
             this.agentMinion = false;
             this.agentDreadMinion = false;
             this.agentMegaDreadMinion = false;
+            this.agentUltraDreadMinion = false;
             this.critMultiplier = 1.00f;
             this.meleeCritMultiplier = 0.0f;
             this.rangedCritMultiplier = 0.0f;
@@ -58,6 +60,7 @@ namespace CheezeMod
             agentMinion = false;
             agentDreadMinion = false;
             agentMegaDreadMinion = false;
+            agentUltraDreadMinion = false;
         }
 
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
@@ -136,7 +139,7 @@ namespace CheezeMod
                 target.AddBuff(mod.BuffType("AngelsBane"), 450);
             }
         }
-        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit)
+        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             if (crit == true)
             {

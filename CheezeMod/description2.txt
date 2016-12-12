@@ -7,39 +7,42 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 • A ton of content related to other games like Ratchet & Clank, FlyFF and Overwatch.
 • Variants to certain vanilla monsters with useful loot.
 • Lots of new, fun and unique weapons are available.
-• Tiered Kunai and Halberds.
+• Tiered Kunai's and Halberds.
 • Alternative ways to get certain vanilla items.
 • Several Quality of Life improvements.
 
-NOTE: Update 1.1 for tModLoader 0.9 has just come out! If you see or find anything odd be sure to tell me!
+NOTE: It's recommended to restart Terraria after installing or updating the mod before generating a new world for the new features to be generated as smoothly as possible!
 
 Changelog:
 v1.1 - An update that flies for fun.
 Updated for tModLoader 0.9
 [Flyff]
-Added Tiered Guardian Weapons. Dropped by Skeletron.
-Added Tiered Historic Weapons. Dropped by WoF
-Added another sword.
-Added Peision Necklace, Mental Necklace and Gore Necklace.
+Added Guardian Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Skeletron.
+Added Historic Axe, Ambidexious Axe, Pickaxe, Sword, Big Sword, Wand, Staff, Yoyo, Bow, Knuckle, Stick and Essence inspired by the game FlyFF. These can be obtained by a drop from Wall of Flesh.
+Added "Sword of the Silver Sword" also a weapon with a very silly name from the game FlyFF.
+Added Peision Necklace, Mental Necklace and Gore Necklace inspired by flyff.
 Added Critical Damage Multiplier for hold items and equipments.
 
 [Ratchet & Clank]
-Added Liquid Gravity Gun
-Added Ultra Bomb Glove
-Added Ultra Heavy Bouncer
-Added Ultra Multistar
-Added Gravity Bomb
- - As well as it's upgrade the Mini Nuke.
-Added Agents of Doom,
- - Also added the upgraded variants, the Agents of Dread, the Mega Agents of Dread and the Ultra Agents of Dread.
+Added Three new monsters, one is found in the Underworld, one is found in the Jungle, the other is found in the Dungeon, all are pre-hardmode.
+Added Liquid Gravity Gun an upgrade for both the Liquid Ichor gun and the Liquid Cursed Flame Gun. It inflicts a new debuff on enemies that pulls them down from the air.
+Added Ultra Bomb Glove, you've never thrown grenades this fast before, end-game throwing item.
+Added Ultra Heavy Bouncer, it just keeps splitting, final upgrade to the Bouncer.
+Added Ultra Multistar which, like the bouncer just keeps splitting, also updated the Mega Multistar.
+Added Gravity Bomb, a powerful early game ranged explosive weapon.
+ - As well as it's upgrade the Mini Nuke, Torgue approves.
+Added Agents of Doom, a devastating new summoning item.
+ - Also added the upgraded variants, the Agents of Dread, the Mega Agents of Dread and the Ultra Agents of Dread these have some devastating firepower.
 
 [Other]
-[1.0.0.1/2- minor changelog fixes.]
-[1.0.0.2/3/4 - minor bugfixes/balancing.]
-[1.0.4 - updated for 0.9.0.2]
-Added three new monsters
 Added Pearlwood Axe and Pickaxe.
-Improvements to older content.
+Changed all expert boss drops to treasure bags.
+Tons of code improvements.
+Some flame projectiles are now affected by water.
+Some quality improvements to (older) weapons.
+Minor bugfixes and balancing.
+Reduced some unneccesary files and thus the mod file size.
+Reintroduced the glow of certain kunai's lying in the world.
 Published mod on GitHub for public access and version control.
 
 v1.0.2.1 - Very hot fix.

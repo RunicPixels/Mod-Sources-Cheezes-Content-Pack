@@ -65,7 +65,7 @@ namespace CheezeMod.Projectiles.Ranged
 
         public void explode()
         {
-            Main.PlaySound(2, projectile.position, 62);
+            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 62, 1.2f);
             projectile.velocity.X = 0;
             projectile.velocity.Y = 0;
             int gore1 = Gore.NewGore(new Vector2(projectile.position.X-25, projectile.position.Y-155) - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/MiniNuke"));

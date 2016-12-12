@@ -6,29 +6,29 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Summoning
 {
-    public class DreadLaser : ModProjectile
+    public class UltraDreadLaser : ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.name = "Dread Laser";
-            projectile.damage = 20;
+            projectile.name = "Ultra Dread Laser";
             projectile.width = 10;
             projectile.height = 8;
-            projectile.scale = 0.6f;
+            projectile.scale = 0.9f;
+            projectile.damage = 65;
             projectile.friendly = true;
-            projectile.penetrate = 1;
+            projectile.penetrate = 6;
             projectile.timeLeft = 300;
             aiType = ProjectileID.Bullet;
         }
 
         public override void AI()
         {
-            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.8f, 0.8f, 0f);
+            Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 1f, 0.6f, 0f);
             if (Main.rand.Next(9) == 0)
             {
-                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("YellowLight"), projectile.velocity.X * 0.3f + Main.rand.Next(4) - 2, projectile.velocity.Y * 0.3f + Main.rand.Next(4) - 2);
+                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("RedLight"), projectile.velocity.X * 0.3f + Main.rand.Next(4) - 2, projectile.velocity.Y * 0.3f + Main.rand.Next(4) - 2);
                 Main.dust[num1].noGravity = true;
-                Main.dust[num1].scale = 0.9f;
+                Main.dust[num1].scale = 1f;
             }
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
@@ -38,6 +38,12 @@ namespace CheezeMod.Projectiles.Summoning
         {
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             return true;
+        }
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.Ichor, 60);
+            target.AddBuff(BuffID.OnFire, 120);
+            base.OnHitNPC(target, damage, knockback, crit);
         }
     }
 }

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Summoning
 {
-	public class MegaAgentOfDread : HoverShooter
+	public class UltraAgentOfDread : HoverShooter
 	{
         int attackCool;
         int attackCool2;
@@ -15,11 +15,11 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.CloneDefaults(ProjectileID.BabySlime);
             projectile.alpha = 0;
 			projectile.netImportant = true;
-			projectile.name = "Mega Agent of Dread";
+			projectile.name = "Ultra Agent of Dread";
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
-            projectile.scale = 1.1f;
+            projectile.scale = 1.2f;
             Main.projFrames[projectile.type] = 6;
 			Main.projPet[projectile.type] = true;
             drawOriginOffsetY = -10;
@@ -28,10 +28,11 @@ namespace CheezeMod.Projectiles.Summoning
 			projectile.penetrate = -1;
 			projectile.timeLeft = 360000;
             aiType = ProjectileID.BabySlime;
+            ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
             ProjectileID.Sets.Homing[projectile.type] = true;
             inertia = 25f;
-            shoot = mod.ProjectileType("DreadLaser");
+            shoot = mod.ProjectileType("UltraDreadLaser");
             shootSpeed = 16;
             attackCool = 0;
             attackCool2 = 10;
@@ -48,10 +49,10 @@ namespace CheezeMod.Projectiles.Summoning
             CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
             if (player.dead)
             {
-                modPlayer.agentMegaDreadMinion = false;
+                modPlayer.agentUltraDreadMinion = false;
                 return false;
             }
-            if (modPlayer.agentMegaDreadMinion)
+            if (modPlayer.agentUltraDreadMinion)
             {
                 projectile.timeLeft = 2;
             }
@@ -65,9 +66,9 @@ namespace CheezeMod.Projectiles.Summoning
 			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
 			if (player.dead)
 			{
-				modPlayer.agentMegaDreadMinion = false;
+				modPlayer.agentUltraDreadMinion = false;
 			}
-			if (modPlayer.agentMegaDreadMinion)
+			if (modPlayer.agentUltraDreadMinion)
 			{
 				projectile.timeLeft = 2;
 			}
@@ -77,9 +78,9 @@ namespace CheezeMod.Projectiles.Summoning
         {
             fallThrough = false;
         }
-
         public override void AI()
 		{
+            Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.1f, 0.3f, 0.3f);
             Vector2 targetPos = projectile.position;
             float targetDist = viewDist;
             bool target = false;
@@ -101,24 +102,24 @@ namespace CheezeMod.Projectiles.Summoning
             {
                 if(Main.rand.Next(4) == 0)
                 {
-                    int dust = Dust.NewDust(new Vector2(projectile.Center.X, projectile.Center.Y + 2), projectile.width, projectile.height / 2, 75);
-                    Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.6f, 0.9f, 0.3f);
+                    int dust = Dust.NewDust(new Vector2(projectile.Center.X, projectile.Center.Y + 2), projectile.width, projectile.height / 2, 135);
+                    Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.3f, 0.9f, 0.9f);
                 }
             }
-            if (target == true && targetDist > 25 && targetDist < 800 && attackCool <= 0)
+            if (target == true && targetDist > 25 && targetDist < 1500 && attackCool <= 0)
             {
-                shootSpeed = 17;
-                shoot = mod.ProjectileType("MegaDreadLaser");
+                shootSpeed = 20;
+                shoot = mod.ProjectileType("UltraDreadLaser");
                 Behavior();
-                attackCool = 50+ Main.rand.Next(25);
+                attackCool = 42+ Main.rand.Next(15);
                 projectile.tileCollide = false;
             }
-            else if (target == true && targetDist > 25 && targetDist < 250 && attackCool2 <= 0)
+            else if (target == true && targetDist > 25 && targetDist < 350 && attackCool2 <= 0)
             {
-                shootSpeed = 8;
-                shoot = mod.ProjectileType("DreadBomb");
+                shootSpeed = 10;
+                shoot = mod.ProjectileType("DreadNuke");
                 Behavior();
-                attackCool2 = 270 + Main.rand.Next(200);
+                attackCool2 = 200 + Main.rand.Next(150);
                 projectile.tileCollide = false;
             }
             else

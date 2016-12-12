@@ -40,6 +40,11 @@ namespace CheezeMod.Projectiles.Summoning
             return true;
         }
 
+        public override void TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
+        {
+            fallThrough = false;
+        }
+
         public override bool PreAI()
         {
             Player player = Main.player[projectile.owner];
@@ -95,13 +100,13 @@ namespace CheezeMod.Projectiles.Summoning
                 if(Main.rand.Next(4) == 0)
                 {
                     int dust = Dust.NewDust(new Vector2(projectile.Center.X, projectile.Center.Y + 2), projectile.width, projectile.height / 2, 6);
-                    Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.6f, 0.9f, 0.3f);
+                    Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.9f, 0.6f, 0.3f);
                 }
             }
-            if (target == true && targetDist > 25 && targetDist < 500 && attackCool <= 0)
+            if (target == true && targetDist > 25 && targetDist < 520 && attackCool <= 0)
             {
                 Behavior();
-                attackCool = 42 + Main.rand.Next(27);
+                attackCool = 65 + Main.rand.Next(30);
                 projectile.tileCollide = false;
             }
             else
