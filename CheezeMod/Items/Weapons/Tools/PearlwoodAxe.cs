@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Items.Tools
+namespace CheezeMod.Items.Weapons.Tools
 {
 	public class PearlwoodAxe : ModItem
 	{

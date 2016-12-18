@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -255,6 +256,16 @@ namespace CheezeMod.NPCs
             #region Bosses
             if (Main.expertMode == false)
             {
+                if (!ModLoader.GetLoadedMods().Contains("QualityOfLifeStandard"))
+                {
+                    if (npc.type == NPCID.KingSlime)
+                    {
+                        if (Main.rand.Next(6) == 0)
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SlimeStaff, 1);
+                        }
+                    }
+                }
                 if (npc.type == NPCID.SkeletronHead)
                 {
                     bool ironOrMeteoriteBolt = false;
@@ -350,6 +361,13 @@ namespace CheezeMod.NPCs
         {
             public override void OpenVanillaBag(string context, Player player, int arg)
             {
+                if (context == "bossBag" && arg == ItemID.KingSlimeBossBag)
+                {
+                    if (Main.rand.Next(5) == 0)
+                    {
+                        player.QuickSpawnItem(ItemID.SlimeStaff);
+                    }
+                }
                 if (context == "bossBag" && arg == ItemID.SkeletronBossBag)
                 {
                     bool ironOrMeteoriteBolt = false;

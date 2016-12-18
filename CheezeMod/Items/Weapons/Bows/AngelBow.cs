@@ -37,8 +37,9 @@ namespace CheezeMod.Items.Weapons.Bows
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "AngelEssence", 5);
-            recipe.AddIngredient(ItemID.SoulofFlight, 20);
-            recipe.AddTile(18);
+            recipe.AddIngredient(ItemID.SoulofFlight, 10);
+            recipe.AddIngredient(ItemID.SoulofSight, 10);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }

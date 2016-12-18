@@ -4,27 +4,26 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Items.Tools
+namespace CheezeMod.Items.Weapons.Tools
 {
-	public class GuardianAmbidextrousAxe : ModItem
+	public class HistoricAmbidextrousAxe : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Guardian Ambidextrous Axe";
-			item.damage = 51;
+			item.name = "Historic Ambidextrous Axe";
+			item.damage = 71;
 			item.melee = true;
-            item.width = 68;
-			item.height = 58;
-			item.toolTip = "An enourmous axe used by the guardians of Madrigal. \n+6% Critical Chance. \n+10 HP when holding. \n+4 Defense when holding.";
-            item.crit = 6;
-            item.scale = 1.1f;
+            item.width = 86;
+			item.height = 86;
+			item.toolTip = "An enourmous axe used by the guardians of Madrigal.\n+11% HP when holding.\n+5 defense when holding.\nInflicts Dryad's bane on your opponent.";
+            item.scale = 1f;
             item.useTime = 64;
 			item.useAnimation = 64;
-			item.axe = 35;
+			item.axe = 70;
 			item.useStyle = 1;
 			item.knockBack = 8;
-			item.value = CheezeItem.guardianPrice;
-			item.rare = CheezeItem.guardianRarity;
+			item.value = CheezeItem.historicPrice;
+            item.rare = CheezeItem.historicRarity;
             item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}
@@ -32,8 +31,8 @@ namespace CheezeMod.Items.Tools
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddRecipeGroup("CheezeMod:EvilAxes");
+            recipe.AddIngredient(null, "HistoricEssence", 5);
+            recipe.AddIngredient(ItemID.MushroomCap);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -51,8 +50,8 @@ namespace CheezeMod.Items.Tools
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                player.statLifeMax2 += 10;
-                player.statDefense += 4;
+                player.statLifeMax2 += (int)(player.statLifeMax2 * 0.11f);
+                player.statDefense += 5;
             }
         }
     }

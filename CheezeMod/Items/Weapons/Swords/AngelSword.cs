@@ -32,8 +32,9 @@ namespace CheezeMod.Items.Weapons.Swords
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "AngelEssence", 5);
-            recipe.AddIngredient(ItemID.PearlwoodSword);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ItemID.SoulofLight, 20);
+            recipe.AddIngredient(ItemID.SoulofFlight, 10);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }

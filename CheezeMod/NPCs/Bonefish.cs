@@ -13,7 +13,7 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
-            npc.CloneDefaults(NPCID.Piranha);
+            //npc.CloneDefaults(NPCID.Piranha);
             npc.name = "Bonefish";
             npc.displayName = "Bonefish";
             npc.width = 26;
@@ -26,10 +26,11 @@ namespace CheezeMod.NPCs
             npc.DeathSound = SoundID.NPCDeath2;
             npc.value = 200f;
             npc.aiStyle = 16;
+            npc.noGravity = true;
+            aiType = NPCID.Piranha;
             banner = npc.type;
             bannerItem = mod.ItemType("BonefishBanner");
             Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Piranha];
-            aiType = NPCID.Piranha;
             animationType = NPCID.Piranha;
         }
 

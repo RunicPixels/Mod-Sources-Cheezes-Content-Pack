@@ -4,35 +4,36 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Items.Tools
+namespace CheezeMod.Items.Weapons.Tools
 {
-	public class HistoricAmbidextrousAxe : ModItem
+	public class HistoricAxe : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Historic Ambidextrous Axe";
-			item.damage = 71;
+			item.name = "Historic Axe";
+			item.damage = 47;
 			item.melee = true;
-            item.width = 86;
-			item.height = 86;
-			item.toolTip = "An enourmous axe used by the guardians of Madrigal.\n+11% HP when holding.\n+5 defense when holding.\nInflicts Dryad's bane on your opponent.";
-            item.scale = 1f;
-            item.useTime = 64;
-			item.useAnimation = 64;
-			item.axe = 70;
+			item.width = 34;
+			item.height = 32;
+			item.toolTip = "An axe that is an historic artifact of Madrigal. \n+17% Critical Chance. \n+10% Increased Critical Damage. \n+15 Max health when holding. \n Inflics Dryad's Bane on enemy hit.";
+            item.crit = 17;
+            item.scale = 1.0f;
+            item.useTime = 29;
+			item.useAnimation = 29;
+			item.axe = 25;
 			item.useStyle = 1;
-			item.knockBack = 8;
+			item.knockBack = 6;
 			item.value = CheezeItem.historicPrice;
-            item.rare = CheezeItem.historicRarity;
+			item.rare = CheezeItem.historicRarity;
             item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
+			item.autoReuse = true;
 		}
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "HistoricEssence", 5);
-            recipe.AddIngredient(ItemID.MushroomCap);
+            recipe.AddIngredient(null, "PearlwoodAxe");
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -50,8 +51,9 @@ namespace CheezeMod.Items.Tools
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                player.statLifeMax2 += (int)(player.statLifeMax2 * 0.11f);
-                player.statDefense += 5;
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.1f; // This number here changes the multiplier
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).flyffhistoric = true; // Dryad debuff on enemy for 1 sec.
+                player.statLifeMax2 += 15;
             }
         }
     }

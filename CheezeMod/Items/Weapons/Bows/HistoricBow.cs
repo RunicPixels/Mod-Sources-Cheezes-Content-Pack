@@ -22,8 +22,8 @@ namespace CheezeMod.Items.Weapons.Bows
             item.scale = 0.8f;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 3;
-            item.value = CheezeItem.historicPrice;
-            item.rare = CheezeItem.historicRarity;
+            item.value = CheezeItem.angelPrice;
+            item.rare = CheezeItem.angelRarity;
             item.crit = 17;
             item.autoReuse = true;
             item.UseSound = SoundID.Item5;

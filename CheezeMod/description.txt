@@ -1,12 +1,12 @@
 Cheeze's Conent Pack is a mod that adds a variety of content to Terraria.
 
-As of right now the mod includes several tools, an armor set, a few new armor parts, a number of accessories, a new generated ore, 140+ weapons, lots of materials, several monsters and a crafting station.
+As of right now the mod includes several tools, an armor set, a few new armor parts, a number of accessories, a new generated ore, 140+ weapons, lots of materials, several monsters, a town npc and a crafting station.
 • There's content spread over hardmode and pre-hardmode.
 • New content spread over a variety of biomes, places and events.
 • Stacked Items crafted at a heavy work bench to save chest space.
 • A ton of content related to other games like Ratchet & Clank, FlyFF and Overwatch.
 • Variants to certain vanilla monsters with useful loot.
-• Lots of new, fun and unique weapons are available.
+• Lots of new, fun and unique items are available.
 • Tiered Kunai and Halberds.
 • Alternative ways to get certain vanilla items.
 • Several Quality of Life improvements.
@@ -18,6 +18,8 @@ Changelog:
 v1.0.1 - Galactic Madness.
 New Town NPC: Martian Trader
 Ultra Agents now permanently fly and do more damage.
+Added Slime Staff to King Slime drop list if Quality of Life mod is not loaded.
+Improved compatibility with Prefixes from Enemies.
 
 Lancer and Lavagun resprited by Vladimier, I altered the upgraded variants of the Lava Gun to match his style.
 

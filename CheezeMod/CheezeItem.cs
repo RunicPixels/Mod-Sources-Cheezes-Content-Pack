@@ -27,7 +27,7 @@ namespace CheezeMod
         };
         public static String[] angelList =
 {
-            "AngelSword","HistoricAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","HistoricBow","HistoricYoyo","HistoricWand","HistoricStaff"
+            "AngelSword","AngelAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","AngelBow","HistoricYoyo","HistoricWand","HistoricStaff"
         };
 
         public static int guardianPrice = 25000;
@@ -46,7 +46,7 @@ namespace CheezeMod
         };
         public static String[] ratchetTier2List =
         {
-            "GoldBombGlove","GoldWalloper","HeavyLancer","Multistar","LiquidNitrogenGun","HeavyBouncer","BlitzCannon","Vaporizer"
+            "GoldBombGlove","GoldWalloper","GloveOfDread","HeavyLancer","MiniNuke","Multistar","LiquidNitrogenGun","HeavyBouncer","BlitzCannon","Vaporizer"
         };
         #endregion
     }

@@ -208,7 +208,7 @@ namespace CheezeMod.NPCs.Friendly
             // Here is an example of how your npc can sell items from other mods.
             if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
             {
-                shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("ThoriumBlock"));
+                shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("ThoriumBrick"));
                 shop.item[nextSlot].shopCustomPrice = 200;
                 nextSlot++;
             }

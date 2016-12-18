@@ -4,23 +4,23 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Items.Tools
+namespace CheezeMod.Items.Weapons.Tools
 {
-	public class GuardianAxe : ModItem
+	public class GuardianPickaxe : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Guardian Axe";
-			item.damage = 32;
+			item.name = "Guardian Pickaxe";
+			item.damage = 18;
 			item.melee = true;
 			item.width = 34;
-			item.height = 32;
-			item.toolTip = "An axe used by the guardians of Madrigal. \n+6% Critical Chance. \n+15% Increased Critical Damage. \n+3 Defense when holding.";
-            item.crit = 6;
+			item.height = 30;
+			item.toolTip = "An pickaxe used by the guardians of Madrigal. \n+3% Critical Chance. \n+25% Increased Critical Damage. \n+3 Defense when holding.";
+            item.crit = 3;
             item.scale = 1.25f;
-            item.useTime = 30;
-			item.useAnimation = 30;
-			item.axe = 19;
+            item.useTime = 20;
+			item.useAnimation = 20;
+            item.pick = 100;
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = CheezeItem.guardianPrice;
@@ -33,7 +33,7 @@ namespace CheezeMod.Items.Tools
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddRecipeGroup("CheezeMod:EvilAxes");
+            recipe.AddRecipeGroup("CheezeMod:EvilPickaxes");
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -51,7 +51,7 @@ namespace CheezeMod.Items.Tools
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.15f; // This number here changes the multiplier
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.25f; // This number here changes the multiplier
                 player.statDefense += 3;
             }
         }
