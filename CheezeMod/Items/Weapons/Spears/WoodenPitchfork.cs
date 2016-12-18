@@ -35,7 +35,7 @@ namespace CheezeMod.Items.Weapons.Spears
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Wood, 10);
+			recipe.AddRecipeGroup("CheezeMod:AnyWood", 10);
             recipe.AddTile(18);
             recipe.SetResult(this);
 			recipe.AddRecipe();

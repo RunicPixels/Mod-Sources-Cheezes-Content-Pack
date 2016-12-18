@@ -14,8 +14,23 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 NOTE: Update 1.1 for tModLoader 0.9 has just come out! If you see or find anything odd be sure to tell me!
 
 Changelog:
+
+v1.0.1 - Galactic Madness.
+New Town NPC: Martian Trader
+Ultra Agents now permanently fly and do more damage.
+
+Lancer and Lavagun resprited by Vladimier, I altered the upgraded variants of the Lava Gun to match his style.
+
 v1.1 - An update that flies for fun.
 Updated for tModLoader 0.9
+
+[1.1.0.8 - Improved Ultra Agents.]
+[1.1.0.7 - Fixed High Noon and Pulse Pistol]
+[1.1.0.6 - Fixed some multiplayer syncing]
+[1.1.0.4 - updated for 0.9.0.2]
+[1.1.0.1/2- minor changelog fixes.]
+[1.1.0.X - minor bugfixes/balancing.]
+
 [Flyff]
 Added Tiered Guardian Weapons. Dropped by Skeletron.
 Added Tiered Historic Weapons. Dropped by WoF
@@ -34,9 +49,6 @@ Added Agents of Doom,
  - Also added the upgraded variants, the Agents of Dread, the Mega Agents of Dread and the Ultra Agents of Dread.
 
 [Other]
-[1.0.0.1/2- minor changelog fixes.]
-[1.0.0.2/3/4 - minor bugfixes/balancing.]
-[1.0.4 - updated for 0.9.0.2]
 Added three new monsters
 Added Pearlwood Axe and Pickaxe.
 Improvements to older content.

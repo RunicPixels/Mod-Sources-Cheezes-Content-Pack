@@ -14,7 +14,6 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.width = 10;
             projectile.height = 8;
             projectile.scale = 0.9f;
-            projectile.damage = 65;
             projectile.friendly = true;
             projectile.penetrate = 6;
             projectile.timeLeft = 300;

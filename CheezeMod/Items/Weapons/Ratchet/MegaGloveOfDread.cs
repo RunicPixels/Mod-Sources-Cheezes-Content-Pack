@@ -17,7 +17,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.height = 42;
             item.scale = 0.75f;
             item.mana = 18;
-            item.toolTip = "Summons an mega agent of dread to fight for you, these now also shoot your enemies with lasers.";
+            item.toolTip = "Summons an mega agent of dread to fight for you, now also comes with bombs.";
             item.toolTip2 = "Originally from Ratchet and Clank.";
             item.useTime = 25;
             item.useAnimation = 25;

@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using CheezeMod.Items;
 using CheezeMod.NPCs;
 using System.Drawing;
+using System.Linq;
 
 namespace CheezeMod
 {
@@ -106,6 +107,22 @@ namespace CheezeMod
         // New Recipe Groups //
         public override void AddRecipeGroups()
         {
+            // All Wood //
+            RecipeGroup AnyWood = new RecipeGroup(() => Lang.misc[37] + " " + GetItem("Any Wood").item.name, new int[]
+            {
+                ItemID.Wood,
+                ItemID.RichMahogany,
+                ItemID.DynastyWood,
+                ItemID.BorealWood,
+                ItemID.Shadewood,
+                ItemID.Ebonwood,
+                ItemID.SpookyWood,
+                ItemID.PalmWood,
+                ItemID.Pearlwood
+
+            });
+            RecipeGroup.RegisterGroup("CheezeMod:AnyWood", AnyWood);
+
             //Alternative Ores//
 
             //Copper/Tin Bar//

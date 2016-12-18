@@ -37,7 +37,6 @@ namespace CheezeMod.Items.Weapons.Spears
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.HellstoneBar, 12);
             recipe.AddIngredient(ItemID.Obsidian, 12);
-            recipe.AddIngredient(ItemID.RichMahogany, 12);
             recipe.AddTile(16);
             recipe.SetResult(this);
 			recipe.AddRecipe();

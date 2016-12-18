@@ -36,7 +36,7 @@ namespace CheezeMod.Items.Weapons.Bows
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(796); // 796 = Tendon Crossbow
+            recipe.AddIngredient(796); // 796 = Tendon Bow
             recipe.AddIngredient(null, "GraniteShard", 15);
             recipe.AddIngredient(3294); // 3294 = Orange String
             recipe.AddTile(16);

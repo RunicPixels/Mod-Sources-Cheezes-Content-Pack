@@ -59,7 +59,8 @@ namespace CheezeMod.Items.Weapons.Ratchet
                     speedY *= 6f;
                     damage *= (int)1.1;
                 }
-                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                Main.projectile[projectile].netUpdate = true;
                 speedX = baseX;
                 speedY = baseY;
             }

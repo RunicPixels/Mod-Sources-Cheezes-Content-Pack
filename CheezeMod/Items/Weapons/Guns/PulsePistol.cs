@@ -13,13 +13,13 @@ namespace CheezeMod.Items.Weapons.Guns
     {
         int magazineSize = 20;
         int maxMagazineSize = 20;
-        int DefaultUseTime = 5;
+        int DefaultUseTime = 4;
         int ReloadTime = 50;
         bool shotPastReload = false;
         public override void SetDefaults()
         {
             item.name = "Pulse Pistol";
-            item.damage = 40;
+            item.damage = 32;
             item.ranged = true;
             item.width = 44;
             item.height = 26;
@@ -62,6 +62,7 @@ namespace CheezeMod.Items.Weapons.Guns
             }
             else
             {
+                item.reuseDelay = 0;
                 item.useTime = DefaultUseTime;
                 item.useAnimation = DefaultUseTime;
             }
@@ -71,7 +72,7 @@ namespace CheezeMod.Items.Weapons.Guns
                 shotPastReload = false;
                 return false;
             }
-            float spread = 7f; // 7 degrees
+            float spread = 17f; // 17 degrees
             speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
             speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             magazineSize--;
@@ -109,6 +110,7 @@ namespace CheezeMod.Items.Weapons.Guns
         {
             item.useTime = ReloadTime;
             item.useAnimation = ReloadTime;
+            item.reuseDelay = ReloadTime;
             magazineSize = maxMagazineSize;
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PistolReload");
             SetMagazineToolTip();

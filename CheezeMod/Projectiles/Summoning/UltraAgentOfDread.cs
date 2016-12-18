@@ -12,22 +12,22 @@ namespace CheezeMod.Projectiles.Summoning
         int attackCool2;
 		public override void SetDefaults()
 		{
-            projectile.CloneDefaults(ProjectileID.BabySlime);
+            projectile.CloneDefaults(ProjectileID.Raven);
             projectile.alpha = 0;
 			projectile.netImportant = true;
 			projectile.name = "Ultra Agent of Dread";
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
-            projectile.scale = 1.2f;
-            Main.projFrames[projectile.type] = 6;
+            projectile.scale = 1.25f;
+            Main.projFrames[projectile.type] = 8;
 			Main.projPet[projectile.type] = true;
             drawOriginOffsetY = -10;
 			projectile.minion = true;
 			projectile.minionSlots = 1;
 			projectile.penetrate = -1;
 			projectile.timeLeft = 360000;
-            aiType = ProjectileID.BabySlime;
+            aiType = ProjectileID.Raven;
             ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
             ProjectileID.Sets.Homing[projectile.type] = true;
@@ -74,12 +74,13 @@ namespace CheezeMod.Projectiles.Summoning
 			}
 		}
 
-        public override void TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
-        {
-            fallThrough = false;
-        }
         public override void AI()
 		{
+            if(Main.rand.Next(5) == 0)
+            {
+                projectile.velocity *= 1.02f;
+                projectile.velocity.Y *= 1.02f;
+            }
             Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.1f, 0.3f, 0.3f);
             Vector2 targetPos = projectile.position;
             float targetDist = viewDist;
@@ -98,25 +99,22 @@ namespace CheezeMod.Projectiles.Summoning
                     }
                 }
             }
-            if (projectile.frame > 1)
-            {
-                if(Main.rand.Next(4) == 0)
+            if(Main.rand.Next(4) == 0)
                 {
                     int dust = Dust.NewDust(new Vector2(projectile.Center.X, projectile.Center.Y + 2), projectile.width, projectile.height / 2, 135);
                     Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.3f, 0.9f, 0.9f);
                 }
-            }
-            if (target == true && targetDist > 25 && targetDist < 1500 && attackCool <= 0)
+            if (target == true && targetDist > 10 && targetDist < 1500 && attackCool <= 0 && Main.rand.Next(3) >= 0)
             {
                 shootSpeed = 20;
                 shoot = mod.ProjectileType("UltraDreadLaser");
                 Behavior();
-                attackCool = 42+ Main.rand.Next(15);
+                attackCool = 43+ Main.rand.Next(15);
                 projectile.tileCollide = false;
             }
-            else if (target == true && targetDist > 25 && targetDist < 350 && attackCool2 <= 0)
+            else if (target == true && targetDist > 10 && targetDist < 350 && attackCool2 <= 0 && Main.rand.Next(3) == 0)
             {
-                shootSpeed = 10;
+                shootSpeed = 14;
                 shoot = mod.ProjectileType("DreadNuke");
                 Behavior();
                 attackCool2 = 200 + Main.rand.Next(150);
@@ -127,7 +125,7 @@ namespace CheezeMod.Projectiles.Summoning
                 attackCool--;
                 attackCool2--;
             }
-            if (!Collision.CanHitLine(projectile.position, projectile.width, projectile.height, targetPos, 1, 1) && targetDist > 300)
+            if (!Collision.CanHitLine(projectile.position, projectile.width, projectile.height, targetPos, 1, 1) && targetDist > 100)
             {
                 projectile.tileCollide = false;
             }

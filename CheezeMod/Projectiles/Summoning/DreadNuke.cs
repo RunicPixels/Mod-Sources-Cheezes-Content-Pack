@@ -9,12 +9,11 @@ namespace CheezeMod.Projectiles.Summoning
     public class DreadNuke : ModProjectile
     {
         public bool canExplode = true;
-        int bonusTime = 30;
+        int bonusTime = 60;
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
             projectile.name = "Dread Bomb";
-            projectile.damage = 99;
             projectile.width = 18;
             projectile.height = 18;
             projectile.friendly = true;
@@ -47,6 +46,7 @@ namespace CheezeMod.Projectiles.Summoning
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
+            damage *= 2;
             Player player = Main.player[(int)projectile.ai[1]];
             if (canExplode)
             {

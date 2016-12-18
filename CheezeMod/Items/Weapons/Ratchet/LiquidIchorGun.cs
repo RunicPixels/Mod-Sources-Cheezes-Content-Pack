@@ -13,9 +13,9 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.name = "Liquid Ichor Gun";
             item.damage = 15;
             item.ranged = true;
-            item.width = 64;
+            item.width = 50;
             item.height = 30;
-            item.scale = 0.8f;
+            item.scale = 0.875f;
             item.channel = true;
             item.toolTip = "Converts Flares into liquid ichor.";
             item.toolTip2 = "Inspired by Ratchet and Clank: Going Commando.";

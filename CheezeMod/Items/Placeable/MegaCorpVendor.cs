@@ -13,14 +13,14 @@ namespace CheezeMod.Items.Placeable
 			item.width = 52;
 			item.height = 52;
 			item.maxStack = 99;
-			AddTooltip("Build weapons from Ratchet & Clank 2 here.");
+			AddTooltip("Build weapons from Ratchet & Clank here.");
 			item.useTurn = true;
 			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.useTime = 10;
 			item.useStyle = 1;
 			item.consumable = true;
-			item.value = 150;
+			item.value = 75000;
 			item.createTile = mod.TileType("MegaCorpVendor");
             item.rare = 2;
         }

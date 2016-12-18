@@ -71,7 +71,8 @@ namespace CheezeMod.Items.Weapons.Bows
                         type = 41;
                     }
                 }
-                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                Main.projectile[projectile].netUpdate = true;
             }
             ConsumeAmmo(player);
             return false;

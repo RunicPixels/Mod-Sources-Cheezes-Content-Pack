@@ -21,7 +21,7 @@ namespace CheezeMod.Items.Materials
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Wood);
+            recipe.AddRecipeGroup("CheezeMod:AnyWood");
             recipe.AddIngredient(ItemID.Mushroom);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);

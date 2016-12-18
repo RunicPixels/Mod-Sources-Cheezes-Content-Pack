@@ -14,9 +14,9 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.name = "Liquid Gravity Gun";
             item.damage = 30;
             item.ranged = true;
-            item.width = 64;
+            item.width = 52;
             item.height = 30;
-            item.scale = 0.8f;
+            item.scale = 0.875f;
             item.channel = true;
             item.toolTip = "Converts Flares into liquid gravity, which inflicts shadow flames, ichor and pulls your enemies dow..";
             item.toolTip2 = "Inspired by Ratchet and Clank: Going Commando.";

@@ -51,14 +51,13 @@ namespace CheezeMod.Items.Weapons.Thrown
             double[] Angle = { baseAngle + -1 * spread, baseAngle + 0 * spread, baseAngle + 1 * spread };
             float[] speedXArray = { baseSpeed * (float)Math.Sin(Angle[0]), baseSpeed * (float)Math.Sin(Angle[1]), baseSpeed * (float)Math.Sin(Angle[2]) };
             float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]), baseSpeed * (float)Math.Cos(Angle[1]), baseSpeed * (float)Math.Cos(Angle[2]) };
-            item.stack = -1;
+            player.ConsumeItem(item.type);
             for (int i = 0; i <= speedXArray.Length; i++)
             {
                 Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], type, damage, knockBack, item.owner);
             }
             return true;
         }
-
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
             Lighting.AddLight(new Vector2(item.position.X, item.position.Y), 0.2f, 0.4f, 0.2f);

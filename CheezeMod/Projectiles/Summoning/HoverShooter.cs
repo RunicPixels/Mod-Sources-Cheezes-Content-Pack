@@ -28,7 +28,7 @@ namespace CheezeMod.Projectiles.Summoning
 		{
 			Player player = Main.player[projectile.owner];
 			float spacing = (float)projectile.width * spacingMult;
-			for (int k = 0; k < 1000; k++)
+			/*for (int k = 0; k < 1000; k++)
 			{
 				Projectile otherProj = Main.projectile[k];
 				if (k != projectile.whoAmI && otherProj.active && otherProj.owner == projectile.owner && otherProj.type == projectile.type && System.Math.Abs(projectile.position.X - otherProj.position.X) + System.Math.Abs(projectile.position.Y - otherProj.position.Y) < spacing)
@@ -50,7 +50,7 @@ namespace CheezeMod.Projectiles.Summoning
 						projectile.velocity.Y += idleAccel;
 					}
 				}
-			}
+			}*/
 			Vector2 targetPos = projectile.position;
 			float targetDist = viewDist;
 			bool target = false;
@@ -74,7 +74,7 @@ namespace CheezeMod.Projectiles.Summoning
 				projectile.ai[0] = 1f;
 				projectile.netUpdate = true;
 			}
-			if (projectile.ai[0] == 1f)
+            /*if (projectile.ai[0] == 1f)
 			{
 				projectile.tileCollide = false;
 			}
@@ -91,8 +91,8 @@ namespace CheezeMod.Projectiles.Summoning
 					projectile.velocity *= (float)Math.Pow(0.97, 40.0 / inertia);
 				}
 			}
-			else
-			{
+            else
+            {
 				if (!Collision.CanHitLine(projectile.Center, 1, 1, player.Center, 1, 1))
 				{
 					projectile.ai[0] = 1f;
@@ -143,10 +143,11 @@ namespace CheezeMod.Projectiles.Summoning
 					projectile.velocity *= (float)Math.Pow(0.9, 40.0 / inertia);
 				}
 			}
-			projectile.rotation = projectile.velocity.X * 0.05f;
+            projectile.rotation = projectile.velocity.X * 0.05f;
 			SelectFrame();
 			CreateDust();
-			if (projectile.velocity.X > 0f)
+            */
+            if (projectile.velocity.X > 0f)
 			{
 				projectile.spriteDirection = (projectile.direction = -1);
 			}

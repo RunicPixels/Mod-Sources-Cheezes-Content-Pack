@@ -121,6 +121,7 @@
     <Compile Include="Items\Blocks\StackedWood.cs" />
     <Compile Include="Items\Consumables\Cheese.cs" />
     <Compile Include="Items\Materials\AmethystLens.cs" />
+    <Compile Include="Items\Materials\AngelEssence.cs" />
     <Compile Include="Items\Materials\DiamondLens.cs" />
     <Compile Include="Items\Materials\EmeraldLens.cs" />
     <Compile Include="Items\Materials\FlameWing.cs" />
@@ -309,6 +310,7 @@
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
     <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\DragonEye.cs" />
+    <Compile Include="NPCs\Friendly\MartianTrader.cs" />
     <Compile Include="NPCs\GraniteWanderer.cs" />
     <Compile Include="NPCs\MoltenEye.cs" />
     <Compile Include="NPCs\Protopet.cs" />
@@ -558,6 +560,7 @@
     <Content Include="Items\Blocks\StackedWood.png" />
     <Content Include="Items\Consumables\Cheese.png" />
     <Content Include="Items\Materials\AmethystLens.png" />
+    <Content Include="Items\Materials\AngelEssence.png" />
     <Content Include="Items\Materials\DiamondLens.png" />
     <Content Include="Items\Materials\EmeraldLens.png" />
     <Content Include="Items\Materials\FlameWing.png" />
@@ -740,6 +743,8 @@
     <Content Include="Items\Weapons\Yoyo\HistoricYoyo.png" />
     <Content Include="NPCs\Bonefish.png" />
     <Content Include="NPCs\DragonEye.png" />
+    <Content Include="NPCs\Friendly\MartianTrader.png" />
+    <Content Include="NPCs\Friendly\MartianTrader_Head.png" />
     <Content Include="NPCs\GraniteWanderer.png" />
     <Content Include="NPCs\MoltenEye.png" />
     <Content Include="NPCs\Protopet.png" />

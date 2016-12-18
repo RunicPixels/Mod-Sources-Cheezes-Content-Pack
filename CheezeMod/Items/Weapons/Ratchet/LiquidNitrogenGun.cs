@@ -13,9 +13,9 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.name = "Liquid Nitrogen Gun";
 			item.damage = 8;
 			item.ranged = true;
-			item.width = 64;
+			item.width = 50;
 			item.height = 30;
-            item.scale = 0.8f;
+            item.scale = 0.875f;
             item.channel = true;
             item.toolTip = "Converts Flares into cold liquid nitrogen.";
             item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";

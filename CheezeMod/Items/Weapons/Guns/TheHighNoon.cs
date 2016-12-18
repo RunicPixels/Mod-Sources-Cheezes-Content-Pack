@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,30 +9,36 @@ namespace CheezeMod.Items.Weapons.Guns
 {
     public class TheHighNoon : ModItem
     {
+        int magazineSize = 6;
+        int maxMagazineSize = 6;
+        int ReloadTime = 50;
+        int DefaultUseTime = 4;
+        bool shotPastReload = false;
         public override void SetDefaults()
         {
             item.name = "The High Noon";
-            item.damage = 44;
+            item.damage = 59;
             item.ranged = true;
             item.width = 48;
             item.height = 26;
             item.scale = 0.7f;
-            item.toolTip = "'It's high noon.' This weapon is a reference from McCree from Overwatch.";
-            item.toolTip2 = "Alternative fire (Default: Right Mouse Button) shoots 6 bullets in rapid fashion.";
-            item.useTime = 5;
-            item.useAnimation = item.useTime;
+            item.toolTip = (magazineSize).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+            item.toolTip2 = "'It's high noon.' This weapon is a reference from McCree from Overwatch.\nAlternative fire (Default: Right Mouse Button) rapidly shoots bullets in a spread. Has to reload every 6 shots.";
+            item.useTime = DefaultUseTime;
+            item.useAnimation = DefaultUseTime;
             item.reuseDelay = 3;
             item.useStyle = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 4;
             item.value = 180000;
             item.rare = 5;
-            item.crit = 8;
+            item.crit = 6;
             item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
-            item.shootSpeed = 14f;
+            item.shootSpeed = 20f;
             item.useAmmo = AmmoID.Bullet;
+            item.useTurn = false;
         }
 
         public override void AddRecipes()
@@ -47,26 +54,61 @@ namespace CheezeMod.Items.Weapons.Guns
         }
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
+            item.UseSound = SoundID.Item11;
+            if (magazineSize <= 2)
+            {
+                Reload(player);
+                magazineSize += 2;
+            }
+            else
+            {
+                item.reuseDelay = 3;
+                item.useTime = DefaultUseTime;
+                item.useAnimation = DefaultUseTime;
+            }
+            if (shotPastReload)
+            {
+                type = 0;
+                shotPastReload = false;
+                return false;
+            }
             Main.PlaySound(2, player.position, 11);
             float spread = 0f;
             if (player.altFunctionUse == 2)
             {
-                spread = 22f; // 22 degrees
+                spread = 20f; // 20 degrees
+                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
+                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             }
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double baseAngle = Math.Atan2(speedX, speedY);
-            double randomAngle = baseAngle + (Main.rand.NextFloat() - 0.5f) * spread;
-            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
-            item.useAnimation = item.useTime;
-            item.reuseDelay = item.useTime;
+            magazineSize--;
+            SetMagazineToolTip();
             return true;
         }
         public override bool AltFunctionUse(Player player)
         {
-            item.useAnimation = 6 * item.useTime;
-            item.reuseDelay = 9 * item.useTime;
             return true;
         }
+
+        public void Reload(Player player)
+        {
+            item.useTime = ReloadTime;
+            item.useAnimation = ReloadTime;
+            item.reuseDelay = ReloadTime;
+            magazineSize = maxMagazineSize;
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PistolReload");
+            SetMagazineToolTip();
+        }
+        public void SetMagazineToolTip()
+        {
+            if (magazineSize >= 7)
+            {
+                item.toolTip = (magazineSize - 6).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+            }
+            else
+            {
+                item.toolTip = magazineSize.ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+            }
+        }
+
     }
 }

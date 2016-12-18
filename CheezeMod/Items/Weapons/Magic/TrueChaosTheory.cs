@@ -62,7 +62,8 @@ namespace CheezeMod.Items.Weapons.Magic
                 float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]), baseSpeed * (float)Math.Cos(Angle[1]), baseSpeed * (float)Math.Cos(Angle[2]) };
                 for (int i = 0; i <= speedXArray.Length; i++)
                 {
-                    Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], mod.ProjectileType("WindBlast"), (int)(damage * 0.65), knockBack, item.owner);
+                    int projectile = Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], mod.ProjectileType("WindBlast"), (int)(damage * 0.65), knockBack, item.owner);
+                    Main.projectile[projectile].netUpdate = true;
                 }
             }
             return true;

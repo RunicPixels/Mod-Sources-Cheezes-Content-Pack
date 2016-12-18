@@ -36,7 +36,7 @@ namespace CheezeMod.Items.Weapons.Spears
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.TitaniumBar, 12);
-            recipe.AddIngredient(ItemID.Wood, 6);
+            recipe.AddRecipeGroup("CheezeMod:AnyWood", 6);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
 			recipe.AddRecipe();

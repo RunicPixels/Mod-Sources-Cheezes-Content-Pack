@@ -11,20 +11,20 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Ultra Glove of Dread";
-			item.damage = 45;
+			item.damage = 100;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
-            item.mana = 18;
-            item.toolTip = "Summons an mega agent of dread to fight for you, these now also shoot your enemies with lasers.";
+            item.mana = 20;
+            item.toolTip = "Summons an ultra agent of dread to fight for you, the agents now have unlimited flight as well as enhanced weaponry.";
             item.toolTip2 = "Originally from Ratchet and Clank.";
             item.useTime = 25;
             item.useAnimation = 25;
 			item.useStyle = 1;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;
-			item.value = 540000;
+			item.value = 960000;
 			item.rare = 10;
             item.UseSound = SoundID.Item19;
 			item.autoReuse = false;
