@@ -26,7 +26,7 @@ namespace CheezeMod
             "HistoricSword","HistoricAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","HistoricBow","HistoricYoyo","HistoricWand","HistoricStaff"
         };
         public static String[] angelList =
-{
+        {
             "AngelSword","AngelAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","AngelBow","HistoricYoyo","HistoricWand","HistoricStaff"
         };
 
@@ -47,6 +47,10 @@ namespace CheezeMod
         public static String[] ratchetTier2List =
         {
             "GoldBombGlove","GoldWalloper","GloveOfDread","HeavyLancer","MiniNuke","Multistar","LiquidNitrogenGun","HeavyBouncer","BlitzCannon","Vaporizer"
+        };
+        
+        public static int[] ratchetRarity = {
+        2,3,6,10
         };
         #endregion
     }
