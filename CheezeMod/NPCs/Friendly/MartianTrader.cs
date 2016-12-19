@@ -58,7 +58,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override string TownNPCName()
         {
-            switch (WorldGen.genRand.Next(9))
+            switch (WorldGen.genRand.Next(11))
             {
                 case 0:
                     return "Ray";
@@ -78,6 +78,8 @@ namespace CheezeMod.NPCs.Friendly
                     return "Kagura";
                 case 8:
                     return "Darth Mule";
+                case 9:
+                    return "Kasei";
                 default:
                     return "E.T.";
             }
@@ -85,20 +87,37 @@ namespace CheezeMod.NPCs.Friendly
         public override string GetChat()
         {
             int goblinTinkerer = NPC.FindFirstNPC(NPCID.GoblinTinkerer);
-            if (goblinTinkerer >= 0 && Main.rand.Next(6) == 0)
+            int cyborg = NPC.FindFirstNPC(NPCID.Cyborg);
+            int guide = NPC.FindFirstNPC(NPCID.Guide);
+
+            if (guide >= 0 && Main.rand.Next(11) == 0)
+            {
+                return Main.npc[guide].displayName + " really knows a lot about this world, I have told him all about the galaxy, he really wants to know everything.";
+            }
+            if (cyborg >= 0 && Main.rand.Next(10) == 0)
+            {
+                return "You know, I have met people like " + Main.npc[cyborg].displayName + " before, I believe they were called the 'Borg'.";
+            }
+            if (goblinTinkerer >= 0 && Main.rand.Next(9) == 0)
             {
                 return "Another facinating lifeform on this planet is " + Main.npc[goblinTinkerer].displayName + " he would be of the race called a goblin, right?";
             }
-            switch (Main.rand.Next(5))
+            switch (Main.rand.Next(8))
             {
                 case 0:
                     return "Terrarian goods are facinating, I want to add them to my collection.";
                 case 1:
                     return "I'm sorry of the agressiveness of my brethen, why can't we all just live in peace?";
                 case 2:
-                    return "I've been starbound for so long, it's good to be on a planet once again!";
+                    return "Do you know the old Martian proverb that revenge is a dish best served cold? It is very cold in space.";
                 case 3:
-                    return "Slimes are odd creatures..., They are very sticky, I wonder why they don't get stuck to the ground.";
+                    return "All things change in a dynamic environment. Your effort to remain what you are is what limits you."; 
+                case 4:
+                    return "You know the first rule of combat? Shoot them before they shoot you.";
+                case 5:
+                    return "All the lights in the sky are stars.";
+                case 6:
+                    return "Slimes are interesting creatures, I wonder how they move, because you know, they're just so sticky.";
                 default:
                     return "I've been to so many stars and worlds, I have goods from all over the galaxy!";
             }

@@ -23,7 +23,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.scale = 0.8f;
 			item.damage = 145;
             item.knockBack = 9f;
-            item.rare = 6;
+            item.rare = CheezeItem.ratchetRarity[3];
             item.value = 300000;
 		}
         public override void AddRecipes()

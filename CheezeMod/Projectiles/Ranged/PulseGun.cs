@@ -13,8 +13,8 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.CloneDefaults(ProjectileID.Bullet);
             projectile.name = "Pulse shot";
             projectile.damage = 8;
-            projectile.width = 15;
-            projectile.height = 10;
+            projectile.width = 8;
+            projectile.height = 8;
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.penetrate = 1;
@@ -28,17 +28,15 @@ namespace CheezeMod.Projectiles.Ranged
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             return true;
         }
-
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.1f, 0.3f, 0.6f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
-            if (Main.rand.Next(2) == 0)
-            {
-                int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, 135, projectile.velocity.X, projectile.velocity.Y);
-                Main.dust[num1].noGravity = true;
-                Main.dust[num1].velocity *= 0.7f + (Main.rand.NextFloat() * 0.2f);
+            for (int i = 0 ; i < 3; i++) { 
+            int num1 = Dust.NewDust(projectile.position - projectile.velocity * Main.rand.NextFloat(), projectile.width, projectile.height, 135, projectile.velocity.X, projectile.velocity.Y);
+            Main.dust[num1].noGravity = true;
+            Main.dust[num1].velocity *= 0.1f + (Main.rand.NextFloat() * 0.4f);
             }
         }
 

@@ -20,7 +20,7 @@ namespace CheezeMod.Dusts
 			dust.position += dust.velocity;
 			dust.rotation += dust.velocity.X * 0.15f;
 			dust.scale *= 0.99f;
-            if (dust.scale < 0.8f)
+            if (dust.scale < 0.75f)
 			{
 				dust.active = false;
 			}

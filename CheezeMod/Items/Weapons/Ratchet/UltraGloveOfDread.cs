@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;
 			item.value = 960000;
-			item.rare = 10;
+            item.rare = CheezeItem.ratchetRarity[3];
             item.UseSound = SoundID.Item19;
 			item.autoReuse = false;
 			item.shoot = mod.ProjectileType("UltraAgentOfDread"); //idk why but all the guns in the vanilla source have this

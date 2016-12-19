@@ -6,5 +6,5 @@ namespace CheezeMod.NPCs
 	{
 		public bool downfall = false;
         public bool angelsBane = false;
-	}
+    }
 }

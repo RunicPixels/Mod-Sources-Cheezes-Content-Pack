@@ -22,6 +22,7 @@ namespace CheezeMod
         public bool agentDreadMinion = false;
         public bool agentMegaDreadMinion = false;
         public bool agentUltraDreadMinion = false;
+        public static bool sellFlare = false;
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
@@ -45,6 +46,7 @@ namespace CheezeMod
             this.agentDreadMinion = false;
             this.agentMegaDreadMinion = false;
             this.agentUltraDreadMinion = false;
+            sellFlare = false;
             this.critMultiplier = 1.00f;
             this.meleeCritMultiplier = 0.0f;
             this.rangedCritMultiplier = 0.0f;
@@ -169,9 +171,9 @@ namespace CheezeMod
         public override void UpdateBadLifeRegen()
         {
             if (angelsBane) {
-                if (player.position.Y <= Main.worldSurface * 1f)
+                if (player.statLife > 400)
                 {
-                    player.lifeRegen -= (Main.expertMode == true) ?  24 : 12;
+                    player.lifeRegen -= (Main.expertMode == true) ?  32 : 16;
                 }
                 else
                 {

@@ -32,7 +32,7 @@ namespace CheezeMod
 
         public static int guardianPrice = 25000;
         public static int historicPrice = guardianPrice * 3;
-        public static int angelPrice = guardianPrice * 3;
+        public static int angelPrice = historicPrice * 3;
 
 
         public static int guardianRarity = 2;
@@ -49,8 +49,9 @@ namespace CheezeMod
             "GoldBombGlove","GoldWalloper","GloveOfDread","HeavyLancer","MiniNuke","Multistar","LiquidNitrogenGun","HeavyBouncer","BlitzCannon","Vaporizer"
         };
         
-        public static int[] ratchetRarity = {
-        2,3,6,10
+        public static int[] ratchetRarity = 
+        {
+            2,3,6,10
         };
         #endregion
     }

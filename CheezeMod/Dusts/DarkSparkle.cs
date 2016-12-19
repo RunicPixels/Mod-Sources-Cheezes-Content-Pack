@@ -22,7 +22,7 @@ namespace CheezeMod.Dusts
 			dust.scale *= 0.99f;
             float light = 0.35f * dust.scale;
             Lighting.AddLight((int)(dust.position.X / 16f), (int)(dust.position.Y / 16f), 0.1f, 0f, 0.3f);
-            if (dust.scale < 0.4f)
+            if (dust.scale < 0.3f)
 			{
 				dust.active = false;
 			}

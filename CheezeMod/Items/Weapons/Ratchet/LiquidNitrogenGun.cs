@@ -26,7 +26,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
 			item.value = 165000;
-			item.rare = 3;
+            item.rare = CheezeItem.ratchetRarity[1];
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/LiquidNitrogenGun");
             item.autoReuse = true;
 			item.shoot = mod.ProjectileType("LiquidNitrogenGun");
@@ -38,6 +38,12 @@ namespace CheezeMod.Items.Weapons.Ratchet
         {
             type = mod.ProjectileType("LiquidNitrogenGun");
             return true;
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            CheezePlayer.sellFlare = true;
+            base.UpdateInventory(player);
         }
 
         public override void AddRecipes()

@@ -1,5 +1,7 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using CheezeMod.NPCs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -26,7 +28,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
 			item.value = 33000;
-			item.rare = 2;
+            item.rare = CheezeItem.ratchetRarity[0];
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/LavaGun");
             item.autoReuse = true;
 			item.shoot = mod.ProjectileType("LavaGun");
@@ -36,7 +38,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            type = mod.ProjectileType("LavaGun"); ;
+            type = mod.ProjectileType("LavaGun");
             return true;
         }
 
@@ -49,8 +51,11 @@ namespace CheezeMod.Items.Weapons.Ratchet
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }
-
-
+        public override void UpdateInventory(Player player)
+        {
+            CheezePlayer.sellFlare = true;
+            base.UpdateInventory(player);
+        }
         public override bool ConsumeAmmo(Player p)
         {
             return Main.rand.Next(10) < 1; // 90% not to consume ammo.

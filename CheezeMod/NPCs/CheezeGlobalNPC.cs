@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System.Linq;
+using CheezeMod;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -20,15 +21,34 @@ namespace CheezeMod.NPCs
             if(Main.expertMode) return Main.rand.Next(8) + drawTimes <= 2;
             else return Main.rand.Next(5) + drawTimes <= 1;
         }
+
+        public bool sellFlare = false;
         #endregion
 
         // ====== // Override Functions \\ ====== \\
         #region MonsterEffects
 
+        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+            if (type == NPCID.Merchant && CheezePlayer.sellFlare)
+            {
+                shop.item[nextSlot].SetDefaults(ItemID.Flare);
+                nextSlot++;
+                shop.item[nextSlot].SetDefaults(ItemID.BlueFlare);
+                nextSlot++;
+            }
+            if(type == NPCID.ArmsDealer)
+            {
+                shop.item[nextSlot].SetDefaults(mod.ItemType("Rocket0"));
+                nextSlot++;
+            }
+            base.SetupShop(type, shop, ref nextSlot);
+        }
         public override void ResetEffects(NPC npc)
         {
             npc.GetModInfo<CheezeNPCInfo>(mod).downfall = false;
             npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane = false;
+            this.sellFlare = false;
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
@@ -46,7 +66,7 @@ namespace CheezeMod.NPCs
             }
             if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
             {
-                if (npc.position.Y < Main.worldSurface)
+                if (npc.life > 1000)
                 {
                     if (Main.rand.Next(3) == 0)
                     {
@@ -54,32 +74,28 @@ namespace CheezeMod.NPCs
                         drawColor.B /= 2;
                     }
                 }
-                else
+                if (Main.rand.Next(3) == 0)
                 {
-                    if (Main.rand.Next(3) == 0)
-                    {
-                        Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("YellowLight"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
-                        drawColor.B /= 2;
-                    }
+                    Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("YellowLight"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+                    drawColor.B /= 2;
                 }
-
             }
         }
         public override void UpdateLifeRegen(NPC npc, ref int damage)
         {
             if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
             {
-                if (npc.position.Y < (float)Main.worldSurface)
+                if (npc.life > 1000)
                 {
-                    npc.lifeRegen = 0;
-                    npc.lifeRegen -= 20;
-                    npc.lifeRegenExpectedLossPerSecond = 20;
+                    npc.lifeRegen -= 100;
+                    damage = 10 + Main.rand.Next(10);
+                    npc.lifeRegenExpectedLossPerSecond = 100;
                 }
                 else
                 {
-                    npc.lifeRegen = 0;
-                    npc.lifeRegen -= 10;
-                    npc.lifeRegenExpectedLossPerSecond = 10;
+                    npc.lifeRegen -= 50;
+                    damage = 5+Main.rand.Next(5);
+                    npc.lifeRegenExpectedLossPerSecond = 50;
                 }
 
             }
