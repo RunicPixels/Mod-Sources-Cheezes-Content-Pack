@@ -11,15 +11,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Heavy Lancer";
-			item.damage = 14;
+			item.damage = 15;
 			item.ranged = true;
 			item.width = 64;
 			item.height = 30;
-            item.scale = 0.8f;
-            item.toolTip = "'My barrel runs hot!', 22% Chance not to consume ammo. Converts normal bullets into Heavy Lancer shots.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
-            item.useTime = 9;
-            item.useAnimation = 9;
+            		item.scale = 0.8f;
+            		item.toolTip = "'My barrel runs hot!', 22% Chance not to consume ammo. Converts normal bullets into Heavy Lancer shots.";
+            		item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+            		item.useTime = 9;
+            		item.useAnimation = 9;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
