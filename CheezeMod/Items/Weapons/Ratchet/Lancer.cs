@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Lancer";
-			item.damage = 7;
+			item.damage = 8;
 			item.ranged = true;
 			item.width = 38;
             item.scale = 0.8f;
