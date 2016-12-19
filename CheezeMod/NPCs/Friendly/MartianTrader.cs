@@ -58,7 +58,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override string TownNPCName()
         {
-            switch (WorldGen.genRand.Next(7))
+            switch (WorldGen.genRand.Next(9))
             {
                 case 0:
                     return "Ray";
@@ -76,6 +76,8 @@ namespace CheezeMod.NPCs.Friendly
                     return "Neytiri";
                 case 7:
                     return "Kagura";
+                case 8:
+                    return "Darth Mule";
                 default:
                     return "E.T.";
             }
@@ -96,7 +98,7 @@ namespace CheezeMod.NPCs.Friendly
                 case 2:
                     return "I've been starbound for so long, it's good to be on a planet once again!";
                 case 3:
-                    return "Slimes are odd creatures..., I wonder why they don't get stuck to the ground.";
+                    return "Slimes are odd creatures..., They are very sticky, I wonder why they don't get stuck to the ground.";
                 default:
                     return "I've been to so many stars and worlds, I have goods from all over the galaxy!";
             }
@@ -137,9 +139,6 @@ namespace CheezeMod.NPCs.Friendly
             shop.item[nextSlot].SetDefaults(ItemID.MartianConduitPlating);
             shop.item[nextSlot].shopCustomPrice = 100;
             nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.MeteoriteBrick);
-            shop.item[nextSlot].shopCustomPrice = 150;
-            nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Glass);
             shop.item[nextSlot].shopCustomPrice = 70;
             nextSlot++;
@@ -158,6 +157,9 @@ namespace CheezeMod.NPCs.Friendly
                 nextSlot++;
                 shop.item[nextSlot].SetDefaults(ItemID.GoldBrick);
                 shop.item[nextSlot].shopCustomPrice = 175;
+                nextSlot++;
+                shop.item[nextSlot].SetDefaults(ItemID.SunplateBlock);
+                shop.item[nextSlot].shopCustomPrice = 190;
                 nextSlot++;
                 shop.item[nextSlot].SetDefaults(ItemID.CobaltBrick);
                 shop.item[nextSlot].shopCustomPrice = 200;
@@ -185,6 +187,9 @@ namespace CheezeMod.NPCs.Friendly
                 nextSlot++;
                 shop.item[nextSlot].SetDefaults(ItemID.PlatinumBrick);
                 shop.item[nextSlot].shopCustomPrice = 185;
+                nextSlot++;
+                shop.item[nextSlot].SetDefaults(ItemID.MeteoriteBrick);
+                shop.item[nextSlot].shopCustomPrice = 200;
                 nextSlot++;
                 shop.item[nextSlot].SetDefaults(ItemID.PalladiumColumn);
                 shop.item[nextSlot].shopCustomPrice = 210;
@@ -222,7 +227,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)
         {
-            cooldown = 30;
+            cooldown = 40;
             randExtraCooldown = 30;
         }
 

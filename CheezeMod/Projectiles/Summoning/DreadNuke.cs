@@ -20,6 +20,7 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.scale = 0.75f;
             projectile.timeLeft = 160;
             projectile.penetrate = 40;
+            ProjectileID.Sets.MinionShot[projectile.type] = true;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
         public override void AI()

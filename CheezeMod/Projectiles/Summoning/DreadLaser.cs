@@ -18,6 +18,7 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.friendly = true;
             projectile.penetrate = 1;
             projectile.timeLeft = 300;
+            ProjectileID.Sets.MinionShot[projectile.type] = true;
             aiType = ProjectileID.Bullet;
         }
 
