@@ -270,8 +270,15 @@ namespace CheezeMod
         {
             // Jungle Related Recipes //
 
+            // Recipe for Seeds.
+            ModRecipe recipe = new ModRecipe(this);
+            recipe.AddIngredient(ItemID.Acorn);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.SetResult(ItemID.Seed, 50);
+            recipe.AddRecipe();
+
             // Recipes for the Seedler.
-            ModRecipe recipe = new ModRecipe(this);  
+            recipe = new ModRecipe(this);  
             recipe.AddIngredient(ItemID.BladeofGrass);
             recipe.AddRecipeGroup("CheezeMod:MythSwords");
             recipe.AddIngredient(ItemID.HallowedBar, 8);

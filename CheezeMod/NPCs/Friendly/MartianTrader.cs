@@ -155,6 +155,8 @@ namespace CheezeMod.NPCs.Friendly
                 shop.item[nextSlot].shopCustomPrice = 25000;
                 nextSlot++;
             }
+            shop.item[nextSlot].SetDefaults(mod.ItemType("CallistoBow"));
+            nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.MartianConduitPlating);
             shop.item[nextSlot].shopCustomPrice = 100;
             nextSlot++;

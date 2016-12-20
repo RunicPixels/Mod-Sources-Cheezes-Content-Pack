@@ -11,16 +11,18 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 • Alternative ways to get certain vanilla items.
 • Several Quality of Life improvements.
 
-NOTE: Update 1.1 for tModLoader 0.9 has just come out! If you see or find anything odd be sure to tell me!
+NOTE: Update 1.1.1 for tModLoader 0.9.0.3 has just come out! If you see or find anything odd be sure to tell me!
 
 Changelog:
 
 v1.1.1 - Galactic Madness.
 New Town NPC: Martian Trader
+Added Mahogany Blowpipe.
+Added Callisto Bow.
 Ultra Agents now permanently fly and do more damage.
 Added Slime Staff to King Slime drop list if Quality of Life mod is not loaded.
 Made the Merchant sell flares if you have a Lava Gun or its upgrades in your inventory.
-Made the Arms Dealer sell Rocket 0 if you have a Gravity Bomb or its upgrades in your inventory.
+Made the Arms Dealer sell Rocket 0.
 Improved compatibility with Prefixes from Enemies.
 Fixed a bug that caused certain parts of recipes to dissapear when hovering over it when using a recipe group.
 Lancer and Lavagun resprited by Vladimier, I altered the upgraded variants of the Lava Gun to match his style.

@@ -161,6 +161,7 @@
     <Compile Include="Items\Weapons\Boomerangs\Kaboomerang.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Star Chakram.cs" />
     <Compile Include="Items\Weapons\Bows\AngelBow.cs" />
+    <Compile Include="Items\Weapons\Bows\CallistoBow.cs" />
     <Compile Include="Items\Weapons\Bows\DemonCrossbow.cs" />
     <Compile Include="Items\Weapons\Bows\GuardianBow.cs" />
     <Compile Include="Items\Weapons\Bows\HistoricBow.cs" />
@@ -184,6 +185,7 @@
     <Compile Include="Items\Weapons\Magic\TrueChaosTheory.cs" />
     <Compile Include="Items\Weapons\Other\GuardianKnuckle.cs" />
     <Compile Include="Items\Weapons\Other\HistoricKnuckle.cs" />
+    <Compile Include="Items\Weapons\Other\MahoganyBlowpipe.cs" />
     <Compile Include="Items\Weapons\Other\OnePunchGlove.cs" />
     <Compile Include="Items\Weapons\Other\SaxtonHalesFist.cs" />
     <Compile Include="Items\Weapons\Ratchet\BlitzCannon.cs" />
@@ -596,6 +598,7 @@
     <Content Include="Items\Weapons\Boomerangs\StarChakram.png" />
     <Content Include="Items\Weapons\Bows\AngelBow.png" />
     <Content Include="Items\Weapons\Bows\AngelBow3.png" />
+    <Content Include="Items\Weapons\Bows\CallistoBow.png" />
     <Content Include="Items\Weapons\Bows\DemonCrossbow.png" />
     <Content Include="Items\Weapons\Bows\GuardianBow.png" />
     <Content Include="Items\Weapons\Bows\HistoricBow.png" />
@@ -619,6 +622,7 @@
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
     <Content Include="Items\Weapons\Other\GuardianKnuckle.png" />
     <Content Include="Items\Weapons\Other\HistoricKnuckle.png" />
+    <Content Include="Items\Weapons\Other\MahoganyBlowpipe.png" />
     <Content Include="Items\Weapons\Other\OnePunchGlove.png" />
     <Content Include="Items\Weapons\Other\SaxtonHalesFist.png" />
     <Content Include="Items\Weapons\Ratchet\blitzcannon.png" />
