@@ -40,7 +40,7 @@ namespace CheezeMod.Items.Weapons.Swords
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("CheezeMod:SilverBars", 10);
+            recipe.AddIngredient(ItemID.SilverBroadsword);
             recipe.AddIngredient(ItemID.Sapphire);
             recipe.AddIngredient(ItemID.Glass, 5);
             recipe.AddTile(TileID.Anvils);

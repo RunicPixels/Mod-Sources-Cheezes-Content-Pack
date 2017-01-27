@@ -13,7 +13,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
             item.name = "Lava Gun";
-			item.damage = 4;
+			item.damage = 5;
 			item.ranged = true;
 			item.width = 50;
 			item.height = 30;

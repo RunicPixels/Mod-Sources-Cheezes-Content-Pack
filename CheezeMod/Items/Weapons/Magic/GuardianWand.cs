@@ -17,7 +17,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "An wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.";
+            item.toolTip = "A wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.";
             Item.staff[item.type] = true;
             item.useTime = 40;
             item.useAnimation = 40;

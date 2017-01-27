@@ -32,6 +32,11 @@ namespace CheezeMod.Projectiles.Ranged
 
         public override void AI()
         {
+            bool waterFlag = Collision.WetCollision(projectile.position, projectile.width, projectile.height);
+            if (waterFlag)
+            {
+                projectile.scale -= 0.05f;
+            }
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.9f, 0.6f, 0.2f);
             projectile.velocity.Y += projectile.ai[0];
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
@@ -46,6 +51,10 @@ namespace CheezeMod.Projectiles.Ranged
                 int num1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, 6, projectile.velocity.X, projectile.velocity.Y, 255, default(Color), 1.6f);
                 Main.dust[num1].noGravity = true;
                 Main.dust[num1].velocity *= 0.3f;
+            }
+            if(projectile.scale <= 0.5f)
+            {
+                projectile.Kill();
             }
         }
 

@@ -119,6 +119,7 @@
     <Compile Include="Items\Blocks\StackedSnowBlock.cs" />
     <Compile Include="Items\Blocks\StackedStoneBlock.cs" />
     <Compile Include="Items\Blocks\StackedWood.cs" />
+    <Compile Include="Items\Consumables\BossSummons\TestSummon.cs" />
     <Compile Include="Items\Consumables\Cheese.cs" />
     <Compile Include="Items\Materials\AmethystLens.cs" />
     <Compile Include="Items\Materials\AngelEssence.cs" />
@@ -296,6 +297,7 @@
     <Compile Include="Items\Weapons\Thrown\TungstenKunai.cs" />
     <Compile Include="Items\Weapons\Thrown\WoodenKunai.cs" />
     <Compile Include="Items\Weapons\Tools\AngelAxe.cs" />
+    <Compile Include="Items\Weapons\Tools\AngelPickaxe.cs" />
     <Compile Include="Items\Weapons\Tools\GuardianAmbidextrousAxe.cs" />
     <Compile Include="Items\Weapons\Tools\GuardianAxe.cs" />
     <Compile Include="Items\Weapons\Tools\GuardianPickaxe.cs" />
@@ -310,6 +312,7 @@
     <Compile Include="Items\Weapons\Yoyo\GuardianYoyo.cs" />
     <Compile Include="Items\Weapons\Yoyo\HistoricYoyo.cs" />
     <Compile Include="NPCs\Bonefish.cs" />
+    <Compile Include="NPCs\Bosses\Susano.cs" />
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
     <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\DragonEye.cs" />
@@ -561,6 +564,7 @@
     <Content Include="Items\Blocks\StackedSnowBlock.png" />
     <Content Include="Items\Blocks\StackedStoneBlock.png" />
     <Content Include="Items\Blocks\StackedWood.png" />
+    <Content Include="Items\Consumables\BossSummons\TestSummon.png" />
     <Content Include="Items\Consumables\Cheese.png" />
     <Content Include="Items\Materials\AmethystLens.png" />
     <Content Include="Items\Materials\AngelEssence.png" />
@@ -734,6 +738,7 @@
     <Content Include="Items\Weapons\Thrown\TungstenKunai.png" />
     <Content Include="Items\Weapons\Thrown\WoodenKunai.png" />
     <Content Include="Items\Weapons\Tools\AngelAxe.png" />
+    <Content Include="Items\Weapons\Tools\AngelPickaxe.png" />
     <Content Include="Items\Weapons\Tools\GuardianAmbidextrousAxe.png" />
     <Content Include="Items\Weapons\Tools\GuardianAxe.png" />
     <Content Include="Items\Weapons\Tools\GuardianPickaxe.png" />
@@ -748,6 +753,7 @@
     <Content Include="Items\Weapons\Yoyo\GuardianYoyo.png" />
     <Content Include="Items\Weapons\Yoyo\HistoricYoyo.png" />
     <Content Include="NPCs\Bonefish.png" />
+    <Content Include="NPCs\Bosses\Susano.png" />
     <Content Include="NPCs\DragonEye.png" />
     <Content Include="NPCs\Friendly\MartianTrader.png" />
     <Content Include="NPCs\Friendly\MartianTrader_Head.png" />

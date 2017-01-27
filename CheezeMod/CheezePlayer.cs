@@ -73,11 +73,11 @@ namespace CheezeMod
             }
             if (this.flyffhistoric == true)
             {
-                target.AddBuff(BuffID.DryadsWardDebuff, 60);
+                target.AddBuff(BuffID.DryadsWardDebuff, 120);
             }
             if (this.flyffangelic == true)
             {
-                target.AddBuff(mod.BuffType("AngelsBane"), 600);
+                target.AddBuff(mod.BuffType("AngelsBane"), 240);
             }
         }
         public override void OnHitPvp(Item item, Player target, int damage, bool crit)
@@ -88,11 +88,11 @@ namespace CheezeMod
             }
             if (this.flyffhistoric == true)
             {
-                target.AddBuff(BuffID.DryadsWardDebuff, 60);
+                target.AddBuff(BuffID.DryadsWardDebuff, 120);
             }
             if (this.flyffangelic == true)
             {
-                target.AddBuff(mod.BuffType("AngelsBane"), 600);
+                target.AddBuff(mod.BuffType("AngelsBane"), 240);
             }
         }
 
@@ -132,13 +132,13 @@ namespace CheezeMod
                     player.AddBuff(mod.BuffType("Starlit"), 200);
                 }
             }
-            if (this.flyffhistoric == true)
+            if (this.flyffhistoric == true && target.friendly == false)
             {
-                target.AddBuff(BuffID.DryadsWardDebuff, 450);
+                target.AddBuff(BuffID.DryadsWardDebuff, 60 );
             }
-            if (this.flyffangelic == true)
+            if (this.flyffangelic == true && target.friendly == false)
             {
-                target.AddBuff(mod.BuffType("AngelsBane"), 450);
+                target.AddBuff(mod.BuffType("AngelsBane"), 120);
             }
         }
         public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)

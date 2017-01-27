@@ -50,7 +50,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             if (type == ProjectileID.Bullet)
             {
                 type = mod.ProjectileType("Lancer");
-                damage *= (int)1.2;
+                damage *= (int)1.4;
             }
             return true;
         }

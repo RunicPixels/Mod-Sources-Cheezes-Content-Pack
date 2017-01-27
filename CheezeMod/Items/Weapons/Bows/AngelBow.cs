@@ -12,11 +12,11 @@ namespace CheezeMod.Items.Weapons.Bows
         public override void SetDefaults()
         {
             item.name = "Angel Bow";
-            item.damage = 48;
+            item.damage = 45;
             item.ranged = true;
             item.width = 28;
             item.height = 56;
-            item.toolTip = "A bow that once used by the angels of Madrigal. \n+19% Critical Chance. \n+25% Increased Critical Damage. \n+Autofires.\n Inflics Angels's Bane on enemy hit.";
+            item.toolTip = "A bow that once used by the angels of Madrigal. \n+18% Critical Chance. \n+25% Increased Critical Damage. \n+Autofires.\n Inflics Angels's Bane on enemy hit.";
             item.useTime = 22;
             item.useAnimation = 22;
             item.useStyle = 5;
@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Bows
             item.knockBack = 4;
             item.value = CheezeItem.angelPrice;
             item.rare = CheezeItem.angelRarity;
-            item.crit = 19;
+            item.crit = 18;
             item.autoReuse = true;
             item.UseSound = SoundID.Item5;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this

@@ -19,7 +19,7 @@ namespace CheezeMod.Items.Weapons.Bows
 			item.toolTip = "Turns wooden arrows into flaming or even hellfire arrows.";
             item.toolTip2 = "Shoots 4 arrows with a large random spread and speed, 33% not to consume ammo.";
             item.useTime = 3;
-            item.reuseDelay = 45;
+            item.reuseDelay = 40;
             item.useAnimation = 12;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage

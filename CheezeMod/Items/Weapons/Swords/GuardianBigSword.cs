@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.melee = true;
             item.width = 54;
             item.height = 54;
-            item.toolTip = "An two handed sword used by the guardians of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+3 Defense when holding.";
+            item.toolTip = "A two handed sword used by the guardians of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+3 Defense when holding.";
             item.crit = 15;
             item.scale = 1.25f;
             item.useTime = 40;

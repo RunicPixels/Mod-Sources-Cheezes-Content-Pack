@@ -20,7 +20,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.melee = true;
             item.useTime = 26;
             item.useAnimation = item.useTime;
-            item.toolTip = "An knuckle that is an historic artifact of Madrigal.\nOne step forward and one step back.\n+7% Critical Chance. \n+25% Increased Critical Damage. \n Gives dodge frames to the player and inflict dryad's bane on the enemy upon hitting an enemy.";
+            item.toolTip = "A knuckle that is an historic artifact of Madrigal.\nOne step forward and one step back.\n+7% Critical Chance. \n+25% Increased Critical Damage. \n Gives dodge frames to the player and inflict dryad's bane on the enemy upon hitting an enemy.";
             item.crit = 7;
             item.scale = 1.1f;
             item.damage = 48;

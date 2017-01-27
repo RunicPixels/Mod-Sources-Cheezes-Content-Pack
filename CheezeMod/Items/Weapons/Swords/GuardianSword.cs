@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.melee = true;
             item.width = 36;
             item.height = 36;
-            item.toolTip = "An sword used by the guardians of Madrigal. \n+14% Critical Chance. \n+6% Increased Critical Damage. \n+10% Movement Speed when hold.";
+            item.toolTip = "A sword used by the guardians of Madrigal. \n+14% Critical Chance. \n+6% Increased Critical Damage. \n+10% Movement Speed when hold.";
             item.crit = 14;
             item.scale = 1.2f;
             item.useTime = 21;

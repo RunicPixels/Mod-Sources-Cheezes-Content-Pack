@@ -12,14 +12,14 @@ namespace CheezeMod.Items.Weapons.Bows
 		{
             item.CloneDefaults(ItemID.MoltenFury);
             item.name = "True Volcano Crossbow";
-			item.damage = 42;
+			item.damage = 43;
 			item.ranged = true;
 			item.width = 58;
 			item.height = 24;
 			item.toolTip = "Turns wooden arrows into flaming or even hellfire arrows.";
             item.toolTip2 = "Shoots 6 arrows with a large random spread and speed, consumes only 2";
             item.useTime = 3;
-            item.reuseDelay = 30;
+            item.reuseDelay = 22;
             item.useAnimation = 6;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage

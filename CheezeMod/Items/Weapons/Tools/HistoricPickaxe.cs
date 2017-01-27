@@ -15,14 +15,14 @@ namespace CheezeMod.Items.Weapons.Tools
 			item.melee = true;
 			item.width = 34;
 			item.height = 30;
-			item.toolTip = "An pickaxe that is an historic artifact of Madrigal. \n+6% Critical Chance. \n+20% Increased Critical Damage. \n+15 Max health when holding. \nInflics Dryad's Bane on enemy hit.";
+			item.toolTip = "A pickaxe that is an historic artifact of Madrigal. \n+6% Critical Chance. \n+20% Increased Critical Damage. \n+15 Max health when holding. \nInflics Dryad's Bane on enemy hit.";
             item.crit = 6;
             item.scale = 1.0f;
             item.useTime = 20;
 			item.useAnimation = 20;
             item.pick = 110;
 			item.useStyle = 1;
-			item.knockBack = 5;
+			item.knockBack = 2;
 			item.value = CheezeItem.historicPrice;
 			item.rare = CheezeItem.historicRarity;
             item.UseSound = SoundID.Item1;
@@ -33,7 +33,7 @@ namespace CheezeMod.Items.Weapons.Tools
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "HistoricEssence", 5);
-            recipe.AddIngredient(ItemID.PearlwoodSword);
+            recipe.AddIngredient(ItemID.ReaverShark);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

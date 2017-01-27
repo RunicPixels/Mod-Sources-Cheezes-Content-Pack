@@ -18,7 +18,7 @@ namespace CheezeMod.Items.Weapons.Magic
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "An staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +5% critical damage and chance when hold.";
+            item.toolTip = "A staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +5% critical damage and chance when hold.";
             Item.staff[item.type] = true;
             item.reuseDelay = 50;
             item.useTime = 55;

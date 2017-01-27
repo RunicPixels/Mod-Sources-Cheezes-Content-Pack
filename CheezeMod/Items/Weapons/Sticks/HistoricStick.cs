@@ -18,7 +18,7 @@ namespace CheezeMod.Items.Weapons.Sticks
             item.height = 42;
             item.scale = 1f;
 			item.maxStack = 1;
-			item.toolTip = "An stick used by the guardians of Madrigal. \nSlash with LMB, Heal 15hp with RMB, costs 60 mana. \n +20 mana when held. \n Inflicts Dryad's Bane on enemies hit. and Dryad's Blessing when healing.";
+			item.toolTip = "A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 15hp with RMB, costs 60 mana. \n +20 mana when held. \n Inflicts Dryad's Bane on enemies hit. and Dryad's Blessing when healing.";
 			item.useTime = 36;
 			item.useAnimation = 36;
             item.autoReuse = false;

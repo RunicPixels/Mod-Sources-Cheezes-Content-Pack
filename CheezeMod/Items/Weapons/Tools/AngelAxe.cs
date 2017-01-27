@@ -21,7 +21,8 @@ namespace CheezeMod.Items.Weapons.Tools
             item.useTime = 28;
 			item.useAnimation = 28;
 			item.axe = 30;
-			item.useStyle = 1;
+            item.tileBoost = 1;
+            item.useStyle = 1;
 			item.knockBack = 6.1f;
 			item.value = CheezeItem.historicPrice;
 			item.rare = CheezeItem.historicRarity;

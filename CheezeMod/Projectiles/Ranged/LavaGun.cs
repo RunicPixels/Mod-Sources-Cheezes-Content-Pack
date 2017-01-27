@@ -33,6 +33,15 @@ namespace CheezeMod.Projectiles.Ranged
 
         public override void AI()
         {
+            bool waterFlag = Collision.WetCollision(projectile.position, projectile.width, projectile.height);
+            if (waterFlag)
+            {
+                projectile.scale -= 0.1f;
+            }
+            if (projectile.scale <= 0.5f)
+            {
+                projectile.Kill();
+            }
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.9f, 0.4f, 0f);
             if (Main.rand.Next(3) == 0)
             {

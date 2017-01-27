@@ -20,7 +20,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.melee = true;
             item.useTime = 30;
             item.useAnimation = item.useTime;
-            item.toolTip = "An knuckle used by the guardians of Madrigal.\nOne step forward and one step back.\n+6% Critical Chance. \n+23% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
+            item.toolTip = "A knuckle used by the guardians of Madrigal.\nOne step forward and one step back.\n+6% Critical Chance. \n+23% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
             item.crit = 6;
             item.scale = 1.1f;
             item.damage = 33;

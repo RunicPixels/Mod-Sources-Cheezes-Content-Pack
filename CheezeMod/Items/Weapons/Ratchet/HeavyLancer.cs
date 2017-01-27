@@ -51,7 +51,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             if (type == ProjectileID.Bullet)
             {
                 type = mod.ProjectileType("HeavyLancer");
-                damage *= (int)1.1;
+                damage *= (int)1.3;
             }
             return true;
         }

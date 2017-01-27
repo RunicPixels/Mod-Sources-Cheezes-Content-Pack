@@ -18,7 +18,7 @@ namespace CheezeMod.Items.Weapons.Sticks
             item.height = 42;
             item.scale = 1f;
 			item.maxStack = 1;
-			item.toolTip = "An stick used by the guardians of Madrigal. \nSlash with LMB, Heal 10hp with RMB, costs 50 mana.";
+			item.toolTip = "A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 10hp with RMB, costs 50 mana.";
 			item.useTime = 38;
 			item.useAnimation = 38;
 			item.knockBack = 5.2f;

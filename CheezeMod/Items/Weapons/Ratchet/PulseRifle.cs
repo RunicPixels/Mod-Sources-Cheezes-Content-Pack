@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Pulse Rifle";
-			item.damage = 27;
+			item.damage = 34;
 			item.ranged = true;
 			item.width = 76;
             item.scale = 0.8f;

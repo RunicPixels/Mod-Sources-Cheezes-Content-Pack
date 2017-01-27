@@ -145,13 +145,6 @@ namespace CheezeMod.NPCs
             }
 
             //Underworld
-            if (npc.type == NPCID.Hellbat || npc.type == NPCID.Demon || npc.type == NPCID.LavaSlime || npc.type == NPCID.FireImp || npc.type == NPCID.VoodooDemon || npc.type == NPCID.Lavabat || npc.type == NPCID.RedDevil) // All pre-hardmode Underworld monsters
-            {
-                if (Main.rand.Next(10) == 0) // 10% chance.
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), Main.rand.Next(3));
-                }
-            }
 
             if (npc.type == 39) // Bone Serpent
             {
@@ -314,7 +307,7 @@ namespace CheezeMod.NPCs
                     int drawChance = 0;
                     for (int i = 0; i < Main.rand.Next(3); i++)
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AngelEssence"), Main.rand.Next(3));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), Main.rand.Next(3));
                     }
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     for (int i = 0; i < flyffMax(); i++)
@@ -336,6 +329,7 @@ namespace CheezeMod.NPCs
                         for (int i = 0; i < Main.rand.Next(25) + 5; i++)
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HallowedBolt"), 1);
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AngelEssence"), 1);
                         }
                     }
                     else
@@ -414,7 +408,7 @@ namespace CheezeMod.NPCs
                     int drawChance = 0;
                     for (int i = 0; i < 1+Main.rand.Next(4); i++)
                     {
-                        player.QuickSpawnItem(mod.ItemType("AngelEssence"), Main.rand.Next(3));
+                        player.QuickSpawnItem(mod.ItemType("HistoricEssence"), Main.rand.Next(3));
                     }
                     player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     
@@ -432,6 +426,23 @@ namespace CheezeMod.NPCs
                 if (context == "bossBag" && arg == ItemID.SkeletronPrimeBossBag || arg == ItemID.DestroyerBossBag || arg == ItemID.TwinsBossBag)
                 {
                     player.QuickSpawnItem(mod.ItemType("HallowedBolt"), Main.rand.Next(50) + 10);
+                    int drawChance = 0;
+                    for (int i = 0; i < 1 + Main.rand.Next(4); i++)
+                    {
+                        player.QuickSpawnItem(mod.ItemType("AngelEssence"), Main.rand.Next(3));
+                    }
+                    player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
+
+                    for (int i = 0; i < flyffMax(); i++)
+                    {
+                        if (flyffChance(drawChance))
+                        {
+                            int selection = Main.rand.Next(CheezeItem.angelList.Length);
+                            string selectedWeapon = CheezeItem.angelList[selection];
+                            player.QuickSpawnItem(mod.ItemType(selectedWeapon), 1);
+                            drawChance++;
+                        }
+                    }
                 }
                 if (context == "bossBag" && arg == ItemID.MoonLordBossBag)
                 {

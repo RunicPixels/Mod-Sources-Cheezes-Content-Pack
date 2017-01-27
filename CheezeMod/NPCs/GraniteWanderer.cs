@@ -10,17 +10,7 @@ namespace CheezeMod.NPCs
 {
     public class GraniteWanderer : ModNPC
     {
-        private float attackCool
-        {
-            get
-            {
-                return npc.ai[0];
-            }
-            set
-            {
-                npc.ai[0] = value;
-            }
-        }
+        private float attackCool = 0f;
 
         public override void SetDefaults()
         {
@@ -55,7 +45,7 @@ namespace CheezeMod.NPCs
             Player player = Main.player[npc.target];
             if (npc.localAI[0] == 0f)
             {
-                int damage = npc.damage / 2;
+                int damage = npc.damage / 3;
                 attackCool -= 1f;
                 if (Main.netMode != 1 && attackCool <= 0f)
                 {
@@ -73,17 +63,19 @@ namespace CheezeMod.NPCs
                     {
                         damage = (int)(damage / Main.expertDamage);
                     }
-                    if (Main.expertMode && Collision.CanHit(npc.position, npc.width, npc.height, player.position, player.width, player.height) && Math.Abs(player.Center.X - npc.Center.X) < 900 && Math.Abs(player.Center.Y - npc.Center.Y) < 900)
+                    if (Main.expertMode &&  Collision.CanHit(npc.position, npc.width, npc.height, player.position, player.width, player.height) && Math.Abs(player.Center.X - npc.Center.X) < 900 && Math.Abs(player.Center.Y - npc.Center.Y) < 900)
                     {
                         Projectile.NewProjectile(npc.Center.X, npc.Center.Y, delta.X, delta.Y, mod.ProjectileType("BlueLaserNPC"), damage, 3f, Main.myPlayer);
                         Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 12);
                         attackCool = 300f + 200f * (float)npc.life / (float)npc.lifeMax + (float)Main.rand.Next(200);
+                        npc.netUpdate = true;
                     }
                     else
                     {
-                        attackCool = Main.rand.NextFloat() * 60f;
+                        attackCool = Main.rand.NextFloat() * 60f + 30f;
                     }
-                    npc.netUpdate = true;
+                    
+                    
                 }
             }
         }

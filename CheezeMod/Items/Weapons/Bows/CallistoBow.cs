@@ -32,17 +32,6 @@ namespace CheezeMod.Items.Weapons.Bows
             item.useAmmo = AmmoID.Arrow;
         }
 
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "AngelEssence", 5);
-            recipe.AddIngredient(ItemID.SoulofFlight, 10);
-            recipe.AddIngredient(ItemID.SoulofSight, 10);
-            recipe.AddTile(TileID.MythrilAnvil);
-            recipe.SetResult(this, 1);
-            recipe.AddRecipe();
-        }
-
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             if(Main.rand.Next(3) == 0)

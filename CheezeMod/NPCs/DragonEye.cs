@@ -31,7 +31,7 @@ namespace CheezeMod.NPCs
             npc.scale = 1.1f;
             npc.life = 50;
             npc.lifeMax = 50;
-            npc.damage = 30;
+            npc.damage = 20;
             npc.defense = 20;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
@@ -50,7 +50,7 @@ namespace CheezeMod.NPCs
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
             Player player = spawnInfo.player;
-            return (CheezeMod.NormalSpawn(spawnInfo)) && player.ZoneJungle && !Main.dayTime ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.175f : 0f;
+            return (CheezeMod.NormalSpawn(spawnInfo)) && NPC.downedBoss1 && player.ZoneJungle && !Main.dayTime ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.105f : 0f;
         }
 
         public override void AI()
@@ -58,7 +58,7 @@ namespace CheezeMod.NPCs
             Player player = Main.player[npc.target];
             if (npc.localAI[0] == 0f)
             {
-                int damage = npc.damage / 2;
+                int damage = npc.damage / 3;
                 attackCool -= 1f;
                 if (Main.netMode != 1 && attackCool <= 0f)
                 {
@@ -76,7 +76,7 @@ namespace CheezeMod.NPCs
                     {
                         Projectile.NewProjectile(npc.Center.X, npc.Center.Y, delta.X/2, delta.Y/2, ProjectileID.Stinger, damage, 3f, Main.myPlayer);
                         Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 17);
-                        attackCool = 200f + 200f * (float)npc.life / (float)npc.lifeMax + (float)Main.rand.Next(200);
+                        attackCool = 300f + 300f * (float)npc.life / (float)npc.lifeMax + (float)Main.rand.Next(200);
                     }
                     else
                     {

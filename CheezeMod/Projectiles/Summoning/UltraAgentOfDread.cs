@@ -19,7 +19,7 @@ namespace CheezeMod.Projectiles.Summoning
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
-            projectile.scale = 1.25f;
+            projectile.scale = 1.125f;
             Main.projFrames[projectile.type] = 8;
 			Main.projPet[projectile.type] = true;
             drawOriginOffsetY = -10;

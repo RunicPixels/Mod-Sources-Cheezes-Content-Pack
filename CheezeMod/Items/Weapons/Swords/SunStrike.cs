@@ -27,7 +27,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.knockBack = 7;
             item.value = 225000;
             item.autoReuse = true;
-            item.scale = 0.9f;
+            item.scale = 1f;
             item.shoot = 10;
         }
 

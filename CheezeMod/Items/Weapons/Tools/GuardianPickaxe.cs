@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Weapons.Tools
 			item.melee = true;
 			item.width = 34;
 			item.height = 30;
-			item.toolTip = "An pickaxe used by the guardians of Madrigal. \n+3% Critical Chance. \n+25% Increased Critical Damage. \n+3 Defense when holding.";
+			item.toolTip = "A pickaxe used by the guardians of Madrigal. \n+3% Critical Chance. \n+25% Increased Critical Damage. \n+3 Defense when holding.";
             item.crit = 3;
             item.scale = 1.25f;
             item.useTime = 20;

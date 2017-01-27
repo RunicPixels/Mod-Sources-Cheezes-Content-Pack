@@ -95,8 +95,8 @@ namespace CheezeMod
         }
 
         //Spawning Zones for NPC imported from Main Terraria Method//
-        public static double HellLayer = (float)((Main.maxTilesY - 204) * 16);
-        public static double CavernLayer = Main.rockLayer * 16.0 + ((double)(1080 / 2 + 16.0));
+        public static double HellLayer = (float)((Main.maxTilesY - 204));
+        public static double CavernLayer = Main.rockLayer + ((double)(540));
         #endregion
         // CRAFTING //
         #region CraftingInfo
@@ -573,6 +573,20 @@ namespace CheezeMod
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(ItemID.LightningBoots);
             recipe.AddRecipe();
+
+            // Other Mods Used //
+
+            if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ItemID.PiggyBank);
+                recipe.AddIngredient(ModLoader.GetMod("ThoriumMod").ItemType("UnholyShards"), 100);
+                recipe.AddIngredient(null, "FlameWing", 10);
+                recipe.AddTile(TileID.TinkerersWorkbench);
+                recipe.SetResult(ItemID.MoneyTrough);
+                recipe.AddRecipe();
+
+            }
         }
         #endregion
     }

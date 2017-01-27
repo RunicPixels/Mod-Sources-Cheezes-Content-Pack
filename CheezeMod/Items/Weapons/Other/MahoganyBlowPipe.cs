@@ -22,7 +22,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.useStyle = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 2;
-            item.value = 12000;
+            item.value = 1200;
             item.rare = 0;
             item.crit = 2;
             item.UseSound = SoundID.Item63;

@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 			item.name = "Mega Vaporizer";
-			item.damage = 84;
+			item.damage = 124;
 			item.ranged = true;
 			item.width = 76;
             item.scale = 0.8f;

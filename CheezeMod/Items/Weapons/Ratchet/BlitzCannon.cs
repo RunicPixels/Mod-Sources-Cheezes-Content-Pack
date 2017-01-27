@@ -38,7 +38,6 @@ namespace CheezeMod.Items.Weapons.Ratchet
             recipe.AddIngredient(null, "BlitzGun");
             recipe.AddIngredient(null, "HellstoneBolt", 50);
             recipe.AddIngredient(ItemID.Bone, 25);
-            recipe.AddIngredient(null, "BlitzGun");
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

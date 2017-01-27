@@ -14,8 +14,8 @@ namespace CheezeMod.Items.Materials
 			item.height = 22;
 			item.maxStack = 999;
 			AddTooltip("An angelic relic from Madrigal");
-			item.value = CheezeItem.historicPrice / 10;
-			item.rare = CheezeItem.historicRarity-1;
+			item.value = CheezeItem.angelPrice / 10;
+			item.rare = CheezeItem.angelRarity-1;
 		}
 	}
 }

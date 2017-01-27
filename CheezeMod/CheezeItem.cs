@@ -27,7 +27,7 @@ namespace CheezeMod
         };
         public static String[] angelList =
         {
-            "AngelSword","AngelAxe","HistoricBigSword","HistoricAmbidextrousAxe","HistoricPickaxe","HistoricStick","HistoricKnuckle","AngelBow","HistoricYoyo","HistoricWand","HistoricStaff"
+            "AngelSword","AngelAxe","AngelBow",
         };
 
         public static int guardianPrice = 25000;

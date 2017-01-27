@@ -19,7 +19,8 @@ namespace CheezeMod.Items.Weapons.Tools
             item.scale = 1f;
             item.useTime = 64;
 			item.useAnimation = 64;
-			item.axe = 70;
+            item.tileBoost = 3;
+            item.axe = 70;
 			item.useStyle = 1;
 			item.knockBack = 8;
 			item.value = CheezeItem.historicPrice;

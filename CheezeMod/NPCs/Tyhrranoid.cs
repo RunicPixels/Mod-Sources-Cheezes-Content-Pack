@@ -35,7 +35,7 @@ namespace CheezeMod.NPCs
 
         public override float CanSpawn(NPCSpawnInfo spawnInfo)
         {
-            return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? ((Main.hardMode) ? 0.1f : 0.19f) : 0f;
+            return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? ((Main.hardMode) ? 0.05f : 0.105f) : 0f;
         }
 
         public override void HitEffect(int hitDirection, double damage)
@@ -76,7 +76,7 @@ namespace CheezeMod.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), 1);
                 }
             }
-            if (Main.rand.Next(30) == 0)
+            if (Main.rand.Next(60) == 0)
             {
                 int selection = Main.rand.Next(CheezeItem.ratchetTier1List.Length);
                 string selectedWeapon = CheezeItem.ratchetTier1List[selection];

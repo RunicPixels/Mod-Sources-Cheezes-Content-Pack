@@ -23,10 +23,17 @@ namespace CheezeMod.Projectiles.Melee
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(BuffID.OnFire, 180);
+            projectile.width = 50;
+            projectile.height = 50;
         }
 
         public override void AI()
         {
+            bool waterFlag = Collision.WetCollision(projectile.position, projectile.width, projectile.height);
+            if (waterFlag)
+            {
+                projectile.Kill();
+            }
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 1f, 0.75f, 0f);
         }
 

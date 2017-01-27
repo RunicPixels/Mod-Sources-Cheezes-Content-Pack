@@ -15,7 +15,7 @@ namespace CheezeMod.Items.Weapons.Swords
             item.melee = true;
             item.width = 44;
             item.height = 44;
-            item.toolTip = "An sword that is an historic artifact of Madrigal. \n+12% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Dryad's Bane on enemy hit.";
+            item.toolTip = "A sword that is an historic artifact of Madrigal. \n+12% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Dryad's Bane on enemy hit.";
             item.crit = 12;
             item.scale = 1.1f;
             item.useTime = 22;
