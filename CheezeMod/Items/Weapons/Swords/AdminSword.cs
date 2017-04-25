@@ -16,13 +16,14 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.width = 118;
 			item.height = 138;
             item.crit = 46;
-			item.toolTip = "Seems legit..., I mean seriously, you're not supposed to have this!";
+			item.toolTip = "Truth is, this alien looking weapon was used by the original creator to make sure the world functions as it does now. But, this weapon is probably the cheeziest weapon in all of history!";
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 10000000;
+			item.value = 1;
 			item.rare = 2;
+            item.expert = true;
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}

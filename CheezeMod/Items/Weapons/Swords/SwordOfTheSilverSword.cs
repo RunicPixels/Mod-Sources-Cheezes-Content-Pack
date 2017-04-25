@@ -41,8 +41,7 @@ namespace CheezeMod.Items.Weapons.Swords
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.SilverBroadsword);
-            recipe.AddIngredient(ItemID.Sapphire);
-            recipe.AddIngredient(ItemID.Glass, 5);
+            recipe.AddIngredient(null, "TwinklingStone", 5);
             recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

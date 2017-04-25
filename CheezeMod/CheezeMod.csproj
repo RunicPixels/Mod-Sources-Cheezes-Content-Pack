@@ -184,6 +184,7 @@
     <Compile Include="Items\Weapons\Magic\StarBlitz.cs" />
     <Compile Include="Items\Weapons\Magic\ThornBlast.cs" />
     <Compile Include="Items\Weapons\Magic\TrueChaosTheory.cs" />
+    <Compile Include="Items\Weapons\Magic\TrueGraniteRod.cs" />
     <Compile Include="Items\Weapons\Other\GuardianKnuckle.cs" />
     <Compile Include="Items\Weapons\Other\HistoricKnuckle.cs" />
     <Compile Include="Items\Weapons\Other\MahoganyBlowpipe.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
     <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\DragonEye.cs" />
+    <Compile Include="NPCs\Eyebat.cs" />
     <Compile Include="NPCs\Friendly\MartianTrader.cs" />
     <Compile Include="NPCs\GraniteWanderer.cs" />
     <Compile Include="NPCs\MoltenEye.cs" />
@@ -329,12 +331,13 @@
     <Compile Include="Projectiles\Magic\HealDown.cs" />
     <Compile Include="Projectiles\Magic\HugeEarthBoulder.cs" />
     <Compile Include="Projectiles\Magic\InfernoFireBlast.cs" />
+    <Compile Include="Projectiles\Magic\LightningBolt.cs" />
     <Compile Include="Projectiles\Magic\MiniFireBlast.cs" />
     <Compile Include="Projectiles\Magic\SpiritBomb.cs" />
     <Compile Include="Projectiles\Magic\PsychicBomb.cs" />
     <Compile Include="Projectiles\Magic\SprayWaterBlast.cs" />
     <Compile Include="Projectiles\Magic\StarStorm.cs" />
-    <Compile Include="Projectiles\Magic\StarStorm3.cs" />
+    <Compile Include="Projectiles\Magic\StarStorm4.cs" />
     <Compile Include="Projectiles\Magic\ThornBlast.cs" />
     <Compile Include="Projectiles\Magic\WaterBlast.cs" />
     <Compile Include="Projectiles\Magic\WindBlast.cs" />
@@ -624,6 +627,7 @@
     <Content Include="Items\Weapons\Magic\StarBlitz.png" />
     <Content Include="Items\Weapons\Magic\ThornBlast.png" />
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
+    <Content Include="Items\Weapons\Magic\TrueGraniteRod.png" />
     <Content Include="Items\Weapons\Other\GuardianKnuckle.png" />
     <Content Include="Items\Weapons\Other\HistoricKnuckle.png" />
     <Content Include="Items\Weapons\Other\MahoganyBlowpipe.png" />
@@ -755,6 +759,7 @@
     <Content Include="NPCs\Bonefish.png" />
     <Content Include="NPCs\Bosses\Susano.png" />
     <Content Include="NPCs\DragonEye.png" />
+    <Content Include="NPCs\Eyebat.png" />
     <Content Include="NPCs\Friendly\MartianTrader.png" />
     <Content Include="NPCs\Friendly\MartianTrader_Head.png" />
     <Content Include="NPCs\GraniteWanderer.png" />
@@ -769,12 +774,13 @@
     <Content Include="Projectiles\Magic\HealDown.png" />
     <Content Include="Projectiles\Magic\HugeEarthBoulder.png" />
     <Content Include="Projectiles\Magic\InfernoFireBlast.png" />
+    <Content Include="Projectiles\Magic\LightningBolt.png" />
     <Content Include="Projectiles\Magic\MiniFireBlast.png" />
     <Content Include="Projectiles\Magic\SpiritBomb.png" />
     <Content Include="Projectiles\Magic\PsychicBomb.png" />
     <Content Include="Projectiles\Magic\SprayWaterBlast.png" />
     <Content Include="Projectiles\Magic\StarStorm.png" />
-    <Content Include="Projectiles\Magic\StarStorm3.png" />
+    <Content Include="Projectiles\Magic\StarStorm4.png" />
     <Content Include="Projectiles\Magic\ThornBlast.png" />
     <Content Include="Projectiles\Magic\WaterBlast.png" />
     <Content Include="Projectiles\Magic\WindBlast.png" />

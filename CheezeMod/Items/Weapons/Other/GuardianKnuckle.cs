@@ -32,7 +32,7 @@ namespace CheezeMod.Items.Weapons.Other
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddIngredient(ItemID.CopperShortsword);
+            recipe.AddIngredient(ItemID.Leather, 3);
             recipe.AddTile(18);
             recipe.SetResult(this);
             recipe.AddRecipe();

@@ -53,6 +53,9 @@ namespace CheezeMod.Tiles
                 case 6:
                     item = "DragonEyeBanner";
                     break;
+                case 7:
+                    item = "EyebatBanner";
+                    break;
                 default:
 					return;
 			}
@@ -88,6 +91,9 @@ namespace CheezeMod.Tiles
                         break;
                     case 6:
                         type = "DragonEye";
+                        break;
+                    case 7:
+                        type = "Eyebat";
                         break;
                     default:
 						return;

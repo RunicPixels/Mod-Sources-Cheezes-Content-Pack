@@ -36,7 +36,7 @@ namespace CheezeMod.Items.Weapons.Sticks
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GuardianEssence", 5);
-            recipe.AddIngredient(ItemID.LesserHealingPotion, 10);
+            recipe.AddIngredient(null, "TwinklingStone", 5);
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

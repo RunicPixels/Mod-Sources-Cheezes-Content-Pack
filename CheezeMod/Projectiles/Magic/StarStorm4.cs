@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Magic
 {
-    public class StarStorm3 : ModProjectile
+    public class StarStorm4 : ModProjectile
     {
         public override void SetDefaults()
         {

@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Other
         public override void SetDefaults()
         {
             item.name = "Mahogany Blowpipe";
-            item.damage = 10;
+            item.damage = 15;
             item.ranged = true;
             item.width = 30;
             item.height = 8;
@@ -36,6 +36,7 @@ namespace CheezeMod.Items.Weapons.Other
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.RichMahogany, 10);
+            recipe.AddIngredient(null, "TwinklingStone");
             recipe.AddTile(18);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
