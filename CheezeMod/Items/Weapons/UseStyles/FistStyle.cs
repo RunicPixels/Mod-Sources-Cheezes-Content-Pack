@@ -26,8 +26,8 @@ namespace CheezeMod.Items.Weapons.UseStyles
     public class FistStyle
     {
         public const int useStyle = 102115116; //http://www.unit-conversion.info/texttools/ascii/ with fst to ASCII numbers
-        private static Color highColour = Color.Cyan;
-        private static Color lowColour = Color.DarkCyan;
+        private static Color highColour = Color.LightSkyBlue;
+        private static Color lowColour = Color.SkyBlue;
         private Color comboColour
         {
             get
@@ -76,8 +76,8 @@ namespace CheezeMod.Items.Weapons.UseStyles
             // Display combo counter
             Rectangle rect = player.getRect();
             if (!isDramatic) rect.Y += (int)(rect.Height * player.gravDir);
-            CombatText.NewText(rect,
-                comboColour, string.Concat(punchCombo), isDramatic);
+            //CombatText.NewText(rect,
+             //   comboColour, string.Concat(punchCombo), isDramatic);
 
             // Manage player combo movement
             if (specialMove == 0)
@@ -305,8 +305,8 @@ namespace CheezeMod.Items.Weapons.UseStyles
         {
             if (punchCombo > 2)
             {
-                CombatText.NewText(player.getRect(),
-                    highColour, punchCombo + " hit", false, false);
+               // CombatText.NewText(player.getRect(),
+               //     highColour, punchCombo + " hit", false, false);
             }
             //Main.NewText("punch reset");
             punchCombo = 0;

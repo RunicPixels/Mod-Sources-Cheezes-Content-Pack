@@ -10,13 +10,10 @@ namespace CheezeMod.Items.Weapons.Other
 {
     public class GuardianKnuckle : ModItem
     {
-        public float speedModifier = 4.5f;
-        public int maxSpeed = 20;
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
         {
             equips.Add(EquipType.HandsOn);
-            equips.Add(EquipType.HandsOff);
             return true;
         }
 
@@ -27,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Other
             {
                 if (fist == null)
                 {
-                    fist = new FistStyle(item, 3);
+                    fist = new FistStyle(item, 1);
                 }
                 return fist;
             }
@@ -42,7 +39,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.height = 30;
             item.melee = true;
             item.useAnimation = 24;
-            item.toolTip = "A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+23% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
+            item.toolTip = "A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+10% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
             item.crit = 6;
             item.noUseGraphic = true;
             item.scale = 1.1f;
@@ -89,6 +86,13 @@ namespace CheezeMod.Items.Weapons.Other
                     //maybe confuse
                     target.AddBuff(BuffID.Confused, 30 * Main.rand.Next(1, 4), false);
                 }
+            }
+        }
+        public override void UpdateInventory(Player player)
+        {
+            if (player.inventory[player.selectedItem] == this.item)
+            {
+                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.10f; // This number here changes the multiplier
             }
         }
     }

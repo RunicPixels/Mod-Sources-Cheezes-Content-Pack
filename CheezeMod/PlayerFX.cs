@@ -233,6 +233,12 @@ namespace CheezeMod
             return false;
         }
 
+        public override void PostUpdateRunSpeeds()
+        {
+            CustomDashMovement();
+        }
+
+
         #region Dash
 
         public int weaponDash = 0;
@@ -262,10 +268,10 @@ namespace CheezeMod
                     float dashSpeed = 14.5f;
                     switch (weaponDash)
                     {
-                        case 1: // Fists of fury
+                        case 1: // Guardian Knuckle
                             dashSpeed = 10f;
                             break;
-                        case 2: // Caestus
+                        case 2: // One Punch Glove
                             dashSpeed = 15f;
                             break;
                         case 3: // Boxing Gloves
@@ -339,17 +345,24 @@ namespace CheezeMod
                             for (int i = 0; i < 3; i++)
                             {
                                 Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
-                                    DustID.Fire, 0, 0, 100, default(Color), 1.8f)];
+                                  mod.DustType("BlueLight"), 0, 0, 100, default(Color), 1.8f)];
                                 d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
                                 d.noGravity = true;
                                 d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
                             }
                             break;
                         case 2: // Super quick ~12 tile dash
-                            dashMaxSpeedThreshold = 6f;
-                            dashMaxFriction = 0.8f;
-                            dashMinFriction = 0.94f;
-                            dashSetDelay = 20;
+                            dashMaxSpeedThreshold = 500f;
+                            dashMaxFriction = 0.995f;
+                            dashMinFriction = 0.99f;
+                            for (int i = 0; i < 3; i++)
+                            {
+                                Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                  mod.DustType("Sparkle"), 0, 0, 100, default(Color), 1.8f)];
+                                d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
+                                d.noGravity = true;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                            }
                             break;
                         case 3: // Boxing Gloves ~ 4.5 tile step
                             dashMaxSpeedThreshold = 3f;

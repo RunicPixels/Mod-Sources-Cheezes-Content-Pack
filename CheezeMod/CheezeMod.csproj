@@ -633,6 +633,8 @@
     <Content Include="Items\Weapons\Magic\TrueChaosTheory.png" />
     <Content Include="Items\Weapons\Magic\TrueGraniteRod.png" />
     <Content Include="Items\Weapons\Other\GuardianKnuckle.png" />
+    <Content Include="Items\Weapons\Other\GuardianKnuckle_HandsOff.png" />
+    <Content Include="Items\Weapons\Other\GuardianKnuckle_HandsOn.png" />
     <Content Include="Items\Weapons\Other\HistoricKnuckle.png" />
     <Content Include="Items\Weapons\Other\MahoganyBlowpipe.png" />
     <Content Include="Items\Weapons\Other\OnePunchGlove.png" />

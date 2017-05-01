@@ -14,7 +14,7 @@ namespace CheezeMod.Projectiles.Magic
         public float maxSize = 3f;
         public override void SetDefaults()
         {
-            projectile.name = "Lightning Boly";
+            projectile.name = "Lightning Bolt";
             projectile.width = 20;
             projectile.height = 20;
             projectile.Opacity = 0.5f;
