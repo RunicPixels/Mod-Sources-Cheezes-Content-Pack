@@ -9,6 +9,7 @@ using CheezeMod.Items;
 using CheezeMod.NPCs;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 
 namespace CheezeMod
 {
@@ -50,9 +51,70 @@ namespace CheezeMod
         }
 
         #endregion
-        // SPAWNING //
-        #region SpawnInfo
-        //spawning helper methods imported from bluemagic123's Example Mod.
+        // NETWORK //
+        #region NetUpdate
+
+        // These Network Methods are property of FlashKirby, do not copy them without his permission.
+        public static void NetUpdateParry(Mod mod, PlayerFX pfx)
+        {
+            if (Main.netMode == 1 && pfx.player.whoAmI == Main.myPlayer)
+            {
+                ModPacket message = mod.GetPacket();
+                message.Write(2);
+                message.Write(Main.myPlayer);
+                message.Write(pfx.parryTimeMax);
+                message.Write(pfx.parryActive);
+                message.Send();
+            }
+        }
+
+        public static void NetUpdateDash(Mod mod, PlayerFX pfx)
+        {
+            if (Main.netMode == 1 && pfx.player.whoAmI == Main.myPlayer)
+            {
+                ModPacket message = mod.GetPacket();
+                message.Write(1);
+                message.Write(Main.myPlayer);
+                message.Write(pfx.weaponDash);
+                message.Send();
+            }
+        }
+        public override void HandlePacket(BinaryReader reader, int whoAmI)
+        {
+            int code = reader.ReadInt32();
+            int sender = reader.ReadInt32();
+            if (code == 1) // Set dash used
+            {
+                int dash = reader.ReadInt32();
+                if (Main.netMode == 2)
+                {
+                    for (int i = 0; i < 255; i++)
+                    {
+                        if (!Main.player[i].active) continue;
+                        if (i != sender)
+                        {
+                            ModPacket me = GetPacket();
+                            me.Write(code);
+                            me.Write(sender);
+                            me.Write(dash);
+                            me.Send();
+                        }
+                    }
+                    // Console.WriteLine("Set player " + Main.player[sender].name + " weapon dash to " + dash);
+                }
+                else
+                {
+                    Main.player[sender].GetModPlayer<PlayerFX>(this).weaponDash = dash;
+                    // Main.NewText("Set player " + Main.player[sender].name + " weapon dash to " + dash);
+                }
+            }
+        }
+
+
+        #endregion
+            // SPAWNING //
+            #region SpawnInfo
+            //spawning helper methods imported from bluemagic123's Example Mod.
         public static bool NoInvasion(NPCSpawnInfo spawnInfo)
         {
             return !spawnInfo.invasion && ((!Main.pumpkinMoon && !Main.snowMoon) || spawnInfo.spawnTileY > Main.worldSurface || Main.dayTime) && (!Main.eclipse || spawnInfo.spawnTileY > Main.worldSurface || !Main.dayTime);

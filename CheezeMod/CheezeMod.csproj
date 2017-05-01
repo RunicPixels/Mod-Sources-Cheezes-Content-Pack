@@ -62,12 +62,14 @@
     <Compile Include="Buffs\CheeseFed.cs" />
     <Compile Include="Buffs\DownFall.cs" />
     <Compile Include="Buffs\MegaAgentOfDread.cs" />
+    <Compile Include="Buffs\ParryActive.cs" />
     <Compile Include="Buffs\Starlit.cs" />
     <Compile Include="Buffs\UltraAgentOfDread.cs" />
     <Compile Include="CheezeItem.cs" />
     <Compile Include="CheezeMod.cs" />
     <Compile Include="CheezePlayer.cs" />
     <Compile Include="CheezeWorld.cs" />
+    <Compile Include="PlayerFX.cs" />
     <Compile Include="Dusts\BlueLight.cs" />
     <Compile Include="Dusts\DarkSparkle.cs" />
     <Compile Include="Dusts\GraniteDust.cs" />
@@ -310,6 +312,7 @@
     <Compile Include="Items\Weapons\Tools\StarlightHammer.cs" />
     <Compile Include="Items\Weapons\Tools\StarlightPaxel.cs" />
     <Compile Include="Items\Weapons\Tools\TempoAccelerator.cs" />
+    <Compile Include="Items\Weapons\UseStyles\FistStyle.cs" />
     <Compile Include="Items\Weapons\Yoyo\GuardianYoyo.cs" />
     <Compile Include="Items\Weapons\Yoyo\HistoricYoyo.cs" />
     <Compile Include="NPCs\Bonefish.cs" />
@@ -451,6 +454,7 @@
     <Compile Include="Projectiles\Thrown\WoodenKunai.cs" />
     <Compile Include="Projectiles\Yoyo\GuardianYoyo.cs" />
     <Compile Include="Projectiles\Yoyo\HistoricYoyo.cs" />
+    <Compile Include="ProjFX.cs" />
     <Compile Include="Sounds\Custom\Wind2.cs" />
     <Compile Include="Sounds\Item\BahSwing.cs" />
     <Compile Include="Sounds\Item\Chopper.cs" />
@@ -933,13 +937,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\SteamApps\common\Terraria\Microsoft.Xna.Framework.Xact.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Drawing" />
-    <Reference Include="Terraria">
-      <HintPath>D:\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
-    </Reference>
     <Reference Include="tModLoader, Version=1.3.3.3, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Steam\SteamApps\common\Terraria\tModLoader.exe</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoader.exe</HintPath>
+    </Reference>
+    <Reference Include="tModLoaderServer">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

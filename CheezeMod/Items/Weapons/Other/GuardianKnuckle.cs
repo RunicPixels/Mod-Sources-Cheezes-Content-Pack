@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CheezeMod.Items.Weapons.UseStyles;
+using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
@@ -10,20 +12,42 @@ namespace CheezeMod.Items.Weapons.Other
     {
         public float speedModifier = 4.5f;
         public int maxSpeed = 20;
+
+        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
+        {
+            equips.Add(EquipType.HandsOn);
+            equips.Add(EquipType.HandsOff);
+            return true;
+        }
+
+        private FistStyle fist;
+        public FistStyle Fist
+        {
+            get
+            {
+                if (fist == null)
+                {
+                    fist = new FistStyle(item, 3);
+                }
+                return fist;
+            }
+        }
+
         public override void SetDefaults()
         {
-            item.useStyle = 3;
+            item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
             item.name = "Guardian Knuckle";
             item.width = 30;
             item.height = 30;
             item.melee = true;
-            item.useTime = 30;
-            item.useAnimation = item.useTime;
-            item.toolTip = "A knuckle used by the guardians of Madrigal.\nOne step forward and one step back.\n+6% Critical Chance. \n+23% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
+            item.useAnimation = 24;
+            item.toolTip = "A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+23% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
             item.crit = 6;
+            item.noUseGraphic = true;
             item.scale = 1.1f;
             item.damage = 33;
+            item.UseSound = SoundID.Item7;
             item.knockBack = 5.5f;
             item.rare = CheezeItem.guardianRarity;
             item.value = CheezeItem.guardianPrice;
@@ -38,64 +62,33 @@ namespace CheezeMod.Items.Weapons.Other
             recipe.AddRecipe();
         }
 
+        public override bool AltFunctionUse(Player player)
+        {
+            if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>(mod).weaponDash = 1;
+            return player.dashDelay == 0;
+        }
+
+        public override bool UseItemFrame(Player player)
+        {
+            Fist.UseItemFrame(player);
+            return true;
+        }
+        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
+        {
+            // jump exactly 6 blocks high!
+            noHitbox = Fist.UseItemHitbox(player, ref hitbox, 22, 9f, 7f, 12f);
+        }
+
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
-            if(Main.rand.Next(5) == 0)
+            int combo = Fist.OnHitNPC(player, target, true);
+            if (combo != -1)
             {
-                target.AddBuff(BuffID.Confused, 300);
-            }
-            else
-            {
-                target.AddBuff(BuffID.Confused, 30);
-            }
-            player.AddBuff(BuffID.ShadowDodge, 5);
-        }
-        public override bool UseItem(Player player)
-        {
-            player.velocity.Y *= 0.98f;
-            if (player.velocity.X >= -maxSpeed && player.velocity.X <= maxSpeed && player.itemAnimation < player.itemAnimationMax / 4)
-            {
-                if (player.direction > 0)
+                if (combo % Fist.punchComboMax == 0)
                 {
-                    player.velocity.X -= speedModifier;
+                    //maybe confuse
+                    target.AddBuff(BuffID.Confused, 30 * Main.rand.Next(1, 4), false);
                 }
-                else
-                {
-                    player.velocity.X += speedModifier;
-                }
-            }
-            if (player.velocity.X >= -maxSpeed && player.velocity.X <= maxSpeed && player.itemAnimation > player.itemAnimationMax / 2 && player.itemAnimation < player.itemAnimationMax / 4 * 3)
-            {
-                if (player.direction < 0)
-                {
-                    player.velocity.X -= speedModifier;
-                }
-                else
-                {
-                    player.velocity.X += speedModifier;
-                }
-            }
-            if (player.itemAnimation <= 1)
-            {
-                player.velocity.X *= 0.01f;
-                player.AddBuff(BuffID.ShadowDodge, 2);
-            }
-            if (player.itemAnimation == player.itemAnimationMax - 3)
-            {
-                player.AddBuff(BuffID.ShadowDodge, 3);
-            }
-            if (player.itemAnimation == player.itemAnimationMax / 2)
-            {
-                player.velocity.X *= 0.02f;
-            }
-            return base.UseItem(player);
-        }
-        public override void UpdateInventory(Player player)
-        {
-            base.UpdateInventory(player);
-            if (player.inventory[player.selectedItem] == this.item)
-            {
-                ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer")).critMultiplier += 0.23f; // This number here changes the multiplier
             }
         }
     }
