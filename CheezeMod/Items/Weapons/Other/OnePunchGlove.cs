@@ -43,7 +43,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.useAnimation = 90;
             item.toolTip = "'One Punch is all you need.'";
             item.scale = 1f;
-			item.damage = 3125;
+			item.damage = 2880;
             item.crit = 9;
             item.knockBack = 10f;
             item.rare = 11;
@@ -81,7 +81,16 @@ namespace CheezeMod.Items.Weapons.Other
         public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
         {
             // jump exactly 6 blocks high!
-            noHitbox = Fist.UseItemHitbox(player, ref hitbox, 22, 27f, 0f, 750f);
+            noHitbox = Fist.UseItemHitbox(player, ref hitbox, 22, 30f, 0f, 50f);
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            if (player.inventory[player.selectedItem] == this.item)
+            {
+                player.noFallDmg = true;
+                player.maxFallSpeed = 50f;
+            }
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
