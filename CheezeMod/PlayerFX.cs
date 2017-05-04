@@ -422,6 +422,38 @@ namespace CheezeMod
                                 d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
                             }
                             break;
+                        case 10: // Long range
+                            dashMaxSpeedThreshold = 7f;
+                            dashMaxFriction = 0.99f;
+                            dashMinFriction = 0.8f;
+                            for (int i = 0; i < 4; i++)
+                            {
+                                Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                    DustID.Smoke, 0, 0, 100, default(Color), 2f)];
+                                d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
+                                d.noGravity = true;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                                d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                    DustID.Smoke, 0, 0, 100, default(Color), 0.4f)];
+                                d.fadeIn = 0.7f;
+                                d.velocity = d.velocity * 0.1f + player.velocity * -0.2f;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                                
+                            }
+                            for (int i = 0; i < 4; i++)
+                            {
+                                Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                    DustID.Gold, 0, 0, 100, default(Color), 2f)];
+                                d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
+                                d.noGravity = true;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                                d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                    DustID.Smoke, 0, 0, 100, default(Color), 0.4f)];
+                                d.fadeIn = 0.7f;
+                                d.velocity = d.velocity * 0.1f + player.velocity * -0.2f;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                            }
+                            break;
                     }
                     #endregion
 

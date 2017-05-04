@@ -15,6 +15,9 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 NOTE: Update 1.1.1.4 for tModLoader 0.9.2.1 has just come out! If you see or find anything odd be sure to tell me!
 
 Changelog:
+v1.1.X
+Major Changes to "Fist" Weapons. Utilizing FlashKirby99's WeaponOut methods to have a variety of special attacks, a better appearance and much more!
+
 v1.1.1.4 - 0.9.2.1 support.
 Added a new monster.
 Fixed Loot pool of Dragon Eye.

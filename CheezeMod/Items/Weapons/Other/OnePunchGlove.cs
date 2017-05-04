@@ -25,7 +25,7 @@ namespace CheezeMod.Items.Weapons.Other
             {
                 if (fist == null)
                 {
-                    fist = new FistStyle(item, 2);
+                    fist = new FistStyle(item, 1);
                 }
                 return fist;
             }
@@ -45,7 +45,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.scale = 1f;
 			item.damage = 2880;
             item.crit = 9;
-            item.knockBack = 10f;
+            item.knockBack = 50f;
             item.rare = 11;
             item.value = 400000;
             item.noUseGraphic = true;
@@ -89,7 +89,7 @@ namespace CheezeMod.Items.Weapons.Other
             if (player.inventory[player.selectedItem] == this.item)
             {
                 player.noFallDmg = true;
-                player.maxFallSpeed = 50f;
+                player.maxFallSpeed += 50f;
             }
         }
 

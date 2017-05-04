@@ -24,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Other
             {
                 if (fist == null)
                 {
-                    fist = new FistStyle(item, 1);
+                    fist = new FistStyle(item, 20);
                 }
                 return fist;
             }

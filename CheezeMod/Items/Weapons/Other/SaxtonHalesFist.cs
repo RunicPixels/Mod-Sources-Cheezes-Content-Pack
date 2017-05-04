@@ -3,16 +3,38 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CheezeMod.Items.Weapons.UseStyles;
+using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
 	public class SaxtonHalesFist : ModItem
 	{
+        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
+        {
+            equips.Add(EquipType.HandsOff);
+            equips.Add(EquipType.HandsOn);
+            return true;
+        }
+
+        private FistStyle fist;
+        public FistStyle Fist
+        {
+            get
+            {
+                if (fist == null)
+                {
+                    fist = new FistStyle(item, 10);
+                }
+                return fist;
+            }
+        }
+
         int braveJumpTimer = 0;
 		public override void SetDefaults()
 		{
-            item.useStyle = 3;
-            item.autoReuse = false;
+            item.useStyle = FistStyle.useStyle;
+            item.autoReuse = true;
             item.name = "Saxton Hale's Fist";
             item.melee = true;
             item.width = 34;
@@ -20,10 +42,11 @@ namespace CheezeMod.Items.Weapons.Other
             item.useTime = 50;
             item.useAnimation = item.useTime;
             item.toolTip = "'It's just you, me and my bare hands.' Inspired by Saxton Hale from TF2.";
-            item.toolTip2 = "Do a Brave Jump with your RMB.";
+            item.toolTip2 = "Do a Brave Jump with your Right Mouse Button.";
             item.scale = 0.8f;
 			item.damage = 195;
-            item.crit = 20;
+            item.noUseGraphic = true;
+            item.crit = 10;
             item.knockBack = 8f;
             item.UseSound = SoundID.Item1;
             item.rare = 7;
@@ -46,22 +69,22 @@ namespace CheezeMod.Items.Weapons.Other
             { 
             Dust.NewDust(target.position, target.width, target.height, DustID.Blood, Main.rand.NextFloat() * 8f - 4f, Main.rand.NextFloat() * 8f - 4f);
             }
-            player.AddBuff(BuffID.ShadowDodge, 12);
             target.AddBuff(BuffID.Confused, 600);
+            target.AddBuff(BuffID.Midas, 120);
             Main.PlaySound(4, (int)target.position.X, (int)target.position.Y, 14);
         }
         public override void UpdateInventory(Player player)
         {
             if (braveJumpTimer <= 0) { braveJumpTimer++; }
             if (braveJumpTimer == 0) { Main.PlaySound(25, player.position); }
+            if (player.inventory[player.selectedItem] == this.item)
+            {
+                player.noFallDmg = true;
+                player.maxFallSpeed += 5f;
+            }
         }
         public override bool UseItem(Player player)
         {
-            if (player.velocity.X >= -7 && player.velocity.X <= 7)
-            {
-                player.velocity.X += player.direction * 0.5f;
-                
-            }
             item.UseSound = SoundID.Item1;
             return base.UseItem(player);
         }
@@ -86,14 +109,26 @@ namespace CheezeMod.Items.Weapons.Other
                     item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SaxtonHaleJump04");
                 }
                 player.position.Y -= 1.5f;
-                player.velocity.Y = -15f;
-                player.velocity.Y -= 7.5f;
+                player.velocity.Y = -16f;
+                player.velocity.Y -= 7.7f;
                 player.justJumped = true;
                 braveJumpTimer = -360;
-                return true;
+                if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>(mod).weaponDash = 10;
+                return player.dashDelay == 0;
+ 
             }
             return false;
-            
+        }
+
+        public override bool UseItemFrame(Player player)
+        {
+            Fist.UseItemFrame(player);
+            return true;
+        }
+        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
+        {
+            // jump exactly 6 blocks high!
+            noHitbox = Fist.UseItemHitbox(player, ref hitbox, 22, 9f, 7f, 12f);
         }
     }
 }

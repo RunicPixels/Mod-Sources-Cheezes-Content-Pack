@@ -639,6 +639,7 @@
     <Content Include="Items\Weapons\Other\MahoganyBlowpipe.png" />
     <Content Include="Items\Weapons\Other\OnePunchGlove.png" />
     <Content Include="Items\Weapons\Other\SaxtonHalesFist.png" />
+    <Content Include="Items\Weapons\Other\SaxtonHalesFist_Hands_On.png" />
     <Content Include="Items\Weapons\Ratchet\blitzcannon.png" />
     <Content Include="Items\Weapons\Ratchet\BlitzEruptor.png" />
     <Content Include="Items\Weapons\Ratchet\BlitzGun.png" />
