@@ -24,7 +24,7 @@ namespace CheezeMod.Items.Weapons.Other
             {
                 if (fist == null)
                 {
-                    fist = new FistStyle(item, 20);
+                    fist = new FistStyle(item, 4);
                 }
                 return fist;
             }
@@ -38,7 +38,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.width = 30;
             item.height = 30;
             item.melee = true;
-            item.useAnimation = 24;
+            item.useAnimation = 28;
             item.toolTip = "A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+10% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
             item.crit = 6;
             item.noUseGraphic = true;

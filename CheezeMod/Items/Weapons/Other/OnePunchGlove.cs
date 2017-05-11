@@ -41,6 +41,7 @@ namespace CheezeMod.Items.Weapons.Other
             item.height = 36;
             item.useTime = 90;
             item.useAnimation = 90;
+            item.UseSound = SoundID.Item7;
             item.toolTip = "'One Punch is all you need.'";
             item.scale = 1f;
 			item.damage = 2880;

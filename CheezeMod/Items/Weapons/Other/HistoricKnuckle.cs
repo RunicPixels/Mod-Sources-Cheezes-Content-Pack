@@ -2,27 +2,50 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using CheezeMod.Items.Weapons.UseStyles;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
     public class HistoricKnuckle : ModItem
     {
+        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
+        {
+            equips.Add(EquipType.HandsOn);
+            return true;
+        }
+
+        private FistStyle fist;
+        public FistStyle Fist
+        {
+            get
+            {
+                if (fist == null)
+                {
+                    fist = new FistStyle(item, 4);
+                }
+                return fist;
+            }
+        }
+
         public float speedModifier = 8.5f;
         public int maxSpeed = 50;
         public override void SetDefaults()
         {
-            item.useStyle = 3;
+            item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
             item.name = "Historic Knuckle";
             item.width = 30;
             item.height = 30;
             item.melee = true;
             item.useTime = 26;
-            item.useAnimation = item.useTime;
+            item.useAnimation = 24;
+            item.noUseGraphic = true;
             item.toolTip = "A knuckle that is an historic artifact of Madrigal.\nOne step forward and one step back.\n+7% Critical Chance. \n+25% Increased Critical Damage. \n Gives dodge frames to the player and inflict dryad's bane on the enemy upon hitting an enemy.";
             item.crit = 7;
             item.scale = 1.1f;
+            item.UseSound = SoundID.Item7;
             item.damage = 48;
             item.knockBack = 6f;
             item.rare = CheezeItem.historicRarity;
@@ -40,58 +63,33 @@ namespace CheezeMod.Items.Weapons.Other
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
-            if(Main.rand.Next(5) == 0)
+            int combo = Fist.OnHitNPC(player, target, true);
+            if (combo != -1)
             {
-                target.AddBuff(BuffID.Confused, 300);
-                target.AddBuff(BuffID.DryadsWardDebuff, 300);
-
+                if (combo % Fist.punchComboMax == 0)
+                {
+                    //maybe confuse and shadow dryads ward
+                    target.AddBuff(BuffID.Confused, 40 * Main.rand.Next(1, 4), false);
+                    target.AddBuff(BuffID.DryadsWardDebuff, 60 * Main.rand.Next(1, 4));
+                }
             }
-            else
-            {
-                target.AddBuff(BuffID.Confused, 30);
-                target.AddBuff(BuffID.DryadsWardDebuff, 60);
-            }
-            player.AddBuff(BuffID.ShadowDodge, 5);
         }
-        public override bool UseItem(Player player)
+
+        public override bool AltFunctionUse(Player player)
         {
-            player.velocity.Y *= 0.98f;
-            if (player.velocity.X >= -maxSpeed && player.velocity.X <= maxSpeed && player.itemAnimation < player.itemAnimationMax / 4)
-            {
-                if (player.direction > 0)
-                {
-                    player.velocity.X -= speedModifier;
-                }
-                else
-                {
-                    player.velocity.X += speedModifier;
-                }
-            }
-            if (player.velocity.X >= -maxSpeed && player.velocity.X <= maxSpeed && player.itemAnimation > player.itemAnimationMax / 2 && player.itemAnimation < player.itemAnimationMax / 4 * 3)
-            {
-                if (player.direction < 0)
-                {
-                    player.velocity.X -= speedModifier;
-                }
-                else
-                {
-                    player.velocity.X += speedModifier;
-                }
-            }
-            if (player.itemAnimation <= 1)
-            {
-                player.velocity.X *= 0.001f;
-                player.AddBuff(BuffID.ShadowDodge, 2);
-            }
-            if (player.itemAnimation == player.itemAnimationMax - 3)
-            {
-                player.AddBuff(BuffID.ShadowDodge, 3);
-            }
-            if (player.itemAnimation == player.itemAnimationMax / 2)
-            {
-                player.velocity.X *= 0.002f;
-            }
-            return base.UseItem(player);
+            if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>(mod).weaponDash = 1;
+            return player.dashDelay == 0;
+        }
+
+        public override bool UseItemFrame(Player player)
+        {
+            Fist.UseItemFrame(player);
+            return true;
+        }
+        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
+        {
+            // jump exactly 9 blocks high!
+            noHitbox = Fist.UseItemHitbox(player, ref hitbox, 22, 12f, 7f, 14f);
         }
         public override void UpdateInventory(Player player)
         {

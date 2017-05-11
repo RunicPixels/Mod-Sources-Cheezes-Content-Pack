@@ -422,7 +422,8 @@ namespace CheezeMod
                                 d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
                             }
                             break;
-                        case 10: // Long range
+                        // 10 - 19 ARE SPECIAL GAME REFERENCES
+                        case 10: // Long range // SAXTON HALE'S FIST
                             dashMaxSpeedThreshold = 7f;
                             dashMaxFriction = 0.99f;
                             dashMinFriction = 0.8f;
@@ -451,6 +452,33 @@ namespace CheezeMod
                                     DustID.Smoke, 0, 0, 100, default(Color), 0.4f)];
                                 d.fadeIn = 0.7f;
                                 d.velocity = d.velocity * 0.1f + player.velocity * -0.2f;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                            }
+                            break;
+                        // 20 - 29 ARE RELATED TO FLYFF
+                        case 20: // Normal short-ish dash // GUARDIAN KNUCKLE
+                            dashMaxSpeedThreshold = 8f;
+                            dashMaxFriction = 0.98f;
+                            dashMinFriction = 0.94f;
+                            for (int i = 0; i < 3; i++)
+                            {
+                                Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                  mod.DustType("BlueLight"), 0, 0, 100, default(Color), 1.8f)];
+                                d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
+                                d.noGravity = true;
+                                d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
+                            }
+                            break;
+                        case 21: // Normal short-ish dash  // HISTORIC KNUCKLE
+                            dashMaxSpeedThreshold = 10f;
+                            dashMaxFriction = 0.98f;
+                            dashMinFriction = 0.94f;
+                            for (int i = 0; i < 3; i++)
+                            {
+                                Dust d = Main.dust[Dust.NewDust(player.position, player.width, player.height,
+                                  107, 0, 0, 100, default(Color), 1.8f)];
+                                d.velocity = d.velocity * 0.5f + player.velocity * -0.4f;
+                                d.noGravity = true;
                                 d.shader = GameShaders.Armor.GetSecondaryShader(player.cShoe, player);
                             }
                             break;
