@@ -141,7 +141,7 @@ namespace CheezeMod.NPCs
                 {
                     if (Main.rand.Next(5) == 0) // 20% chance.
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RelicFragment"), 1);
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Relic Fragment"), 1);
                     }
                 }
             }

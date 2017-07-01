@@ -38,7 +38,7 @@ namespace CheezeMod.Items.Weapons.Swords
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(117, 10); // 117 is a Meteorite Bar
-            recipe.AddIngredient(null, "RelicFragment", 15);
+            recipe.AddIngredient(null, "Relic Fragment", 15);
             recipe.AddIngredient(ItemID.FossilOre, 5);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 1);

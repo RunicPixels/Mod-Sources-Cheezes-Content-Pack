@@ -19,7 +19,7 @@ namespace CheezeMod
         public CheezeMod() {
             Properties = new ModProperties()
             {
-                Autoload = false,
+                Autoload = true,
                 AutoloadGores = true,
                 AutoloadSounds = true
             };
@@ -401,7 +401,7 @@ namespace CheezeMod
 
             // Recipe for the Hellwing Bow
             recipe = new ModRecipe(this); 
-            recipe.AddIngredient(null, "RelicFragment", 10);
+            recipe.AddIngredient(null, "RelicFragment", 3);
             recipe.AddIngredient(null, "FlameWing", 20);
             recipe.AddIngredient(ItemID.MoltenFury);
             recipe.AddTile(77);
