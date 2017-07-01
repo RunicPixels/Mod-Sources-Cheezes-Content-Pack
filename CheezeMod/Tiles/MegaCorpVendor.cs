@@ -19,7 +19,9 @@ namespace CheezeMod.Tiles
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 18 };
             TileObjectData.addTile(Type);
             animationFrameHeight = 74;
-            AddMapEntry(new Color(200, 200, 200), CreateMapEntryName("VolcanoWarning"));
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("MegaCorpVendor");
+            AddMapEntry(new Color(0, 40, 125), name);
             disableSmartCursor = true;
         }
 

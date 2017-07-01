@@ -23,8 +23,10 @@ namespace CheezeMod.Tiles
 			TileObjectData.addTile(Type);
 			dustType = -1;
 			disableSmartCursor = true;
-			AddMapEntry(new Color(13, 88, 130), CreateMapEntryName("Banner"));
-		}
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("Banner");
+            AddMapEntry(new Color(255, 255, 0), name);
+        }
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{

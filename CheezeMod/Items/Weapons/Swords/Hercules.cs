@@ -15,8 +15,6 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.melee = true;
 			item.width = 58;
 			item.height = 62;
-
-
             item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 1;
@@ -27,18 +25,18 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.autoReuse = true;
 		}
 
-    public override void SetStaticDefaults()
-    {
-      DisplayName.SetDefault("Hercules");
-      Tooltip.SetDefault("Goes way back.\nGrants three second of rage on hit.");
-    }
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Hercules");
+            Tooltip.SetDefault("Goes way back.\nGrants three second of rage on hit.");
+        }
 
 
 		public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(117, 10); // 117 is a Meteorite Bar
-            recipe.AddIngredient(null, "Relic Fragment", 15);
+            recipe.AddIngredient(null, "RelicFragment", 15);
             recipe.AddIngredient(ItemID.FossilOre, 5);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 1);

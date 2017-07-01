@@ -24,9 +24,6 @@ namespace CheezeMod.Items.Weapons.Guns
             item.width = 44;
             item.height = 26;
             item.scale = 0.8f;
-            SetMagazineToolTip();
-
-
             item.useTime = DefaultUseTime;
             item.useAnimation = DefaultUseTime;
             item.useStyle = 5;
@@ -41,11 +38,12 @@ namespace CheezeMod.Items.Weapons.Guns
             item.useAmmo = AmmoID.Bullet;
         }
 
-    public override void SetStaticDefaults()
-    {
-      DisplayName.SetDefault("Pulse Pistol");
-      Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.");
-    }
+        public override void SetStaticDefaults()
+        {
+            SetMagazineToolTip();
+            DisplayName.SetDefault("Pulse Pistol");
+            Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.");
+        }
 
 
         public override void AddRecipes()

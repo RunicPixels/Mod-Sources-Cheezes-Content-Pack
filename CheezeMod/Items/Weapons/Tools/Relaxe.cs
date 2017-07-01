@@ -37,7 +37,7 @@ namespace CheezeMod.Items.Weapons.Tools
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null, "Relic Fragment", 18);
+			recipe.AddIngredient(null, "RelicFragment", 9);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
