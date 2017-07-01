@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Blitz Gun";
+
 			item.damage = 13;
 			item.ranged = true;
 			item.width = 50;
             item.scale = 0.7f;
 			item.height = 34;
-			item.toolTip = "Shoots a wide arc of shots, converts normal bullets into Blitz Cannon shots.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 42;
             item.useAnimation = 42;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 3f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Blitz Gun");
+      Tooltip.SetDefault("Shoots a wide arc of shots, converts normal bullets into Blitz Cannon shots.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

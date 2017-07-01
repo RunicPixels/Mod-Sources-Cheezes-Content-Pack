@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
 	{
 		public override void SetDefaults()
 		{
-			projectile.name = "Lava Gun";
 			projectile.width = 10;
 			projectile.height = 10;
 			projectile.aiStyle = 1;
@@ -23,6 +22,11 @@ namespace CheezeMod.Projectiles.Ranged
 			ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
 			ProjectileID.Sets.TrailingMode[projectile.type] = 5;
             aiType = ProjectileID.MolotovFire;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Lava Gun");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Yoyo
 	{
 		public override void SetDefaults()
 		{
-            item.name = "Historic Yo-Yo";
+
 			item.damage = 42;
 			item.melee = true;
 			item.width = 32;
 			item.height = 32;
-			item.toolTip = "A yoyo that is an historic artifact of Madrigal. \n+5% Critical Chance. \n+31% Increased Critical Damage.\n Inflics Dryad's Bane on enemy hit.";
+
 			item.knockBack = 5f;
             item.useTime = 10;
             item.useAnimation = 10;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Yoyo
             item.shoot = mod.ProjectileType("HistoricYoyo");
             item.channel = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Yo-Yo");
+      Tooltip.SetDefault("A yoyo that is an historic artifact of Madrigal. \n+5% Critical Chance. \n+31% Increased Critical Damage.\n Inflics Dryad's Bane on enemy hit.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

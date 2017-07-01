@@ -11,13 +11,13 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.Bananarang);
-			item.name = "Bonemerang";
+
 			item.damage = 25;
 			item.melee = true;
 			item.width = 22;
 			item.height = 42;
-			item.toolTip = "It's ought to be used by some skull wearing monsters.";
-            item.toolTip2 = "Can stack up to 2 times.";
+
+
             item.maxStack = 2;
             item.useTime = 20;
 			item.useAnimation = 20;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 			item.shoot = mod.ProjectileType("Bonemerang");
 			item.shootSpeed = 11f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Bonemerang");
+      Tooltip.SetDefault("It's ought to be used by some skull wearing monsters.\nCan stack up to 2 times.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

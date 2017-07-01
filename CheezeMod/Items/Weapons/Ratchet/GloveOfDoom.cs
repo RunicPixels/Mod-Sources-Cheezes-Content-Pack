@@ -10,15 +10,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Glove of Doom";
+
 			item.damage = 15;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
             item.mana = 8;
-            item.toolTip = "Summons an agent of doom to fight for you.";
-            item.toolTip2 = "Originally from Ratchet and Clank.";
+
+
             item.useTime = 35;
             item.useAnimation = 35;
 			item.useStyle = 1;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.buffTime = 360000;
             item.buffType = mod.BuffType("AgentOfDoom");
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Glove of Doom");
+      Tooltip.SetDefault("Summons an agent of doom to fight for you.\nOriginally from Ratchet and Clank.");
+    }
+
 
         public override void AddRecipes()
         {

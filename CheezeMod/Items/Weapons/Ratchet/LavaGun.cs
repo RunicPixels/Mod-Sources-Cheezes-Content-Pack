@@ -12,15 +12,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-            item.name = "Lava Gun";
+
 			item.damage = 5;
 			item.ranged = true;
 			item.width = 50;
 			item.height = 30;
             item.scale = 0.875f;
             item.channel = true;
-            item.toolTip = "Uses Flares, now also made at the MegaCorp Vendor with Musket Balls.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 5;
             item.useAnimation = 10;
 			item.useStyle = 5;
@@ -35,6 +35,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.shootSpeed = 0f;
             item.useAmmo = 931;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Lava Gun");
+      Tooltip.SetDefault("Uses Flares, now also made at the MegaCorp Vendor with Musket Balls.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

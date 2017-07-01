@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Lancer";
+
 			item.damage = 8;
 			item.ranged = true;
 			item.width = 38;
             item.scale = 0.8f;
 			item.height = 24;
-			item.toolTip = "'Megacorp's finest.' 11% Chance not to consume ammo. Converts normal bullets into Lancer shots.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 13;
             item.useAnimation = 13;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 6f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Lancer");
+      Tooltip.SetDefault("'Megacorp's finest.' 11% Chance not to consume ammo. Converts normal bullets into Lancer shots.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

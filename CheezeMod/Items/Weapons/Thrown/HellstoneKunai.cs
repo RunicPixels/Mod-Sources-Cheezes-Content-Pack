@@ -13,15 +13,15 @@ namespace CheezeMod.Items.Weapons.Thrown
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThrowingKnife);
-			item.name = "Hellstone Kunai";
+
 			item.damage = 29;
 			item.thrown = true;
             item.noMelee = true;
 			item.width = 18;
 			item.height = 38;
             item.autoReuse = true;
-            item.toolTip = "It has a tag on its handle which reads 'Kazan', it's from a far eastern place.";
-            item.toolTip2 = "It has a 10% chance to put your enemy on fire.";
+
+
             item.useTime = 21;
 			item.useAnimation = 21;
 			item.knockBack = 1f;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.shoot = mod.ProjectileType("HellstoneKunai");
 			item.shootSpeed = 14f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Hellstone Kunai");
+      Tooltip.SetDefault("It has a tag on its handle which reads 'Kazan', it's from a far eastern place.\nIt has a 10% chance to put your enemy on fire.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

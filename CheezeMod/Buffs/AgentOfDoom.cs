@@ -7,13 +7,13 @@ namespace CheezeMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[Type] = "Agent of Doom";
-			Main.buffTip[Type] = "The agent of doom will fight for you";
+            DisplayName.SetDefault("Agent of Doom");
+            Description.SetDefault("The agent of doom will fight for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}
 
-		public override void Update(Player player, ref int buffIndex)
+        public override void Update(Player player, ref int buffIndex)
 		{
 			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
 			if (player.ownedProjectileCounts[mod.ProjectileType("AgentOfDoom")] > 0)

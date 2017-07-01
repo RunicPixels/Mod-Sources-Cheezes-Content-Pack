@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Granite Rod";
+
             item.damage = 20;
             item.magic = true;
             item.mana = 6;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "Shoots a resonating beam.";
+
             Item.staff[item.type] = true;
             item.useTime = 28;
             item.useAnimation = 28;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("BlueLaserStaff");
             item.shootSpeed = 23f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Granite Rod");
+      Tooltip.SetDefault("Shoots a resonating beam.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

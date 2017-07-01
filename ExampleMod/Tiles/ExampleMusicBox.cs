@@ -18,7 +18,9 @@ namespace ExampleMod.Tiles
 			TileObjectData.newTile.DrawYOffset = 2;
 			TileObjectData.addTile(Type);
 			disableSmartCursor = true;
-			AddMapEntry(new Color(200, 200, 200), "Music Box");
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Music Box");
+			AddMapEntry(new Color(200, 200, 200), name);
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
@@ -28,7 +30,7 @@ namespace ExampleMod.Tiles
 
 		public override void MouseOver(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			player.noThrow = 2;
 			player.showItemIcon = true;
 			player.showItemIcon2 = mod.ItemType("ExampleMusicBox");

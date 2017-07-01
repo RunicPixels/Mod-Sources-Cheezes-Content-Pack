@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Historic Axe";
+
 			item.damage = 47;
 			item.melee = true;
 			item.width = 34;
 			item.height = 32;
-			item.toolTip = "An axe that is an historic artifact of Madrigal. \n+17% Critical Chance. \n+10% Increased Critical Damage. \n+15 Max health when holding. \n Inflics Dryad's Bane on enemy hit.";
+
             item.crit = 17;
             item.scale = 1.0f;
             item.useTime = 29;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Axe");
+      Tooltip.SetDefault("An axe that is an historic artifact of Madrigal. \n+17% Critical Chance. \n+10% Increased Critical Damage. \n+15 Max health when holding. \n Inflics Dryad's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

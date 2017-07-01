@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Magic
         int bounceCount = 1;
         public override void SetDefaults()
         {
-            projectile.name = "Wind Blast";
             projectile.width = 32;
             projectile.height = 28;
             projectile.magic = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 8;
             projectile.timeLeft = 420;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Wind Blast");
         }
 
         public override void AI()

@@ -9,13 +9,20 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Torn Hero Book";
+
 			item.width = 24;
 			item.height = 22;
 			item.maxStack = 999;
-			AddTooltip("This was a spell used by mages of the old times.");
+
             item.value = 18000;
             item.rare = 8;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Torn Hero Book");
+      Tooltip.SetDefault("This was a spell used by mages of the old times.");
+    }
+
 	}
 }

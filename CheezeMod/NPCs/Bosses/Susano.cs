@@ -14,8 +14,6 @@ namespace CheezeMod.NPCs.Bosses
         public override void SetDefaults()
         {
             //npc.CloneDefaults(NPCID.Piranha);
-            npc.name = "Susano";
-            npc.displayName = "Susano";
             npc.width = 138;
             npc.height = 156;
             npc.life = 20000;
@@ -35,6 +33,10 @@ namespace CheezeMod.NPCs.Bosses
             npc.netAlways = true;
             Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.SkeletronHead];
             animationType = NPCID.SkeletronHead;
+        }
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Susano");
         }
 
         public override void HitEffect(int hitDirection, double damage)

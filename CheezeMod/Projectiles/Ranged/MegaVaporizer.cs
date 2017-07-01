@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BulletHighVelocity);
-            projectile.name = "MegaVaporizer";
             projectile.width = 18;
             projectile.height = 18;
             projectile.ranged = true;
@@ -23,6 +22,12 @@ namespace CheezeMod.Projectiles.Ranged
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
             aiType = ProjectileID.BulletHighVelocity;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mega Vaporizer");
+        }
+
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.8f, 0.3f, 1.2f);

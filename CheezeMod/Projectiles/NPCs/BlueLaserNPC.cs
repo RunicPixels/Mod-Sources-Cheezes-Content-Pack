@@ -10,7 +10,6 @@ namespace CheezeMod.Projectiles.NPCs
     {
         public override void SetDefaults()
         {
-            projectile.name = "Blue Laser";
             projectile.width = 10;
             projectile.height = 8;
             projectile.hostile = true;
@@ -18,7 +17,10 @@ namespace CheezeMod.Projectiles.NPCs
             projectile.timeLeft = 300;
             aiType = ProjectileID.Bullet;
         }
-
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blue Laser");
+        }
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0f, 0f, 1f);

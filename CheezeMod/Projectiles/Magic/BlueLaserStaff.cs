@@ -10,7 +10,6 @@ namespace CheezeMod.Projectiles.Magic
     {
         public override void SetDefaults()
         {
-            projectile.name = "Blue Laser";
             projectile.width = 15;
             projectile.height = 10;
             projectile.magic = true;
@@ -18,6 +17,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 3;
             projectile.timeLeft = 300;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blue Laser");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

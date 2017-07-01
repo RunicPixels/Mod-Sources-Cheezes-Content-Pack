@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Rel-axe";
+
 			item.damage = 14;
 			item.melee = true;
 			item.width = 48;
 			item.height = 48;
-			item.toolTip = "It's old but it's still a real axe.";
+
 			item.useTime = 24;
 			item.useAnimation = 26;
 			item.axe = 10;
@@ -26,6 +26,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Rel-axe");
+      Tooltip.SetDefault("It's old but it's still a real axe.");
+    }
+
 
 		public override void AddRecipes()
 		{

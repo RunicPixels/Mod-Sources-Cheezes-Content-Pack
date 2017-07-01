@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Angel Pickaxe";
+
 			item.damage = 48;
 			item.melee = true;
             item.width = 52;
 			item.height = 50;
-			item.toolTip = "A pickaxe that once used by the angels of Madrigal. \n+5% Critical Chance. \n+22% Increased Critical Damage. \n+20 Max health when holding. \nInflics Angels's Bane on enemy hit.";
+
             item.crit = 5;
             item.scale = 1.0f;
             item.useTime = 15;
@@ -29,6 +29,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Angel Pickaxe");
+      Tooltip.SetDefault("A pickaxe that once used by the angels of Madrigal. \n+5% Critical Chance. \n+22% Increased Critical Damage. \n+20 Max health when holding. \nInflics Angels's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

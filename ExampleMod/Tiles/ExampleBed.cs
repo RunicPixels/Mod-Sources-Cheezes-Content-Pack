@@ -15,7 +15,9 @@ namespace ExampleMod.Tiles
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); //this style already takes care of direction for us
 			TileObjectData.newTile.CoordinateHeights = new int[]{ 16, 18 };
 			TileObjectData.addTile(Type);
-			AddMapEntry(new Color(200, 200, 200), "Example Bed");
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Example Bed");
+			AddMapEntry(new Color(200, 200, 200), name);
 			dustType = mod.DustType("Sparkle");
 			disableSmartCursor = true;
 			adjTiles = new int[]{ TileID.Beds };
@@ -34,7 +36,7 @@ namespace ExampleMod.Tiles
 
 		public override void RightClick(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			Tile tile = Main.tile[i, j];
 			int spawnX = i - tile.frameX / 18;
 			int spawnY = j + 2;
@@ -58,7 +60,7 @@ namespace ExampleMod.Tiles
 
 		public override void MouseOver(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			player.noThrow = 2;
 			player.showItemIcon = true;
 			player.showItemIcon2 = mod.ItemType("ExampleBed");

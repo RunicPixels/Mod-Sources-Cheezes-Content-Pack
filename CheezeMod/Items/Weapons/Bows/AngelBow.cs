@@ -11,12 +11,12 @@ namespace CheezeMod.Items.Weapons.Bows
         int mode = 0;
         public override void SetDefaults()
         {
-            item.name = "Angel Bow";
+
             item.damage = 45;
             item.ranged = true;
             item.width = 28;
             item.height = 56;
-            item.toolTip = "A bow that once used by the angels of Madrigal. \n+18% Critical Chance. \n+25% Increased Critical Damage. \n+Autofires.\n Inflics Angels's Bane on enemy hit.";
+
             item.useTime = 22;
             item.useAnimation = 22;
             item.useStyle = 5;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Bows
             item.shootSpeed = 12f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Angel Bow");
+      Tooltip.SetDefault("A bow that once used by the angels of Madrigal. \n+18% Critical Chance. \n+25% Increased Critical Damage. \n+Autofires.\n Inflics Angels's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

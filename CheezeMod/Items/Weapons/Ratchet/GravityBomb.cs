@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Gravity Bomb";
+
 			item.damage = 41;
 			item.ranged = true;
 			item.width = 56;
 			item.height = 40;
             item.scale = 1f;
-            item.toolTip = "Uses rockets, shoots an exploding bomb.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 55;
             item.useAnimation = 55;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 6f;
 			item.useAmmo = AmmoID.Rocket;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Gravity Bomb");
+      Tooltip.SetDefault("Uses rockets, shoots an exploding bomb.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

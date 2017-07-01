@@ -13,8 +13,6 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
-            npc.name = "Robonoid";
-            npc.displayName = "Robonoid";
             npc.width = 26;
             npc.height = 40;
             npc.life = 60;
@@ -33,7 +31,12 @@ namespace CheezeMod.NPCs
             animationType = NPCID.Zombie;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Robonoid");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (Main.hardMode) && (spawnInfo.spawnTileY < Main.rockLayer) ? 0.105f : 0f;
         }

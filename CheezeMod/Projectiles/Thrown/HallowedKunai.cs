@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Thrown
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.ThrowingKnife);
-            projectile.name = "Hallowed Kunai";
             projectile.width = 22;
             projectile.height = 22;
             projectile.thrown = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Thrown
             projectile.scale = 0.9f;
             projectile.penetrate = 5;
             aiType = ProjectileID.ThrowingKnife;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Hallowed Kunai");
         }
 
         public override void AI()

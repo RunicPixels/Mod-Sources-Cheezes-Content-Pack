@@ -16,9 +16,13 @@ namespace ExampleMod.NPCs
 			accelerationY = 0.1f;
 		}
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Sarcophagus");
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "Sarcophagus";
 			npc.lifeMax = 1100;
 			npc.damage = 140;
 			npc.defense = 100;
@@ -27,8 +31,8 @@ namespace ExampleMod.NPCs
 			npc.height = 56;
 			npc.aiStyle = -1;
 			npc.noGravity = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 6;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath6;
 			npc.value = Item.buyPrice(0, 0, 15, 0);
 			npc.buffImmune[BuffID.Poisoned] = true;
 			npc.buffImmune[BuffID.Venom] = true;
@@ -73,7 +77,7 @@ namespace ExampleMod.NPCs
 				}
 				if (ai == -60f || ai == -120f)
 				{
-					Main.PlaySound(4, (int)npc.position.X, (int)npc.position.Y, 6);
+					Main.PlaySound(SoundID.NPCDeath6, npc.position);
 				}
 				if (ai == -1f)
 				{
@@ -85,7 +89,7 @@ namespace ExampleMod.NPCs
 							target.AddBuff(BuffID.Cursed, 240, true);
 							target.AddBuff(BuffID.Slow, 240, true);
 							target.AddBuff(BuffID.Darkness, 240, true);
-							if (target.HasBuff(BuffID.Cursed) >= 0 || target.HasBuff(BuffID.Slow) >= 0 || target.HasBuff(BuffID.Darkness) >= 0)
+							if (target.FindBuffIndex(BuffID.Cursed) >= 0 || target.FindBuffIndex(BuffID.Slow) >= 0 || target.FindBuffIndex(BuffID.Darkness) >= 0)
 							{
                                 target.GetModPlayer<ExamplePlayer>(mod).lockTime = 60;
 							}
@@ -145,10 +149,17 @@ namespace ExampleMod.NPCs
 			}
 		}
 
-		public override float CanSpawn(NPCSpawnInfo spawnInfo)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			Tile tile = Main.tile[spawnInfo.spawnTileX, spawnInfo.spawnTileY];
-			return ExampleMod.NoZoneNormalSpawn(spawnInfo) && (tile.type == 53 || tile.type == 112 || tile.type == 116 || tile.type == 234 || spawnInfo.desertCave) && !spawnInfo.playerSafe && ExampleWorld.downedAbomination ? 0.5f : 0f;
+			if (spawnInfo.playerSafe || !ExampleWorld.downedAbomination)
+			{
+				return 0f;
+			}
+			if (SpawnCondition.DesertCave.Chance > 0f)
+			{
+				return SpawnCondition.DesertCave.Chance / 3f;
+			}
+			return SpawnCondition.Mummy.Chance + SpawnCondition.LightMummy.Chance + SpawnCondition.DarkMummy.Chance;
 		}
 	}
 }

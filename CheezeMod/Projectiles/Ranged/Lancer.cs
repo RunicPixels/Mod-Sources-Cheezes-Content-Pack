@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bullet);
-            projectile.name = "Lancer shot";
             projectile.width = 11;
             projectile.height = 11;
             projectile.ranged = true;
@@ -22,6 +21,11 @@ namespace CheezeMod.Projectiles.Ranged
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Lancer Shot");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

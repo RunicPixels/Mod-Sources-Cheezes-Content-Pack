@@ -7,8 +7,8 @@ namespace CheezeMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[this.Type] = "Cheese!";
-			Main.buffTip[this.Type] = "Your feel overwhelmed by cheese, increases defense, life regen and melee stats.";
+            DisplayName.SetDefault("Cheese!");
+            Description.SetDefault("Your feel overwhelmed by cheese, increases defense, life regen and melee stats.");
 			Main.buffNoSave[Type] = false;
 			Main.debuff[Type] = false;
 			canBeCleared = true;

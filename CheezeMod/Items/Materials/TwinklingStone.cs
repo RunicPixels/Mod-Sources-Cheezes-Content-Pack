@@ -9,13 +9,20 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Twinkling Stone";
+
 			item.width = 26;
 			item.height = 22;
 			item.maxStack = 999;
-			AddTooltip("Sometimes dropped by Eyebats");
+
             item.value = 100;
 			item.rare = 0;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Twinkling Stone");
+      Tooltip.SetDefault("Sometimes dropped by Eyebats");
+    }
+
 	}
 }

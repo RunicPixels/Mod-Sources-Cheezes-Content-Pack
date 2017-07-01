@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Hallowed Bolt";
+
 			item.width = 30;
 			item.height = 30;
 			item.maxStack = 999;
-			AddTooltip("'It seems shiny.'");
+
 			item.value = 9000;
 			item.rare = 5;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Hallowed Bolt");
+      Tooltip.SetDefault("'It seems shiny.'");
+    }
+
 
 		public override void AddRecipes()
 		{

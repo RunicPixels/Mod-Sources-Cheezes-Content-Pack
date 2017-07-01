@@ -13,7 +13,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            projectile.name = "Mini Nuke";
             projectile.width = 24;
             projectile.height = 24;
             projectile.ranged = true;
@@ -23,6 +22,12 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.penetrate = 40;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mini Nuke");
+        }
+
         public override void AI()
         {
             if (Main.rand.Next(20) == 0)

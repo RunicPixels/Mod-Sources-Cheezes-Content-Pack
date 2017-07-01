@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Gradience";
+
 			item.damage = 30;
 			item.melee = true;
 			item.width = 60;
 			item.height = 72;
-			item.toolTip = "Warning, packs a punch!";
-            item.toolTip2 = "Grants three second of endurance on hit.";
+
+
             item.useTime = 42;
 			item.useAnimation = 42;
 			item.useStyle = 1;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Gradience");
+      Tooltip.SetDefault("Warning, packs a punch!\nGrants three second of endurance on hit.");
+    }
+
 
 		public override void AddRecipes()
 		{

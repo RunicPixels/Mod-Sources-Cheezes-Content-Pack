@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
     {
         public override void SetDefaults()
         {
-            item.name = "Meteorite Bolt";
+
             item.width = 26;
             item.height = 26;
             item.maxStack = 999;
-            AddTooltip("Used for crafting mechanical weapons.");
+
             item.value = 1400;
             item.rare = 1;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Meteorite Bolt");
+      Tooltip.SetDefault("Used for crafting mechanical weapons.");
+    }
+
 
         public override void AddRecipes()
         {

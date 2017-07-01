@@ -24,8 +24,6 @@ namespace CheezeMod.NPCs
         }
         public override void SetDefaults()
         {
-            npc.name = "DragonEye";
-            npc.displayName = "Dragon Eye";
             npc.width = 32;
             npc.height = 30;
             npc.scale = 1.1f;
@@ -47,7 +45,12 @@ namespace CheezeMod.NPCs
             attackCool = 200f;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dragon Eye");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             Player player = spawnInfo.player;
             return (CheezeMod.NormalSpawn(spawnInfo)) && NPC.downedBoss1 && player.ZoneJungle && !Main.dayTime ? spawnInfo.spawnTileY > Main.worldSurface ? 0.05f : 0.105f : 0f;

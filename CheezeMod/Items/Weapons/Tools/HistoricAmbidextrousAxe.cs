@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Historic Ambidextrous Axe";
+
 			item.damage = 71;
 			item.melee = true;
             item.width = 86;
 			item.height = 86;
-			item.toolTip = "An enourmous axe used by the guardians of Madrigal.\n+11% HP when holding.\n+5 defense when holding.\nInflicts Dryad's bane on your opponent.";
+
             item.scale = 1f;
             item.useTime = 64;
 			item.useAnimation = 64;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Ambidextrous Axe");
+      Tooltip.SetDefault("An enourmous axe used by the guardians of Madrigal.\n+11% HP when holding.\n+5 defense when holding.\nInflicts Dryad's bane on your opponent.");
+    }
+
 
         public override void AddRecipes()
         {

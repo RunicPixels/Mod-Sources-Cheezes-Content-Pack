@@ -10,7 +10,7 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Stone Broadsword";
+
             item.damage = 10;
             item.melee = true;
             item.width = 32;
@@ -25,6 +25,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Stone Broadsword");
+      Tooltip.SetDefault("");
+    }
+
 
         public override void AddRecipes()
         {

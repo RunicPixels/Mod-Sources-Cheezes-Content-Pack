@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Landmine);
-            projectile.name = "Kaboom";
             projectile.width = 128;
             projectile.height = 128;
             projectile.penetrate = 8;
@@ -19,6 +18,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.hostile = false;
             projectile.timeLeft = 1;
             aiType = ProjectileID.Landmine;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Kaboom");
         }
 
         public override bool PreKill(int timeLeft)

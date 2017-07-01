@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Guns
     {
         public override void SetDefaults()
         {
-            item.name = "Golden Pirate Pistol";
+
             item.damage = 39;
             item.ranged = true;
             item.width = 40;
             item.height = 24;
             item.scale = 0.8f;
-            item.toolTip = "Converts Musket Balls and Silver Bullets into Ichor Bullets.";
+
             item.useTime = 19;
             item.useAnimation = 19;
             item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Guns
             item.shootSpeed = 16f;
             item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Golden Pirate Pistol");
+      Tooltip.SetDefault("Converts Musket Balls and Silver Bullets into Ichor Bullets.");
+    }
+
 
         public override void AddRecipes()
         {

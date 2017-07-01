@@ -6,13 +6,9 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Armor
 {
-	public class StarlightHelmet : ModItem
+    [AutoloadEquip(EquipType.Head)]
+    public class StarlightHelmet : ModItem
 	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-		{
-			equips.Add(EquipType.Head);
-			return true;
-		}
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
@@ -28,15 +24,22 @@ namespace CheezeMod.Items.Armor
 
         public override void SetDefaults()
 		{
-			item.name = "Starlight Helmet";
+
 			item.width = 18;
 			item.height = 18;
-			item.toolTip = "It fills you with... Spellblade capacities.";
-            item.toolTip2 ="+5 max mana, 3% Melee and Magic damage.";
+
+
             item.value = 10000;
 			item.rare = 2;
 			item.defense = 5;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Helmet");
+      Tooltip.SetDefault("It fills you with... Spellblade capacities.\n+5 max mana, 3% Melee and Magic damage.");
+    }
+
 
         public override void UpdateEquip(Player player)
         {

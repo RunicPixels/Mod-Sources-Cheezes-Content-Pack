@@ -11,9 +11,9 @@ namespace CheezeMod.Items.Weapons.Swords
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.StarWrath);
-			item.name = "Sun Strike";
-            item.toolTip = "Shoots out Sunstrikes to ingite your enemies.";
-            item.toolTip2 = "Also provides one second of either 'rage' or 'endurance' on direct hit.";
+
+
+
             item.useTime = 48;
             item.UseSound = SoundID.Item1;
             item.melee = true;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.scale = 1f;
             item.shoot = 10;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Sun Strike");
+      Tooltip.SetDefault("Shoots out Sunstrikes to ingite your enemies.\nAlso provides one second of either 'rage' or 'endurance' on direct hit.");
+    }
+
 
 
         public override void MeleeEffects(Player player, Rectangle hitbox)

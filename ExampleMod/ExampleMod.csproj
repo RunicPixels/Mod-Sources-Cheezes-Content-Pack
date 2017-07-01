@@ -38,14 +38,18 @@
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" />
     <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" />
     <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" />
+    <Reference Include="ReLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\ReLogic.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="tModLoaderDebug">
-      <HintPath>C:\Program Files (x86)\Steam\SteamApps\common\Terraria\tModLoaderDebug.exe</HintPath>
+    <Reference Include="Terraria">
+      <HintPath>..\src\tModLoader\bin\x86\WindowsDebug\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +67,18 @@
     <Compile Include="Buffs\PurityWisp.cs" />
     <Compile Include="Buffs\Undead.cs" />
     <Compile Include="Buffs\Undead2.cs" />
+    <Compile Include="Commands\AddTimeCommand.cs" />
+    <Compile Include="Commands\CoinCommand.cs" />
+    <Compile Include="Commands\ItemCommand.cs" />
+    <Compile Include="Commands\NpcCommand.cs" />
+    <Compile Include="Commands\NpcTypeCommand.cs" />
+    <Compile Include="Commands\ScoreCommand.cs" />
+    <Compile Include="Commands\SoundCommand.cs" />
+    <Compile Include="Commands\VolcanoCommand.cs" />
     <Compile Include="Dusts\Bubble.cs" />
     <Compile Include="Dusts\EtherealFlame.cs" />
     <Compile Include="Dusts\ExampleSolution.cs" />
+    <Compile Include="Dusts\ExampleWaterSplash.cs" />
     <Compile Include="Dusts\Flame.cs" />
     <Compile Include="Dusts\Negative.cs" />
     <Compile Include="Dusts\Pixel.cs" />
@@ -74,6 +87,7 @@
     <Compile Include="Dusts\Smoke.cs" />
     <Compile Include="Dusts\Sparkle.cs" />
     <Compile Include="Dusts\SpectreDust.cs" />
+    <Compile Include="ExampleCustomCurrency.cs" />
     <Compile Include="ExampleMod.cs" />
     <Compile Include="ExamplePlayer.cs" />
     <Compile Include="ExampleWorld.cs" />
@@ -93,6 +107,7 @@
     <Compile Include="Items\Armor\ExampleHelmet.cs" />
     <Compile Include="Items\Armor\ExampleHood.cs" />
     <Compile Include="Items\Armor\ExampleLeggings.cs" />
+    <Compile Include="Items\Armor\ExampleRobe.cs" />
     <Compile Include="Items\Armor\PuritySpiritMask.cs" />
     <Compile Include="Items\Banners\OctopusBanner.cs" />
     <Compile Include="Items\Banners\SarcophagusBanner.cs" />
@@ -101,9 +116,15 @@
     <Compile Include="Items\CarKey.cs" />
     <Compile Include="Items\CopperShortsword.cs" />
     <Compile Include="Items\EquipMaterial.cs" />
+    <Compile Include="Items\ExampleDye.cs" />
     <Compile Include="Items\ExampleGlobalRecipe.cs" />
     <Compile Include="Items\ExampleHamaxe.cs" />
+    <Compile Include="Items\ExampleHook.cs" />
+    <Compile Include="Items\ExampleInstancedGlobalItem.cs" />
     <Compile Include="Items\ExampleItem.cs" />
+    <Compile Include="Items\Placeable\ScoreBoard.cs" />
+    <Compile Include="Items\Weapons\ExampleExplosive.cs" />
+    <Compile Include="Items\Weapons\ExampleJavelin.cs" />
     <Compile Include="Items\ExampleLightPet.cs" />
     <Compile Include="Items\ExamplePet.cs" />
     <Compile Include="Items\ExamplePickaxe.cs" />
@@ -127,7 +148,7 @@
     <Compile Include="Items\Placeable\ExampleDresser.cs" />
     <Compile Include="Items\Placeable\ExampleMusicBox.cs" />
     <Compile Include="Items\Placeable\ExamplePlatform.cs" />
-    <Compile Include="Items\Placeable\ExampleSeeds.cs" />
+    <Compile Include="Items\Placeable\ExampleHerbSeeds.cs" />
     <Compile Include="Items\Placeable\ExampleTorch.cs" />
     <Compile Include="Items\Placeable\ExampleWall.cs" />
     <Compile Include="Items\Placeable\ExampleWorkbench.cs" />
@@ -142,9 +163,12 @@
     <Compile Include="Items\Weapons\ExampleBullet.cs" />
     <Compile Include="Items\Weapons\ExampleCloneItem.cs" />
     <Compile Include="Items\Weapons\ExampleGun.cs" />
+    <Compile Include="Items\Weapons\ExampleLaserWeapon.cs" />
+    <Compile Include="Items\Weapons\ExampleSpear.cs" />
     <Compile Include="Items\Weapons\ExampleStaff.cs" />
     <Compile Include="Items\Weapons\ExampleDualUseWeapon.cs" />
     <Compile Include="Items\Weapons\ExampleSword.cs" />
+    <Compile Include="Items\Weapons\ExampleYoyo.cs" />
     <Compile Include="Items\Weapons\PurityTotem.cs" />
     <Compile Include="Items\Weapons\SpectreGun.cs" />
     <Compile Include="Items\Weapons\Wisp.cs" />
@@ -156,9 +180,9 @@
     <Compile Include="NPCs\Abomination\FreedElement.cs" />
     <Compile Include="NPCs\ExampleChestSummon.cs" />
     <Compile Include="NPCs\ExampleGlobalNPC.cs" />
-    <Compile Include="NPCs\ExampleNPCInfo.cs" />
     <Compile Include="NPCs\ExamplePerson.cs" />
     <Compile Include="NPCs\Fish.cs" />
+    <Compile Include="NPCs\FlutterSlime.cs" />
     <Compile Include="NPCs\Hover.cs" />
     <Compile Include="NPCs\Octopus.cs" />
     <Compile Include="NPCs\PartyZombie.cs" />
@@ -174,7 +198,12 @@
     <Compile Include="Projectiles\ExampleBehindTilesProjectile.cs" />
     <Compile Include="Projectiles\ExampleBullet.cs" />
     <Compile Include="Projectiles\ExampleCloneProjectile.cs" />
+    <Compile Include="Projectiles\ExampleExplosive.cs" />
+    <Compile Include="Projectiles\ExampleJavelinProjectile.cs" />
+    <Compile Include="Projectiles\ExampleLaser.cs" />
     <Compile Include="Projectiles\ExampleSolution.cs" />
+    <Compile Include="Projectiles\ExampleSpearProjectile.cs" />
+    <Compile Include="Projectiles\ExampleYoyo.cs" />
     <Compile Include="Projectiles\HealProj.cs" />
     <Compile Include="Projectiles\Minions\HoverShooter.cs" />
     <Compile Include="Projectiles\Minions\Minion.cs" />
@@ -192,6 +221,7 @@
     <Compile Include="Projectiles\PuritySpirit\PuritySnake.cs" />
     <Compile Include="Projectiles\PuritySpirit\PuritySphere.cs" />
     <Compile Include="Projectiles\PuritySpirit\VoidWorld.cs" />
+    <Compile Include="Projectiles\ScorePoint.cs" />
     <Compile Include="Projectiles\ShadowArm.cs" />
     <Compile Include="Projectiles\SparklingBall.cs" />
     <Compile Include="Projectiles\Wisp.cs" />
@@ -207,11 +237,13 @@
     <Compile Include="Tiles\ExampleChair.cs" />
     <Compile Include="Tiles\ExampleChest.cs" />
     <Compile Include="Tiles\ExampleClock.cs" />
+    <Compile Include="Tiles\ExampleCutTile.cs" />
     <Compile Include="Tiles\ExampleDoorClosed.cs" />
     <Compile Include="Tiles\ExampleDoorOpen.cs" />
     <Compile Include="Tiles\ExampleDresser.cs" />
+    <Compile Include="Tiles\ExampleGlobalTile.cs" />
     <Compile Include="Tiles\ExampleMusicBox.cs" />
-    <Compile Include="Tiles\ExamplePlant.cs" />
+    <Compile Include="Tiles\ExampleHerb.cs" />
     <Compile Include="Tiles\ExamplePlatform.cs" />
     <Compile Include="Tiles\ExampleSapling.cs" />
     <Compile Include="Tiles\ExampleStatue.cs" />
@@ -219,8 +251,11 @@
     <Compile Include="Tiles\ExampleTree.cs" />
     <Compile Include="Tiles\ExampleWorkbench.cs" />
     <Compile Include="Tiles\MonsterBanner.cs" />
+    <Compile Include="Tiles\TEElementalPurge.cs" />
+    <Compile Include="Tiles\TEScoreBoard.cs" />
     <Compile Include="Tiles\VoidMonolith.cs" />
     <Compile Include="Tiles\VoidSky.cs" />
+    <Compile Include="UI\ExampleUI.cs" />
     <Compile Include="Walls\ExampleWall.cs" />
     <Compile Include="Waters\ExampleWaterfallStyle.cs" />
     <Compile Include="Waters\ExampleWaterStyle.cs" />
@@ -235,6 +270,7 @@
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServerDebug.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>for /f "tokens=* delims=" %25%25i in ('"$(ProjectDir)..\setup\bin\setup" --steamdir') do set TERRARIASTEAMDIR=%25%25i
+"%25TERRARIASTEAMDIR%25\tModLoaderServerDebug.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

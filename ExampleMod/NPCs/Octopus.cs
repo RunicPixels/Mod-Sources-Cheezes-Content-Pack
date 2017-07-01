@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using ExampleMod.Projectiles;
+using Terraria.ID;
 
 namespace ExampleMod.NPCs
 {
@@ -11,7 +12,6 @@ namespace ExampleMod.NPCs
 	{
 		public Octopus()
 		{
-			npc.name = "Octopus";
 			speed = 1f;
 			speedY = 1f;
 			acceleration = 0.05f;
@@ -20,9 +20,13 @@ namespace ExampleMod.NPCs
 			bounces = false;
 		}
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Octopus");
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "Octopus";
 			npc.lifeMax = 1100;
 			npc.damage = 160;
 			npc.defense = 90;
@@ -31,9 +35,10 @@ namespace ExampleMod.NPCs
 			npc.height = 44;
 			npc.aiStyle = -1;
 			npc.noGravity = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 1;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath1;
 			npc.value = Item.buyPrice(0, 0, 15, 0);
+			npc.hide = true;
 			banner = npc.type;
 			bannerItem = mod.ItemType("OctopusBanner");
 		}
@@ -99,12 +104,9 @@ namespace ExampleMod.NPCs
 			}
 		}
 
-		public override float CanSpawn(NPCSpawnInfo spawnInfo)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			int x = spawnInfo.spawnTileX;
-			int y = spawnInfo.spawnTileY;
-			int tile = (int)Main.tile[x, y].type;
-			return (ExampleMod.NormalSpawn(spawnInfo) && (tile == 53 || tile == 112 || tile == 116 || tile == 234) && ExampleMod.NoZoneAllowWater(spawnInfo) && spawnInfo.water) && y < Main.rockLayer && (x < 250 || x > Main.maxTilesX - 250) && !spawnInfo.playerSafe && ExampleWorld.downedAbomination ? 0.5f : 0f;
+			return !spawnInfo.playerSafe && ExampleWorld.downedAbomination ? SpawnCondition.OceanMonster.Chance * 0.5f : 0f;
 		}
 	}
 }

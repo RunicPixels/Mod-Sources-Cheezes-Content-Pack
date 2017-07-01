@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Historic Pickaxe";
+
 			item.damage = 28;
 			item.melee = true;
 			item.width = 34;
 			item.height = 30;
-			item.toolTip = "A pickaxe that is an historic artifact of Madrigal. \n+6% Critical Chance. \n+20% Increased Critical Damage. \n+15 Max health when holding. \nInflics Dryad's Bane on enemy hit.";
+
             item.crit = 6;
             item.scale = 1.0f;
             item.useTime = 20;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Pickaxe");
+      Tooltip.SetDefault("A pickaxe that is an historic artifact of Madrigal. \n+6% Critical Chance. \n+20% Increased Critical Damage. \n+15 Max health when holding. \nInflics Dryad's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

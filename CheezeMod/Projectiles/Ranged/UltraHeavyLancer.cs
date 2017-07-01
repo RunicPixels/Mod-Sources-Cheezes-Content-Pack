@@ -13,7 +13,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bullet);
-            projectile.name = "Ultra Heavy Lancer shot";
             projectile.width = 11;
             projectile.height = 11;
             projectile.ranged = true;
@@ -24,6 +23,11 @@ namespace CheezeMod.Projectiles.Ranged
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Ultra Heavy Lancer Shot");
         }
 
         public override void AI()

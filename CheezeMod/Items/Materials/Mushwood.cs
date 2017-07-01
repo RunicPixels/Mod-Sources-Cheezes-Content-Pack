@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Mushwood";
+
 			item.width = 28;
 			item.height = 24;
 			item.maxStack = 999;
-			AddTooltip("There's things growing on this.");
+
 			item.value = 500;
 			item.rare = 1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mushwood");
+      Tooltip.SetDefault("There's things growing on this.");
+    }
+
 
         public override void AddRecipes()
         {

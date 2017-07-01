@@ -1,12 +1,16 @@
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.World.Generation;
 using Microsoft.Xna.Framework;
 using Terraria.GameContent.Generation;
-using System.Linq;
+using Terraria.ModLoader.IO;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ExampleMod
 {
@@ -34,48 +38,71 @@ namespace ExampleMod
 			VolcanoTremorTime = 0;
 		}
 
-		public override void SaveCustomData(BinaryWriter writer)
+		public override TagCompound Save()
 		{
-			writer.Write(saveVersion);
-			byte flags = 0;
-			if (downedAbomination)
+			var downed = new List<string>();
+			if (downedAbomination) downed.Add("abomination");
+			if (downedPuritySpirit) downed.Add("puritySpirit");
+
+			return new TagCompound {
+				{"downed", downed}
+			};
+		}
+
+		public override void Load(TagCompound tag)
+		{
+			var downed = tag.GetList<string>("downed");
+			downedAbomination = downed.Contains("abomination");
+			downedPuritySpirit = downed.Contains("puritySpirit");
+		}
+
+		public override void LoadLegacy(BinaryReader reader)
+		{
+			int loadVersion = reader.ReadInt32();
+			if (loadVersion == 0)
 			{
-				flags |= 1;
+				BitsByte flags = reader.ReadByte();
+				downedAbomination = flags[0];
+				downedPuritySpirit = flags[1];
 			}
-			if (downedPuritySpirit)
+			else
 			{
-				flags |= 2;
+				ErrorLogger.Log("ExampleMod: Unknown loadVersion: " + loadVersion);
 			}
+		}
+
+		public override void NetSend(BinaryWriter writer)
+		{
+			BitsByte flags = new BitsByte();
+			flags[0] = downedAbomination;
+			flags[1] = downedPuritySpirit;
 			writer.Write(flags);
+
+			//If you prefer, you can use the BitsByte constructor approach as well.
+			//writer.Write(saveVersion);
+			//BitsByte flags = new BitsByte(downedAbomination, downedPuritySpirit);
+			//writer.Write(flags);
+
+			// This is another way to do the same thing, but with bitmasks and the bitwise OR assignment operator (the |=)
+			// Note that 1 and 2 here are bit masks. The next values in the pattern are 4,8,16,32,64,128. If you require more than 8 flags, make another byte.
+			//writer.Write(saveVersion);
+			//byte flags = 0;
+			//if (downedAbomination)
+			//{
+			//	flags |= 1;
+			//}
+			//if (downedPuritySpirit)
+			//{
+			//	flags |= 2;
+			//}
+			//writer.Write(flags);
 		}
 
-		public override void LoadCustomData(BinaryReader reader)
+		public override void NetReceive(BinaryReader reader)
 		{
-			reader.ReadInt32();
-			byte flags = reader.ReadByte();
-			downedAbomination = ((flags & 1) == 1);
-			downedPuritySpirit = ((flags & 2) == 2);
-		}
-
-		public override void SendCustomData(BinaryWriter writer)
-		{
-			byte flags = 0;
-			if (downedAbomination)
-			{
-				flags |= 1;
-			}
-			if (downedPuritySpirit)
-			{
-				flags |= 2;
-			}
-			writer.Write(flags);
-		}
-
-		public override void ReceiveCustomData(BinaryReader reader)
-		{
-			byte flags = reader.ReadByte();
-			downedAbomination = ((flags & 1) == 1);
-			downedPuritySpirit = ((flags & 2) == 2);
+			BitsByte flags = reader.ReadByte();
+			downedAbomination = flags[0];
+			downedPuritySpirit = flags[1];
 		}
 
 		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
@@ -90,6 +117,32 @@ namespace ExampleMod
 					for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
 					{
 						WorldGen.TileRunner(WorldGen.genRand.Next(0, Main.maxTilesX), WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY), (double)WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), mod.TileType("ExampleBlock"), false, 0f, 0f, false, true);
+					}
+				}));
+			}
+
+			int TrapsIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Traps"));
+			if (TrapsIndex != -1)
+			{
+				tasks.Insert(TrapsIndex + 1, new PassLegacy("Example Mod Traps", delegate (GenerationProgress progress)
+				{
+					progress.Message = "Example Mod Traps";
+					// Computers are fast, so WorldGen code sometimes looks stupid.
+					// Here, we want to place a bunch of tiles in the world, so we just repeat until success. It might be useful to keep track of attempts and check for attemps > maxattempts so you don't have infinite loops. 
+					// The WorldGen.PlaceTile method returns a bool, but it is useless. Instead, we check the tile after calling it and if it is the desired tile, we know we succeeded.
+					for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+					{
+						bool placeSuccessful = false;
+						Tile tile;
+						int tileToPlace = mod.TileType<Tiles.ExampleCutTileTile>();
+						while (!placeSuccessful)
+						{
+							int x = WorldGen.genRand.Next(0, Main.maxTilesX);
+							int y = WorldGen.genRand.Next(0, Main.maxTilesY);
+							WorldGen.PlaceTile(x, y, tileToPlace);
+							tile = Main.tile[x, y];
+							placeSuccessful = tile.active() && tile.type == tileToPlace;
+						}
 					}
 				}));
 			}
@@ -331,7 +384,7 @@ namespace ExampleMod
 
 		public override void ResetNearbyTileEffects()
 		{
-			ExamplePlayer modPlayer = Main.player[Main.myPlayer].GetModPlayer<ExamplePlayer>(mod);
+			ExamplePlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExamplePlayer>(mod);
 			modPlayer.voidMonolith = false;
 			exampleTiles = 0;
 		}
@@ -351,15 +404,15 @@ namespace ExampleMod
 				}
 				if (VolcanoCooldown <= 0 && Main.rand.Next(VolcanoChance) == 0)
 				{
-					string message = "Did you hear something....A Volcano! Find Cover!";
+					string key = "Mods.ExampleMod.VolcanoWarning";
 					Color messageColor = Color.Orange;
 					if (Main.netMode == 2) // Server
 					{
-						NetMessage.SendData(25, -1, -1, message, 255, messageColor.R, messageColor.G, messageColor.B, 0);
+						NetMessage.BroadcastChatMessage(NetworkText.FromKey(key), messageColor);
 					}
 					else if (Main.netMode == 0) // Single Player
 					{
-						Main.NewText(message, messageColor.R, messageColor.G, messageColor.B);
+						Main.NewText(Language.GetTextValue(key), messageColor);
 					}
 					VolcanoCountdown = DefaultVolcanoCountdown;
 					VolcanoCooldown = DefaultVolcanoCooldown;
@@ -401,7 +454,7 @@ namespace ExampleMod
 								velocity.X = velocity.X + 3 * Main.rand.NextFloat() - 1.5f;
 								int projectile = Projectile.NewProjectile(spawn.X, spawn.Y, velocity.X, velocity.Y, Main.rand.Next(ProjectileID.MolotovFire, ProjectileID.MolotovFire3 + 1), 10, 10f, Main.myPlayer, 0f, 0f);
 								Main.projectile[projectile].hostile = true;
-								Main.projectile[projectile].name = "Volcanic Rubble";
+								Main.projectile[projectile].Name = "Volcanic Rubble";
 								identities.Add(Main.projectile[projectile].identity);
 							}
 							if (Main.netMode == 2)
@@ -419,6 +472,40 @@ namespace ExampleMod
 					}
 				}
 			}
+		}
+
+		// In ExampleMod, we use PostDrawTiles to draw the TEScoreBoard area. PostDrawTiles draws before players, npc, and projectiles, so it works well.
+		public override void PostDrawTiles()
+		{
+			Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			Rectangle screenRect = new Rectangle((int)Main.screenPosition.X, (int)Main.screenPosition.Y, Main.screenWidth, Main.screenHeight);
+			screenRect.Inflate(Tiles.TEScoreBoard.drawBorderWidth, Tiles.TEScoreBoard.drawBorderWidth);
+			int scoreBoardType = mod.TileEntityType<Tiles.TEScoreBoard>();
+			foreach (var item in TileEntity.ByID)
+			{
+				if (item.Value.type == scoreBoardType)
+				{
+					var scoreBoard = item.Value as Tiles.TEScoreBoard;
+					Rectangle scoreBoardArea = scoreBoard.GetPlayArea();
+					// We only want to draw while the area is visible. 
+					if (screenRect.Intersects(scoreBoardArea))
+					{
+						scoreBoardArea.Offset((int)-Main.screenPosition.X, (int)-Main.screenPosition.Y);
+						DrawBorderedRect(Main.spriteBatch, Color.LightBlue * 0.1f, Color.Blue * 0.3f, scoreBoardArea.TopLeft(), scoreBoardArea.Size(), Tiles.TEScoreBoard.drawBorderWidth);
+					}
+				}
+			}
+			Main.spriteBatch.End();
+		}
+
+		// A helper method that draws a bordered rectangle. 
+		public static void DrawBorderedRect(SpriteBatch spriteBatch, Color color, Color borderColor, Vector2 position, Vector2 size, int borderWidth)
+		{
+			spriteBatch.Draw(Main.magicPixel, new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y), color);
+			spriteBatch.Draw(Main.magicPixel, new Rectangle((int)position.X - borderWidth, (int)position.Y - borderWidth, (int)size.X + borderWidth * 2, borderWidth), borderColor);
+			spriteBatch.Draw(Main.magicPixel, new Rectangle((int)position.X - borderWidth, (int)position.Y + (int)size.Y, (int)size.X + borderWidth * 2, borderWidth), borderColor);
+			spriteBatch.Draw(Main.magicPixel, new Rectangle((int)position.X - borderWidth, (int)position.Y, (int)borderWidth, (int)size.Y), borderColor);
+			spriteBatch.Draw(Main.magicPixel, new Rectangle((int)position.X + (int)size.X, (int)position.Y, (int)borderWidth, (int)size.Y), borderColor);
 		}
 	}
 }

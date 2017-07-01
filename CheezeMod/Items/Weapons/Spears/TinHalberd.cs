@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
         public override void SetDefaults()
 		{
-			item.name = "Tin Halberd";
+
 			item.damage = 8;
 			item.melee = true;
             item.width = CheezeItem.defaultHalberdWidth;
             item.height = CheezeItem.defaultHalberdWidth;
             item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "Stab with LMB, Slash with RMB.";
+
 			item.useTime = 49;
 			item.useAnimation = 49;
 			item.knockBack = 4.1f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("TinHalberd");
             item.shootSpeed = 3.85f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Tin Halberd");
+      Tooltip.SetDefault("Stab with LMB, Slash with RMB.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

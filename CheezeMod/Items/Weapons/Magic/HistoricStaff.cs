@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Historic Staff";
+
             item.damage = 55; 
             item.magic = true;
             item.mana = 24;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "A staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +5% critical damage and chance when hold.";
+
             Item.staff[item.type] = true;
             item.reuseDelay = 50;
             item.useTime = 55;
@@ -34,6 +34,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("WindFieldCast");
             item.shootSpeed = 10f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Staff");
+      Tooltip.SetDefault("A staff used by the guardians of Madrigal. \nShoots a Wind Field that slows and inflics Dryad's Bane on enemies. \n+20% Max mana when hold. \n +5% critical damage and chance when hold.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

@@ -18,15 +18,15 @@ namespace CheezeMod.Items.Weapons.Guns
         bool shotPastReload = false;
         public override void SetDefaults()
         {
-            item.name = "Pulse Pistol";
+
             item.damage = 32;
             item.ranged = true;
             item.width = 44;
             item.height = 26;
             item.scale = 0.8f;
             SetMagazineToolTip();
-            item.toolTip2 = "Originating by Tracer from Overwatch, rapidly fires in a spread.";
-            AddTooltip2("Has to reload every 20 shots or with right click. Only consumes ammo half of the time.");
+
+
             item.useTime = DefaultUseTime;
             item.useAnimation = DefaultUseTime;
             item.useStyle = 5;
@@ -40,6 +40,13 @@ namespace CheezeMod.Items.Weapons.Guns
             item.shootSpeed = 15f;
             item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Pulse Pistol");
+      Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.");
+    }
+
 
         public override void AddRecipes()
         {
@@ -119,11 +126,11 @@ namespace CheezeMod.Items.Weapons.Guns
         {
             if (magazineSize >= 21)
             {
-                item.toolTip = (magazineSize-20).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+                Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click.Only consumes ammo half of the time.\n"+(magazineSize-20).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.");
             }
             else
             {
-                item.toolTip = magazineSize.ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+                Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.\n"+magazineSize.ToString() + " / " + maxMagazineSize.ToString() + " magazine left.");
             }
         }
     }

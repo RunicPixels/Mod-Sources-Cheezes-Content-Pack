@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Sticks
 	{
         public override void SetDefaults()
 		{
-			item.name = "Historic Stick";
+
 			item.damage = 40;
 			item.melee = true;
             item.width = 42;
             item.height = 42;
             item.scale = 1f;
 			item.maxStack = 1;
-			item.toolTip = "A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 15hp with RMB, costs 60 mana. \n +20 mana when held. \n Inflicts Dryad's Bane on enemies hit. and Dryad's Blessing when healing.";
+
 			item.useTime = 36;
 			item.useAnimation = 36;
             item.autoReuse = false;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Sticks
             item.rare = CheezeItem.historicRarity;
             item.shootSpeed = 4f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Stick");
+      Tooltip.SetDefault("A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 15hp with RMB, costs 60 mana. \n +20 mana when held. \n Inflicts Dryad's Bane on enemies hit. and Dryad's Blessing when healing.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

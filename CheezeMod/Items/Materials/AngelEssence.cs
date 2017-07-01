@@ -9,13 +9,20 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Angel Essence";
+
 			item.width = 26;
 			item.height = 22;
 			item.maxStack = 999;
-			AddTooltip("An angelic relic from Madrigal");
+
 			item.value = CheezeItem.angelPrice / 10;
 			item.rare = CheezeItem.angelRarity-1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Angel Essence");
+      Tooltip.SetDefault("An angelic relic from Madrigal");
+    }
+
 	}
 }

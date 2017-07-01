@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Yoyo
 	{
 		public override void SetDefaults()
 		{
-            item.name = "Guardian Yo-Yo";
+
 			item.damage = 26;
 			item.melee = true;
 			item.width = 36;
 			item.height = 32;
-			item.toolTip = "A yoyo used by the guardians of Madrigal. \n+5% Critical Chance. \n+28% Increased Critical Damage.";
+
 			item.knockBack = 5f;
             item.useTime = 10;
             item.useAnimation = 10;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Yoyo
             item.shoot = mod.ProjectileType("GuardianYoyo");
             item.channel = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Yo-Yo");
+      Tooltip.SetDefault("A yoyo used by the guardians of Madrigal. \n+5% Critical Chance. \n+28% Increased Critical Damage.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

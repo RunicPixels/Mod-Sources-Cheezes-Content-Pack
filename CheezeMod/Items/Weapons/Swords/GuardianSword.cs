@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Sword";
+
             item.damage = 25;
             item.melee = true;
             item.width = 36;
             item.height = 36;
-            item.toolTip = "A sword used by the guardians of Madrigal. \n+14% Critical Chance. \n+6% Increased Critical Damage. \n+10% Movement Speed when hold.";
+
             item.crit = 14;
             item.scale = 1.2f;
             item.useTime = 21;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Sword");
+      Tooltip.SetDefault("A sword used by the guardians of Madrigal. \n+14% Critical Chance. \n+6% Increased Critical Damage. \n+10% Movement Speed when hold.");
+    }
+
 
         public override void AddRecipes()
         {

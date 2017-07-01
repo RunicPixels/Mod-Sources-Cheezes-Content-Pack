@@ -9,7 +9,7 @@ namespace CheezeMod.Items.Placeable.Banner
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Dragon Eye Banner";
+
 			item.width = 10;
 			item.height = 24;
 			item.maxStack = 99;
@@ -24,5 +24,12 @@ namespace CheezeMod.Items.Placeable.Banner
 			item.createTile = mod.TileType("CheezeMonsterBanner");
 			item.placeStyle = 6;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Dragon Eye Banner");
+      Tooltip.SetDefault("");
+    }
+
 	}
 }

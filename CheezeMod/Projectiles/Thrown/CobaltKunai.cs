@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Thrown
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.ThrowingKnife);
-            projectile.name = "Cobalt Kunai";
             projectile.width = 18;
             projectile.height = 20;
             projectile.thrown = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Thrown
             projectile.scale = 0.9f;
             projectile.penetrate = 2;
             aiType = ProjectileID.ThrowingKnife;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Cobalt Kunai");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

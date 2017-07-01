@@ -546,13 +546,6 @@ namespace CheezeMod
             if (weaponTex == null) return; //no texture to item so ignore too
             float itemWidth = weaponTex.Width * heldItem.scale;
             float itemHeight = weaponTex.Height * heldItem.scale;
-            if (heldItem.modItem != null)
-            {
-                if (heldItem.modItem.GetAnimation() != null)
-                {
-                    itemHeight /= heldItem.modItem.GetAnimation().FrameCount;
-                }
-            }
             float larger = Math.Max(itemWidth, itemHeight);
             int playerBodyFrameNum = player.bodyFrame.Y / player.bodyFrame.Height;
             if (heldItem.useStyle == 5
@@ -680,7 +673,7 @@ namespace CheezeMod
                         npc.StrikeNPC(npc.defense, knockback, player.direction, false, false, false);
                         if (Main.netMode != 0)
                         {
-                            NetMessage.SendData(28, -1, -1, "", npc.whoAmI, (float)npc.defense, (float)knockback, (float)hitDirection, 0, 0, 0);
+                            NetMessage.SendData(28, -1, -1, null, npc.whoAmI, (float)npc.defense, (float)knockback, (float)hitDirection, 0, 0, 0);
                         }
                     }
                     else
@@ -750,7 +743,7 @@ namespace CheezeMod
                 npc.StrikeNPC(hitDamage, (float)knockBack, hitDirection, false, false, false);
                 if (Main.netMode != 0)
                 {
-                    NetMessage.SendData(28, -1, -1, "", npc.whoAmI, (float)hitDamage, (float)knockBack, (float)hitDirection, 0, 0, 0);
+                    NetMessage.SendData(28, -1, -1, null, npc.whoAmI, (float)hitDamage, (float)knockBack, (float)hitDirection, 0, 0, 0);
                 }
             }
         }

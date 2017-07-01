@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Bows
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Demon Crossbow";
+
 			item.damage = 19;
 			item.ranged = true;
 			item.width = 52;
 			item.height = 20;
-            item.toolTip = "Sometimes turns wooden arrows into Unholy arrows.";
-            item.toolTip2 = "Shoots 2 arrows with a small random spread and speed, 25% not to consume ammo.";
+
+
             item.useTime = 4;
             item.reuseDelay = 34;
             item.useAnimation = 8;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Bows
 			item.shootSpeed = 7.5f;
 			item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Demon Crossbow");
+      Tooltip.SetDefault("Sometimes turns wooden arrows into Unholy arrows.\nShoots 2 arrows with a small random spread and speed, 25% not to consume ammo.");
+    }
+
 
         public override void AddRecipes()
         {

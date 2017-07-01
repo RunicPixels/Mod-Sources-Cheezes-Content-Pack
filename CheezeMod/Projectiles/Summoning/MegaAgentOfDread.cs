@@ -15,7 +15,6 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.CloneDefaults(ProjectileID.BabySlime);
             projectile.alpha = 0;
 			projectile.netImportant = true;
-			projectile.name = "Mega Agent of Dread";
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
@@ -35,6 +34,11 @@ namespace CheezeMod.Projectiles.Summoning
             shootSpeed = 16;
             attackCool = 0;
             attackCool2 = 10;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mega Agent of Dread");
         }
 
         public override bool MinionContactDamage()
@@ -73,9 +77,10 @@ namespace CheezeMod.Projectiles.Summoning
 			}
 		}
 
-        public override void TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
+        public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
         {
             fallThrough = false;
+            return true;
         }
 
         public override void AI()

@@ -10,7 +10,6 @@ namespace CheezeMod.Projectiles.Magic
     {
         public override void SetDefaults()
         {
-            projectile.name = "ThornBlast";
             projectile.width = 18;
             projectile.height = 18;
             projectile.scale = 1f;
@@ -18,6 +17,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.magic = true;
             projectile.penetrate = 1;
             projectile.timeLeft = 30;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Thorn Blast");
         }
 
         public override void AI()

@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
         public override void SetDefaults()
 		{
-			item.name = "Adamantite Halberd";
+
 			item.damage = 47;
 			item.melee = true;
             item.width = CheezeItem.defaultHalberdWidth;
             item.height = CheezeItem.defaultHalberdWidth;
             item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "Stab with LMB, Slash with RMB.";
+
 			item.useTime = 28;
 			item.useAnimation = 28;
 			item.knockBack = 5.3f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("AdamantHalberd");
             item.shootSpeed = 7.15f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Adamantite Halberd");
+      Tooltip.SetDefault("Stab with LMB, Slash with RMB.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

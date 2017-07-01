@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Starlight Paxel";
+
 			item.damage = 12;
 			item.melee = true;
 			item.width = 32;
 			item.height = 34;
-			item.toolTip = "Functions as a Pickaxe as well as an axe. Mines up to Demonite.";
+
 			item.useTime = 19;
             item.scale = 1.2f;
 			item.useAnimation = 19;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Paxel");
+      Tooltip.SetDefault("Functions as a Pickaxe as well as an axe. Mines up to Demonite.");
+    }
+
 
 		public override void AddRecipes()
 		{

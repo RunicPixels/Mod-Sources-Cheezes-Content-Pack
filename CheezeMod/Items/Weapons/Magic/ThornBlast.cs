@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Thorn Blast";
+
             item.damage = 22;
             item.magic = true;
             item.mana = 12;
             item.width = 40;
             item.height = 40;
-            item.toolTip = "Summons a floating ball of thorns that explodes and shoots poisoning thorns after 0.5 second";
+
             item.channel = true;
             item.useTime = 21;
             item.useAnimation = 21;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("ThornBlast");
             item.shootSpeed = 9f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Thorn Blast");
+      Tooltip.SetDefault("Summons a floating ball of thorns that explodes and shoots poisoning thorns after 0.5 second");
+    }
+
 
         public override void AddRecipes()
         {

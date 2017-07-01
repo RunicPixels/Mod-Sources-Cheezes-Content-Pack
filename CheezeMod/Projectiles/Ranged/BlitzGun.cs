@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BulletHighVelocity);
-            projectile.name = "Blitz Shot";
             projectile.width = 15;
             projectile.height = 15;
             projectile.ranged = true;
@@ -23,6 +22,11 @@ namespace CheezeMod.Projectiles.Ranged
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
             aiType = ProjectileID.BulletHighVelocity;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blitz Shot");
         }
 
         public override void AI()

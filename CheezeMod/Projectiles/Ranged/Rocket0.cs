@@ -11,13 +11,17 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.RocketI);
-            projectile.name = "Rocket 0";
             projectile.damage = 11;
             projectile.ranged = true;
             projectile.friendly = true;
             projectile.penetrate = 10;
             projectile.aiStyle = ProjectileID.RocketI;
             aiType = ProjectileID.RocketI;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Rocket 0");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

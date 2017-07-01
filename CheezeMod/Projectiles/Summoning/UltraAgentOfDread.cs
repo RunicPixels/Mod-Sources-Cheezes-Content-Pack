@@ -15,7 +15,6 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.CloneDefaults(ProjectileID.Raven);
             projectile.alpha = 0;
 			projectile.netImportant = true;
-			projectile.name = "Ultra Agent of Dread";
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
@@ -36,6 +35,11 @@ namespace CheezeMod.Projectiles.Summoning
             shootSpeed = 16;
             attackCool = 0;
             attackCool2 = 10;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Ultra Agent of Dread");
         }
 
         public override bool MinionContactDamage()

@@ -9,7 +9,6 @@ namespace CheezeMod.Projectiles.Thrown
     {
         public override void SetDefaults()
         {
-            projectile.name = "StarStorm";
             projectile.width = 18;
             projectile.height = 18;
             projectile.scale = 0.5f;
@@ -18,6 +17,11 @@ namespace CheezeMod.Projectiles.Thrown
             projectile.penetrate = 1;
             projectile.timeLeft = 50;
             projectile.tileCollide = false;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Starstorm");
         }
 
         public override void AI()

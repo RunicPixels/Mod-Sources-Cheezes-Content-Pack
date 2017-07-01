@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Sticks
 	{
         public override void SetDefaults()
 		{
-			item.name = "Guardian Stick";
+
 			item.damage = 20;
 			item.melee = true;
             item.width = 42;
             item.height = 42;
             item.scale = 1f;
 			item.maxStack = 1;
-			item.toolTip = "A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 10hp with RMB, costs 50 mana.";
+
 			item.useTime = 38;
 			item.useAnimation = 38;
 			item.knockBack = 5.2f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Sticks
             item.rare = CheezeItem.guardianRarity;
             item.shootSpeed = 4f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Stick");
+      Tooltip.SetDefault("A stick used by the guardians of Madrigal. \nSlash with LMB, Heal 10hp with RMB, costs 50 mana.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bananarang);
-            projectile.name = "Bonemerang";
             projectile.width = 22;
             projectile.height = 42;
             projectile.melee = true;
@@ -19,6 +18,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.penetrate = 20;
             projectile.timeLeft = 700;
             aiType = ProjectileID.Bananarang;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bonemerang");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

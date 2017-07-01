@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
     {
         public override void SetDefaults()
         {
-            item.name = "Iron Bolt";
+
             item.width = 26;
             item.height = 26;
             item.maxStack = 999;
-            AddTooltip("Used for crafting mechanical weapons.");
+
             item.value = 800;
             item.rare = 0;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Iron Bolt");
+      Tooltip.SetDefault("Used for crafting mechanical weapons.");
+    }
+
 
         public override void AddRecipes()
         {

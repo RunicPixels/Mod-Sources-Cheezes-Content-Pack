@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Thrown
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThrowingKnife);
-			item.name = "Bone Kunai";
+
 			item.damage = 25;
 			item.thrown = true;
             item.noMelee = true;
 			item.width = 18;
 			item.height = 40;
             item.autoReuse = true;
-            item.toolTip = "Undead ninjas are a thing.";
+
             item.useTime = 18;
 			item.useAnimation = 18;
 			item.knockBack = 2.2f;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.shoot = mod.ProjectileType("BoneKunai");
 			item.shootSpeed = 15f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Bone Kunai");
+      Tooltip.SetDefault("Undead ninjas are a thing.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

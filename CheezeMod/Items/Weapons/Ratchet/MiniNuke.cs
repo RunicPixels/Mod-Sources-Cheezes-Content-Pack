@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Mini Nuke";
+
 			item.damage = 64;
 			item.ranged = true;
 			item.width = 56;
 			item.height = 40;
             item.scale = 1f;
-            item.toolTip = "Uses rockets, shoots an exploding nuke.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 55;
             item.useAnimation = 55;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 7f;
 			item.useAmmo = AmmoID.Rocket;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mini Nuke");
+      Tooltip.SetDefault("Uses rockets, shoots an exploding nuke.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

@@ -7,9 +7,9 @@ namespace CheezeMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[Type] = "Mega Agent of Dread";
-			Main.buffTip[Type] = "The mega agent of dread will fight for you";
-			Main.buffNoSave[Type] = true;
+            DisplayName.SetDefault("Mega Agent of Dread");
+            Description.SetDefault("The mega agent of dread will fight for you");
+            Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}
 

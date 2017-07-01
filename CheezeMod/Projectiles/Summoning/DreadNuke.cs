@@ -13,7 +13,6 @@ namespace CheezeMod.Projectiles.Summoning
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            projectile.name = "Dread Bomb";
             projectile.width = 18;
             projectile.height = 18;
             projectile.friendly = true;
@@ -23,6 +22,12 @@ namespace CheezeMod.Projectiles.Summoning
             ProjectileID.Sets.MinionShot[projectile.type] = true;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dead Bomb");
+        }
+
         public override void AI()
         {
             if (Main.rand.Next(20) == 0)

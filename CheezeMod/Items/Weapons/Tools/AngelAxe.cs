@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Angel Axe";
+
 			item.damage = 80;
 			item.melee = true;
 			item.width = 52;
 			item.height = 52;
-			item.toolTip = "An axe that once used by the angels of Madrigal. \n+19% Critical Chance. \n+12% Increased Critical Damage. \n+18 Max health when holding. \n Inflics Dryad's Bane on enemy hit.";
+
             item.crit = 19;
             item.scale = 1f;
             item.useTime = 28;
@@ -29,6 +29,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Angel Axe");
+      Tooltip.SetDefault("An axe that once used by the angels of Madrigal. \n+19% Critical Chance. \n+12% Increased Critical Damage. \n+18 Max health when holding. \n Inflics Dryad's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

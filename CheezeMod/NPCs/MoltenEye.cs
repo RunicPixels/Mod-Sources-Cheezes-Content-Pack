@@ -24,8 +24,6 @@ namespace CheezeMod.NPCs
         }
         public override void SetDefaults()
         {
-            npc.name = "MoltenEye";
-            npc.displayName = "Molten Eye";
             npc.width = 32;
             npc.height = 30;
             npc.scale = 1.2f;
@@ -49,7 +47,12 @@ namespace CheezeMod.NPCs
             attackCool = 200f;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Molten Eye");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (CheezeMod.NormalSpawn(spawnInfo)) && NPC.downedBoss2 && (spawnInfo.spawnTileY > CheezeMod.HellLayer) ? Main.hardMode ? 0.0325f : 0.0475f : 0f;
         }

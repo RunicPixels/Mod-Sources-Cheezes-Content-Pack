@@ -6,25 +6,28 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Accessory
 {
-	public class GoreNecklace : ModItem
-	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-        {
-            equips.Add(EquipType.Neck);
-            return true;
-        }
+    [AutoloadEquip(EquipType.Neck)]
+    public class GoreNecklace : ModItem
+    {
         public override void SetDefaults()
 		{
-			item.name = "Gore Necklace";
+
 			item.width = 32;
 			item.height = 32;
-			item.toolTip = "What's HP?";
-			item.toolTip2 = "Increases Max Health by 25, melee crit damage by 10%, and defense by 3.";
+
+
 			item.value = 12500;
 			item.rare = 2;
 			item.accessory = true;
             item.defense = 3;
 		}
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Gore Necklace");
+            Tooltip.SetDefault("What's HP?\nIncreases Max Health by 25, melee crit damage by 10%, and defense by 3.");
+        }
+
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{

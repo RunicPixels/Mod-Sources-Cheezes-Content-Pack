@@ -8,16 +8,9 @@ using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
-
+    [AutoloadEquip((EquipType.HandsOn),(EquipType.HandsOff))]
     public class OnePunchGlove : ModItem
 	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-        {
-            equips.Add(EquipType.HandsOn);
-            equips.Add(EquipType.HandsOff);
-            return true;
-        }
-
         private FistStyle fist;
         public FistStyle Fist
         {
@@ -35,14 +28,14 @@ namespace CheezeMod.Items.Weapons.Other
 		{
             item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
-            item.name = "One Punch Glove";
+
             item.melee = true;
             item.width = 34;
             item.height = 36;
             item.useTime = 90;
             item.useAnimation = 90;
             item.UseSound = SoundID.Item7;
-            item.toolTip = "'One Punch is all you need.'";
+
             item.scale = 1f;
 			item.damage = 2880;
             item.crit = 9;
@@ -51,6 +44,13 @@ namespace CheezeMod.Items.Weapons.Other
             item.value = 400000;
             item.noUseGraphic = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("One Punch Glove");
+      Tooltip.SetDefault("'One Punch is all you need.'");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

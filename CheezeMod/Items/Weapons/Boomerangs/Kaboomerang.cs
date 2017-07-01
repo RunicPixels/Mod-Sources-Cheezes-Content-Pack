@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.Bananarang);
-			item.name = "Kaboomerang";
+
 			item.damage = 69;
 			item.melee = true;
 			item.width = 36;
 			item.height = 36;
 			item.scale = 1.1f;
-			item.toolTip = "A true lihzahrd has some explosive instincts.";
-            item.toolTip2 = "Explodes on hit, can stack up to 2 times.";
+
+
             item.maxStack = 2;
             item.useTime = 22;
 			item.useAnimation = 22;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 			item.shoot = mod.ProjectileType("Kaboomerang");
 			item.shootSpeed = 12f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Kaboomerang");
+      Tooltip.SetDefault("A true lihzahrd has some explosive instincts.\nExplodes on hit, can stack up to 2 times.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

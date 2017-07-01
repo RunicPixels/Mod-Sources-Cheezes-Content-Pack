@@ -13,7 +13,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            projectile.name = "Gravity Bomb";
             projectile.width = 24;
             projectile.height = 24;
             projectile.ranged = true;
@@ -23,6 +22,12 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.penetrate = 30;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Gravity Bomb");
+        }
+
         public override void AI()
         {
             if (Main.rand.Next(20) == 0)

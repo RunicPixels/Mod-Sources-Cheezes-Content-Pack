@@ -5,11 +5,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.Utilities;
 using ExampleMod.Projectiles.PuritySpirit;
 
 namespace ExampleMod.NPCs.PuritySpirit
 {
+	[AutoloadBossHead]
 	public class PuritySpirit : ModNPC
 	{
 		private const int size = 120;
@@ -17,10 +20,14 @@ namespace ExampleMod.NPCs.PuritySpirit
 		public static readonly int arenaWidth = (int)(1.3f * NPC.sWidth);
 		public static readonly int arenaHeight = (int)(1.3f * NPC.sHeight);
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Spirit of Purity");
+			NPCID.Sets.MustAlwaysDraw[npc.type] = true;
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "PuritySpirit";
-			npc.displayName = "Spirit of Purity";
 			npc.aiStyle = -1;
 			npc.lifeMax = 200000;
 			npc.damage = 0;
@@ -35,14 +42,13 @@ namespace ExampleMod.NPCs.PuritySpirit
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 0;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = null;
 			npc.alpha = 255;
 			for (int k = 0; k < npc.buffImmune.Length; k++)
 			{
 				npc.buffImmune[k] = true;
 			}
-			NPCID.Sets.MustAlwaysDraw[npc.type] = true;
 			music = MusicID.Title;
 			bossBag = mod.ItemType("PuritySpiritBag");
 		}
@@ -163,7 +169,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 		private int damageTotal = 0;
 		private bool saidRushMessage = false;
 		public readonly IList<int> targets = new List<int>();
-		public int[] attackWeights = new int[]{ 2000, 2000, 2000, 2000, 3000 };
+		public int[] attackWeights = new int[] { 2000, 2000, 2000, 2000, 3000 };
 		public const int minAttackWeight = 1000;
 		public const int maxAttackWeight = 4000;
 
@@ -419,7 +425,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 				int proj = Projectile.NewProjectile(pos.X, pos.Y, 0f, 0f, mod.ProjectileType("PureCrystal"), damage, 0f, Main.myPlayer, npc.whoAmI, angle);
 				Main.projectile[proj].localAI[0] = radius;
 				Main.projectile[proj].localAI[1] = clockwise ? 1 : -1;
-				NetMessage.SendData(27, -1, -1, "", proj);
+				NetMessage.SendData(27, -1, -1, null, proj);
 			}
 		}
 
@@ -570,7 +576,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 					int proj = Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 0f, 0f, mod.ProjectileType("NullLaser"), damage, 0f, Main.myPlayer, npc.whoAmI, (int)(60f + k * timer));
 					Main.projectile[proj].localAI[0] = (int)totalTime;
 					((NullLaser)Main.projectile[proj].modProjectile).warningTime = timer;
-					NetMessage.SendData(27, -1, -1, "", proj);
+					NetMessage.SendData(27, -1, -1, null, proj);
 				}
 				attackProgress = (int)totalTime;
 			}
@@ -619,7 +625,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 						Main.projectile[proj].localAI[0] = target;
 						Main.projectile[proj].localAI[1] = rotationSpeed;
 						((PuritySphere)Main.projectile[proj].modProjectile).maxTimer = (int)time;
-						NetMessage.SendData(27, -1, -1, "", proj);
+						NetMessage.SendData(27, -1, -1, null, proj);
 					}
 				}
 				attackProgress = 60 + (int)time + PuritySphere.strikeTime;
@@ -711,13 +717,47 @@ namespace ExampleMod.NPCs.PuritySpirit
 			if (attackProgress >= 180)
 			{
 				npc.dontTakeDamage = false;
-				npc.soundHit = 0;
+				npc.HitSound = null;
 				npc.StrikeNPCNoInteraction(9999, 0f, 0);
 			}
 		}
 
 		public override void NPCLoot()
 		{
+			/* // Consider using this alternate approach to choosing drops.
+			int trophyChoice = new WeightedRandom<int>(
+				Tuple.Create(mod.ItemType<Items.Placeable.PuritySpiritTrophy>(), 1.0),
+				Tuple.Create(mod.ItemType<Items.Placeable.BunnyTrophy>(), 1.0),
+				Tuple.Create(mod.ItemType<Items.Placeable.TreeTrophy>(), 1.0),
+				Tuple.Create(0, 7.0)
+			);
+			if (trophyChoice > 0)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, trophyChoice);
+			}
+			if (Main.expertMode)
+			{
+				npc.DropBossBags();
+			}
+			else
+			{
+				//This is an alrenate syntax you can use
+				//var maskChooser = new WeightedRandom<int>();
+				//maskChooser.Add(mod.ItemType<Items.Armor.PuritySpiritMask>());
+				//maskChooser.Add(mod.ItemType<Items.Armor.BunnyMask>());
+				//maskChooser.Add(ItemID.Bunny, 5.0);
+				//int maskChoice = maskChooser;
+
+				int maskChoice = new WeightedRandom<int>(
+					Tuple.Create(mod.ItemType<Items.Armor.PuritySpiritMask>(), 1.0),
+					Tuple.Create(mod.ItemType<Items.Armor.BunnyMask>(), 1.0),
+					Tuple.Create((int)ItemID.Bunny, 5.0)
+				);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, maskChoice);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType<Items.PurityShield>());
+			}
+			ExampleWorld.downedPuritySpirit = true; */
+
 			int choice = Main.rand.Next(10);
 			int item = 0;
 			switch (choice)
@@ -762,7 +802,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 
 		public override void BossLoot(ref string name, ref int potionType)
 		{
-			name = "The " + npc.displayName;
+			name = "The " + name;
 			potionType = ItemID.SuperHealingPotion;
 		}
 
@@ -786,7 +826,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 			return CanBeHitByPlayer(Main.player[projectile.owner]);
 		}
 
-		public override void ModifyHitByProjectile(Projectile projectile, ref int damage, ref float knockback, ref bool crit)
+		public override void ModifyHitByProjectile(Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 		{
 			if (ProjectileID.Sets.StardustDragon[projectile.type])
 			{
@@ -906,14 +946,15 @@ namespace ExampleMod.NPCs.PuritySpirit
 
 		private void Talk(string message)
 		{
-			string text = "<Spirit of Purity> " + message;
 			if (Main.netMode != 2)
 			{
-				Main.NewText("<Spirit of Purity> " + message, 150, 250, 150);
+				string text = Language.GetTextValue("Mods.ExampleMod.NPCTalk", Lang.GetNPCNameValue(npc.type), message);
+				Main.NewText(text, 150, 250, 150);
 			}
 			else
 			{
-				NetMessage.SendData(25, -1, -1, text, 255, 150, 250, 150);
+				NetworkText text = NetworkText.FromKey("Mods.ExampleMod.NPCTalk", Lang.GetNPCNameValue(npc.type), message);
+				NetMessage.BroadcastChatMessage(text, new Color(150, 250, 150));
 			}
 		}
 
@@ -953,7 +994,7 @@ namespace ExampleMod.NPCs.PuritySpirit
 			PuritySpiritMessageType type = (PuritySpiritMessageType)reader.ReadByte();
 			if (type == PuritySpiritMessageType.HeroPlayer)
 			{
-				Player player = Main.player[Main.myPlayer];
+				Player player = Main.LocalPlayer;
 				player.GetModPlayer<ExamplePlayer>(mod).heroLives = 3;
 			}
 			else if (type == PuritySpiritMessageType.TargetList)

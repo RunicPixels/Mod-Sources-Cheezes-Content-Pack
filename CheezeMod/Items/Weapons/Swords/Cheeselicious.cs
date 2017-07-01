@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Cheeselicious";
+
 			item.damage = 65;
 			item.melee = true;
 			item.width = 56;
 			item.height = 54;
-			item.toolTip = "It smells deliciously.";
-            item.toolTip2 = "Gives Well Fed and Cheese! to the player for 5 seconds after hitting an enemy, has a chance to inflict an enemy with ichor.";
+
+
             item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 1;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.autoReuse = true;
             item.shootSpeed = 12f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Cheeselicious");
+      Tooltip.SetDefault("It smells deliciously.\nGives Well Fed and Cheese! to the player for 5 seconds after hitting an enemy, has a chance to inflict an enemy with ichor.");
+    }
+
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

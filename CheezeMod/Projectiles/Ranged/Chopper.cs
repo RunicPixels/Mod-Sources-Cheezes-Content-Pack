@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
         int maxBounces = 3;
         public override void SetDefaults()
         {
-            projectile.name = "Chopper";
             projectile.width = 20;
             projectile.height = 20;
             projectile.ranged = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.scale = 0.9f;
             projectile.penetrate = 4;
             aiType = ProjectileID.Shuriken;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Chopper");
         }
 
         public override void AI()

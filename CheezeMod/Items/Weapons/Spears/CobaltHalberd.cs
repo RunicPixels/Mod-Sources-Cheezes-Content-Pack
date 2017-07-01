@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
         public override void SetDefaults()
 		{
-			item.name = "Cobalt Halberd";
+
 			item.damage = 34;
 			item.melee = true;
             item.width = CheezeItem.defaultHalberdWidth;
             item.height = CheezeItem.defaultHalberdWidth;
             item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "Stab with LMB, Slash with RMB.";
+
 			item.useTime = 32;
 			item.useAnimation = 32;
 			item.knockBack = 5.3f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("CobaltHalberd");
             item.shootSpeed = 6.45f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Cobalt Halberd");
+      Tooltip.SetDefault("Stab with LMB, Slash with RMB.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

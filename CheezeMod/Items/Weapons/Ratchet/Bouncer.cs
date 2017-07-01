@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Bouncer";
+
 			item.damage = 19;
 			item.ranged = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
-            item.toolTip = "Uses bullets, shoots a splitting ball.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 50;
             item.useAnimation = 50;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 3f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Bouncer");
+      Tooltip.SetDefault("Uses bullets, shoots a splitting ball.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

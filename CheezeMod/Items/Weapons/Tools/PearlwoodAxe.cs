@@ -11,10 +11,17 @@ namespace CheezeMod.Items.Weapons.Tools
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.CopperAxe);
-            item.name = "Pearlwood Axe";
+
             item.damage = 5;
             item.axe = 8;
     	}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Pearlwood Axe");
+      Tooltip.SetDefault("");
+    }
+
 
 		public override void AddRecipes()
 		{

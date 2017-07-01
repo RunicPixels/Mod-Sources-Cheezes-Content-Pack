@@ -14,7 +14,6 @@ namespace CheezeMod.Projectiles.Magic
         public float maxSize = 3f;
         public override void SetDefaults()
         {
-            projectile.name = "Lightning Bolt";
             projectile.width = 20;
             projectile.height = 20;
             projectile.Opacity = 0.5f;
@@ -24,6 +23,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 7;
             projectile.timeLeft = 234;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Lightning Bolt");
         }
 
         public override void AI()

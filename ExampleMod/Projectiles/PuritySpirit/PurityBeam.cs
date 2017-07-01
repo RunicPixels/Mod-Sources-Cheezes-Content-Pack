@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace ExampleMod.Projectiles.PuritySpirit
 {
@@ -10,16 +11,20 @@ namespace ExampleMod.Projectiles.PuritySpirit
 	{
 		internal const float charge = 60f;
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("PurifyingColumn");
+			Main.projFrames[projectile.type] = 3;
+		}
+
 		public override void SetDefaults()
 		{
-			projectile.name = "Purifying Column";
 			projectile.width = 80;
 			projectile.height = 14;
 			projectile.penetrate = -1;
 			projectile.magic = true;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
-			Main.projFrames[projectile.type] = 3;
 			cooldownSlot = 1;
 		}
 
@@ -34,14 +39,14 @@ namespace ExampleMod.Projectiles.PuritySpirit
 			projectile.ai[1] += 1f;
 			if (projectile.ai[1] == charge)
 			{
-				ExamplePlayer modPlayer = Main.player[Main.myPlayer].GetModPlayer<ExamplePlayer>(mod);
+				ExamplePlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExamplePlayer>(mod);
 				if (modPlayer.heroLives > 0)
 				{
-					Main.PlaySound(29, -1, -1, 104);
+					Main.PlaySound(SoundID.Zombie, -1, -1, 104);
 				}
 				else
 				{
-					Main.PlaySound(29, (int)projectile.Center.X, (int)projectile.Center.Y, 104);
+					Main.PlaySound(SoundID.Zombie, projectile.Center, 104);
 				}
 				projectile.hostile = true;
 			}

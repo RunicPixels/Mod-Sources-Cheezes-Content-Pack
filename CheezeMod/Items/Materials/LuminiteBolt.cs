@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Luminite Bolt";
+
 			item.width = 30;
 			item.height = 30;
 			item.maxStack = 999;
-			AddTooltip("'This will add that final touch.'");
+
 			item.value = 18000;
 			item.rare = 10;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Luminite Bolt");
+      Tooltip.SetDefault("'This will add that final touch.'");
+    }
+
 
 		public override void AddRecipes()
 		{

@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThornChakram);
-			item.name = "Star Chakram";
+
 			item.damage = 24;
 			item.melee = true;
 			item.width = 28;
 			item.height = 28;
             item.scale = 0.7f;
             item.autoReuse = true;
-            item.toolTip = "Calls Stars on hit.";
+
             item.useTime = 20;
 			item.useAnimation = 20;
 			item.knockBack = 5f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 			item.shoot = mod.ProjectileType("StarChakram");
 			item.shootSpeed = 11f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Star Chakram");
+      Tooltip.SetDefault("Calls Stars on hit.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

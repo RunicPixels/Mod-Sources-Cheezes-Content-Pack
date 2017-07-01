@@ -7,14 +7,13 @@ namespace CheezeMod.NPCs.Friendly
 {
     public class MartianTrader : ModNPC
     {
-        public override bool Autoload(ref string name, ref string texture, ref string[] altTextures)
+        public override bool Autoload(ref string name)
         {
-            name = "Martian Trader";
+            name = "MartianTrader";
             return mod.Properties.Autoload;
         }
         public override void SetDefaults()
         {
-            npc.name = "Martian Trader";
             npc.townNPC = true;
             npc.friendly = true;
             npc.width = 18;
@@ -36,6 +35,11 @@ namespace CheezeMod.NPCs.Friendly
             NPCID.Sets.HatOffsetY[npc.type] = 4;
             NPCID.Sets.ExtraTextureCount[npc.type] = 0;
             animationType = NPCID.GoblinTinkerer;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Martian Trader");
         }
 
         public override void HitEffect(int hitDirection, double damage)
@@ -92,15 +96,15 @@ namespace CheezeMod.NPCs.Friendly
 
             if (guide >= 0 && Main.rand.Next(11) == 0)
             {
-                return Main.npc[guide].displayName + " really knows a lot about this world, I have told him all about the galaxy, he really wants to know everything.";
+                return Main.npc[guide].GivenName + " really knows a lot about this world, I have told him all about the galaxy, he really wants to know everything.";
             }
             if (cyborg >= 0 && Main.rand.Next(10) == 0)
             {
-                return "You know, I have met people like " + Main.npc[cyborg].displayName + " before, I believe they were called the 'Borg'.";
+                return "You know, I have met people like " + Main.npc[cyborg].GivenName + " before, I believe they were called the 'Borg'.";
             }
             if (goblinTinkerer >= 0 && Main.rand.Next(9) == 0)
             {
-                return "Another facinating lifeform on this planet is " + Main.npc[goblinTinkerer].displayName + " he would be of the race called a goblin, right?";
+                return "Another facinating lifeform on this planet is " + Main.npc[goblinTinkerer].GivenName + " he would be of the race called a goblin, right?";
             }
             switch (Main.rand.Next(8))
             {
@@ -125,7 +129,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            button = Lang.inter[28];
+            button = Lang.inter[28].Value;
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)

@@ -10,16 +10,23 @@ namespace CheezeMod.Items.Weapons.Ammo
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.RocketI);
-            item.name = "Rocket 0";
+
             item.damage = 11;
             item.ranged = true;
-            item.toolTip = "A low tier rocket. Crafted with Musket Balls";
+
             item.noMelee = true; //so the item's animation doesn't do damage
             item.value = 100;
             item.rare = 0;
             item.maxStack = 9999;
             item.ammo = AmmoID.Rocket;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Rocket 0");
+      Tooltip.SetDefault("A low tier rocket. Crafted with Musket Balls");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

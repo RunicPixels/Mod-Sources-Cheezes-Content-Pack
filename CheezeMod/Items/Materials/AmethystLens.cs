@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Amethyst Lens";
+
 			item.width = 18;
 			item.height = 18;
 			item.maxStack = 999;
-			AddTooltip("Great for projecting light, made with an amethyst and a lens");
+
 			item.value = 3000;
 			item.rare = 1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Amethyst Lens");
+      Tooltip.SetDefault("Great for projecting light, made with an amethyst and a lens");
+    }
+
 
 		public override void AddRecipes()
 		{

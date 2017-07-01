@@ -12,20 +12,27 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		{
             item.useStyle = 3;
             item.autoReuse = false;
-			item.name = "Walloper";
+
             item.width = 42;
             item.height = 42;
             item.melee = true;
             item.useTime = 63;
             item.useAnimation = item.useTime;
-            item.toolTip = "'Fits like a glove and hits like a truck.'";
-            item.toolTip2 = "Originally from Ratchet and Clank.";
+
+
             item.scale = 0.8f;
 			item.damage = 21;
             item.knockBack = 6.5f;
             item.rare = CheezeItem.ratchetRarity[0];
             item.value = 8000;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Walloper");
+      Tooltip.SetDefault("'Fits like a glove and hits like a truck.'\nOriginally from Ratchet and Clank.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

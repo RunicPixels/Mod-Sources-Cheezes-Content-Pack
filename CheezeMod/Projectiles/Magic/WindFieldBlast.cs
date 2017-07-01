@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Magic
         public int hitDelay = 30;
         public override void SetDefaults()
         {
-            projectile.name = "Wind Field";
             projectile.width = 180;
             projectile.height = 50;
             projectile.magic = true;
@@ -22,6 +21,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.Opacity = 0f;
             projectile.timeLeft = hitDelay * 8 + 1;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Wind Field");
         }
 
         public override void AI()

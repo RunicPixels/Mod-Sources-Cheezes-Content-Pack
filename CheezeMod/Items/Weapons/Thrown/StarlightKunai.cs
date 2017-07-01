@@ -12,15 +12,15 @@ namespace CheezeMod.Items.Weapons.Thrown
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThrowingKnife);
-			item.name = "Starlight Kunai";
+
 			item.damage = 15;
 			item.thrown = true;
             item.noMelee = true;
 			item.width = 18;
 			item.height = 38;
             item.autoReuse = true;
-            item.toolTip = "It has a tag on its handle which reads 'Hoshi', it's from a far eastern place.";
-            item.toolTip2 = "It has a 50% chance to summon an attacking star on enemy hit.";
+
+
             item.useTime = 20;
 			item.useAnimation = 20;
 			item.knockBack = 1f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.shoot = mod.ProjectileType("StarlightKunai");
 			item.shootSpeed = 13f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Kunai");
+      Tooltip.SetDefault("It has a tag on its handle which reads 'Hoshi', it's from a far eastern place.\nIt has a 50% chance to summon an attacking star on enemy hit.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Magic
         int bounceCount = 0;
         public override void SetDefaults()
         {
-            projectile.name = "Wind Field";
             projectile.width = 32;
             projectile.height = 28;
             projectile.magic = true;
@@ -21,6 +20,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.Opacity = 0.5f;
             projectile.timeLeft = 30;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Wind Cast");
         }
 
         public override void AI()

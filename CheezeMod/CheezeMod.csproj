@@ -318,7 +318,6 @@
     <Compile Include="NPCs\Bonefish.cs" />
     <Compile Include="NPCs\Bosses\Susano.cs" />
     <Compile Include="NPCs\CheezeGlobalNPC.cs" />
-    <Compile Include="NPCs\CheezeNPCInfo.cs" />
     <Compile Include="NPCs\DragonEye.cs" />
     <Compile Include="NPCs\Eyebat.cs" />
     <Compile Include="NPCs\Friendly\MartianTrader.cs" />
@@ -948,9 +947,6 @@
     <Reference Include="tModLoader, Version=1.3.3.3, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoader.exe</HintPath>
-    </Reference>
-    <Reference Include="tModLoaderServer">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

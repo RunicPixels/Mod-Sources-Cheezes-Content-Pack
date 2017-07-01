@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.ThornChakram);
-            projectile.name = "StarChakram";
             projectile.width = 20;
             projectile.height = 20;
             projectile.scale = 1.3f;
@@ -21,6 +20,12 @@ namespace CheezeMod.Projectiles.Melee
             projectile.timeLeft = 600;
             aiType = ProjectileID.Bananarang;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Star Chakram");
+        }
+
         public override void AI()
         {
 

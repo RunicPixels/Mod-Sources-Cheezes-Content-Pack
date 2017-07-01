@@ -9,20 +9,32 @@ namespace CheezeMod.NPCs
 {
     public class CheezeGlobalNPC : GlobalNPC
     {
+        public override bool InstancePerEntity // To Allow Non-Instanced and Non-Static Variables
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public bool downfall = false;
+        public bool angelsBane = false;
+        public bool sellFlare = false;
+
+
         // ====== // Custom Functions \\ ====== \\
         #region CustomFunctions
-        private static int flyffMax()
+        private static int FlyffMax()
         {
             if (Main.expertMode) return 4 + Main.rand.Next(4);
             else return 3 + Main.rand.Next(2);
         }
-        private static bool flyffChance(int drawTimes)
+        private static bool FlyffChance(int drawTimes)
         {
             if(Main.expertMode) return Main.rand.Next(8) + drawTimes <= 2;
             else return Main.rand.Next(5) + drawTimes <= 1;
         }
 
-        public bool sellFlare = false;
         #endregion
 
         // ====== // Override Functions \\ ====== \\
@@ -46,14 +58,14 @@ namespace CheezeMod.NPCs
         }
         public override void ResetEffects(NPC npc)
         {
-            npc.GetModInfo<CheezeNPCInfo>(mod).downfall = false;
-            npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane = false;
+            this.downfall = false;
+            this.angelsBane = false;
             this.sellFlare = false;
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
         {
-            if (npc.GetModInfo<CheezeNPCInfo>(mod).downfall == true)
+            if (downfall == true)
             {
                 if (npc.boss == false && npc.noTileCollide == false)
                 {
@@ -64,7 +76,7 @@ namespace CheezeMod.NPCs
                     drawColor.G /= 2;
                 }
             }
-            if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
+            if (angelsBane == true)
             {
                 if (npc.life > 1000)
                 {
@@ -83,7 +95,7 @@ namespace CheezeMod.NPCs
         }
         public override void UpdateLifeRegen(NPC npc, ref int damage)
         {
-            if (npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane == true)
+            if (angelsBane == true)
             {
                 if (npc.life > 1000)
                 {
@@ -290,9 +302,9 @@ namespace CheezeMod.NPCs
                     if (ironOrMeteoriteBolt)Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MeteoriteBolt"), Main.rand.Next(3) + 1);
                     else Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IronBolt"), Main.rand.Next(3) + 1);
                     
-                    for (int i = 0; i < flyffMax(); i++)
+                    for (int i = 0; i < FlyffMax(); i++)
                     {
-                        if (flyffChance(drawChance))
+                        if (FlyffChance(drawChance))
                         {
                             int selection = Main.rand.Next(CheezeItem.guardianList.Length);
                             string selectedWeapon = CheezeItem.guardianList[selection];
@@ -310,9 +322,9 @@ namespace CheezeMod.NPCs
                         Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HistoricEssence"), Main.rand.Next(3));
                     }
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
-                    for (int i = 0; i < flyffMax(); i++)
+                    for (int i = 0; i < FlyffMax(); i++)
                     {
-                        if (flyffChance(drawChance))
+                        if (FlyffChance(drawChance))
                         {
                             int selection = Main.rand.Next(CheezeItem.historicList.Length);
                             string selectedWeapon = CheezeItem.historicList[selection];
@@ -392,9 +404,9 @@ namespace CheezeMod.NPCs
                     }
                     if (ironOrMeteoriteBolt)player.QuickSpawnItem(mod.ItemType("IronBolt"), Main.rand.Next(50) + 10);
                     else player.QuickSpawnItem(mod.ItemType("MeteoriteBolt"), Main.rand.Next(50) + 10);
-                    for (int i = 0; i < flyffMax(); i++)
+                    for (int i = 0; i < FlyffMax(); i++)
                     {
-                        if (flyffChance(drawChance))
+                        if (FlyffChance(drawChance))
                         {
                             int selection = Main.rand.Next(CheezeItem.guardianList.Length);
                             string selectedWeapon = CheezeItem.guardianList[selection];
@@ -412,9 +424,9 @@ namespace CheezeMod.NPCs
                     }
                     player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
                     
-                    for (int i = 0; i < flyffMax(); i++)
+                    for (int i = 0; i < FlyffMax(); i++)
                     {
-                        if (flyffChance(drawChance))
+                        if (FlyffChance(drawChance))
                         {
                             int selection = Main.rand.Next(CheezeItem.historicList.Length);
                             string selectedWeapon = CheezeItem.historicList[selection];
@@ -433,9 +445,9 @@ namespace CheezeMod.NPCs
                     }
                     player.QuickSpawnItem(mod.ItemType("HellstoneBolt"), Main.rand.Next(50) + 10);
 
-                    for (int i = 0; i < flyffMax(); i++)
+                    for (int i = 0; i < FlyffMax(); i++)
                     {
-                        if (flyffChance(drawChance))
+                        if (FlyffChance(drawChance))
                         {
                             int selection = Main.rand.Next(CheezeItem.angelList.Length);
                             string selectedWeapon = CheezeItem.angelList[selection];

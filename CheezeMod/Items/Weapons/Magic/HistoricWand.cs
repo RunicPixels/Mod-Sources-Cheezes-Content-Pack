@@ -12,14 +12,14 @@ namespace CheezeMod.Items.Weapons.Magic
         float damageMultiplier = 0.125f;
         public override void SetDefaults()
         {
-            item.name = "Historic Wand";
+
             item.damage = baseDamage;
             item.magic = true;
             item.mana = 9;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "A wand that is an historic artifact of Madrigal. \nShoots a penetrating Spirit Bomb that inflics ShadowFlame.\nDeals increased damage if you have more mana left. \n+25 Max mana when hold. \n +14% critical damage when hold.";
+
             Item.staff[item.type] = true;
             item.useTime = 38;
             item.useAnimation = 38;
@@ -34,6 +34,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("SpiritBomb");
             item.shootSpeed = 10f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Wand");
+      Tooltip.SetDefault("A wand that is an historic artifact of Madrigal. \nShoots a penetrating Spirit Bomb that inflics ShadowFlame.\nDeals increased damage if you have more mana left. \n+25 Max mana when hold. \n +14% critical damage when hold.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

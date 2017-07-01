@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Wand";
+
             item.damage = 30;
             item.magic = true;
             item.mana = 6;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "A wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.";
+
             Item.staff[item.type] = true;
             item.useTime = 40;
             item.useAnimation = 40;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("PsychicBomb");
             item.shootSpeed = 7f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Wand");
+      Tooltip.SetDefault("A wand used by the guardians of Madrigal. \nShoots a penetrating Psychic Bomb that inflics ShadowFlame. \n+15 Max mana when hold. \n +12% critical damage when hold.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

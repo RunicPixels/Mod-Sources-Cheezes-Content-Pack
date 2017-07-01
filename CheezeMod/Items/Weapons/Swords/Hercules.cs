@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Hercules";
+
             item.damage = 25;
 			item.melee = true;
 			item.width = 58;
 			item.height = 62;
-			item.toolTip = "Goes way back.";
-            item.toolTip2 = "Grants three second of rage on hit.";
+
+
             item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 1;
@@ -26,6 +26,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Hercules");
+      Tooltip.SetDefault("Goes way back.\nGrants three second of rage on hit.");
+    }
+
 
 		public override void AddRecipes()
 		{

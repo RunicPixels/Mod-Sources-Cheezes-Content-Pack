@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
     {
         public override void SetDefaults()
         {
-            item.name = "Ultra Bomb Glove";
+
             item.damage = 80;
             item.thrown = true;
             item.width = 60;
             item.height = 42;
             item.scale = 0.75f;
-            item.toolTip = "Uses grenades, has a 75% chance not to consume ammo.";
-            item.toolTip2 = "Insired by Ratchet and Clank.";
+
+
             item.useTime = 16;
             item.useAnimation = 16;
             item.useStyle = 1;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.autoReuse = true;
             item.useAmmo = ProjectileID.Grenade;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Ultra Bomb Glove");
+      Tooltip.SetDefault("Uses grenades, has a 75% chance not to consume ammo.\nInsired by Ratchet and Clank.");
+    }
+
 
         public override void AddRecipes()
         {

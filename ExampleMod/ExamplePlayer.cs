@@ -8,6 +8,8 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ExampleMod.NPCs.PuritySpirit;
+using Terraria.ModLoader.IO;
+using Terraria.GameInput;
 
 namespace ExampleMod
 {
@@ -34,6 +36,7 @@ namespace ExampleMod
 		public bool purityMinion = false;
 		public bool examplePet = false;
 		public bool exampleLightPet = false;
+		public bool exampleShield = false;
 
 		public bool ZoneExample = false;
 
@@ -50,6 +53,7 @@ namespace ExampleMod
 			purityMinion = false;
 			examplePet = false;
 			exampleLightPet = false;
+			exampleShield = false;
 		}
 
 		public override void UpdateDead()
@@ -58,13 +62,23 @@ namespace ExampleMod
 			badHeal = false;
 		}
 
-		public override void SaveCustomData(BinaryWriter writer)
+		public override TagCompound Save()
 		{
-			writer.Write(saveVersion);
-			writer.Write(score);
+			return new TagCompound {
+				{"score", score}
+			};
+			//note that C# 6.0 supports indexer initialisers
+			//return new TagCompound {
+			//	["score"] = score
+			//};
 		}
 
-		public override void LoadCustomData(BinaryReader reader)
+		public override void Load(TagCompound tag)
+		{
+			score = tag.GetInt("score");
+		}
+
+		public override void LoadLegacy(BinaryReader reader)
 		{
 			int loadVersion = reader.ReadInt32();
 			score = reader.ReadInt32();
@@ -97,18 +111,15 @@ namespace ExampleMod
 
 		public override void SendCustomBiomes(BinaryWriter writer)
 		{
-			byte flags = 0;
-			if (ZoneExample)
-			{
-				flags |= 1;
-			}
+			BitsByte flags = new BitsByte();
+			flags[0] = ZoneExample;
 			writer.Write(flags);
 		}
 
 		public override void ReceiveCustomBiomes(BinaryReader reader)
 		{
-			byte flags = reader.ReadByte();
-			ZoneExample = ((flags & 1) == 1);
+			BitsByte flags = reader.ReadByte();
+			ZoneExample = flags[0];
 		}
 
 		public override void UpdateBiomeVisuals()
@@ -150,6 +161,15 @@ namespace ExampleMod
 			}
 		}
 
+		public override void ProcessTriggers(TriggersSet triggersSet)
+		{
+			if (ExampleMod.RandomBuffHotKey.JustPressed)
+			{
+				int buff = Main.rand.Next(BuffID.Count);
+				player.AddBuff(buff, 600);
+			}
+		}
+
 		public override void PreUpdateBuffs()
 		{
 			if (heroLives > 0)
@@ -171,7 +191,7 @@ namespace ExampleMod
 				}
 				if (heroLives == 1)
 				{
-					player.AddBuff(mod.BuffType("HeroOne"), 2);
+					player.AddBuff(mod.BuffType<Buffs.HeroOne>(), 2); // Consider using this alternate method call for maintainable code.
 				}
 				else if (heroLives == 2)
 				{
@@ -228,7 +248,7 @@ namespace ExampleMod
 			if (newPosition != player.position)
 			{
 				player.Teleport(newPosition, 1, 0);
-				NetMessage.SendData(65, -1, -1, "", 0, player.whoAmI, newPosition.X, newPosition.Y, 1, 0, 0);
+				NetMessage.SendData(65, -1, -1, null, 0, player.whoAmI, newPosition.X, newPosition.Y, 1, 0, 0);
 				PuritySpiritDebuff();
 			}
 		}
@@ -358,7 +378,7 @@ namespace ExampleMod
 		}
 
 		public override bool PreHurt(bool pvp, bool quiet, ref int damage, ref int hitDirection, ref bool crit,
-			ref bool customDamage, ref bool playSound, ref bool genGore, ref string deathText)
+			ref bool customDamage, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
 		{
 			if (constantDamage > 0 || percentDamage > 0f)
 			{
@@ -382,7 +402,7 @@ namespace ExampleMod
 			constantDamage = 0;
 			percentDamage = 0f;
 			defenseEffect = -1f;
-			return base.PreHurt(pvp, quiet, ref damage, ref hitDirection, ref crit, ref customDamage, ref playSound, ref genGore, ref deathText);
+			return base.PreHurt(pvp, quiet, ref damage, ref hitDirection, ref crit, ref customDamage, ref playSound, ref genGore, ref damageSource);
 		}
 
 		public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
@@ -442,7 +462,7 @@ namespace ExampleMod
 			}
 		}
 
-		public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref string deathText)
+		public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
 		{
 			if (heroLives > 0)
 			{
@@ -465,16 +485,21 @@ namespace ExampleMod
 					{
 						player.hurtCooldowns[k] = player.longInvince ? 180 : 120;
 					}
-					Main.PlaySound(2, (int)player.position.X, (int)player.position.Y, 29);
+					Main.PlaySound(SoundID.Item29, player.position);
 					reviveTime = 60;
 					return false;
 				}
 			}
-			if (healHurt > 0 && damage == 10.0 && hitDirection == 0 && deathText == " " + Lang.dt[1])
+			if (healHurt > 0 && damage == 10.0 && hitDirection == 0 && damageSource.SourceOtherIndex == 8)
 			{
-				deathText = " was dissolved by holy powers";
+				damageSource = PlayerDeathReason.ByCustomReason(" was dissolved by holy powers");
 			}
 			return true;
+		}
+
+		public override float UseTimeMultiplier(Item item)
+		{
+			return exampleShield ? 1.5f : 1f;
 		}
 
 		public override void AnglerQuestReward(float quality, List<Item> rewardItems)
@@ -503,7 +528,7 @@ namespace ExampleMod
 			{
 				return;
 			}
-			if (player.HasBuff(BuffID.TwinEyesMinion) > -1 && liquidType == 0 && Main.rand.Next(3) == 0)
+			if (player.FindBuffIndex(BuffID.TwinEyesMinion) > -1 && liquidType == 0 && Main.rand.Next(3) == 0)
 			{
 				caughtType = mod.ItemType("SparklingSphere");
 			}
@@ -515,7 +540,7 @@ namespace ExampleMod
 
 		public override void GetFishingLevel(Item fishingRod, Item bait, ref int fishingLevel)
 		{
-			if (player.HasBuff(mod.BuffType("CarMount")) > -1)
+			if (player.FindBuffIndex(mod.BuffType("CarMount")) > -1)
 			{
 				fishingLevel = (int)(fishingLevel * 1.1f);
 			}
@@ -523,7 +548,7 @@ namespace ExampleMod
 
 		public override void GetDyeTraderReward(List<int> dyeItemIDsPool)
 		{
-			if (player.HasBuff(BuffID.UFOMount) > -1)
+			if (player.FindBuffIndex(BuffID.UFOMount) > -1)
 			{
 				dyeItemIDsPool.Clear();
 				dyeItemIDsPool.Add(ItemID.MartianArmorDye);
@@ -549,7 +574,7 @@ namespace ExampleMod
 			}
 		}
 
-		public static readonly PlayerLayer MiscEffectsBack = new PlayerLayer("ExampleMod", "MiscEffectsBack", PlayerLayer.MiscEffectsBack, delegate(PlayerDrawInfo drawInfo)
+		public static readonly PlayerLayer MiscEffectsBack = new PlayerLayer("ExampleMod", "MiscEffectsBack", PlayerLayer.MiscEffectsBack, delegate (PlayerDrawInfo drawInfo)
 			{
 				if (drawInfo.shadow != 0f)
 				{
@@ -567,7 +592,7 @@ namespace ExampleMod
 					Main.playerDrawData.Add(data);
 				}
 			});
-		public static readonly PlayerLayer MiscEffects = new PlayerLayer("ExampleMod", "MiscEffects", PlayerLayer.MiscEffectsFront, delegate(PlayerDrawInfo drawInfo)
+		public static readonly PlayerLayer MiscEffects = new PlayerLayer("ExampleMod", "MiscEffects", PlayerLayer.MiscEffectsFront, delegate (PlayerDrawInfo drawInfo)
 			{
 				if (drawInfo.shadow != 0f)
 				{

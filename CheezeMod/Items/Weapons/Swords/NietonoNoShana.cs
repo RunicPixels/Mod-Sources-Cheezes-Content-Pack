@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Nietono No Shana";
+
             item.damage = 70;
 			item.melee = true;
 			item.width = 58;
 			item.height = 64;
-			item.toolTip = "To be wielded by the flame haze.";
-            item.toolTip2 = "Burns your enemies.";
+
+
             item.useTime = 24;
 			item.useAnimation = 24;
 			item.useStyle = 1;
@@ -26,6 +26,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Nietono No Shana");
+      Tooltip.SetDefault("To be wielded by the flame haze.\nBurns your enemies.");
+    }
+
 
 		public override void AddRecipes()
 		{

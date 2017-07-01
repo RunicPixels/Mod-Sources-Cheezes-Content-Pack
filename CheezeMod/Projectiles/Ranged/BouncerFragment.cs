@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            projectile.name = "Bouncer Fragment";
             projectile.width = 14;
             projectile.height = 14;
             projectile.ranged = true;
@@ -22,6 +21,12 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.penetrate = 1;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bouncer");
+        }
+
         public override void AI()
         {
             if (Main.rand.Next(20) == 0)

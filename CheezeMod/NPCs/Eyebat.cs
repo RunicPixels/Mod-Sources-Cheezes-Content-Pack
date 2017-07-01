@@ -13,8 +13,6 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
-            npc.name = "Eyebat";
-            npc.displayName = "Eyebat";
             npc.width = 32;
             npc.height = 30;
             npc.scale = 1f;
@@ -35,7 +33,12 @@ namespace CheezeMod.NPCs
             animationType = NPCID.GiantBat;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Eyebat");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             Player player = spawnInfo.player;
             return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? ((Main.hardMode) ? 0.045f : 0.095f) : 0f;

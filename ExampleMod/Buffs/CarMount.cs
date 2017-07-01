@@ -7,15 +7,15 @@ namespace ExampleMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[this.Type] = "Car";
-			Main.buffTip[this.Type] = "Leather seats, 4 cupholders";
+			DisplayName.SetDefault("Car");
+			Description.SetDefault("Leather seats, 4 cupholders");
 			Main.buffNoTimeDisplay[Type] = true;
 			Main.buffNoSave[Type] = true;
 		}
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.mount.SetMount(mod.MountType("Car"), player);
+			player.mount.SetMount(mod.MountType<Mounts.Car>(), player);
 			player.buffTime[buffIndex] = 10;
 		}
 	}

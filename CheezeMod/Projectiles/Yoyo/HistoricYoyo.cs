@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Yoyo
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.TheEyeOfCthulhu);
-            projectile.name = "Historic Yoyo";
             projectile.penetrate = -1;
             projectile.width = 28;
             projectile.height = 28;
@@ -20,6 +19,12 @@ namespace CheezeMod.Projectiles.Yoyo
             projectile.friendly = true;
             projectile.timeLeft = 320;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Historic Yoyo");
+        }
+
         public override void AI()
         {
             base.AI();

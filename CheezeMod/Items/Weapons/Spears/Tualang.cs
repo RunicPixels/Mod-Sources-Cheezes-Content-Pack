@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
         public override void SetDefaults()
 		{
-			item.name = "Tualang";
+
 			item.damage = 25;
 			item.melee = true;
 			item.width = 46;
 			item.height = 48;
 			item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "Stab with LMB, Slash with RMB. It will poison your enemies.";
+
 			item.useTime = 41;
 			item.useAnimation = 41;
 			item.knockBack = 5.2f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("Tualang");
             item.shootSpeed = 4.8f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Tualang");
+      Tooltip.SetDefault("Stab with LMB, Slash with RMB. It will poison your enemies.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

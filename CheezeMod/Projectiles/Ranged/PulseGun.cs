@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bullet);
-            projectile.name = "Pulse shot";
             projectile.damage = 8;
             projectile.width = 8;
             projectile.height = 8;
@@ -21,6 +20,11 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.timeLeft = 300;
             projectile.scale = 1f;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Pulse Shot");
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

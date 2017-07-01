@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Baconomnomnom";
+
 			item.damage = 62;
 			item.melee = true;
 			item.width = 56;
 			item.height = 58;
-			item.toolTip = "It slashes deliciously.";
-            item.toolTip2 = "Gives Well Fed and Rapid Healing to the player for 5 seconds after hitting an enemy, has a chance to inflict an enemy with ichor.";
+
+
             item.useTime = 22;
 			item.useAnimation = 22;
 			item.useStyle = 1;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.autoReuse = true;
             item.shootSpeed = 12f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Baconomnomnom");
+      Tooltip.SetDefault("It slashes deliciously.\nGives Well Fed and Rapid Healing to the player for 5 seconds after hitting an enemy, has a chance to inflict an enemy with ichor.");
+    }
+
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Guardian Pickaxe";
+
 			item.damage = 18;
 			item.melee = true;
 			item.width = 34;
 			item.height = 30;
-			item.toolTip = "A pickaxe used by the guardians of Madrigal. \n+3% Critical Chance. \n+25% Increased Critical Damage. \n+3 Defense when holding.";
+
             item.crit = 3;
             item.scale = 1.25f;
             item.useTime = 20;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Pickaxe");
+      Tooltip.SetDefault("A pickaxe used by the guardians of Madrigal. \n+3% Critical Chance. \n+25% Increased Critical Damage. \n+3 Defense when holding.");
+    }
+
 
         public override void AddRecipes()
         {

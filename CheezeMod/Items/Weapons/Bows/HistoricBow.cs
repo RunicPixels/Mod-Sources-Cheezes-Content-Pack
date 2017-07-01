@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Bows
     {
         public override void SetDefaults()
         {
-            item.name = "Historic Bow";
+
             item.damage = 36;
             item.ranged = true;
             item.width = 50;
             item.height = 60;
-            item.toolTip = "A bow that is an historic artifact of Madrigal. \n+17% Critical Chance. \n+23% Increased Critical Damage. \n+Autofire.\n Inflics Dryad's Bane on enemy hit.";
+
             item.useTime = 25;
             item.useAnimation = 25;
             item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Bows
             item.shootSpeed = 11f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Bow");
+      Tooltip.SetDefault("A bow that is an historic artifact of Madrigal. \n+17% Critical Chance. \n+23% Increased Critical Damage. \n+Autofire.\n Inflics Dryad's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

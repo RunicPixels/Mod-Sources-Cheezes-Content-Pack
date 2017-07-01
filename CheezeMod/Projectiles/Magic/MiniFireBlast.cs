@@ -13,7 +13,6 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BallofFire);
-            projectile.name = "Mini Fire Blast";
             projectile.width = 24;
             projectile.height = 24;
             projectile.magic = true;
@@ -23,6 +22,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 1;
             projectile.timeLeft = 180;
             aiType = ProjectileID.BallofFire;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Little Fire Blast");
         }
 
         public override void AI()

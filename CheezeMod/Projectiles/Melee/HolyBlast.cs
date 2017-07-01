@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.damage = 60;
-            projectile.name = "Holy Blast";
             projectile.width = 32;
             projectile.height = 28;
             projectile.melee = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.penetrate = 3;
             projectile.timeLeft = 300;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Holy Strike");
         }
 
         public override void AI()

@@ -8,10 +8,15 @@ namespace ExampleMod.NPCs.PuritySpirit
 {
 	public class PurityShield : ModNPC
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Shield of Purity");
+			Main.npcFrameCount[npc.type] = 4;
+			NPCID.Sets.MustAlwaysDraw[npc.type] = true;
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "PurityShield";
-			npc.displayName = "Shield of Purity";
 			npc.aiStyle = -1;
 			npc.lifeMax = PuritySpirit.dpsCap;
 			npc.damage = 0;
@@ -22,14 +27,12 @@ namespace ExampleMod.NPCs.PuritySpirit
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 6;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath6;
 			for (int k = 0; k < npc.buffImmune.Length; k++)
 			{
 				npc.buffImmune[k] = true;
 			}
-			Main.npcFrameCount[npc.type] = 4;
-			NPCID.Sets.MustAlwaysDraw[npc.type] = true;
 		}
 
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
@@ -51,11 +54,11 @@ namespace ExampleMod.NPCs.PuritySpirit
 			{
 				if (modOwner.targets.Contains(Main.myPlayer))
 				{
-					Main.PlaySound(2, -1, -1, 2);
+					Main.PlaySound(SoundID.Item2);
 				}
 				else
 				{
-					Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 2);
+					Main.PlaySound(SoundID.Item2, npc.position);
 				}
 				npc.localAI[0] = 1f;
 			}

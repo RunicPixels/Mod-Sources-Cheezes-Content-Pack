@@ -9,11 +9,11 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Starlight Ore";
+
 			item.width = 12;
 			item.height = 12;
 			item.maxStack = 999;
-			AddTooltip("It feels pretty warm");
+
 			item.useTurn = true;
 			item.autoReuse = true;
 			item.useAnimation = 15;
@@ -24,5 +24,12 @@ namespace CheezeMod.Items.Materials
 			item.consumable = true;
 			item.createTile = mod.TileType("StarlightOre");
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Ore");
+      Tooltip.SetDefault("It feels pretty warm");
+    }
+
 	}
 }

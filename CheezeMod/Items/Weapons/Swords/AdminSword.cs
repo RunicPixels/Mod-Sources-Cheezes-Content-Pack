@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Admin Sword";
+
 			item.damage = 9001;
 			item.melee = true;
 			item.width = 118;
 			item.height = 138;
             item.crit = 46;
-			item.toolTip = "Truth is, this alien looking weapon was used by the original creator to make sure the world functions as it does now. But, this weapon is probably the cheeziest weapon in all of history!";
+
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = 1;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Admin Sword");
+      Tooltip.SetDefault("Truth is, this alien looking weapon was used by the original creator to make sure the world functions as it does now. But, this weapon is probably the cheeziest weapon in all of history!");
+    }
+
 
         int effect = -1;
 

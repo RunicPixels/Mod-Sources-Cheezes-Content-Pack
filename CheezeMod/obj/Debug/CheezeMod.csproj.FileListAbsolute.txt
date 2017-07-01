@@ -5,13 +5,7 @@ C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Game.dll
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Xact.dll
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Terraria.exe
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\tModLoader.exe
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Terraria.pdb
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Microsoft.Xna.Framework.Input.Touch.xml
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.dll
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.pdb
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.csprojResolveAssemblyReference.cache

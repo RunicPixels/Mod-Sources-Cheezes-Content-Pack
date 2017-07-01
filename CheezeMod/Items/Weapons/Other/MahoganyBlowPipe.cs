@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Other
     {
         public override void SetDefaults()
         {
-            item.name = "Mahogany Blowpipe";
+
             item.damage = 15;
             item.ranged = true;
             item.width = 30;
             item.height = 8;
-            item.toolTip = "Seeds can be crafted with acorns.";
+
             item.useTime = 36;
             item.useAnimation = 36;
             item.autoReuse = true;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Other
             item.useAmmo = AmmoID.Dart;
             item.position.Y -= 10;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mahogany Blowpipe");
+      Tooltip.SetDefault("Seeds can be crafted with acorns.");
+    }
+
 
         public override void AddRecipes()
         {

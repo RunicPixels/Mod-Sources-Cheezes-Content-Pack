@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Historic Big Sword";
+
             item.damage = 62;
             item.melee = true;
             item.width = 78;
             item.height = 78;
-            item.toolTip = "A two handed sword that is an historic artifact of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+5 Defense when holding. \nInflicts enemies with Dryad's Bane.";
+
             item.crit = 15;
             item.scale = 1f;
             item.useTime = 38;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Big Sword");
+      Tooltip.SetDefault("A two handed sword that is an historic artifact of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+5 Defense when holding. \nInflicts enemies with Dryad's Bane.");
+    }
+
 
         public override void AddRecipes()
         {

@@ -9,15 +9,22 @@ namespace CheezeMod.Items.Blocks
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Stacked Dirt Block";
+
 			item.width = 16;
 			item.height = 16;
             item.scale = 1.0f;
 			item.maxStack = 999;
-            AddTooltip("One of these contain " + Convert.ToString(CheezeMod.stackedBlockNumber) + " Dirt Blocks.");
+
             item.value = CheezeMod.blockBaseValue * CheezeMod.stackedBlockNumber;
             item.rare = 1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Stacked Dirt Block");
+      Tooltip.SetDefault("One of these contain ");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

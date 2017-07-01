@@ -9,11 +9,11 @@ namespace CheezeMod.Items.Placeable
 	{
 		public override void SetDefaults()
 		{
-			item.name = "MegaCorp Vendor";
+
 			item.width = 52;
 			item.height = 52;
 			item.maxStack = 99;
-			AddTooltip("Build weapons from Ratchet & Clank here.");
+
 			item.useTurn = true;
 			item.autoReuse = true;
 			item.useAnimation = 15;
@@ -24,6 +24,13 @@ namespace CheezeMod.Items.Placeable
 			item.createTile = mod.TileType("MegaCorpVendor");
             item.rare = 2;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("MegaCorp Vendor");
+      Tooltip.SetDefault("Build weapons from Ratchet & Clank here.");
+    }
+
 
 		public override void AddRecipes()
 		{

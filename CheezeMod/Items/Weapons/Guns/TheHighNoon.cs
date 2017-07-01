@@ -16,14 +16,14 @@ namespace CheezeMod.Items.Weapons.Guns
         bool shotPastReload = false;
         public override void SetDefaults()
         {
-            item.name = "The High Noon";
+
             item.damage = 59;
             item.ranged = true;
             item.width = 48;
             item.height = 26;
             item.scale = 0.7f;
-            item.toolTip = (magazineSize).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
-            item.toolTip2 = "'It's high noon.' This weapon is a reference from McCree from Overwatch.\nAlternative fire (Default: Right Mouse Button) rapidly shoots bullets in a spread. Has to reload every 6 shots.";
+
+
             item.useTime = DefaultUseTime;
             item.useAnimation = DefaultUseTime;
             item.reuseDelay = 3;
@@ -40,6 +40,13 @@ namespace CheezeMod.Items.Weapons.Guns
             item.useAmmo = AmmoID.Bullet;
             item.useTurn = false;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("The High Noon");
+      Tooltip.SetDefault("/\n'It's high noon.' This weapon is a reference from McCree from Overwatch.\nAlternative fire (Default: Right Mouse Button) rapidly shoots bullets in a spread. Has to reload every 6 shots.");
+    }
+
 
         public override void AddRecipes()
         {
@@ -102,11 +109,11 @@ namespace CheezeMod.Items.Weapons.Guns
         {
             if (magazineSize >= 7)
             {
-                item.toolTip = (magazineSize - 6).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+                Tooltip.SetDefault("/\n'It's high noon.' This weapon is a reference from McCree from Overwatch.\nAlternative fire (Default: Right Mouse Button) rapidly shoots bullets in a spread. Has to reload every 6 shots.\n"+(magazineSize - 6).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.");
             }
             else
             {
-                item.toolTip = magazineSize.ToString() + "/" + maxMagazineSize.ToString() + " magazine left.";
+                Tooltip.SetDefault("/\n'It's high noon.' This weapon is a reference from McCree from Overwatch.\nAlternative fire (Default: Right Mouse Button) rapidly shoots bullets in a spread. Has to reload every 6 shots.\n"+ magazineSize.ToString() + "/" + maxMagazineSize.ToString() + " magazine left.");
             }
         }
 

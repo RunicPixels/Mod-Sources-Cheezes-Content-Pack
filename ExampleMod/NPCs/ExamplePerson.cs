@@ -2,32 +2,38 @@ using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Utilities;
 
 namespace ExampleMod.NPCs
 {
+	[AutoloadHead]
 	public class ExamplePerson : ModNPC
 	{
-		public override bool Autoload(ref string name, ref string texture, ref string[] altTextures)
+		public override string Texture
+		{
+			get
+			{
+				return "ExampleMod/NPCs/ExamplePerson";
+			}
+		}
+
+		public override string[] AltTextures
+		{
+			get
+			{
+				return new string[] { "ExampleMod/NPCs/ExamplePerson_Alt_1" };
+			}
+		}
+
+		public override bool Autoload(ref string name)
 		{
 			name = "Example Person";
-			altTextures = new string[] { "ExampleMod/NPCs/ExamplePerson_Alt_1" };
 			return mod.Properties.Autoload;
 		}
 
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
-			npc.name = "Example Person";
-			npc.townNPC = true;
-			npc.friendly = true;
-			npc.width = 18;
-			npc.height = 40;
-			npc.aiStyle = 7;
-			npc.damage = 10;
-			npc.defense = 15;
-			npc.lifeMax = 250;
-			npc.soundHit = 1;
-			npc.soundKilled = 1;
-			npc.knockBackResist = 0.5f;
+			DisplayName.SetDefault("Example Person");
 			Main.npcFrameCount[npc.type] = 25;
 			NPCID.Sets.ExtraFramesCount[npc.type] = 9;
 			NPCID.Sets.AttackFrameCount[npc.type] = 4;
@@ -36,7 +42,21 @@ namespace ExampleMod.NPCs
 			NPCID.Sets.AttackTime[npc.type] = 90;
 			NPCID.Sets.AttackAverageChance[npc.type] = 30;
 			NPCID.Sets.HatOffsetY[npc.type] = 4;
-			NPCID.Sets.ExtraTextureCount[npc.type] = 1;
+		}
+
+		public override void SetDefaults()
+		{
+			npc.townNPC = true;
+			npc.friendly = true;
+			npc.width = 18;
+			npc.height = 40;
+			npc.aiStyle = 7;
+			npc.damage = 10;
+			npc.defense = 15;
+			npc.lifeMax = 250;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath1;
+			npc.knockBackResist = 0.5f;
 			animationType = NPCID.Guide;
 		}
 
@@ -122,7 +142,7 @@ namespace ExampleMod.NPCs
 			int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
 			if (partyGirl >= 0 && Main.rand.Next(4) == 0)
 			{
-				return "Can you please tell " + Main.npc[partyGirl].displayName + " to stop decorating my house with colors?";
+				return "Can you please tell " + Main.npc[partyGirl].GivenName + " to stop decorating my house with colors?";
 			}
 			switch (Main.rand.Next(3))
 			{
@@ -135,9 +155,30 @@ namespace ExampleMod.NPCs
 			}
 		}
 
+		/* 
+		// Consider using this alternate approach to choosing a random thing. Very useful for a variety of use cases.
+		// The WeightedRandom class needs "using Terraria.Utilities;" to use
+		public override string GetChat()
+		{
+			WeightedRandom<string> chat = new WeightedRandom<string>();
+
+			int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
+			if (partyGirl >= 0 && Main.rand.Next(4) == 0)
+			{
+				chat.Add("Can you please tell " + Main.npc[partyGirl].GivenName + " to stop decorating my house with colors?");
+			}
+			chat.Add("Sometimes I feel like I'm different from everyone else here.");
+			chat.Add("What's your favorite color? My favorite colors are white and black.");
+			chat.Add("What? I don't have any arms or legs? Oh, don't be ridiculous!");
+			chat.Add("This message has a weight of 5, meaning it appears 5 times more often.", 5.0);
+			chat.Add("This message has a weight of 0.1, meaning it appears 10 times as rare.", 0.1);
+			return chat; // chat is implicitly cast to a string. You can also do "return chat.Get();" if that makes you feel better
+		}
+		*/
+
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
-			button = Lang.inter[28];
+			button = Lang.inter[28].Value;
 		}
 
 		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
@@ -170,7 +211,7 @@ namespace ExampleMod.NPCs
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(mod.ItemType("ExampleHamaxe"));
 			nextSlot++;
-			if (Main.player[Main.myPlayer].GetModPlayer<ExamplePlayer>(mod).ZoneExample)
+			if (Main.LocalPlayer.GetModPlayer<ExamplePlayer>(mod).ZoneExample)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("ExampleWings"));
 				nextSlot++;

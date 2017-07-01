@@ -11,9 +11,9 @@ namespace CheezeMod.Items.Weapons.Swords
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.BeamSword);
-            item.name = "Red Lasersaber";
-            item.toolTip = "Join the dark side, we have cookies!";
-            item.toolTip2 = "This laser is so hot that it burns your enemies, it also shoots lasers.";
+
+
+
             item.width = 48;
             item.height = 50;
             item.useTime = 25;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.scale = 1.3f;
             item.autoReuse = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Red Lasersaber");
+      Tooltip.SetDefault("Join the dark side, we have cookies!\nThis laser is so hot that it burns your enemies, it also shoots lasers.");
+    }
+
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {

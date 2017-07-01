@@ -7,14 +7,9 @@ using CheezeMod;
 
 namespace CheezeMod.Items.Armor
 {
-	public class PalladiumHat : ModItem
+    [AutoloadEquip(EquipType.Head)]
+    public class PalladiumHat : ModItem
 	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-		{
-			equips.Add(EquipType.Head);
-			return true;
-		}
-
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == ItemID.PalladiumBreastplate && legs.type == ItemID.PalladiumLeggings;
@@ -27,15 +22,22 @@ namespace CheezeMod.Items.Armor
         }
         public override void SetDefaults()
 		{
-			item.name = "Palladium Hat";
+
 			item.width = 18;
 			item.height = 18;
-			item.toolTip = "Good for people that throw things.";
-            item.toolTip2 = "30% inceased throwing velocity, 10% increased throwing damage";
+
+
             item.value = 10000;
 			item.rare = 4;
 			item.defense = 7;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Palladium Hat");
+      Tooltip.SetDefault("Good for people that throw things.\n30% inceased throwing velocity, 10% increased throwing damage");
+    }
+
 
         public override void UpdateEquip(Player player)
         {

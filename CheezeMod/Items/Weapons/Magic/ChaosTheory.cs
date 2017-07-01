@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Chaos Theory";
+
             item.damage = 40;
             item.magic = true;
             item.mana = 9;
             item.width = 40;
             item.height = 40;
-            item.toolTip = "Nature has gone to chaos.";
-            item.toolTip2 = "Shoots 4 different elemental spells at random. \nThe Spells are:\nFire Blast.\nWater Bolt\nWind Strike\nand Earth Boulder";
+
+
             item.channel = true;
             item.useTime = 26;
             item.useAnimation = 26;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("EarthBoulder");
             item.shootSpeed = 9f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Chaos Theory");
+      Tooltip.SetDefault("Nature has gone to chaos.\nShoots 4 different elemental spells at random. \nThe Spells are:\nFire Blast.\nWater Bolt\nWind Strike\nand Earth Boulder");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

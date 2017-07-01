@@ -8,15 +8,9 @@ using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
+    [AutoloadEquip(EquipType.HandsOn)]
     public class GuardianKnuckle : ModItem
     {
-
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-        {
-            equips.Add(EquipType.HandsOn);
-            return true;
-        }
-
         private FistStyle fist;
         public FistStyle Fist
         {
@@ -34,12 +28,12 @@ namespace CheezeMod.Items.Weapons.Other
         {
             item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
-            item.name = "Guardian Knuckle";
+
             item.width = 30;
             item.height = 30;
             item.melee = true;
             item.useAnimation = 28;
-            item.toolTip = "A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+10% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.";
+
             item.crit = 6;
             item.noUseGraphic = true;
             item.scale = 1.1f;
@@ -49,6 +43,13 @@ namespace CheezeMod.Items.Weapons.Other
             item.rare = CheezeItem.guardianRarity;
             item.value = CheezeItem.guardianPrice;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Knuckle");
+      Tooltip.SetDefault("A knuckle used by the guardians of Madrigal.\n Right Click to do a Burst Crack.\n+6% Critical Chance. \n+10% Increased Critical Damage. \nGives dodge frames upon hitting an enemy.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

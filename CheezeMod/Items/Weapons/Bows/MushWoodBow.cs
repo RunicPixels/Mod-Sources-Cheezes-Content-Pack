@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Bows
     {
         public override void SetDefaults()
         {
-            item.name = "Mushwood Bow";
+
             item.damage = 9;
             item.ranged = true;
             item.width = 18;
             item.height = 42;
-            item.toolTip = "Is this bow alive?";
+
             item.useTime = 24;
             item.useAnimation = 24;
             item.useStyle = 5;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Bows
             item.shootSpeed = 7f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mushwood Bow");
+      Tooltip.SetDefault("Is this bow alive?");
+    }
+
 
         public override void AddRecipes()
         {

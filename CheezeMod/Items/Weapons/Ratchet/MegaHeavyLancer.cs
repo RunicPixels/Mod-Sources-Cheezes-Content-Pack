@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Mega Heavy Lancer";
+
 			item.damage = 36;
 			item.ranged = true;
 			item.width = 64;
 			item.height = 30;
             item.scale = 0.8f;
-            item.toolTip = "'My barrel runs hot!', 44% Chance not to consume ammo. Converts normal bullets into Mega Heavy Lancer shots which inflict flames and midas.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 8;
             item.useAnimation = 8;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 8f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mega Heavy Lancer");
+      Tooltip.SetDefault("'My barrel runs hot!', 44% Chance not to consume ammo. Converts normal bullets into Mega Heavy Lancer shots which inflict flames and midas.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Bows
     {
         public override void SetDefaults()
         {
-            item.name = "Callisto Bow";
+
             item.damage = 60;
             item.ranged = true;
             item.width = 28;
             item.height = 56;
-            item.toolTip = "This a bow from a far moon. \n+40% Increased Critical Damage.\n Has a 33% chance to shoot an extra arrow.";
+
             item.useTime = 16;
             item.useAnimation = 16;
             item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Bows
             item.shootSpeed = 15f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Callisto Bow");
+      Tooltip.SetDefault("This a bow from a far moon. \n+40% Increased Critical Damage.\n Has a 33% chance to shoot an extra arrow.");
+    }
+
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

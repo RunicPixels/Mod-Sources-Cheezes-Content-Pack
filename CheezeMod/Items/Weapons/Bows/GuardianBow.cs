@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Bows
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Bow";
+
             item.damage = 18;
             item.ranged = true;
             item.width = 18;
             item.height = 42;
-            item.toolTip = "A bow used by the guardians of Madrigal. \n+15% Critical Chance. \n+21% Increased Critical Damage. \n+Autofire.";
+
             item.useTime = 28;
             item.useAnimation = 28;
             item.useStyle = 5;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Bows
             item.shootSpeed = 10f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Bow");
+      Tooltip.SetDefault("A bow used by the guardians of Madrigal. \n+15% Critical Chance. \n+21% Increased Critical Damage. \n+Autofire.");
+    }
+
 
         public override void AddRecipes()
         {

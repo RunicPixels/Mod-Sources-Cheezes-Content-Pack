@@ -5,23 +5,33 @@ using Terraria.ModLoader;
 namespace ExampleMod.NPCs.Abomination
 {
 	//ported from my tAPI mod because I'm lazy
+	[AutoloadBossHead]
 	public class AbominationRun : ModNPC
 	{
-		public override bool Autoload(ref string name, ref string texture, ref string[] altTextures)
+		public override string Texture
 		{
-			texture = "ExampleMod/NPCs/Abomination/Abomination";
-			return mod.Properties.Autoload;
+			get
+			{
+				return "ExampleMod/NPCs/Abomination/Abomination";
+			}
 		}
 
-		public override void AutoloadHead(ref string headTexture, ref string bossHeadTexture)
+		public override string HeadTexture
 		{
-			bossHeadTexture = "ExampleMod/NPCs/Abomination/Abomination_Head_Boss";
+			get
+			{
+				return "ExampleMod/NPCs/Abomination/Abomination_Head_Boss";
+			}
+		}
+
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("The Abomination");
+			Main.npcFrameCount[npc.type] = 2;
 		}
 
 		public override void SetDefaults()
 		{
-			npc.name = "Injured Abomination";
-			npc.displayName = "The Abomination";
 			npc.aiStyle = -1;
 			npc.lifeMax = 40000;
 			npc.damage = 100;
@@ -30,15 +40,14 @@ namespace ExampleMod.NPCs.Abomination
 			npc.dontTakeDamage = true;
 			npc.width = 100;
 			npc.height = 100;
-			Main.npcFrameCount[npc.type] = 2;
 			npc.value = Item.buyPrice(0, 20, 0, 0);
 			npc.npcSlots = 15f;
 			npc.boss = true;
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 1;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath1;
 			npc.buffImmune[24] = true;
 			music = MusicID.Boss2;
 		}
@@ -53,7 +62,7 @@ namespace ExampleMod.NPCs.Abomination
 		{
 			if (npc.localAI[0] == 0f)
 			{
-				Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
+				Main.PlaySound(SoundID.Roar, npc.position, 0);
 				npc.localAI[0] = 1f;
 			}
 			npc.velocity.Y += 1f;

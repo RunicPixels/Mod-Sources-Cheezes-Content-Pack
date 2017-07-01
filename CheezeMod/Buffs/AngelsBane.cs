@@ -9,8 +9,8 @@ namespace CheezeMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[Type] = "Angels Bane";
-			Main.buffTip[Type] = "Cursed by the Angels of Madrigal, losing hp, deals double damage when above 400hp";
+            DisplayName.SetDefault("Angels Bane");
+            Description.SetDefault("Cursed by the Angels of Madrigal, losing hp, deals double damage when above 400hp");
 			Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;
@@ -24,7 +24,7 @@ namespace CheezeMod.Buffs
 
 		public override void Update(NPC npc, ref int buffIndex)
 		{
-			npc.GetModInfo<CheezeNPCInfo>(mod).angelsBane = true;
+			npc.GetGlobalNPC<CheezeGlobalNPC>(mod).angelsBane = true;
 		}
 	}
 }

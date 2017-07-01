@@ -9,13 +9,20 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Historic Essence";
+
 			item.width = 26;
 			item.height = 22;
 			item.maxStack = 999;
-			AddTooltip("An historic relic from Madrigal");
+
 			item.value = CheezeItem.historicPrice / 10;
 			item.rare = CheezeItem.historicRarity-1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Essence");
+      Tooltip.SetDefault("An historic relic from Madrigal");
+    }
+
 	}
 }

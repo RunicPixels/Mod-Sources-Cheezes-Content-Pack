@@ -11,12 +11,12 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Starlight Bar";
+
 			item.width = 30;
 			item.height = 24;
 			item.maxStack = 999;
-			AddTooltip("It shines in the moonlight.");
-            AddTooltip2("Ores can be found on Floating Islands.");
+
+
             item.useTurn = true;
             item.autoReuse = true;
             item.useAnimation = 15;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Materials
             item.consumable = true;
             item.createTile = mod.TileType("StarlightBar");
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Bar");
+      Tooltip.SetDefault("It shines in the moonlight.\nOres can be found on Floating Islands.");
+    }
+
 
         public override void AddRecipes()
         {

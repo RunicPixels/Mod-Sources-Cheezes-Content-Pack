@@ -12,20 +12,27 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		{
             item.useStyle = 3;
             item.autoReuse = false;
-            item.name = "Mega Gold Walloper";
+
             item.width = 42;
             item.height = 42;
             item.useTime = 60;
             item.useAnimation = item.useTime;
             item.melee = true;
-            item.toolTip = "'Fits like a golden glove and hits like a golden truck which inflicts Midas and Confusion'";
-            item.toolTip2 = "Inspired by Ratchet and Clank.";
+
+
             item.scale = 0.8f;
 			item.damage = 145;
             item.knockBack = 9f;
             item.rare = CheezeItem.ratchetRarity[2];
             item.value = 300000;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mega Gold Walloper");
+      Tooltip.SetDefault("'Fits like a golden glove and hits like a golden truck which inflicts Midas and Confusion'\nInspired by Ratchet and Clank.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

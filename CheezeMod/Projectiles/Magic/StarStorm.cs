@@ -9,7 +9,6 @@ namespace CheezeMod.Projectiles.Magic
     {
         public override void SetDefaults()
         {
-            projectile.name = "StarStorm";
             projectile.width = 18;
             projectile.height = 18;
             projectile.scale = 0.7f;
@@ -17,6 +16,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.magic = true;
             projectile.penetrate = 1;
             projectile.timeLeft = 50;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Star");
         }
 
         public override void AI()

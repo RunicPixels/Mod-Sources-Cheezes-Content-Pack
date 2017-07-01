@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Thrown
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.ThrowingKnife);
-            projectile.name = "Mythril Kunai";
             projectile.width = 18;
             projectile.height = 20;
             projectile.thrown = true;
@@ -21,6 +20,12 @@ namespace CheezeMod.Projectiles.Thrown
             projectile.penetrate = 3;
             aiType = ProjectileID.ThrowingKnife;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mythril Kunai");
+        }
+
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);

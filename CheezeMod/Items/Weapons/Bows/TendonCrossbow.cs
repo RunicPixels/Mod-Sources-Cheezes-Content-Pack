@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Bows
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Tendon Crossbow";
+
 			item.damage = 24;
 			item.ranged = true;
 			item.width = 52;
 			item.height = 20;
-            item.toolTip = "Sometimes turns Wooden arrows into Unholy arrows.";
-            item.toolTip2 = "Shoots 3 arrows with a random spread and speed, 25% not to consume ammo.";
+
+
             item.useTime = 5;
             item.reuseDelay = 40;
             item.useAnimation = 15;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Bows
 			item.shootSpeed = 8f;
 			item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Tendon Crossbow");
+      Tooltip.SetDefault("Sometimes turns Wooden arrows into Unholy arrows.\nShoots 3 arrows with a random spread and speed, 25% not to consume ammo.");
+    }
+
 
         public override void AddRecipes()
         {

@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Staff";
+
             item.damage = 40;
             item.magic = true;
             item.mana = 13;
             item.width = 42;
             item.height = 42;
             item.channel = true;
-            item.toolTip = "A staff used by the guardians of Madrigal. \nShoots a flame geyser. \n+20 Max mana when hold. \n +6% critical damage when hold.";
+
             Item.staff[item.type] = true;
             item.useTime = 46;
             item.useAnimation = 46;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("FlameGeyser");
             item.shootSpeed = 12f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Staff");
+      Tooltip.SetDefault("A staff used by the guardians of Madrigal. \nShoots a flame geyser. \n+20 Max mana when hold. \n +6% critical damage when hold.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

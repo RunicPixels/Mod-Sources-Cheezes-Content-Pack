@@ -11,9 +11,9 @@ namespace CheezeMod.Items.Weapons.Swords
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.BeamSword);
-            item.name = "White Lasersaber";
-            item.toolTip = "A true wielder of the force.";
-            item.toolTip2 = "This laser is so hot that it burns your enemies, it also shoots lasers.";
+
+
+
             item.width = 48;
             item.height = 50;
             item.useTime = 25;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.scale = 1.3f;
             item.autoReuse = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("White Lasersaber");
+      Tooltip.SetDefault("A true wielder of the force.\nThis laser is so hot that it burns your enemies, it also shoots lasers.");
+    }
+
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {

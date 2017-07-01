@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Guardian Big Sword";
+
             item.damage = 42;
             item.melee = true;
             item.width = 54;
             item.height = 54;
-            item.toolTip = "A two handed sword used by the guardians of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+3 Defense when holding.";
+
             item.crit = 15;
             item.scale = 1.25f;
             item.useTime = 40;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Big Sword");
+      Tooltip.SetDefault("A two handed sword used by the guardians of Madrigal. \n+15% Critical Chance. \n+15 HP when holding. \n+3 Defense when holding.");
+    }
+
 
         public override void AddRecipes()
         {

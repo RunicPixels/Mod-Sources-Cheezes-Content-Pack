@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
     {
         public override void SetDefaults()
         {
-            item.name = "Enchanted Orichalcum Halberd";
+
             item.damage = 42;
             item.melee = true;
             item.width = CheezeItem.defaultHalberdWidth;
             item.height = CheezeItem.defaultHalberdWidth;
             item.scale = 1.1f;
             item.maxStack = 1;
-            item.toolTip = "Has a shorter range, but a few different attack styles on comparison to the original. Stab with LMB, Slash with RMB.";
+
             item.useTime = 29;
             item.useAnimation = 29;
             item.knockBack = 5.3f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
             item.shoot = mod.ProjectileType("OrichalcumHalberd");
             item.shootSpeed = 6.90f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Enchanted Orichalcum Halberd");
+      Tooltip.SetDefault("Has a shorter range, but a few different attack styles on comparison to the original. Stab with LMB, Slash with RMB.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

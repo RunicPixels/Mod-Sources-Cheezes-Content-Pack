@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Guardian Axe";
+
 			item.damage = 32;
 			item.melee = true;
 			item.width = 34;
 			item.height = 32;
-			item.toolTip = "An axe used by the guardians of Madrigal. \n+9% Critical chance and damage. \n+3 Defense when holding.";
+
             item.crit = 9;
             item.scale = 1.25f;
             item.useTime = 30;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Axe");
+      Tooltip.SetDefault("An axe used by the guardians of Madrigal. \n+9% Critical chance and damage. \n+3 Defense when holding.");
+    }
+
 
         public override void AddRecipes()
         {

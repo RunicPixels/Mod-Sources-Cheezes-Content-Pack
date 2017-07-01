@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
         int maxBounces = 2;
         public override void SetDefaults()
         {
-            projectile.name = "UltraMultistar";
             projectile.width = 26;
             projectile.height = 26;
             projectile.ranged = true;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.scale = 1.2f;
             projectile.penetrate = 4;
             aiType = ProjectileID.Shuriken;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Ultra Multistar");
         }
 
         public override void AI()

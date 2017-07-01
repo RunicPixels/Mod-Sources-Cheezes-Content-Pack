@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            projectile.name = "Huge Earth Boulder";
             projectile.width = 32;
             projectile.height = 32;
             projectile.scale = 0.9f;
@@ -22,6 +21,12 @@ namespace CheezeMod.Projectiles.Magic
             projectile.knockBack *= 2;
             aiType = ProjectileID.BoulderStaffOfEarth;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Huge Earth Boulder");
+        }
+
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.25f, 0.4f, 1f);

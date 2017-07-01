@@ -9,7 +9,6 @@ namespace CheezeMod.Projectiles.Melee
     {
         public override void SetDefaults()
         {
-            projectile.name = "StarStorm";
             projectile.width = 18;
             projectile.height = 18;
             projectile.scale = 0.7f;
@@ -18,6 +17,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.penetrate = 1;
             projectile.timeLeft = 50;
             projectile.tileCollide = false;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Star");
         }
 
         public override void AI()

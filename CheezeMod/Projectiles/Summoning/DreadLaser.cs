@@ -10,7 +10,6 @@ namespace CheezeMod.Projectiles.Summoning
     {
         public override void SetDefaults()
         {
-            projectile.name = "Dread Laser";
             projectile.damage = 20;
             projectile.width = 10;
             projectile.height = 8;
@@ -20,6 +19,11 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.timeLeft = 300;
             ProjectileID.Sets.MinionShot[projectile.type] = true;
             aiType = ProjectileID.Bullet;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dread Laser");
         }
 
         public override void AI()

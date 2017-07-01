@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Ranged
 	{
 		public override void SetDefaults()
 		{
-			projectile.name = "Liquid Ichor Gun";
 			projectile.width = 10;
 			projectile.height = 10;
 			projectile.aiStyle = 1;
@@ -24,6 +23,11 @@ namespace CheezeMod.Projectiles.Ranged
 			ProjectileID.Sets.TrailingMode[projectile.type] = 5;
 			aiType = ProjectileID.MolotovFire;
 		}
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Liquid Ichor Gun");
+        }
 
         public override bool OnTileCollide(Vector2 oldVelocity)
         {

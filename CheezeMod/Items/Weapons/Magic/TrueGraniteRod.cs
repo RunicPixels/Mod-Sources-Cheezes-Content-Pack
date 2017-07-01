@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "True Granite Rod";
+
             item.damage = 20;
             item.magic = true;
             item.mana = 6;
             item.width = 44;
             item.height = 44;
             item.channel = true;
-            item.toolTip = "Shoots a resonating lightning strike.";
+
             Item.staff[item.type] = true;
             item.useTime = 28;
             item.useAnimation = 28;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("LightningBolt");
             item.shootSpeed = 5f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("True Granite Rod");
+      Tooltip.SetDefault("Shoots a resonating lightning strike.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

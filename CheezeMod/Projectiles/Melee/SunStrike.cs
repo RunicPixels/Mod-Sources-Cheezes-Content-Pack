@@ -12,12 +12,16 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.InfernoFriendlyBolt);
-            projectile.name = "Sun Strike";
             projectile.melee = true;
             projectile.scale = 1f;
             projectile.height = 16;
             projectile.width = 16;
             projectile.penetrate = 2;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Sun Strike");
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

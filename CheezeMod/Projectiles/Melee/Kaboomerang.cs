@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bananarang);
-            projectile.name = "Kaboomemerang";
             projectile.width = 36;
             projectile.height = 36;
             projectile.melee = true;
@@ -21,6 +20,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.penetrate = 8;
             projectile.timeLeft = 700;
             aiType = ProjectileID.Bananarang;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Kaboomerang");
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

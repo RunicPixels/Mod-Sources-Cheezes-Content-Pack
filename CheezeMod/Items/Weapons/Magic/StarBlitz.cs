@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "Star Blitz";
+
             item.damage = 12;
             item.magic = true;
             item.mana = 3;
             item.width = 40;
             item.height = 40;
-            item.toolTip = "Summons a shower of stars.";
+
             item.channel = true;
             item.useTime = 7;
             item.useAnimation = 7;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("StarStorm");
             item.shootSpeed = 10f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Star Blitz");
+      Tooltip.SetDefault("Summons a shower of stars.");
+    }
+
 
         public override void AddRecipes()
         {

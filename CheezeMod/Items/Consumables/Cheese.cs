@@ -9,17 +9,24 @@ namespace CheezeMod.Items.Consumables
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Cheese";
+
 			item.width = 18;
 			item.height = 18;
 			item.maxStack = 999;
-			AddTooltip("Gives well fed for 20 minutes.");
+
 			item.value = 24000;
 			item.rare = 8;
             item.useStyle = 2;
             item.UseSound = SoundID.Item2;
             item.consumable = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Cheese");
+      Tooltip.SetDefault("Gives well fed for 20 minutes.");
+    }
+
         public override bool UseItem(Player player)
         {
             player.AddBuff(BuffID.WellFed, 72000);

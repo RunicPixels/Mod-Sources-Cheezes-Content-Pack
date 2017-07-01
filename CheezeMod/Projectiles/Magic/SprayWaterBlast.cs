@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.WaterBolt);
-            projectile.name = "Spray Water Blast";
             projectile.width = 15;
             projectile.height = 15;
             projectile.magic = true;
@@ -22,6 +21,12 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 8;
             aiType = ProjectileID.WaterBolt;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Sprayed Water Blast");
+        }
+
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.25f, 0.4f, 1f);

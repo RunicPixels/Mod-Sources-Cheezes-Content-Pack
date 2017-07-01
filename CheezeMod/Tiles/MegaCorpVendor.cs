@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.Chat;
 
 namespace CheezeMod.Tiles
 {
@@ -18,7 +19,7 @@ namespace CheezeMod.Tiles
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 18 };
             TileObjectData.addTile(Type);
             animationFrameHeight = 74;
-            AddMapEntry(new Color(200, 200, 200), "MegaCorpVendor");
+            AddMapEntry(new Color(200, 200, 200), CreateMapEntryName("VolcanoWarning"));
             disableSmartCursor = true;
         }
 

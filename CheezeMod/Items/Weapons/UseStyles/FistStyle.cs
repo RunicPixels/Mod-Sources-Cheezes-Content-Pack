@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.GameInput;
 using Terraria.World.Generation;
 using Terraria.ModLoader;
+using Terraria.Localization;
 // version = 1.3
 namespace CheezeMod.Items.Weapons.UseStyles
 {
@@ -118,7 +119,7 @@ namespace CheezeMod.Items.Weapons.UseStyles
                     // Sync player movement on net
                     if (Main.netMode == 1 && player.whoAmI == Main.myPlayer)
                     {
-                        NetMessage.SendData(MessageID.SyncPlayer, -1, -1, Main.player[Main.myPlayer].name, Main.myPlayer);
+                        NetMessage.SendData(MessageID.SyncPlayer, -1, -1, NetworkText.FromLiteral(Main.player[Main.myPlayer].name), Main.myPlayer);
                     }
                 }
                 #endregion
@@ -141,13 +142,13 @@ namespace CheezeMod.Items.Weapons.UseStyles
                 // Sync player movement on net
                 if (Main.netMode == 1 && player.whoAmI == Main.myPlayer)
                 {
-                    NetMessage.SendData(MessageID.SyncPlayer, -1, -1, Main.player[Main.myPlayer].name, Main.myPlayer);
+                    NetMessage.SendData(MessageID.SyncPlayer, -1, -1, NetworkText.FromLiteral(Main.player[Main.myPlayer].name), Main.myPlayer);
                 }
 
                 // Sync player movement on net
                 if (Main.netMode == 1 && player.whoAmI == Main.myPlayer)
                 {
-                    NetMessage.SendData(MessageID.SyncPlayer, -1, -1, Main.player[Main.myPlayer].name, Main.myPlayer);
+                    NetMessage.SendData(MessageID.SyncPlayer, -1, -1, NetworkText.FromLiteral(Main.player[Main.myPlayer].name), Main.myPlayer);
                 }
             }
 
@@ -392,8 +393,8 @@ namespace CheezeMod.Items.Weapons.UseStyles
                 if (Main.myPlayer == player.whoAmI)
                 {
 
-                    NetMessage.SendData(MessageID.PlayerControls, -1, -1, "", player.whoAmI, 0f, 0f, 0f, 0, 0, 0);
-                    NetMessage.SendData(MessageID.ItemAnimation, -1, -1, "", player.whoAmI, 0f, 0f, 0f, 0, 0, 0);
+                    NetMessage.SendData(MessageID.PlayerControls, -1, -1, NetworkText.FromLiteral(""), player.whoAmI, 0f, 0f, 0f, 0, 0, 0);
+                    NetMessage.SendData(MessageID.ItemAnimation, -1, -1, NetworkText.FromLiteral(""), player.whoAmI, 0f, 0f, 0f, 0, 0, 0);
                 }
             }
 
@@ -635,7 +636,8 @@ namespace CheezeMod.Items.Weapons.UseStyles
                 }
                 if (buffDescription != "" && player.whoAmI == Main.myPlayer)
                 {
-                    Main.buffTip[mod.BuffType<Buffs.ParryActive>()] = buffDescription;
+                    
+                    //Main.buffTip[mod.BuffType<Buffs.ParryActive>()] = buffDescription;
                 }
             }
             return parryIndex;

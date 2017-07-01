@@ -7,8 +7,8 @@ namespace CheezeMod.Buffs
 	{
 		public override void SetDefaults()
 		{
-			Main.buffName[this.Type] = "Starlit";
-			Main.buffTip[this.Type] = "Your magical attacks and mana regen are empowered by the stars.";
+            DisplayName.SetDefault("Starlit");
+            Description.SetDefault("Your magical attacks and mana regen are empowered by the stars.");
 			Main.buffNoSave[Type] = false;
 			Main.debuff[Type] = false;
 			canBeCleared = true;

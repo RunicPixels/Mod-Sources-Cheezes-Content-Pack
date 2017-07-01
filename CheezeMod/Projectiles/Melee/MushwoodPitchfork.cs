@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
 	{
 		public override void SetDefaults()
 		{
-			projectile.name = "Mushwood Pitchfork";
 			projectile.width = 20;
 			projectile.height = 20;
 			projectile.scale = 1.1f;
@@ -27,7 +26,13 @@ namespace CheezeMod.Projectiles.Melee
 			projectile.hide = true;
             projectile.timeLeft = 600;
         }
-		public override void AI()
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mushwood Pitchfork");
+        }
+
+        public override void AI()
         {
 			//Spear code
 			Main.player[projectile.owner].direction = projectile.direction;

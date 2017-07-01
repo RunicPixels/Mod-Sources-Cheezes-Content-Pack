@@ -11,13 +11,13 @@ namespace CheezeMod.Items.Weapons.Bows
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.MoltenFury);
-            item.name = "Volcano Crossbow";
+
 			item.damage = 31;
 			item.ranged = true;
 			item.width = 52;
 			item.height = 20;
-			item.toolTip = "Turns wooden arrows into flaming or even hellfire arrows.";
-            item.toolTip2 = "Shoots 4 arrows with a large random spread and speed, 33% not to consume ammo.";
+
+
             item.useTime = 3;
             item.reuseDelay = 40;
             item.useAnimation = 12;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Bows
 			item.shootSpeed = 9f;
             item.useAmmo = AmmoID.Arrow;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Volcano Crossbow");
+      Tooltip.SetDefault("Turns wooden arrows into flaming or even hellfire arrows.\nShoots 4 arrows with a large random spread and speed, 33% not to consume ammo.");
+    }
+
 
         public override void AddRecipes()
         {

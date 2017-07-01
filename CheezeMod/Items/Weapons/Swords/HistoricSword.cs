@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Historic Sword";
+
             item.damage = 40;
             item.melee = true;
             item.width = 44;
             item.height = 44;
-            item.toolTip = "A sword that is an historic artifact of Madrigal. \n+12% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Dryad's Bane on enemy hit.";
+
             item.crit = 12;
             item.scale = 1.1f;
             item.useTime = 22;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Sword");
+      Tooltip.SetDefault("A sword that is an historic artifact of Madrigal. \n+12% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Dryad's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

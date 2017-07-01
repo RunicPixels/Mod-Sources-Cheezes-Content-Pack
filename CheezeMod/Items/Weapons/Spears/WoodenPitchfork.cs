@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Wooden Pitchfork";
+
 			item.damage = 5;
 			item.melee = true;
 			item.width = 44;
 			item.height = 44;
 			item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "Beside towing lands, this is also useful for defending yourself.";
+
 			item.useTime = 50;
 			item.useAnimation = 50;
 			item.knockBack = 5f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("WoodenPitchfork");
 			item.shootSpeed = 3f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Wooden Pitchfork");
+      Tooltip.SetDefault("Beside towing lands, this is also useful for defending yourself.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Melee
         {
             projectile.damage = 50;
             projectile.melee = true;
-            projectile.name = "Kaboom";
             projectile.width = 128;
             projectile.height = 128;
             projectile.penetrate = 8;
@@ -21,5 +20,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.hostile = false;
             projectile.timeLeft = 60;
         }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Kaboom");
+        }
+
     }
 }

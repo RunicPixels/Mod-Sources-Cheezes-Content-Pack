@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Swords
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Chronicle Sword";
+
 			item.damage = 120;
 			item.melee = true;
 			item.width = 52;
 			item.height = 52;
-			item.toolTip = "It's from a Dark Chronicle.";
-            item.toolTip2 = "Sends out three blasts that have a chance to inflict cursed flames or ichor.";
+
+
             item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 1;
@@ -29,6 +29,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.shoot = 10;
             item.shootSpeed = 12f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Chronicle Sword");
+      Tooltip.SetDefault("It's from a Dark Chronicle.\nSends out three blasts that have a chance to inflict cursed flames or ichor.");
+    }
+
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

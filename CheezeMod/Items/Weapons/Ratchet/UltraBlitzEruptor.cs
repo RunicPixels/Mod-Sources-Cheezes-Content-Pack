@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
     {
         public override void SetDefaults()
         {
-            item.name = "Ultra Blitz Eruptor";
+
             item.damage = 78;
             item.ranged = true;
             item.width = 50;
             item.scale = 0.8f;
             item.height = 38;
-            item.toolTip = "Is able to inflict enemies with frost-, normal- or shadow flames, converts normal bullets into Ultra Blitz Eruptor shots.";
-            item.toolTip2 = "Inspired by from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 27;
             item.useAnimation = 27;
             item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.shootSpeed = 3f;
             item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Ultra Blitz Eruptor");
+      Tooltip.SetDefault("Is able to inflict enemies with frost-, normal- or shadow flames, converts normal bullets into Ultra Blitz Eruptor shots.\nInspired by from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

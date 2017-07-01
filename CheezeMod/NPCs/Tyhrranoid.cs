@@ -13,8 +13,6 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
-            npc.name = "Tyhrranoid";
-            npc.displayName = "Tyhrranoid";
             npc.width = 26;
             npc.height = 40;
             npc.life = 33;
@@ -33,7 +31,12 @@ namespace CheezeMod.NPCs
             animationType = NPCID.Zombie;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Tyhrranoid");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (Main.dayTime) && (spawnInfo.spawnTileY < CheezeMod.HellLayer - 400) ? ((Main.hardMode) ? 0.05f : 0.105f) : 0f;
         }

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
@@ -30,7 +31,9 @@ namespace ExampleMod.Tiles
 			TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-			AddMapEntry(new Color(200, 200, 200), "Example Dresser");
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Example Dresser");
+			AddMapEntry(new Color(200, 200, 200), name);
 			dustType = mod.DustType("Sparkle");
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Dressers };
@@ -40,7 +43,7 @@ namespace ExampleMod.Tiles
 
 		public override void RightClick(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			if (Main.tile[Player.tileTargetX, Player.tileTargetY].frameY == 0)
 			{
 				Main.CancelClothesWindow(true);
@@ -51,20 +54,20 @@ namespace ExampleMod.Tiles
 				int top = Player.tileTargetY - (int)(Main.tile[Player.tileTargetX, Player.tileTargetY].frameY / 18);
 				if (player.sign > -1)
 				{
-					Main.PlaySound(11, -1, -1, 1);
+					Main.PlaySound(SoundID.MenuClose);
 					player.sign = -1;
 					Main.editSign = false;
 					Main.npcChatText = string.Empty;
 				}
 				if (Main.editChest)
 				{
-					Main.PlaySound(12, -1, -1, 1);
+					Main.PlaySound(SoundID.MenuTick);
 					Main.editChest = false;
 					Main.npcChatText = string.Empty;
 				}
 				if (player.editedChestName)
 				{
-					NetMessage.SendData(33, -1, -1, Main.chest[player.chest].name, player.chest, 1f, 0f, 0f, 0, 0, 0);
+					NetMessage.SendData(33, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f, 0f, 0f, 0, 0, 0);
 					player.editedChestName = false;
 				}
 				if (Main.netMode == 1)
@@ -73,11 +76,11 @@ namespace ExampleMod.Tiles
 					{
 						player.chest = -1;
 						Recipe.FindRecipes();
-						Main.PlaySound(11, -1, -1, 1);
+						Main.PlaySound(SoundID.MenuClose);
 					}
 					else
 					{
-						NetMessage.SendData(31, -1, -1, "", left, (float)top, 0f, 0f, 0, 0, 0);
+						NetMessage.SendData(31, -1, -1, null, left, (float)top, 0f, 0f, 0, 0, 0);
 						Main.stackSplit = 600;
 					}
 				}
@@ -92,14 +95,14 @@ namespace ExampleMod.Tiles
 						{
 							player.chest = -1;
 							Recipe.FindRecipes();
-							Main.PlaySound(11, -1, -1, 1);
+							Main.PlaySound(SoundID.MenuClose);
 						}
 						else if (num213 != player.chest && player.chest == -1)
 						{
 							player.chest = num213;
 							Main.playerInventory = true;
 							Main.recBigList = false;
-							Main.PlaySound(10, -1, -1, 1);
+							Main.PlaySound(SoundID.MenuOpen);
 							player.chestX = left;
 							player.chestY = top;
 						}
@@ -108,7 +111,7 @@ namespace ExampleMod.Tiles
 							player.chest = num213;
 							Main.playerInventory = true;
 							Main.recBigList = false;
-							Main.PlaySound(12, -1, -1, 1);
+							Main.PlaySound(SoundID.MenuTick);
 							player.chestX = left;
 							player.chestY = top;
 						}
@@ -129,7 +132,7 @@ namespace ExampleMod.Tiles
 
 		public override void MouseOverFar(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
 			int left = Player.tileTargetX;
 			int top = Player.tileTargetY;
@@ -142,7 +145,7 @@ namespace ExampleMod.Tiles
 			player.showItemIcon2 = -1;
 			if (chestIndex < 0)
 			{
-				player.showItemIconText = Lang.dresserType[0];
+				player.showItemIconText = Lang.dresserType[0].Value;
 			}
 			else
 			{
@@ -171,7 +174,7 @@ namespace ExampleMod.Tiles
 
 		public override void MouseOver(int i, int j)
 		{
-			Player player = Main.player[Main.myPlayer];
+			Player player = Main.LocalPlayer;
 			Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
 			int left = Player.tileTargetX;
 			int top = Player.tileTargetY;
@@ -184,7 +187,7 @@ namespace ExampleMod.Tiles
 			player.showItemIcon2 = -1;
 			if (num138 < 0)
 			{
-				player.showItemIconText = Lang.dresserType[0];
+				player.showItemIconText = Lang.dresserType[0].Value;
 			}
 			else
 			{

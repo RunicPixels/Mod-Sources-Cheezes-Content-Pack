@@ -1,14 +1,19 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ExampleMod.Projectiles
 {
 	public class ElementBall : ModProjectile
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Elemental Ball");
+		}
+
 		public override void SetDefaults()
 		{
-			projectile.name = "Elemental Ball";
 			projectile.width = 30;
 			projectile.height = 30;
 			projectile.alpha = 255;
@@ -37,7 +42,7 @@ namespace ExampleMod.Projectiles
 				{
 					cooldownSlot = 1;
 				}
-				projectile.name = GetName();
+				projectile.Name = GetName();
 				projectile.localAI[0] = 1f;
 			}
 			CreateDust();
@@ -45,7 +50,7 @@ namespace ExampleMod.Projectiles
 
 		public virtual void PlaySound()
 		{
-			Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 20);
+			Main.PlaySound(SoundID.Item20, projectile.position);
 		}
 
 		public virtual void CreateDust()

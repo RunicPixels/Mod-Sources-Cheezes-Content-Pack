@@ -11,7 +11,6 @@ namespace CheezeMod.Projectiles.Melee
 	{
 		public override void SetDefaults()
 		{
-			projectile.name = "Skull Halberd";
 			projectile.width = 20;
             projectile.height = 20;
 			projectile.scale = 1.1f;
@@ -26,6 +25,11 @@ namespace CheezeMod.Projectiles.Melee
 			projectile.ownerHitCheck = true;
 			projectile.hide = true;
             projectile.knockBack = 0.4f;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Skull Halberd");
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

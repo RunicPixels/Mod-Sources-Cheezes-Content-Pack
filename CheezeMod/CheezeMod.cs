@@ -10,6 +10,7 @@ using CheezeMod.NPCs;
 using System.Drawing;
 using System.Linq;
 using System.IO;
+using Terraria.Localization;
 
 namespace CheezeMod
 {
@@ -18,7 +19,7 @@ namespace CheezeMod
         public CheezeMod() {
             Properties = new ModProperties()
             {
-                Autoload = true,
+                Autoload = false,
                 AutoloadGores = true,
                 AutoloadSounds = true
             };
@@ -54,7 +55,7 @@ namespace CheezeMod
         // NETWORK //
         #region NetUpdate
 
-        // These Network Methods are property of FlashKirby, do not copy them without his permission.
+        //These Network Methods are property of FlashKirby, do not copy them without his permission.
         public static void NetUpdateParry(Mod mod, PlayerFX pfx)
         {
             if (Main.netMode == 1 && pfx.player.whoAmI == Main.myPlayer)
@@ -170,7 +171,7 @@ namespace CheezeMod
         public override void AddRecipeGroups()
         {
             // All Wood //
-            RecipeGroup AnyWood = new RecipeGroup(() => Lang.misc[37] + " " + "Any Wood", new int[]
+            RecipeGroup AnyWood = new RecipeGroup(() => Language.GetText("any") + " " + "Any Wood", new int[]
             {
                 ItemID.Wood,
                 ItemID.RichMahogany,
@@ -188,7 +189,7 @@ namespace CheezeMod
             //Alternative Ores//
 
             //Copper/Tin Bar//
-            RecipeGroup CopperBars = new RecipeGroup(() => Lang.misc[37] + " " + "Copper/Tin Bar", new int[]
+            RecipeGroup CopperBars = new RecipeGroup(() => Language.GetText("any") + " " + "Copper/Tin Bar", new int[]
             {
                 ItemID.CopperBar,
                 ItemID.TinBar
@@ -196,7 +197,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:CopperBars", CopperBars);
 
             //Iron/Lead Bar//
-            RecipeGroup IronBars = new RecipeGroup(() => Lang.misc[37] + " " + "Iron/Lead Bar", new int[]
+            RecipeGroup IronBars = new RecipeGroup(() => Language.GetText("any") + " " + "Iron/Lead Bar", new int[]
             {
                 ItemID.IronBar,
                 ItemID.LeadBar
@@ -204,7 +205,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:IronBars", IronBars);
 
             //Silver/Tungsten Bar//
-            RecipeGroup SilverBars = new RecipeGroup(() => Lang.misc[37] + " " + "Silver/Tungsten Bar", new int[]
+            RecipeGroup SilverBars = new RecipeGroup(() => Language.GetText("any") + " " + "Silver/Tungsten Bar", new int[]
             {
                 ItemID.SilverBar,
                 ItemID.TungstenBar
@@ -212,7 +213,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:SilverBars", SilverBars);
 
             //Gold/Platinum Bar//
-            RecipeGroup GoldBars = new RecipeGroup(() => Lang.misc[37] + " " + "Gold/Platinum Bar", new int[]
+            RecipeGroup GoldBars = new RecipeGroup(() => Language.GetText("any") + " " + "Gold/Platinum Bar", new int[]
             {
                 ItemID.GoldBar,
                 ItemID.PlatinumBar
@@ -220,7 +221,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:GoldBars", GoldBars);
 
             //Demonite/Crimtane Bar//
-            RecipeGroup EvilBars = new RecipeGroup(() => Lang.misc[37] + " " + "Demonite/Crimtane Bar", new int[]
+            RecipeGroup EvilBars = new RecipeGroup(() => Language.GetText("any") + " " + "Demonite/Crimtane Bar", new int[]
             {
                 ItemID.DemoniteBar,
                 ItemID.CrimtaneBar
@@ -228,7 +229,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:EvilBars", EvilBars);
 
             //Cobalt/Mythril Bar//
-            RecipeGroup CobaltBars = new RecipeGroup(() => Lang.misc[37] + " " + "Cobalt/Palladium Bar", new int[]
+            RecipeGroup CobaltBars = new RecipeGroup(() => Language.GetText("any") + " " + "Cobalt/Palladium Bar", new int[]
             {
                 ItemID.CobaltBar,
                 ItemID.PalladiumBar
@@ -236,7 +237,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:CobaltBars", CobaltBars);
 
             //Mythril/Orichalcum Bar//
-            RecipeGroup MythrilBars = new RecipeGroup(() => Lang.misc[37] + " " + "Mythril/Orichalcum Bar", new int[]
+            RecipeGroup MythrilBars = new RecipeGroup(() => Language.GetText("any") + " " + "Mythril/Orichalcum Bar", new int[]
             {
                 ItemID.MythrilBar,
                 ItemID.OrichalcumBar
@@ -244,7 +245,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:MythrilBars", MythrilBars);
 
             //Adamantite/Titanium Bar//
-            RecipeGroup AdamantiteBars = new RecipeGroup(() => Lang.misc[37] + " " + "Adamantite/Titanium Bar", new int[]
+            RecipeGroup AdamantiteBars = new RecipeGroup(() => Language.GetText("any") + " " + "Adamantite/Titanium Bar", new int[]
             {
                 ItemID.AdamantiteBar,
                 ItemID.TitaniumBar
@@ -254,7 +255,7 @@ namespace CheezeMod
             //Alternative Materials//
 
             //Cursed Flames/Ichor//
-            RecipeGroup CursedFlames = new RecipeGroup(() => Lang.misc[37] + " " + "Cursed Flames/Ichor", new int[]
+            RecipeGroup CursedFlames = new RecipeGroup(() => Language.GetText("any") + " " + "Cursed Flames/Ichor", new int[]
             {
                 ItemID.CursedFlame,
                 ItemID.Ichor
@@ -262,7 +263,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:CursedFlames", CursedFlames);
 
             //Rotten Chunk/Vertebrae//
-            RecipeGroup EvilLeather = new RecipeGroup(() => Lang.misc[37] + " " + "Rotten Chunk/Vertebrae", new int[]
+            RecipeGroup EvilLeather = new RecipeGroup(() => Language.GetText("any") + " " + "Rotten Chunk/Vertebrae", new int[]
             {
                 ItemID.RottenChunk,
                 ItemID.Vertebrae
@@ -270,7 +271,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:EvilLeather", EvilLeather);
 
             //Ebonkoi/Hemopiranha//
-            RecipeGroup EvilFish = new RecipeGroup(() => Lang.misc[37] + " " + "Ebonkoi/Hemopiranha", new int[]
+            RecipeGroup EvilFish = new RecipeGroup(() => Language.GetText("any") + " " + "Ebonkoi/Hemopiranha", new int[]
             {
                 ItemID.Ebonkoi,
                 ItemID.Hemopiranha
@@ -281,14 +282,14 @@ namespace CheezeMod
             //Alternative Weapons//
 
             //Silver Bow / Tungsten Bow//
-            RecipeGroup SilverBows = new RecipeGroup(() => Lang.misc[37] + " " + "Silver Bow / Tungsten Bow", new int[]
+            RecipeGroup SilverBows = new RecipeGroup(() => Language.GetText("any") + " " + "Silver Bow / Tungsten Bow", new int[]
             {
                 ItemID.SilverBow,
                 ItemID.TungstenBow
             });
             RecipeGroup.RegisterGroup("CheezeMod:SilverBows", SilverBows);
 
-            RecipeGroup EvilBows = new RecipeGroup(() => Lang.misc[37] + " " + "Demon Bow / Tendon Bow", new int[]
+            RecipeGroup EvilBows = new RecipeGroup(() => Language.GetText("any") + " " + "Demon Bow / Tendon Bow", new int[]
             {
                 ItemID.DemonBow,
                 ItemID.TendonBow
@@ -297,7 +298,7 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:EvilBows", EvilBows);
 
             //Light's Bane/Blood Butcherer//
-            RecipeGroup EvilSwords = new RecipeGroup(() => Lang.misc[37] + " " + "Light's Bane/Blood Butcherer", new int[]
+            RecipeGroup EvilSwords = new RecipeGroup(() => Language.GetText("any") + " " + "Light's Bane/Blood Butcherer", new int[]
             {
                 ItemID.LightsBane,
                 ItemID.BloodButcherer
@@ -305,21 +306,21 @@ namespace CheezeMod
             RecipeGroup.RegisterGroup("CheezeMod:EvilSwords", EvilSwords);
 
             //NM Pick, Bloody pick//
-            RecipeGroup EvilPickaxes = new RecipeGroup(() => Lang.misc[37] + " " + "Nightmare Pickaxe/Deathbringer Pickaxe", new int[]
+            RecipeGroup EvilPickaxes = new RecipeGroup(() => Language.GetText("any") + " " + "Nightmare Pickaxe/Deathbringer Pickaxe", new int[]
             {
                 ItemID.NightmarePickaxe,
                 ItemID.DeathbringerPickaxe
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilPickaxes", EvilPickaxes);
             //Waraxe/BloodLust//
-            RecipeGroup EvilAxes = new RecipeGroup(() => Lang.misc[37] + " " + "War Axe of the Night/Blood Lust Cluster", new int[]
+            RecipeGroup EvilAxes = new RecipeGroup(() => Language.GetText("any") + " " + "War Axe of the Night/Blood Lust Cluster", new int[]
             {
                 ItemID.WarAxeoftheNight,
                 ItemID.BloodLustCluster
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilAxes", EvilAxes);
             //Mythril/Orichalcum Sword//
-            RecipeGroup MythSwords = new RecipeGroup(() => Lang.misc[37] + " " + "Mythril/Orichalcum Sword", new int[]
+            RecipeGroup MythSwords = new RecipeGroup(() => Language.GetText("any") + " " + "Mythril/Orichalcum Sword", new int[]
             {
                 ItemID.MythrilSword,
                 ItemID.OrichalcumSword

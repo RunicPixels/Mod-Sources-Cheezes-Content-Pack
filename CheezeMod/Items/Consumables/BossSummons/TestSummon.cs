@@ -9,17 +9,24 @@ namespace CheezeMod.Items.Consumables.BossSummons
 	{
 		public override void SetDefaults()
 		{
-			item.name = "TestSummon";
+
 			item.width = 18;
 			item.height = 18;
 			item.maxStack = 999;
-			AddTooltip("Work in progress, use at own risk.");
+
 			item.value = 2400;
 			item.rare = 8;
             item.useStyle = 2;
             item.UseSound = SoundID.Item2;
             item.consumable = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("TestSummon");
+      Tooltip.SetDefault("Work in progress, use at own risk.");
+    }
+
         public override bool CanUseItem(Player player)
         {
             return !NPC.AnyNPCs(mod.NPCType("Susano")) && !Main.dayTime;

@@ -10,15 +10,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Ultra Glove of Dread";
+
 			item.damage = 100;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
             item.mana = 20;
-            item.toolTip = "Summons an ultra agent of dread to fight for you, the agents now have unlimited flight as well as enhanced weaponry.";
-            item.toolTip2 = "Originally from Ratchet and Clank.";
             item.useTime = 25;
             item.useAnimation = 25;
 			item.useStyle = 1;
@@ -33,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.buffTime = 360000;
             item.buffType = mod.BuffType("UltraAgentOfDread");
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Ultra Glove of Dread");
+      Tooltip.SetDefault("Summons an ultra agent of dread to fight for you, the agents now have unlimited flight as well as enhanced weaponry.\nOriginally from Ratchet and Clank.");
+    }
+
 
         public override void AddRecipes()
         {

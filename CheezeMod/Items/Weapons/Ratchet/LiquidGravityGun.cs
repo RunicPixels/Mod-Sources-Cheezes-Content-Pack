@@ -11,15 +11,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
         public uint ammoCounter = 0;
         public override void SetDefaults()
         {
-            item.name = "Liquid Gravity Gun";
+
             item.damage = 30;
             item.ranged = true;
             item.width = 52;
             item.height = 30;
             item.scale = 0.875f;
             item.channel = true;
-            item.toolTip = "Converts Flares into liquid gravity, which inflicts shadow flames, ichor and pulls your enemies dow..";
-            item.toolTip2 = "Inspired by Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 2;
             item.useAnimation = 8;
             item.useStyle = 5;
@@ -34,6 +34,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.shootSpeed = 1f;
             item.useAmmo = 931;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Liquid Gravity Gun");
+      Tooltip.SetDefault("Converts Flares into liquid gravity, which inflicts shadow flames, ichor and pulls your enemies dow..\nInspired by Ratchet and Clank: Going Commando.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

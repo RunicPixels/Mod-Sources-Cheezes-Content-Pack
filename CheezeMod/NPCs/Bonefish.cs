@@ -14,8 +14,6 @@ namespace CheezeMod.NPCs
         public override void SetDefaults()
         {
             //npc.CloneDefaults(NPCID.Piranha);
-            npc.name = "Bonefish";
-            npc.displayName = "Bonefish";
             npc.width = 26;
             npc.height = 20;
             npc.life = 36;
@@ -34,7 +32,12 @@ namespace CheezeMod.NPCs
             animationType = NPCID.Piranha;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bonefish");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (spawnInfo.water && spawnInfo.player.ZoneDungeon) ? 1f : 0.0f;
         }

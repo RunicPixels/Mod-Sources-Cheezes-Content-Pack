@@ -10,15 +10,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Glove of Dread";
+
 			item.damage = 27;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
             item.mana = 12;
-            item.toolTip = "Summons an agent of dread to fight for you, these now also shoot your enemies with lasers.";
-            item.toolTip2 = "Originally from Ratchet and Clank.";
+
+
             item.useTime = 30;
             item.useAnimation = 30;
 			item.useStyle = 1;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.buffTime = 360000;
             item.buffType = mod.BuffType("AgentOfDread");
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Glove of Dread");
+      Tooltip.SetDefault("Summons an agent of dread to fight for you, these now also shoot your enemies with lasers.\nOriginally from Ratchet and Clank.");
+    }
+
 
         public override void AddRecipes()
         {

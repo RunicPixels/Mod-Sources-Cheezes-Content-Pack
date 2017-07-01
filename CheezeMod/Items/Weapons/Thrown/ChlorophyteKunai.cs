@@ -13,15 +13,15 @@ namespace CheezeMod.Items.Weapons.Thrown
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThrowingKnife);
-			item.name = "Chlorophyte Kunai";
+
 			item.damage = 55;
 			item.thrown = true;
             item.noMelee = true;
 			item.width = 18;
 			item.height = 38;
             item.autoReuse = true;
-            item.toolTip = "It has a tag on its handle which reads 'Hikari', it's from a far eastern place.";
-            item.toolTip2 = "It throws three kunais while always using only one, has a 10% chance to poison your enemies for 6 seconds.";
+
+
             item.useTime = 26;
 			item.useAnimation = 26;
 			item.knockBack = 1f;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.shoot = mod.ProjectileType("ChlorophyteKunai");
 			item.shootSpeed = 16f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Chlorophyte Kunai");
+      Tooltip.SetDefault("It has a tag on its handle which reads 'Hikari', it's from a far eastern place.\nIt throws three kunais while always using only one, has a 10% chance to poison your enemies for 6 seconds.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

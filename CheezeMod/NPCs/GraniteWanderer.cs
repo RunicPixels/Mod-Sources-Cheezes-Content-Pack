@@ -14,8 +14,6 @@ namespace CheezeMod.NPCs
 
         public override void SetDefaults()
         {
-            npc.name = "GraniteWanderer";
-            npc.displayName = "Granite Wanderer";
             npc.width = 18;
             npc.height = 40;
             npc.life = 64;
@@ -35,7 +33,12 @@ namespace CheezeMod.NPCs
             attackCool = 150f;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Granite Wanderer");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (CheezeMod.NormalSpawn(spawnInfo)) && (spawnInfo.granite) ? 0.25f : 0f;
         }

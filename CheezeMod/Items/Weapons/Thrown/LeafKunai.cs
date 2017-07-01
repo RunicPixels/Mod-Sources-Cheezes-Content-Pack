@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Thrown
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThrowingKnife);
-			item.name = "Leaf Kunai";
+
 			item.damage = 19;
 			item.thrown = true;
             item.noMelee = true;
 			item.width = 14;
 			item.height = 36;
             item.autoReuse = true;
-            item.toolTip = "Will inflict poison on your enemies.";
+
             item.useTime = 18;
 			item.useAnimation = 18;
 			item.knockBack = 1f;
@@ -30,6 +30,13 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.shoot = mod.ProjectileType("LeafKunai");
 			item.shootSpeed = 15f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Leaf Kunai");
+      Tooltip.SetDefault("Will inflict poison on your enemies.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

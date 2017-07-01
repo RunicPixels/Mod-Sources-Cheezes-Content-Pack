@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.BallofFire);
-            projectile.name = "Fire Blast";
             projectile.width = 20;
             projectile.height = 24;
             projectile.magic = true;
@@ -21,6 +20,11 @@ namespace CheezeMod.Projectiles.Magic
             projectile.penetrate = 1;
             projectile.timeLeft = 30;
             aiType = ProjectileID.BallofFire;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Flame Geyser");
         }
 
         public override void AI()

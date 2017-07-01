@@ -9,8 +9,6 @@ namespace CheezeMod.NPCs
     {
         public override void SetDefaults()
         {
-            npc.name = "Protopet";
-            npc.displayName = "Protopet";
             npc.width = 46;
             npc.height = 50;
             npc.life = 34;
@@ -30,7 +28,12 @@ namespace CheezeMod.NPCs
             animationType = NPCID.SnowFlinx;
         }
 
-        public override float CanSpawn(NPCSpawnInfo spawnInfo)
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Protopet");
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return (CheezeMod.NoBiomeNormalSpawn(spawnInfo)) && (spawnInfo.spawnTileY > Main.worldSurface + 50) && (spawnInfo.spawnTileY < CheezeMod.CavernLayer) ? 0.125f : 0f;
         }

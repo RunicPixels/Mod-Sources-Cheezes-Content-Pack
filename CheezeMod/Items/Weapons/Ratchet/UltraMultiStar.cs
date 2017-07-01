@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Ultra Multistar";
+
 			item.damage = 90;
 			item.thrown = true;
 			item.width = 38;
             item.scale = 0.6f;
 			item.height = 24;
-			item.toolTip = "Throw a triple splitting shuriken, uses Shuriken as ammo.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 35;
             item.useAnimation = 35;
             item.useStyle = 5;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 9f;
 			item.useAmmo = ProjectileID.Shuriken;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Ultra Multistar");
+      Tooltip.SetDefault("Throw a triple splitting shuriken, uses Shuriken as ammo.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

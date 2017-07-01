@@ -7,21 +7,24 @@ namespace ExampleMod.Items.Weapons
 {
 	public class ExampleDualUseWeapon : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			Tooltip.SetDefault("This weapon does something special with <right>.");
+		}
+
 		public override void SetDefaults()
 		{
-			item.name = "Example Dual Use Weapon";
 			item.damage = 50;
 			item.melee = true;
 			item.width = 40;
 			item.height = 40;
-			item.toolTip = "This weapon does something special with right click.";
 			item.useTime = 20;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = 10000;
 			item.rare = 2;
-			item.useSound = 1;
+			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shoot = ProjectileID.Bee;
 			item.shootSpeed = 5f;

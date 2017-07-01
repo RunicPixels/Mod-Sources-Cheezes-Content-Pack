@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Vaporizer";
+
 			item.damage = 52;
 			item.ranged = true;
 			item.width = 76;
             item.scale = 0.8f;
 			item.height = 36;
-			item.toolTip = "Shoots a piercing red explosive beam, right click to zoom.";
-            item.toolTip2 = "Originally from Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 50;
             item.useAnimation = 50;
 			item.useStyle = 5;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 30f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Vaporizer");
+      Tooltip.SetDefault("Shoots a piercing red explosive beam, right click to zoom.\nOriginally from Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

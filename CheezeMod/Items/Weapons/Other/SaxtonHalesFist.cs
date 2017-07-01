@@ -8,15 +8,9 @@ using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
-	public class SaxtonHalesFist : ModItem
+    [AutoloadEquip((EquipType.HandsOn), (EquipType.HandsOff))]
+    public class SaxtonHalesFist : ModItem
 	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-        {
-            equips.Add(EquipType.HandsOff);
-            equips.Add(EquipType.HandsOn);
-            return true;
-        }
-
         private FistStyle fist;
         public FistStyle Fist
         {
@@ -35,14 +29,14 @@ namespace CheezeMod.Items.Weapons.Other
 		{
             item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
-            item.name = "Saxton Hale's Fist";
+
             item.melee = true;
             item.width = 34;
             item.height = 36;
             item.useTime = 50;
             item.useAnimation = item.useTime;
-            item.toolTip = "'It's just you, me and my bare hands.' Inspired by Saxton Hale from TF2.";
-            item.toolTip2 = "Do a Brave Jump with your Right Mouse Button.";
+
+
             item.scale = 0.8f;
 			item.damage = 195;
             item.noUseGraphic = true;
@@ -52,6 +46,13 @@ namespace CheezeMod.Items.Weapons.Other
             item.rare = 7;
             item.value = 400000;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Saxton Hale's Fist");
+      Tooltip.SetDefault("'It's just you, me and my bare hands.' Inspired by Saxton Hale from TF2.\nDo a Brave Jump with your Right Mouse Button.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

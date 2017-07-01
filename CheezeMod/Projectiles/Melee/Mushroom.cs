@@ -9,7 +9,6 @@ namespace CheezeMod.Projectiles.Melee
     {
         public override void SetDefaults()
         {
-            projectile.name = "Mushroom";
             projectile.width = 18;
             projectile.height = 18;
             projectile.scale = 1f;
@@ -18,6 +17,11 @@ namespace CheezeMod.Projectiles.Melee
             projectile.penetrate = 1;
             projectile.timeLeft = 60;
             projectile.tileCollide = true;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mushroom");
         }
 
         public override void AI()

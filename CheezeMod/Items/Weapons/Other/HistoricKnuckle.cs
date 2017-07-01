@@ -8,13 +8,9 @@ using System.Collections.Generic;
 
 namespace CheezeMod.Items.Weapons.Other
 {
+    [AutoloadEquip(EquipType.HandsOn)]
     public class HistoricKnuckle : ModItem
     {
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-        {
-            equips.Add(EquipType.HandsOn);
-            return true;
-        }
 
         private FistStyle fist;
         public FistStyle Fist
@@ -35,14 +31,14 @@ namespace CheezeMod.Items.Weapons.Other
         {
             item.useStyle = FistStyle.useStyle;
             item.autoReuse = true;
-            item.name = "Historic Knuckle";
+
             item.width = 30;
             item.height = 30;
             item.melee = true;
             item.useTime = 26;
             item.useAnimation = 24;
             item.noUseGraphic = true;
-            item.toolTip = "A knuckle that is an historic artifact of Madrigal.\nOne step forward and one step back.\n+7% Critical Chance. \n+25% Increased Critical Damage. \n Gives dodge frames to the player and inflict dryad's bane on the enemy upon hitting an enemy.";
+
             item.crit = 7;
             item.scale = 1.1f;
             item.UseSound = SoundID.Item7;
@@ -51,6 +47,13 @@ namespace CheezeMod.Items.Weapons.Other
             item.rare = CheezeItem.historicRarity;
             item.value = CheezeItem.historicPrice;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Historic Knuckle");
+      Tooltip.SetDefault("A knuckle that is an historic artifact of Madrigal.\nOne step forward and one step back.\n+7% Critical Chance. \n+25% Increased Critical Damage. \n Gives dodge frames to the player and inflict dryad's bane on the enemy upon hitting an enemy.");
+    }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

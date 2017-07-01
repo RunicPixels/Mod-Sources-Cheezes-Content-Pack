@@ -6,14 +6,9 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Items.Armor
 {
-	public class CobaltCowl : ModItem
-	{
-        public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
-		{
-			equips.Add(EquipType.Head);
-			return true;
-		}
-
+    [AutoloadEquip(EquipType.Head)]
+    public class CobaltCowl : ModItem
+    {
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == ItemID.CobaltBreastplate && legs.type == ItemID.CobaltLeggings;
@@ -37,16 +32,23 @@ namespace CheezeMod.Items.Armor
             base.ArmorSetShadows(player);
         }
         public override void SetDefaults()
-		{
-			item.name = "Cobalt Cowl";
-			item.width = 18;
-			item.height = 18;
-			item.toolTip = "Good for people that throw things.";
-            item.toolTip2 = "10% inceased movement speed, 8% increased throwing damage";
+        {
+
+            item.width = 18;
+            item.height = 18;
+
+
             item.value = 10000;
-			item.rare = 4;
-			item.defense = 5;
-		}
+            item.rare = 4;
+            item.defense = 5;
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Cobalt Cowl");
+            Tooltip.SetDefault("Good for people that throw things.\n10% inceased movement speed, 8% increased throwing damage");
+        }
+
 
         public override void UpdateEquip(Player player)
         {

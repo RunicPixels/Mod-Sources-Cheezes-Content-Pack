@@ -10,14 +10,14 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Ultra Heavy Bouncer";
+
 			item.damage = 100;
 			item.ranged = true;
 			item.width = 66;
 			item.height = 42;
             item.scale = 0.8f;
-            item.toolTip = "Uses bullets, shoots a double splitting ball that inflicts frostburn.";
-            item.toolTip2 = "Inspired by Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 46;
             item.useAnimation = 46;
 			item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.shootSpeed = 4f;
 			item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Ultra Heavy Bouncer");
+      Tooltip.SetDefault("Uses bullets, shoots a double splitting ball that inflicts frostburn.\nInspired by Ratchet and Clank: Going Commando.");
+    }
+
 
         public override void AddRecipes()
         {

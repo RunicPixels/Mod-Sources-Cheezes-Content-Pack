@@ -8,14 +8,17 @@ namespace ExampleMod.Items.Weapons
 	//ported from my tAPI mod because I'm lazy
 	public class SpectreGun : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			Tooltip.SetDefault("Uses wisps as ammo");
+		}
+
 		public override void SetDefaults()
 		{
-			item.name = "Spectre Gun";
 			item.damage = 53;
 			item.ranged = true;
 			item.width = 42;
 			item.height = 30;
-			item.toolTip = "Uses wisps as ammo";
 			item.useTime = 35;
 			item.useAnimation = 35;
 			item.useStyle = 5;
@@ -23,11 +26,11 @@ namespace ExampleMod.Items.Weapons
 			item.knockBack = 4f;
 			item.value = Item.sellPrice(0, 10, 0, 0);
 			item.rare = 8;
-			item.useSound = mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Wooo");
+			item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/Wooo");
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("Wisp");
 			item.shootSpeed = 6f;
-			item.useAmmo = mod.ProjectileType("Wisp");
+			item.useAmmo = mod.ItemType("Wisp");		//Restrict the type of ammo the weapon can use, so that the weapon cannot use other ammos
 		}
 
 		public override void AddRecipes()

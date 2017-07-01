@@ -11,8 +11,8 @@ namespace CheezeMod.Items.Weapons.Swords
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.StarWrath);
-			item.name = "Sword of the Silver Sword";
-            item.toolTip = "That's a lot of sword.";
+
+
             item.useTime = 48;
             item.UseSound = SoundID.Item1;
             item.melee = true;
@@ -28,6 +28,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.scale = 0.75f;
             item.shoot = 0;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Sword of the Silver Sword");
+      Tooltip.SetDefault("That's a lot of sword.");
+    }
+
 
 
         public override void MeleeEffects(Player player, Rectangle hitbox)

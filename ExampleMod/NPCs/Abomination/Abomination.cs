@@ -9,6 +9,8 @@ using Terraria.ModLoader;
 namespace ExampleMod.NPCs.Abomination
 {
 	//ported from my tAPI mod because I'm lazy
+	// Abomination is a multi-stage boss.
+	[AutoloadBossHead]
 	public class Abomination : ModNPC
 	{
 		private static int hellLayer
@@ -76,10 +78,14 @@ namespace ExampleMod.NPCs.Abomination
 		internal int laser2 = -1;
 		private bool dontDamage = false;
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("The Abomination");
+			Main.npcFrameCount[npc.type] = 2;
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "Abomination";
-			npc.displayName = "The Abomination";
 			npc.aiStyle = -1;
 			npc.lifeMax = 40000;
 			npc.damage = 100;
@@ -87,15 +93,14 @@ namespace ExampleMod.NPCs.Abomination
 			npc.knockBackResist = 0f;
 			npc.width = 100;
 			npc.height = 100;
-			Main.npcFrameCount[npc.type] = 2;
 			npc.value = Item.buyPrice(0, 20, 0, 0);
 			npc.npcSlots = 15f;
 			npc.boss = true;
 			npc.lavaImmune = true;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
-			npc.soundHit = 1;
-			npc.soundKilled = 1;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath1;
 			npc.buffImmune[24] = true;
 			music = MusicID.Boss2;
 		}
@@ -344,11 +349,13 @@ namespace ExampleMod.NPCs.Abomination
 			}
 		}
 
+		// We use this hook to prevent any loot from dropping. We do this because this is a multistage npc and it shouldn't drop anything until the final form is dead.
 		public override bool PreNPCLoot()
 		{
 			return false;
 		}
 
+		// We use this method to inflict a debuff on a player on contact. OnFire is inflicted 100% of the time in expert, and 50% of the time on non-expert mode.
 		public override void OnHitPlayer(Player player, int damage, bool crit)
 		{
 			if (Main.expertMode || Main.rand.Next(2) == 0)
@@ -362,7 +369,7 @@ namespace ExampleMod.NPCs.Abomination
 			dontDamage = (player.Center - npc.Center).Length() > sphereRadius;
 		}
 
-		public override void ModifyHitByProjectile(Projectile projectile, ref int damage, ref float knockback, ref bool crit)
+		public override void ModifyHitByProjectile(Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 		{
 			Player player = Main.player[projectile.owner];
 			dontDamage = player.active && (player.Center - npc.Center).Length() > sphereRadius;
@@ -375,7 +382,7 @@ namespace ExampleMod.NPCs.Abomination
 				damage = 0;
 				crit = true;
 				dontDamage = false;
-				Main.PlaySound(3, (int)npc.position.X, (int)npc.position.Y, npc.soundHit);
+				Main.PlaySound(npc.HitSound, npc.position);
 				return false;
 			}
 			return true;

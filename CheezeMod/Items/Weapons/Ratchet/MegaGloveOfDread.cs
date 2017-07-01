@@ -10,15 +10,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Mega Glove of Dread";
+
 			item.damage = 45;
             item.summon = true;
 			item.width = 60;
 			item.height = 42;
             item.scale = 0.75f;
             item.mana = 18;
-            item.toolTip = "Summons an mega agent of dread to fight for you, now also comes with bombs.";
-            item.toolTip2 = "Originally from Ratchet and Clank.";
+
+
             item.useTime = 25;
             item.useAnimation = 25;
 			item.useStyle = 1;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.buffTime = 360000;
             item.buffType = mod.BuffType("MegaAgentOfDread");
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Mega Glove of Dread");
+      Tooltip.SetDefault("Summons an mega agent of dread to fight for you, now also comes with bombs.\nOriginally from Ratchet and Clank.");
+    }
+
 
         public override void AddRecipes()
         {

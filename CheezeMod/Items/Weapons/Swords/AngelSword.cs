@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.name = "Angel Sword";
+
             item.damage = 68;
             item.melee = true;
             item.width = 44;
             item.height = 44;
-            item.toolTip = "A sword that once used by the angels of Madrigal. \n+13% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Angel's Bane on enemy hit.";
+
             item.crit = 12;
             item.scale = 1.1f;
             item.useTime = 20;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Angel Sword");
+      Tooltip.SetDefault("A sword that once used by the angels of Madrigal. \n+13% increased Critical hit chance, critical hit damage and movement speed. \n Inflics Angel's Bane on enemy hit.");
+    }
+
 
         public override void AddRecipes()
         {

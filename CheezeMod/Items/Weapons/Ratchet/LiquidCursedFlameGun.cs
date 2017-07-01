@@ -10,15 +10,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 	{
 		public override void SetDefaults()
 		{
-            item.name = "Liquid Cursed Flame Gun";
+
 			item.damage = 15;
 			item.ranged = true;
 			item.width = 50;
 			item.height = 30;
             item.scale = 0.875f;
             item.channel = true;
-            item.toolTip = "Converts Flares into liquid cursed flames.";
-            item.toolTip2 = "inspired by Ratchet and Clank: Going Commando.";
+
+
             item.useTime = 3;
             item.useAnimation = 9;
 			item.useStyle = 5;
@@ -33,6 +33,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.shootSpeed = 1f;
             item.useAmmo = 931;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Liquid Cursed Flame Gun");
+      Tooltip.SetDefault("Converts Flares into liquid cursed flames.\ninspired by Ratchet and Clank: Going Commando.");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

@@ -1,20 +1,22 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 
 namespace ExampleMod.Projectiles
 {
 	public class PixelBall : ElementBall
 	{
-		public override bool Autoload(ref string name, ref string texture)
+		public override string Texture
 		{
-			texture = mod.Name + "/Projectiles/ElementBall";
-			return mod.Properties.Autoload;
+			get
+			{
+				return mod.Name + "/Projectiles/ElementBall";
+			}
 		}
 
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
-			base.SetDefaults();
-			projectile.name = "Pixel Ball";
+			DisplayName.SetDefault("Pixel Ball");
 		}
 
 		public override void CreateDust()
@@ -30,7 +32,7 @@ namespace ExampleMod.Projectiles
 
 		public override void PlaySound()
 		{
-			Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 33);
+			Main.PlaySound(SoundID.Item33, projectile.position);
 		}
 
 		public override string GetName()

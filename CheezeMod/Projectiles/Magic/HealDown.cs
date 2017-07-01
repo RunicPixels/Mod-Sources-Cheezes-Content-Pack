@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Magic
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.WaterBolt);
-            projectile.name = "Heal";
             projectile.width = 15;
             projectile.height = 15;
             projectile.magic = true;
@@ -21,7 +20,13 @@ namespace CheezeMod.Projectiles.Magic
             projectile.timeLeft = 550;
             projectile.penetrate = 4;
             aiType = ProjectileID.WaterBolt;
-        }  
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Healing");
+        }
+
         public override void OnHitPlayer(Player target, int damage, bool crit)
         {
             damage = 0;

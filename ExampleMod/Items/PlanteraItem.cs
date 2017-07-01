@@ -6,13 +6,17 @@ namespace ExampleMod.Items
 {
 	public class PlanteraItem : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Plantera");
+			Tooltip.SetDefault("The wrath of the jungle");
+		}
+
 		public override void SetDefaults()
 		{
-			item.name = "Plantera";
 			item.width = 20;
 			item.height = 20;
 			item.maxStack = 20;
-			item.toolTip = "The wrath of the jungle";
 			item.value = 100;
 			item.rare = 1;
 			item.useAnimation = 30;
@@ -29,7 +33,7 @@ namespace ExampleMod.Items
 		public override bool UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, NPCID.Plantera);
-			Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
+			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}
 

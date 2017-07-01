@@ -12,7 +12,6 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.CloneDefaults(ProjectileID.BabySlime);
             projectile.alpha = 0;
 			projectile.netImportant = true;
-			projectile.name = "Agent of Doom";
 			projectile.friendly = true;
             projectile.height = 29;
             projectile.width = 20;
@@ -29,14 +28,20 @@ namespace CheezeMod.Projectiles.Summoning
             ProjectileID.Sets.Homing[projectile.type] = true;
 		}
 
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Agent of Doom");
+        }
+
         public override bool MinionContactDamage()
         {
             return true;
         }
 
-        public override void TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
+        public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
         {
-            fallThrough = false;
+            fallThrough = true;
+            return true;
         }
 
         public override bool PreAI()

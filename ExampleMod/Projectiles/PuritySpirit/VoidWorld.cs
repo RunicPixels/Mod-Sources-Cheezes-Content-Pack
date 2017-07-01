@@ -12,9 +12,16 @@ namespace ExampleMod.Projectiles.PuritySpirit
 	{
 		private Random rand;
 
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Void World");
+			Main.projFrames[projectile.type] = 8;
+			ProjectileID.Sets.TrailingMode[projectile.type] = 0;
+			ProjectileID.Sets.TrailCacheLength[projectile.type] = 200;
+		}
+
 		public override void SetDefaults()
 		{
-			projectile.name = "Void World";
 			projectile.width = 80;
 			projectile.height = 80;
 			projectile.penetrate = -1;
@@ -22,9 +29,6 @@ namespace ExampleMod.Projectiles.PuritySpirit
 			projectile.hostile = true;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
-			Main.projFrames[projectile.type] = 8;
-			ProjectileID.Sets.TrailingMode[projectile.type] = 0;
-			ProjectileID.Sets.TrailCacheLength[projectile.type] = 200;
 			cooldownSlot = 1;
 		}
 
@@ -43,14 +47,14 @@ namespace ExampleMod.Projectiles.PuritySpirit
 			projectile.localAI[0] += 1f;
 			if (!Main.dedServ && projectile.localAI[0] >= 180f && projectile.localAI[0] < 480f && Main.rand.Next(10) == 0)
 			{
-				ExamplePlayer modPlayer = Main.player[Main.myPlayer].GetModPlayer<ExamplePlayer>(mod);
+				ExamplePlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExamplePlayer>(mod);
 				if (modPlayer.heroLives > 0)
 				{
-					Main.PlaySound(2, -1, -1, 14);
+					Main.PlaySound(SoundID.Item14);
 				}
 				else
 				{
-					Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 14);
+					Main.PlaySound(SoundID.Item14, projectile.position);
 				}
 			}
 			projectile.position = NextPosition();

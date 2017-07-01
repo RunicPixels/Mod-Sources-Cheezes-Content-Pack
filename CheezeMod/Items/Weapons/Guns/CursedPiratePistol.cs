@@ -10,13 +10,13 @@ namespace CheezeMod.Items.Weapons.Guns
     {
         public override void SetDefaults()
         {
-            item.name = "Cursed Pirate Pistol";
+
             item.damage = 36;
             item.ranged = true;
             item.width = 44;
             item.height = 24;
             item.scale = 0.8f;
-            item.toolTip = "Converts Musket Balls and Silver Bullets into Cursed Bullets.";
+
             item.useTime = 17;
             item.useAnimation = 17;
             item.useStyle = 5;
@@ -31,6 +31,13 @@ namespace CheezeMod.Items.Weapons.Guns
             item.shootSpeed = 14f;
             item.useAmmo = AmmoID.Bullet;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Cursed Pirate Pistol");
+      Tooltip.SetDefault("Converts Musket Balls and Silver Bullets into Cursed Bullets.");
+    }
+
 
         public override void AddRecipes()
         {

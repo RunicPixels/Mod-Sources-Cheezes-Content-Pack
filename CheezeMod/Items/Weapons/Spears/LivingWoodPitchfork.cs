@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Living Wood Pitchfork";
+
 			item.damage = 8;
 			item.melee = true;
 			item.width = 44;
 			item.height = 44;
 			item.scale = 1.1f;
 			item.maxStack = 1;
-			item.toolTip = "There's leaves growing on this.";
+
 			item.useTime = 40;
 			item.useAnimation = 40;
 			item.knockBack = 5f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("LivingWoodPitchfork");
 			item.shootSpeed = 4f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Living Wood Pitchfork");
+      Tooltip.SetDefault("There's leaves growing on this.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

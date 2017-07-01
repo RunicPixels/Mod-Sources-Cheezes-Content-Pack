@@ -11,14 +11,14 @@ namespace CheezeMod.Items.Weapons.Spears
 	{
         public override void SetDefaults()
 		{
-			item.name = "Magma Halberd";
+
 			item.damage = 31;
 			item.melee = true;
 			item.width = 48;
 			item.height = 50;
 			item.scale = 1.2f;
 			item.maxStack = 1;
-			item.toolTip = "Stab with LMB, Slash with RMB. It will ignite your enemies.";
+
 			item.useTime = 45;
 			item.useAnimation = 45;
 			item.knockBack = 5.2f;
@@ -32,6 +32,13 @@ namespace CheezeMod.Items.Weapons.Spears
 			item.shoot = mod.ProjectileType("MagmaHalberd");
             item.shootSpeed = 4.5f;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Magma Halberd");
+      Tooltip.SetDefault("Stab with LMB, Slash with RMB. It will ignite your enemies.");
+    }
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

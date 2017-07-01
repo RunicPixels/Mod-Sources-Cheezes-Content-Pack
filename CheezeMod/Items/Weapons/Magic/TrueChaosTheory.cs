@@ -10,14 +10,12 @@ namespace CheezeMod.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "True Chaos Theory";
+
             item.damage = 70;
             item.magic = true;
             item.mana = 12;
             item.width = 40;
             item.height = 40;
-            item.toolTip = "Nature has gone to true chaos.";
-            item.toolTip = "Spells gain aditional effects compared to the default Chaos Theory. \nThe Spells are:\nInferno Blast.\nWaterfall Bolt\nTriple Wind Strike\nand Earth Avalanche";
             item.channel = true;
             item.useTime = 25;
             item.useAnimation = 25;
@@ -31,6 +29,13 @@ namespace CheezeMod.Items.Weapons.Magic
             item.shoot = mod.ProjectileType("HugeEarthBoulder");
             item.shootSpeed = 9f;
         }
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("True Chaos Theory");
+      Tooltip.SetDefault("Nature has gone to true chaos.\nSpells gain aditional effects compared to the default Chaos Theory. \nThe Spells are:\nInferno Blast.\nWaterfall Bolt\nTriple Wind Strike\nand Earth Avalanche");
+    }
+
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {

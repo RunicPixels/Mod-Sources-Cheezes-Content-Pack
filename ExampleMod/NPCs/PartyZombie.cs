@@ -6,28 +6,31 @@ namespace ExampleMod.NPCs
 {
 	public class PartyZombie : ModNPC
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Zombie");
+			Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Zombie];
+		}
+
 		public override void SetDefaults()
 		{
-			npc.name = "Party Zombie";
-			npc.displayName = "Zombie";
 			npc.width = 18;
 			npc.height = 40;
 			npc.damage = 14;
 			npc.defense = 6;
 			npc.lifeMax = 200;
-			npc.soundHit = 1;
-			npc.soundKilled = 2;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath2;
 			npc.value = 60f;
 			npc.knockBackResist = 0.5f;
 			npc.aiStyle = 3;
-			Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Zombie];
 			aiType = NPCID.Zombie;
 			animationType = NPCID.Zombie;
 		}
 
-		public override float CanSpawn(NPCSpawnInfo spawnInfo)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return spawnInfo.spawnTileY < Main.rockLayer && !Main.dayTime ? 0.5f : 0f;
+			return SpawnCondition.OverworldNightMonster.Chance * 0.5f;
 		}
 
 		public override void HitEffect(int hitDirection, double damage)

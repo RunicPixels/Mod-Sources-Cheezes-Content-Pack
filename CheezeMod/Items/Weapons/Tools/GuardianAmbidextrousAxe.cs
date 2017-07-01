@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Guardian Ambidextrous Axe";
+
 			item.damage = 51;
 			item.melee = true;
             item.width = 68;
 			item.height = 58;
-			item.toolTip = "An enourmous axe used by the guardians of Madrigal. \n+6% Critical Chance. \n+10 HP when holding. \n+4 Defense when holding.";
+
             item.crit = 6;
             item.scale = 1.1f;
             item.useTime = 64;
@@ -29,6 +29,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Guardian Ambidextrous Axe");
+      Tooltip.SetDefault("An enourmous axe used by the guardians of Madrigal. \n+6% Critical Chance. \n+10 HP when holding. \n+4 Defense when holding.");
+    }
+
 
         public override void AddRecipes()
         {

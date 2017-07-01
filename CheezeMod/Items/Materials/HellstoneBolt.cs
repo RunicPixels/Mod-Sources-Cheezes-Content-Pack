@@ -9,14 +9,21 @@ namespace CheezeMod.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Hellstone Bolt";
+
 			item.width = 26;
 			item.height = 26;
 			item.maxStack = 999;
-			AddTooltip("'Sure to give a mechanical advantage.'");
+
 			item.value = 4000;
 			item.rare = 1;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Hellstone Bolt");
+      Tooltip.SetDefault("'Sure to give a mechanical advantage.'");
+    }
+
 
 		public override void AddRecipes()
 		{

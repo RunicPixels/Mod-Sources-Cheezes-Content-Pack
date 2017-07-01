@@ -10,12 +10,12 @@ namespace CheezeMod.Items.Weapons.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Starlight Hammer";
+
 			item.damage = 18;
 			item.melee = true;
 			item.width = 32;
 			item.height = 34;
-			item.toolTip = "A star in its class.";
+
 			item.useTime = 26;
             item.scale = 1.2f;
 			item.useAnimation = 26;
@@ -27,6 +27,13 @@ namespace CheezeMod.Items.Weapons.Tools
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
+
+    public override void SetStaticDefaults()
+    {
+      DisplayName.SetDefault("Starlight Hammer");
+      Tooltip.SetDefault("A star in its class.");
+    }
+
 
 		public override void AddRecipes()
 		{
