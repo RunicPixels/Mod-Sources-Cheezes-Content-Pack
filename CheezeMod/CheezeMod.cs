@@ -16,7 +16,8 @@ namespace CheezeMod
 {
     public class CheezeMod : Mod
     {
-        public CheezeMod() {
+        public CheezeMod()
+        {
             Properties = new ModProperties()
             {
                 Autoload = true,
@@ -41,14 +42,14 @@ namespace CheezeMod
             float randomSpeed = Main.rand.NextFloat() * 0.05f + 0.975f;
             speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
             speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
-            if(XorY == 'X')
+            if (XorY == 'X')
             {
                 return speedX;
             }
             else
             {
                 return speedY;
-            } 
+            }
         }
 
         #endregion
@@ -113,9 +114,9 @@ namespace CheezeMod
 
 
         #endregion
-            // SPAWNING //
-            #region SpawnInfo
-            //spawning helper methods imported from bluemagic123's Example Mod.
+        // SPAWNING //
+        #region SpawnInfo
+        //spawning helper methods imported from bluemagic123's Example Mod.
         public static bool NoInvasion(NPCSpawnInfo spawnInfo)
         {
             return !spawnInfo.invasion && ((!Main.pumpkinMoon && !Main.snowMoon) || spawnInfo.spawnTileY > Main.worldSurface || Main.dayTime) && (!Main.eclipse || spawnInfo.spawnTileY > Main.worldSurface || !Main.dayTime);
@@ -173,15 +174,15 @@ namespace CheezeMod
             // All Wood //
             RecipeGroup AnyWood = new RecipeGroup(() => Language.GetText("any") + " " + "Any Wood", new int[]
             {
-                ItemID.Wood,
-                ItemID.RichMahogany,
-                ItemID.DynastyWood,
-                ItemID.BorealWood,
-                ItemID.Shadewood,
-                ItemID.Ebonwood,
-                ItemID.SpookyWood,
-                ItemID.PalmWood,
-                ItemID.Pearlwood
+                    ItemID.Wood,
+                    ItemID.RichMahogany,
+                    ItemID.DynastyWood,
+                    ItemID.BorealWood,
+                    ItemID.Shadewood,
+                    ItemID.Ebonwood,
+                    ItemID.SpookyWood,
+                    ItemID.PalmWood,
+                    ItemID.Pearlwood
 
             });
             RecipeGroup.RegisterGroup("CheezeMod:AnyWood", AnyWood);
@@ -191,64 +192,64 @@ namespace CheezeMod
             //Copper/Tin Bar//
             RecipeGroup CopperBars = new RecipeGroup(() => Language.GetText("any") + " " + "Copper/Tin Bar", new int[]
             {
-                ItemID.CopperBar,
-                ItemID.TinBar
+                    ItemID.CopperBar,
+                    ItemID.TinBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:CopperBars", CopperBars);
 
             //Iron/Lead Bar//
             RecipeGroup IronBars = new RecipeGroup(() => Language.GetText("any") + " " + "Iron/Lead Bar", new int[]
             {
-                ItemID.IronBar,
-                ItemID.LeadBar
+                    ItemID.IronBar,
+                    ItemID.LeadBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:IronBars", IronBars);
 
             //Silver/Tungsten Bar//
             RecipeGroup SilverBars = new RecipeGroup(() => Language.GetText("any") + " " + "Silver/Tungsten Bar", new int[]
             {
-                ItemID.SilverBar,
-                ItemID.TungstenBar
+                    ItemID.SilverBar,
+                    ItemID.TungstenBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:SilverBars", SilverBars);
 
             //Gold/Platinum Bar//
             RecipeGroup GoldBars = new RecipeGroup(() => Language.GetText("any") + " " + "Gold/Platinum Bar", new int[]
             {
-                ItemID.GoldBar,
-                ItemID.PlatinumBar
+                    ItemID.GoldBar,
+                    ItemID.PlatinumBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:GoldBars", GoldBars);
 
             //Demonite/Crimtane Bar//
             RecipeGroup EvilBars = new RecipeGroup(() => Language.GetText("any") + " " + "Demonite/Crimtane Bar", new int[]
             {
-                ItemID.DemoniteBar,
-                ItemID.CrimtaneBar
+                    ItemID.DemoniteBar,
+                    ItemID.CrimtaneBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilBars", EvilBars);
 
             //Cobalt/Mythril Bar//
             RecipeGroup CobaltBars = new RecipeGroup(() => Language.GetText("any") + " " + "Cobalt/Palladium Bar", new int[]
             {
-                ItemID.CobaltBar,
-                ItemID.PalladiumBar
+                    ItemID.CobaltBar,
+                    ItemID.PalladiumBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:CobaltBars", CobaltBars);
 
             //Mythril/Orichalcum Bar//
             RecipeGroup MythrilBars = new RecipeGroup(() => Language.GetText("any") + " " + "Mythril/Orichalcum Bar", new int[]
             {
-                ItemID.MythrilBar,
-                ItemID.OrichalcumBar
+                    ItemID.MythrilBar,
+                    ItemID.OrichalcumBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:MythrilBars", MythrilBars);
 
             //Adamantite/Titanium Bar//
             RecipeGroup AdamantiteBars = new RecipeGroup(() => Language.GetText("any") + " " + "Adamantite/Titanium Bar", new int[]
             {
-                ItemID.AdamantiteBar,
-                ItemID.TitaniumBar
+                    ItemID.AdamantiteBar,
+                    ItemID.TitaniumBar
             });
             RecipeGroup.RegisterGroup("CheezeMod:AdamantiteBars", AdamantiteBars);
 
@@ -257,24 +258,24 @@ namespace CheezeMod
             //Cursed Flames/Ichor//
             RecipeGroup CursedFlames = new RecipeGroup(() => Language.GetText("any") + " " + "Cursed Flames/Ichor", new int[]
             {
-                ItemID.CursedFlame,
-                ItemID.Ichor
+                    ItemID.CursedFlame,
+                    ItemID.Ichor
             });
             RecipeGroup.RegisterGroup("CheezeMod:CursedFlames", CursedFlames);
 
             //Rotten Chunk/Vertebrae//
             RecipeGroup EvilLeather = new RecipeGroup(() => Language.GetText("any") + " " + "Rotten Chunk/Vertebrae", new int[]
             {
-                ItemID.RottenChunk,
-                ItemID.Vertebrae
+                    ItemID.RottenChunk,
+                    ItemID.Vertebrae
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilLeather", EvilLeather);
 
             //Ebonkoi/Hemopiranha//
             RecipeGroup EvilFish = new RecipeGroup(() => Language.GetText("any") + " " + "Ebonkoi/Hemopiranha", new int[]
             {
-                ItemID.Ebonkoi,
-                ItemID.Hemopiranha
+                    ItemID.Ebonkoi,
+                    ItemID.Hemopiranha
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilFish", EvilFish);
 
@@ -284,15 +285,15 @@ namespace CheezeMod
             //Silver Bow / Tungsten Bow//
             RecipeGroup SilverBows = new RecipeGroup(() => Language.GetText("any") + " " + "Silver Bow / Tungsten Bow", new int[]
             {
-                ItemID.SilverBow,
-                ItemID.TungstenBow
+                    ItemID.SilverBow,
+                    ItemID.TungstenBow
             });
             RecipeGroup.RegisterGroup("CheezeMod:SilverBows", SilverBows);
 
             RecipeGroup EvilBows = new RecipeGroup(() => Language.GetText("any") + " " + "Demon Bow / Tendon Bow", new int[]
             {
-                ItemID.DemonBow,
-                ItemID.TendonBow
+                    ItemID.DemonBow,
+                    ItemID.TendonBow
 
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilBows", EvilBows);
@@ -300,30 +301,30 @@ namespace CheezeMod
             //Light's Bane/Blood Butcherer//
             RecipeGroup EvilSwords = new RecipeGroup(() => Language.GetText("any") + " " + "Light's Bane/Blood Butcherer", new int[]
             {
-                ItemID.LightsBane,
-                ItemID.BloodButcherer
+                    ItemID.LightsBane,
+                    ItemID.BloodButcherer
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilSwords", EvilSwords);
 
             //NM Pick, Bloody pick//
             RecipeGroup EvilPickaxes = new RecipeGroup(() => Language.GetText("any") + " " + "Nightmare Pickaxe/Deathbringer Pickaxe", new int[]
             {
-                ItemID.NightmarePickaxe,
-                ItemID.DeathbringerPickaxe
+                    ItemID.NightmarePickaxe,
+                    ItemID.DeathbringerPickaxe
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilPickaxes", EvilPickaxes);
             //Waraxe/BloodLust//
             RecipeGroup EvilAxes = new RecipeGroup(() => Language.GetText("any") + " " + "War Axe of the Night/Blood Lust Cluster", new int[]
             {
-                ItemID.WarAxeoftheNight,
-                ItemID.BloodLustCluster
+                    ItemID.WarAxeoftheNight,
+                    ItemID.BloodLustCluster
             });
             RecipeGroup.RegisterGroup("CheezeMod:EvilAxes", EvilAxes);
             //Mythril/Orichalcum Sword//
             RecipeGroup MythSwords = new RecipeGroup(() => Language.GetText("any") + " " + "Mythril/Orichalcum Sword", new int[]
             {
-                ItemID.MythrilSword,
-                ItemID.OrichalcumSword
+                    ItemID.MythrilSword,
+                    ItemID.OrichalcumSword
             });
             RecipeGroup.RegisterGroup("CheezeMod:MythSwords", MythSwords);
         }
@@ -341,7 +342,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipes for the Seedler.
-            recipe = new ModRecipe(this);  
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.BladeofGrass);
             recipe.AddRecipeGroup("CheezeMod:MythSwords");
             recipe.AddIngredient(ItemID.HallowedBar, 8);
@@ -400,7 +401,7 @@ namespace CheezeMod
             // Underworld/Fire Relatated recipes //
 
             // Recipe for the Hellwing Bow
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(null, "RelicFragment", 3);
             recipe.AddIngredient(null, "FlameWing", 20);
             recipe.AddIngredient(ItemID.MoltenFury);
@@ -409,7 +410,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipe for flares
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.MusketBall, 9);
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(931, 9);
@@ -419,7 +420,7 @@ namespace CheezeMod
             // Sky/Stars/Mana/Starlight related recipes //
 
             // Recipe for Lucky Horseshoe.
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(null, "StarlightBar", 12);
             recipe.AddRecipeGroup("CheezeMod:IronBars", 4);
             recipe.AddTile(TileID.SkyMill);
@@ -427,7 +428,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipe for Starfury
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(null, "StarlightBar", 12);
             recipe.AddIngredient(ItemID.Trident);
             recipe.AddTile(TileID.SkyMill);
@@ -435,7 +436,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipe for Shiny Red Balloon
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(null, "StarlightBar", 12);
             recipe.AddIngredient(ItemID.WhiteString);
             recipe.AddIngredient(ItemID.Feather, 10);
@@ -445,7 +446,7 @@ namespace CheezeMod
 
             // Recipe for Cloud in a bottle.
             recipe = new ModRecipe(this);
-            recipe.AddIngredient(null, "StarlightBar", 9); 
+            recipe.AddIngredient(null, "StarlightBar", 9);
             recipe.AddIngredient(ItemID.Bottle);
             recipe.AddIngredient(ItemID.Cloud, 25);
             recipe.AddIngredient(ItemID.RainCloud, 5);
@@ -456,7 +457,7 @@ namespace CheezeMod
 
             // Recipe for Sandstorm in a bottle.
             recipe = new ModRecipe(this);
-            recipe.AddIngredient(null, "StarlightBar", 9); 
+            recipe.AddIngredient(null, "StarlightBar", 9);
             recipe.AddIngredient(ItemID.Bottle);
             recipe.AddIngredient(ItemID.Cloud, 10);
             recipe.AddIngredient(ItemID.SandBlock, 25);
@@ -467,7 +468,7 @@ namespace CheezeMod
 
             // Recipe for Blizzard in a bottle.
             recipe = new ModRecipe(this);
-            recipe.AddIngredient(null, "StarlightBar", 9); 
+            recipe.AddIngredient(null, "StarlightBar", 9);
             recipe.AddIngredient(ItemID.Bottle);
             recipe.AddIngredient(ItemID.Cloud, 10);
             recipe.AddIngredient(ItemID.IceBlock, 25);
@@ -488,7 +489,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipe for Sky Mill
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.SunplateBlock, 25);
             recipe.AddIngredient(ItemID.RainCloud, 25);
             recipe.AddIngredient(ItemID.Cloud, 25);
@@ -497,7 +498,7 @@ namespace CheezeMod
             recipe.AddRecipe();
 
             // Recipe for Sunplate Block
-            recipe = new ModRecipe(this); 
+            recipe = new ModRecipe(this);
             recipe.AddIngredient(null, "StarlightOre");
             recipe.AddIngredient(ItemID.StoneBlock, 3);
             recipe.AddTile(TileID.SkyMill);

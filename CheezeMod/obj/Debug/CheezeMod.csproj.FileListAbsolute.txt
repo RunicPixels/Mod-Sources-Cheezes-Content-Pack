@@ -9,3 +9,5 @@ C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.dll
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.pdb
 C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\Debug\CheezeMod.csprojResolveAssemblyReference.cache
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Terraria.exe
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\Debug\Terraria.pdb

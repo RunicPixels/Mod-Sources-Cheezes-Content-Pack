@@ -196,7 +196,7 @@ namespace CheezeMod
                     Main.PlaySound(2, player.Center, 32);
                 }
 
-                if (DEBUG_PARRYFISTS) Main.NewText(string.Concat("Parrying: ", parryTime, "/", parryActive, "/", parryTimeMax));
+                //if (DEBUG_PARRYFISTS) Main.NewText(string.Concat("Parrying: ", parryTime, "/", parryActive, "/", parryTimeMax));
 
                 if (parryTime > 0)
                 {

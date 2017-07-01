@@ -1,0 +1,12 @@
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\CheezeMod.dll.config
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\CheezeMod.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\CheezeMod.pdb
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\x86\Debug\CheezeMod.dll
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\x86\Debug\CheezeMod.pdb
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\obj\x86\Debug\CheezeMod.csprojResolveAssemblyReference.cache
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Terraria.exe
+C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources\CheezeMod\bin\x86\Debug\Terraria.pdb

@@ -1,0 +1,7 @@
+2017-07-01 21:55:06
+System.DllNotFoundException: Unable to load DLL 'CSteamworks': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Steamworks.NativeMethods.SteamAPI_RestartAppIfNecessary(AppId_t unOwnAppID)
+   at Terraria.Social.Steam.CoreSocialModule.Initialize()
+   at Terraria.Social.SocialAPI.Initialize(Nullable`1 mode)
+   at Terraria.Program.LaunchGame(String[] args, Boolean monoArgs)
+

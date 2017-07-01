@@ -5,4 +5,4 @@ homepage = http://forums.terraria.org/index.php?threads/cheezes-content-pack.406
 hideCode = false
 hideResources = false
 includeSource = true
-buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, .git\*, .gitIgnore\*
