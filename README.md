@@ -47,9 +47,29 @@ Feel free to donate cryptocurrencies to :
 
 **Ethereum to : 0x7086C605A431ff8077a6378f79Ce32E125F1B000**
 
-**Bitcoin[/B] to : [B]1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD**
+**Bitcoin to : [B]1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD**
 
-**Litecoin[/B] to : [B]LLeDtEQ4eGeUzZyxiCPaLoDLurpxkYRpni**
+**Litecoin to : [B]LLeDtEQ4eGeUzZyxiCPaLoDLurpxkYRpni**
+
+# Credits
+Everyone at Re-Logic for making Terraria.
+
+bluemagic123,jopojelly, Chicken Bones and Itamar for creating the tmodloader.
+
+FlashKirby00For his amazing "Fist" weapon code and allowing me to use it!
+Sin Costan and @Eldrazi for their general help in the tmodloader discussion and tu
+torials as well as code snippets.
+
+jopojelly and @DivermanSam for helping me out a with few problems I encountered.
+
+MinieK for creating an awesome logo for the mod.
+
+Liam W-D. and Potatolord for helping to fill the wiki with content.
+
+Eli10293and Vladimier for creating a lot of amazing sprites for the mod.
+
+And last, but certainly not least: you, for looking at my mod! :D
+
 
 
 # Changelog
