@@ -54,7 +54,7 @@ Feel free to donate cryptocurrencies to :
 # Credits
 Everyone at Re-Logic for making Terraria.
 
-bluemagic123,jopojelly, Chicken Bones and Itamar for creating the tmodloader.
+bluemagic123, jopojelly, Chicken Bones and Itamar for creating the tmodloader.
 
 FlashKirby00For his amazing "Fist" weapon code and allowing me to use it!
 Sin Costan and @Eldrazi for their general help in the tmodloader discussion and tu
