@@ -47,9 +47,9 @@ Feel free to donate cryptocurrencies to :
 
 **Ethereum to : 0x7086C605A431ff8077a6378f79Ce32E125F1B000**
 
-**Bitcoin to : [B]1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD**
+**Bitcoin to : 1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD**
 
-**Litecoin to : [B]LLeDtEQ4eGeUzZyxiCPaLoDLurpxkYRpni**
+**Litecoin to : LLeDtEQ4eGeUzZyxiCPaLoDLurpxkYRpni**
 
 # Credits
 Everyone at Re-Logic for making Terraria.
