@@ -16,10 +16,16 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 • Several Quality of Life improvements.
 • A little bit of cross content with other mods, more in the future.
 
-NOTE: Update 1.1.2 for tModLoader 0.10.0.2 has just come out! If you see or find anything odd be sure to tell me!
-
-Changelog:
-v1.1.2 - 0.10.0.2 Support, Quality Improvements and Nukes!
+*NOTE: Update 1.1.2 for tModLoader 0.10.0.2 has just come out! If you see or find anything odd be sure to tell me!*
+# Installation
+**1.-** Install Terraria and tModloader according to the instructions here: https://github.com/blushiemagic/tModLoader/
+**2.-** Go to the Ingame Mod Browser and type in Cheeze's Content Pack.
+**3.-** Press Download and go to the mods section on the main menu.
+**4.-** Go to Cheeze's Content Pack and press the Enable Button.
+**5.-** Press Reload Mods.
+**7.-** You're ready to play!
+# Changelog
+**v1.1.2 - 0.10.0.2 Support, Quality Improvements and Nukes!**
 Major Changes to most "Fist" Weapons. Utilizing FlashKirby99's WeaponOut methods to have a variety of special attacks, a better appearance and much more!
 Changes to Pulse Pistol and The High Noon to reflect your ammo on usage (might change again in the future in it's own ui section).
 Platforming Improvements to Agents of Doom Upgrade line.
@@ -28,12 +34,12 @@ Added two new weapons to the Gravity Bomb upgrade line.
 A ton of graphical improvements to older sprites.
 Fixed some minor bugs.
 
-v1.1.1.4 - 0.9.2.1 support.
+**v1.1.1.4 - 0.9.2.1 support.**
 Added a new monster.
 Fixed Loot pool of Dragon Eye.
 Buffed Pulse Rifle and the Vaporizers slightly
 
-v1.1.1.3 - Happy late new year!
+**v1.1.1.3 - Happy late new year!**
 Fixed certain monsters spawning wrongly on the Y axis. I.E. Spawning in hell while they shouldn't.
 Added a new recipe for Money Through if Thorium Mod is enabled.
 Changed Molten Eye (which now spawns correctly) to only appear after defeating EoW/BoC.
@@ -41,7 +47,7 @@ Changed Dragon Eye to only appear after defeating EoC.
 Overal Reduced Spawnrate of most monsters in the mod.
 Revisited a lot of old sprites that were below par.
 
-v1.1.1.2 - Merry Xmas
+**v1.1.1.2 - Merry Xmas**
 Build for 0.9.1
 Fixed AI problem with Granite Wanderer in expert mode shooting more than a single laser at once.
 Nerfed Dragon Eye.
@@ -51,7 +57,7 @@ Lava Gun buffed and its shots now evaporate in water.
 And more general fixes and balancing.
 Nerfed Dragon Eye in expert mode.
 
-v1.1.1.1 - Angel Update.
+**v1.1.1.1 - Angel Update.**
 (New)(Some)Angel Weapons and essence now drop from the mech bosses, more coming soon.
 Lots of bugfixes related to FlyFF weapons.
 New Texture for Sun Strike (based on the textures Eli10293 supplied me a while ago.)
@@ -60,7 +66,7 @@ Nerfed Dragon Eye in expert mode.
 Minor balancing and bugfixes.
 
 
-v1.1.1 - Galactic Madness.
+**v1.1.1 - Galactic Madness.**
 New Town NPC: Martian Trader
 Added Mahogany Blowpipe.
 Added Callisto Bow.
@@ -73,7 +79,7 @@ Fixed a bug that caused certain parts of recipes to dissapear when hovering over
 Lancer and Lavagun resprited by Vladimier, I altered the upgraded variants of the Lava Gun to match his style.
 Resprited the Walloper and its upgrades.
 
-v1.1 - An update that flies for fun.
+**v1.1 - An update that flies for fun.**
 Updated for tModLoader 0.9
 
 [1.1.0.8 - Improved Ultra Agents.]
@@ -106,12 +112,12 @@ Added Pearlwood Axe and Pickaxe.
 Improvements to older content.
 Published mod on GitHub for public access and version control.
 
-v1.0.2.1 - Very hot fix.
+**v1.0.2.1 - Very hot fix.**
 Added Skull Halberd and Bone Kunai.
 Removed glow from kunai's lying in the world, doesn't seem to be working in current tModLoader version, will look into this later.
 Compatible with latest tModLoader version.
 
-v1.0.2 - Slash and Stab.
+**v1.0.2 - Slash and Stab.**
 Made some optimizations.
 Added a few Ultra versions of the Ratchet and Clank weapons, craftable with Luminite Bolts.
 Added 15+ Halberds spread over pre-hardmode(copper-platinum, hellstone, etc) and early hardmode(cobalt-titanium), which can be right clicked to slash or left clicked to stab.
@@ -122,7 +128,7 @@ Added recipes for Blindfold and Frozen Turtle Shell.
 Added Cross Necklace to Paladin drop table.
 More miscellaneous fixes.
 
-v1.0.1.1 - Buffs and Stuffs
+**v1.0.1.1 - Buffs and Stuffs**
 Slightly lowered Tyhrranoid and Robonoid spawn chance, and further halved Tyhrranoid spawnrate in hardmode.
 Changed Starlight Armor to have a custom buff.
 Added Stacked and Double Stacked Ebon-, Crim- and Pearlstone Blocks and Gel.
@@ -131,7 +137,7 @@ Added Hallowed Bolt to Hardmode Bosses Drop.
 Hopefully fixed the issues some people were having updating to 1.0.1.
 A few general fixes.
 
-v1.0.1 - Cheese, mate.
+**v1.0.1 - Cheese, mate.**
 Added CHEESE! Yes, people it's finally here. Kill some herplings and derplings to get some.
 Added two new semi secret items.
 Added upgrades to all Ratchet and Clank weapons.
@@ -141,14 +147,14 @@ Overhauled all Walloper-type weapons.
 Minor fixes to certain weapons.
 More general fixes, balancing and tweaks after thorough playtesting.
 
-v1.0.0.1 - Post release hotfix
+**v1.0.0.1 - Post release hotfix**
 Added recipes for Goodie Bag, Christmas Present, Eater's Bone, Bone Ratle and Unlucky Barn.
 Added a secret new item.
 Fixed Stacked Mud not being able to be converted back to normal mud.
 Fixed True Chaos Theory having no recipe.
 Fixed Projectile Shooting Swords doing no damage with their projectiles.
 
-v1.0 - Out of Alpha.
+**v1.0 - Out of Alpha.**
 Added Stacked and Double Stacked Dirt, Stone, Sand, Snow and Wood Blocks.
 Added Robonoid and Protopet hostile monsters.
 Added a drop to the Flying Dutchman which is used to craft some new weapons and items, which so far are three pistols that shoot their respective biome specific bullets.
@@ -169,14 +175,14 @@ Fixed Throwing Palladium Armor now to trigger the vanilla set effect, the pallad
 Numerous bugfixes, tweaks and balancing.
 And a lot more!
 
-Alpha v0.6.1 - tModloader updated.
+**Alpha v0.6.1 - tModloader updated.**
 Added even more kunai's! (Hellstone, Meteorite and Chlorophyte).
 Added a cobalt and palladium throwing helmet with set bonus.
 Fixed some minor issues and improved balance a bit.
 Changed Orichalcum kunai to have the same effect as the armor set.
 Fixed mod to work in tModloader 0.8.0.0
 
-Alpha v0.6 - One Punch of an Update!
+**Alpha v0.6 - One Punch of an Update!**
 Added a new monster from Ratchet and Clank called the Thyrranoid(credits to MapleStrip for making the sprite a long time ago).
 Added a new weapon from Ratchet & Clank called the Walloper, it's either rarely dropped by Thyrranoids or crafted at the Megacorp Vendor.
 Changed the recipe of the MegaCorp vendor to allow it being made without requiring Meteorite.
@@ -190,7 +196,7 @@ Added Iron Bolts, craftable with Iron/Lead bars at the anvil or dropped by Thyrr
 Fixed Granite Rod doing melee damage instead of magical, also fixed the rarity of the Sun Strike.
 Eli10293 improved a lot of the sprites in the mod.
 
-Alpha v0.5 - Floating Island Expansion.
+**Alpha v0.5 - Floating Island Expansion.**
 Added a new ore that spawns on floating islands and high hills called "Starlight Ore", mineable with a Gold Pickaxe or higher.
 Added Starlight Bar. Made by either Starlight ore, or as an alloy of Gold/Platinum, Silver/Tungsten and Fallen Stars.
 Added Starlight Armor, an pre-hardmode floating island armor that serves "Spellblade" type characters boosting both melee and magic capacities.
@@ -202,7 +208,7 @@ Updated Livingwood Pitchfork Projectile sprite and resized the Bonemerang a bit.
 Changed Star Blitz recipe and sprite.
 Changed Meteorite and Hellstone Cog to Bolt with new sprites, made them droppable in their respective biomes as well.
 
-Alpha v0.4 - Balance and Boomerangs.
+**Alpha v0.4 - Balance and Boomerangs.**
 Added Bonemerang and Kaboomerang.
 Made a new sprite for the Hercules, Gradience and Sunstrike swords.
 Tweaked the Star Blitz sprite a little bit.
@@ -211,7 +217,7 @@ Improved some projectiles to do the correct damage type.
 Improved every (mod)bow's attack speed.
 Fixed Obisidan string recipe missing and changed sprite.
 
-Alpha v0.3 - A bit of everything.
+**Alpha v0.3 - A bit of everything.**
 Made a few changes with the Ratchet & Clank weapons, they now need a bit more variety to obtain, but they are also stronger, also improved their sprites a bit.
 Added the Liquid Nitrogen Gun as an upgade to the lava gun.
 Fixed a double recipe for the Hellwing bow.
@@ -219,7 +225,7 @@ Increased defense, damage and money drop of the Granite Wanderer.
 Added Mushwood, Mushwood Bow and Mushwood Pitchfork.
 Added a Granite Rod magical weapon as a drop to the Granite Wanderer.
 
-Alpha v0.2.1 - Multiplayer & More
+**Alpha v0.2.1 - Multiplayer & More**
 Changed Granite Wanderer to shoot lasers, increased its defense and lowered its hp.
 Improved compatibility with 0.7.1.+
 Changed Sun Strike Projectile to have a higher velocity.
@@ -227,7 +233,7 @@ Added a Lava Gun to the MegaCorp Vendor that shoots flares.
 Added a Flare recipe at MegaCorp Vendor (9 Musket Balls are used for 9 Flares).
 Fixed Granite Wanderer in Multiplayer.
 
-Alpha v0.2 - Lasers and stuff
+**Alpha v0.2 - Lasers and stuff**
 Added 6 Lasersabers that also shoot lasers.
 Fixed some bugs related to the Heavy Lancer.
 Fixed several percentages to match what's intended.
@@ -239,11 +245,11 @@ Added a Granite Lance.
 Added Flame Wing as a drop to Hellbats and Lavabats, used in Hellwing Bow.
 Tweaked the Wood Pitchfork projectile spawn a bit to remove "Cheezing".
 
-Alpha v0.1.1 - The first update
+**Alpha v0.1.1 - The first update**
 Added 2 new spears called the Wooden Pitchfork and Living Wood Pitchfork and tweaked the Sun Strike.
 Also made the Flamelash and Sunfury droppable by the Bone Serpent as well as the Rocket Boots from the Goblin army by a rare chance.
 
-Alpha v0.1 - Original Release
+**Alpha v0.1 - Original Release**
 Added 10 new weapons
 Added 5 crafting materials
 Added 1 new npc
