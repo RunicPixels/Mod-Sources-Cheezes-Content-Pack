@@ -42,6 +42,16 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 
 **7.-** You're ready to play!
 
+# Donating
+Feel free to donate cryptocurrencies to :
+
+**Ethereum to : 0x7086C605A431ff8077a6378f79Ce32E125F1B000
+
+**Bitcoin[/B] to : [B]1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD
+
+**Litecoin[/B] to : [B]LLeDtEQ4eGeUzZyxiCPaLoDLurpxkYRpni
+
+
 # Changelog
 **v1.1.2 - 0.10.0.2 Support, Quality Improvements and Nukes!**
 
