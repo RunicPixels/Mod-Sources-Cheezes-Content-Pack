@@ -56,11 +56,11 @@ Everyone at Re-Logic for making Terraria.
 
 bluemagic123, jopojelly, Chicken Bones and Itamar for creating the tmodloader.
 
-FlashKirby00For his amazing "Fist" weapon code and allowing me to use it!
+FlashKirby00 For his amazing "Fist" weapon code and allowing me to use it!
 Sin Costan and @Eldrazi for their general help in the tmodloader discussion and tu
 torials as well as code snippets.
 
-jopojelly and @DivermanSam for helping me out a with few problems I encountered.
+jopojelly and DivermanSam for helping me out a with few problems I encountered.
 
 MinieK for creating an awesome logo for the mod.
 
