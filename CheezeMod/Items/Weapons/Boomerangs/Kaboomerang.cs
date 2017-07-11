@@ -11,14 +11,11 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.Bananarang);
-
 			item.damage = 69;
 			item.melee = true;
 			item.width = 36;
 			item.height = 36;
 			item.scale = 1.1f;
-
-
             item.maxStack = 2;
             item.useTime = 22;
 			item.useAnimation = 22;
@@ -48,7 +45,11 @@ namespace CheezeMod.Items.Weapons.Boomerangs
             recipe.AddTile(18);
             recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+            ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(null, "KaboomerangThrowing");
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
+        }
 
         public override bool CanUseItem(Player player)
         {

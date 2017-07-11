@@ -17,6 +17,8 @@ namespace CheezeMod.NPCs
             }
         }
 
+        public bool radiation = false;
+        public bool extremeRadiation = false;
         public bool downfall = false;
         public bool angelsBane = false;
         public bool sellFlare = false;
@@ -58,6 +60,8 @@ namespace CheezeMod.NPCs
         }
         public override void ResetEffects(NPC npc)
         {
+            this.radiation = false;
+            this.extremeRadiation = false;
             this.downfall = false;
             this.angelsBane = false;
             this.sellFlare = false;
@@ -92,6 +96,24 @@ namespace CheezeMod.NPCs
                     drawColor.B /= 2;
                 }
             }
+
+            if (radiation)
+            {
+                //if (Main.rand.Next(3) == 0)
+                // {
+                //    Dust.NewDust(player.position, player.width, player.height, DustID.AncientLight, player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+                // }
+                drawColor.G *= 2;
+                drawColor.B /= 2;
+                Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("Radiation"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+            }
+            if (extremeRadiation)
+            {
+                drawColor.R /= 2;
+                drawColor.G *= 3;
+                drawColor.B /= 2;
+                Dust.NewDust(npc.position, npc.width, npc.height, mod.DustType("ExtremeRadiation"), npc.velocity.X * 0.3f, npc.velocity.Y * 0.3f);
+            }
         }
         public override void UpdateLifeRegen(NPC npc, ref int damage)
         {
@@ -110,6 +132,26 @@ namespace CheezeMod.NPCs
                     npc.lifeRegenExpectedLossPerSecond = 50;
                 }
 
+            }
+            if(radiation)
+            {
+                npc.lifeRegen -= 30;
+                if (damage < 3)
+                {
+                    damage = 3;
+                }
+                npc.defense -= 5;
+                npc.lifeRegenExpectedLossPerSecond = 30;
+            }
+            if (extremeRadiation)
+            {
+                npc.lifeRegen -= 120;
+                if(damage<12)
+                {
+                    damage = 12;
+                }
+                npc.defense -= 10;
+                npc.lifeRegenExpectedLossPerSecond = 120;
             }
         }
         #endregion

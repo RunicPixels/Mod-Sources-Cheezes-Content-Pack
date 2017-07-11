@@ -14,7 +14,7 @@ namespace CheezeMod.Gores.Explosions
             gore.rotation = 0f;
             gore.frame = 0;
             gore.sticky = true;
-            gore.timeLeft = 36;
+            gore.timeLeft = 55;
             gore.scale = 1.1f;
             gore.rotation *= 0f;
             baseGorePosition = gore.position;
@@ -26,17 +26,19 @@ namespace CheezeMod.Gores.Explosions
             gore.velocity.Y = 0f;
             gore.rotation *= 0f;
             gore.position = baseGorePosition;
-            if (goreFrame >= 25)
+
+
+            if (goreFrame >= 32)
             {
                 gore.frame = 6;
                 gore.frameCounter = 6;
-                gore.alpha += 1;
+                gore.alpha += 15;
             }
             else if (goreFrame >= 21)
             {
                 gore.frame = 5;
                 gore.frameCounter = 5;
-                gore.alpha += 1;
+                gore.alpha += 5;
             }
             else if (goreFrame >= 17)
             {
@@ -64,7 +66,7 @@ namespace CheezeMod.Gores.Explosions
                 gore.frame = 0;
                 gore.frameCounter = 0;
             }
-            if (goreFrame >= 30)
+            if (goreFrame >= 45)
             {
                 gore.active = false;
                 gore.light -= 0.1f;

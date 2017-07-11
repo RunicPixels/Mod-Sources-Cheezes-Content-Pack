@@ -11,7 +11,6 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.ThornChakram);
-
 			item.damage = 24;
 			item.melee = true;
 			item.width = 28;
@@ -33,11 +32,11 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 			item.shootSpeed = 11f;
 		}
 
-    public override void SetStaticDefaults()
-    {
-      DisplayName.SetDefault("Star Chakram");
-      Tooltip.SetDefault("Calls Stars on hit.");
-    }
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Star Chakram[Melee]");
+            Tooltip.SetDefault("Calls Stars on hit.");
+        }
 
 		public override void AddRecipes()
 		{
@@ -47,7 +46,11 @@ namespace CheezeMod.Items.Weapons.Boomerangs
             recipe.AddTile(TileID.SkyMill);
             recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+            ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(null, "StarChakramThrowing");
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
+        }
 
         public override bool CanUseItem(Player player)
         {

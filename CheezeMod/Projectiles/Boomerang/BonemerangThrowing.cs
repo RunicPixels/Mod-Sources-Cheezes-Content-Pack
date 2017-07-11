@@ -4,16 +4,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Projectiles.Melee
+namespace CheezeMod.Projectiles.Boomerang
 {
-    public class Bonemerang : ModProjectile
+    public class BonemerangThrowing : ModProjectile
     {
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Bananarang);
             projectile.width = 22;
             projectile.height = 42;
-            projectile.melee = true;
+            projectile.thrown = true;
             projectile.friendly = true;
             projectile.penetrate = 20;
             projectile.timeLeft = 700;

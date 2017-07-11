@@ -14,7 +14,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 			item.damage = 12;
 			item.thrown = true;
 			item.width = 38;
-            item.scale = 0.6f;
+            item.scale = 0.75f;
 			item.height = 24;
 
 

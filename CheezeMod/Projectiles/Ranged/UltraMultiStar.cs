@@ -71,10 +71,7 @@ namespace CheezeMod.Projectiles.Ranged
             {
                 Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 61, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f);
             }
-            for (int i = 0; i < 2; i++)
-            {
-                Projectile.NewProjectile(projectile.position.X, projectile.position.Y, (projectile.oldVelocity.X * 1f) - 6 + Main.rand.Next(12), (projectile.oldVelocity.Y * 1f) + 2 - Main.rand.Next(8), mod.ProjectileType("MegaMultistar"), (int)(projectile.damage * 0.75f), projectile.knockBack, projectile.owner);
-            }
+            Projectile.NewProjectile(projectile.position.X, projectile.position.Y, (projectile.oldVelocity.X * 1f) - 6 + Main.rand.Next(12), (projectile.oldVelocity.Y * 1f) + 2 - Main.rand.Next(8), mod.ProjectileType("MegaMultistar"), (int)(projectile.damage * 0.95f), projectile.knockBack, projectile.owner);
         }
         public void Bounce(Vector2 oldVelocity)
         {

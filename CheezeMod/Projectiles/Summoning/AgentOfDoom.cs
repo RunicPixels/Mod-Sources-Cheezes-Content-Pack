@@ -5,8 +5,9 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.Projectiles.Summoning
 {
-	public class AgentOfDoom : ModProjectile
+	public class AgentOfDoom : HoverShooter
 	{
+        bool platformThrough = false;
 		public override void SetDefaults()
 		{
             projectile.CloneDefaults(ProjectileID.BabySlime);
@@ -18,7 +19,7 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.scale = 0.95f;
             Main.projFrames[projectile.type] = 6;
 			Main.projPet[projectile.type] = true;
-            drawOriginOffsetY = -10;
+            drawOriginOffsetY = -2;
 			projectile.minion = true;
 			projectile.minionSlots = 1;
 			projectile.penetrate = -1;
@@ -40,8 +41,32 @@ namespace CheezeMod.Projectiles.Summoning
 
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
         {
-            fallThrough = true;
-            return true;
+            Player player = Main.player[projectile.owner];
+            if (platformThrough)
+            {
+                fallThrough = true;
+                return false;
+            }
+            else
+            {
+                fallThrough = false;
+                return true;
+            }
+        }
+
+        public override void CheckActive()
+        {
+            Player player = Main.player[projectile.owner];
+            CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
+            if (player.dead)
+            {
+                modPlayer.agentDreadMinion = false;
+                projectile.active = false;
+            }
+            if (modPlayer.agentDreadMinion)
+            {
+                projectile.timeLeft = 2;
+            }
         }
 
         public override bool PreAI()
@@ -60,17 +85,35 @@ namespace CheezeMod.Projectiles.Summoning
             return true;
 		}
 
-		public override void AI()
-		{
-			if(projectile.frame > 1)
+        public override void AI()
+        {
+            Vector2 targetPos = projectile.position;
+            float targetDist = 500;
+            bool target = false;
+            if (projectile.frame > 1)
             {
-                if(Main.rand.Next(4) == 0)
+                if (Main.rand.Next(4) == 0)
                 {
                     int dust = Dust.NewDust(new Vector2(projectile.Center.X, projectile.Center.Y + 2), projectile.width, projectile.height / 2, 6);
                     Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.9f, 0.6f, 0.3f);
                 }
             }
+            for (int k = 0; k < 200; k++)
+            {
+                NPC npc = Main.npc[k];
+                if (npc.CanBeChasedBy(this, false))
+                {
+                    float distance = Vector2.Distance(npc.Center, projectile.Center);
+                    if ((distance < targetDist || !target) && Collision.CanHitLine(projectile.position, projectile.width, projectile.height, npc.position, npc.width, npc.height))
+                    {
+                        targetDist = distance;
+                        targetPos = npc.Center;
+                        target = true;
+                        projectile.tileCollide = !Agent.CompareY(npc.Center.Y - 50, projectile.Center.Y);
+                    }
+                }
+            }
 
-		}
+        }
 	}
 }

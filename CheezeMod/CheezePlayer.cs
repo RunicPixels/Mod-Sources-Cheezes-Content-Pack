@@ -12,17 +12,26 @@ namespace CheezeMod
 {
 	public class CheezePlayer : ModPlayer
 	{
-		public bool starlit = false;
-        public bool flyffhistoric = false;
-        public bool flyffangelic = false;
-        public bool angelsBane = false;
-        public bool superAngel = false;
-        public bool downfall = false;
         public bool agentMinion = false;
         public bool agentDreadMinion = false;
         public bool agentMegaDreadMinion = false;
         public bool agentUltraDreadMinion = false;
+
+        public bool radiation = false;
+        public bool extremeRadiation = false;
+
+        public bool downfall = false;
+        public bool starlit = false;
+
+        public bool flyffhistoric = false;
+        public bool flyffangelic = false;
+        public bool angelsBane = false;
+        public bool superAngel = false;
+
+        public bool cutUp = false;
+
         public static bool sellFlare = false;
+
         public float critMultiplier = 1.0f; // Base crit multiplier. Critical damage will be damage * this number + damage type modifier.
         public float meleeCritMultiplier = 0.0f; // Melee Crit Multiplier, percentage that will be added onto the critical damage.
         public float rangedCritMultiplier = 0.0f; // Ranged Crit Multiplier, percentage that will be added onto the critical damage.
@@ -36,6 +45,8 @@ namespace CheezeMod
 
         public override void ResetEffects() // Resets effects back to normal after each cast, helps effects to go off when needed and prevents them from stacking infinite times.
         {
+            this.radiation = false;
+            this.extremeRadiation = false;
             this.starlit = false;
             this.flyffhistoric = false;
             this.flyffangelic = false;
@@ -57,6 +68,8 @@ namespace CheezeMod
 
         public override void UpdateDead()
         {
+            radiation = false;
+            extremeRadiation = false;
             angelsBane = false;
             downfall = false;
             agentMinion = false;
@@ -180,6 +193,16 @@ namespace CheezeMod
                     player.lifeRegen -= (Main.expertMode == true) ? 16 : 8;
                 }
             }
+            if(radiation)
+            {
+                player.lifeRegen -= (Main.expertMode == true) ? 16 : 8;
+                player.statDefense -= 10;
+            }
+            else if(extremeRadiation)
+            {
+                player.lifeRegen -= (Main.expertMode == true) ? 32 : 16;
+                player.statDefense -= 20;
+            }
         }
 
         public override void PreUpdateBuffs()
@@ -228,6 +251,30 @@ namespace CheezeMod
                 {
                     Dust.NewDust(player.position, player.width, player.height, mod.DustType("YellowLight"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
                 }
+            }
+            if (radiation)
+            {
+                //if (Main.rand.Next(3) == 0)
+                // {
+                //    Dust.NewDust(player.position, player.width, player.height, DustID.AncientLight, player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+                // }
+                r *= 1f;
+                g *= 2f;
+                b /= 0.5f;
+                fullBright = true;
+                Dust.NewDust(player.position, player.width, player.height, mod.DustType("Radiation"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+            }
+            else if (extremeRadiation)
+            {
+                //if (Main.rand.Next(3) == 0)
+                // {
+                //    Dust.NewDust(player.position, player.width, player.height, DustID.AncientLight, player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
+                // }
+                r *= 0.75f;
+                g *= 3f;
+                b /= 0.5f;
+                fullBright = true;
+                Dust.NewDust(player.position, player.width, player.height, mod.DustType("ExtremeRadiation"), player.velocity.X * 0.3f, player.velocity.Y * 0.3f);
             }
             base.DrawEffects(drawInfo, ref r, ref g, ref b, ref a, ref fullBright);
         }

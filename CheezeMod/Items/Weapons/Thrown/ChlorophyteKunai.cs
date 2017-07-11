@@ -20,8 +20,6 @@ namespace CheezeMod.Items.Weapons.Thrown
 			item.width = 18;
 			item.height = 38;
             item.autoReuse = true;
-
-
             item.useTime = 26;
 			item.useAnimation = 26;
 			item.knockBack = 1f;
@@ -51,17 +49,16 @@ namespace CheezeMod.Items.Weapons.Thrown
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            type = mod.ProjectileType("ChlorophyteKunai");
+            player.ConsumeItem(item.type);
             float spread = 5f * 0.0174f; // 5 degrees converted to radians
             float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
             double baseAngle = Math.Atan2(speedX, speedY);
             double[] Angle = { baseAngle + -1 * spread, baseAngle + 0 * spread, baseAngle + 1 * spread };
             float[] speedXArray = { baseSpeed * (float)Math.Sin(Angle[0]), baseSpeed * (float)Math.Sin(Angle[1]), baseSpeed * (float)Math.Sin(Angle[2]) };
             float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]), baseSpeed * (float)Math.Cos(Angle[1]), baseSpeed * (float)Math.Cos(Angle[2]) };
-            player.ConsumeItem(item.type);
-            for (int i = 0; i <= speedXArray.Length; i++)
+            for (int i = 0; i < speedXArray.Length; i++)
             {
-                Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], type, damage, knockBack, item.owner);
+               Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], type, damage, knockBack, item.owner);
             }
             return true;
         }

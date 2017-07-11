@@ -45,7 +45,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "MegaVaporizer");
             recipe.AddIngredient(null, "LuminiteBolt", 50);
-            recipe.AddIngredient(ItemID.FragmentStardust, 5);
+            recipe.AddIngredient(null, "Antimatter", 2);
             recipe.AddIngredient(null, "DiamondLens");
             recipe.AddTile(null, "MegaCorpVendor");
             recipe.SetResult(this, 1);
@@ -56,7 +56,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
         {
             if (player.inventory[player.selectedItem] == this.item)
             {
-                
+                player.scope = true;
             }
         }
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)

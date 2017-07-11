@@ -10,6 +10,7 @@ namespace CheezeMod.Projectiles.Summoning
 	{
         int attackCool;
         int attackCool2;
+        bool platformThrough = false;
 		public override void SetDefaults()
 		{
             projectile.CloneDefaults(ProjectileID.BabySlime);
@@ -21,8 +22,8 @@ namespace CheezeMod.Projectiles.Summoning
             projectile.scale = 1.05f;
             Main.projFrames[projectile.type] = 6;
 			Main.projPet[projectile.type] = true;
-            drawOriginOffsetY = -10;
-			projectile.minion = true;
+            drawOriginOffsetY = -2;
+            projectile.minion = true;
 			projectile.minionSlots = 1;
 			projectile.penetrate = -1;
 			projectile.timeLeft = 360000;
@@ -79,8 +80,18 @@ namespace CheezeMod.Projectiles.Summoning
 
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
         {
-            fallThrough = false;
-            return true;
+            Player player = Main.player[projectile.owner];
+            if (platformThrough)
+            {
+                fallThrough = true;
+                return false;
+            }
+            else
+            {
+                fallThrough = false;
+                return true;
+            }
+
         }
 
         public override void AI()
@@ -99,6 +110,7 @@ namespace CheezeMod.Projectiles.Summoning
                         targetDist = distance;
                         targetPos = npc.Center;
                         target = true;
+                        projectile.tileCollide = !Agent.CompareY(npc.Center.Y - 50, projectile.Center.Y);
                     }
                 }
             }

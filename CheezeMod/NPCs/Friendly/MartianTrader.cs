@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace CheezeMod.NPCs.Friendly
 {
+    [AutoloadHead]
     public class MartianTrader : ModNPC
     {
         public override bool Autoload(ref string name)
@@ -37,11 +38,6 @@ namespace CheezeMod.NPCs.Friendly
             animationType = NPCID.GoblinTinkerer;
         }
 
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Martian Trader");
-        }
-
         public override void HitEffect(int hitDirection, double damage)
         {
             int num = npc.life > 0 ? 1 : 5;
@@ -62,7 +58,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override string TownNPCName()
         {
-            switch (WorldGen.genRand.Next(11))
+            switch (WorldGen.genRand.Next(12))
             {
                 case 0:
                     return "Ray";
@@ -84,6 +80,8 @@ namespace CheezeMod.NPCs.Friendly
                     return "Darth Mule";
                 case 9:
                     return "Kasei";
+                case 10:
+                    return "Jakesully";
                 default:
                     return "E.T.";
             }
@@ -106,12 +104,12 @@ namespace CheezeMod.NPCs.Friendly
             {
                 return "Another facinating lifeform on this planet is " + Main.npc[goblinTinkerer].GivenName + " he would be of the race called a goblin, right?";
             }
-            switch (Main.rand.Next(8))
+            switch (Main.rand.Next(9))
             {
                 case 0:
                     return "Terrarian goods are facinating, I want to add them to my collection.";
                 case 1:
-                    return "I'm sorry of the agressiveness of my brethen, why can't we all just live in peace?";
+                    return "I'm sorry of the aggressiveness of my brethen, why can't we all just live in peace?";
                 case 2:
                     return "Do you know the old Martian proverb that revenge is a dish best served cold? It is very cold in space.";
                 case 3:
@@ -122,6 +120,8 @@ namespace CheezeMod.NPCs.Friendly
                     return "All the lights in the sky are stars.";
                 case 6:
                     return "Slimes are interesting creatures, I wonder how they move, because you know, they're just so sticky.";
+                case 7:
+                    return "You cannot discover new planets unless you have the courage to lose sight of your homeworld.";
                 default:
                     return "I've been to so many stars and worlds, I have goods from all over the galaxy!";
             }
@@ -129,7 +129,7 @@ namespace CheezeMod.NPCs.Friendly
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            //button = Lang.inter[28].Value;
+            button = Lang.inter[28].Value;
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
@@ -143,6 +143,8 @@ namespace CheezeMod.NPCs.Friendly
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
             shop.item[nextSlot].SetDefaults(mod.ItemType("MegaCorpVendor"));
+            nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("Antimatter"));
             nextSlot++;
             shop.item[nextSlot].SetDefaults(mod.ItemType("IronBolt"));
             shop.item[nextSlot].shopCustomPrice = 2500;

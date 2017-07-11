@@ -11,13 +11,10 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 		public override void SetDefaults()
 		{
             item.CloneDefaults(ItemID.Bananarang);
-
 			item.damage = 25;
 			item.melee = true;
 			item.width = 22;
 			item.height = 42;
-
-
             item.maxStack = 2;
             item.useTime = 20;
 			item.useAnimation = 20;
@@ -35,7 +32,7 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 
     public override void SetStaticDefaults()
     {
-      DisplayName.SetDefault("Bonemerang");
+      DisplayName.SetDefault("Bonemerang[Melee]");
       Tooltip.SetDefault("It's ought to be used by some skull wearing monsters.\nCan stack up to 2 times.");
     }
 
@@ -47,7 +44,11 @@ namespace CheezeMod.Items.Weapons.Boomerangs
             recipe.AddTile(18);
             recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+            ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(null, "BonemerangThrowing");
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
+        }
 
         public override bool CanUseItem(Player player)
         {

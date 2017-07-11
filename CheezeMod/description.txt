@@ -12,11 +12,20 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 • Several Quality of Life improvements.
 • A little bit of cross content with other mods, more in the future.
 
-NOTE: Update 1.1.1.4 for tModLoader 0.9.2.1 has just come out! If you see or find anything odd be sure to tell me!
+NOTE: Update 1.1.2 for tModLoader 0.10.0.2 has just come out! If you see or find anything odd be sure to tell me!
 
 Changelog:
-v1.1.X
-Major Changes to "Fist" Weapons. Utilizing FlashKirby99's WeaponOut methods to have a variety of special attacks, a better appearance and much more!
+v1.1.2.1 - Icon Testing
+Made an Icon and a few minor fixes.
+
+v1.1.2 - 0.10.0.2 Support, Quality Improvements and Nukes!
+Major Changes to most "Fist" Weapons. Utilizing FlashKirby99's WeaponOut methods to have a variety of special attacks, a better appearance and much more!
+Changes to Pulse Pistol and The High Noon to reflect your ammo on usage (might change again in the future in it's own ui section).
+Platforming Improvements to Agents of Doom Upgrade line.
+Variety of grammar tweaks and balances, I have rewritten a lot of text, so if you see any grammar mistakes, contact me.
+Added two new weapons to the Gravity Bomb upgrade line.
+A ton of graphical improvements to older sprites.
+Fixed some minor bugs.
 
 v1.1.1.4 - 0.9.2.1 support.
 Added a new monster.

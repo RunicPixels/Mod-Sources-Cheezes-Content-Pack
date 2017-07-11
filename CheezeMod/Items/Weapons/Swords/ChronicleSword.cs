@@ -15,8 +15,6 @@ namespace CheezeMod.Items.Weapons.Swords
 			item.melee = true;
 			item.width = 52;
 			item.height = 52;
-
-
             item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 1;
@@ -30,11 +28,11 @@ namespace CheezeMod.Items.Weapons.Swords
             item.shootSpeed = 12f;
 		}
 
-    public override void SetStaticDefaults()
-    {
-      DisplayName.SetDefault("Chronicle Sword");
-      Tooltip.SetDefault("It's from a Dark Chronicle.\nSends out three blasts that have a chance to inflict cursed flames or ichor.");
-    }
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Chronicle Sword");
+            Tooltip.SetDefault("It's from a Dark Chronicle.\nSends out three blasts that have a chance to inflict cursed flames or ichor.");
+        }
 
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
@@ -59,7 +57,7 @@ namespace CheezeMod.Items.Weapons.Swords
             double[] Angle = { baseAngle + -1 * spread, baseAngle + 0 * spread, baseAngle + 1 * spread };
             float[] speedXArray = { baseSpeed * (float)Math.Sin(Angle[0]) , baseSpeed * (float)Math.Sin(Angle[1]) , baseSpeed * (float)Math.Sin(Angle[2]) };
             float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]) , baseSpeed * (float)Math.Cos(Angle[1]) , baseSpeed * (float)Math.Cos(Angle[2]) };
-            for(int i = 0;i <= speedXArray.Length; i++) {
+            for(int i = 0;i < speedXArray.Length; i++) {
                 Projectile.NewProjectile(position.X, position.Y, speedXArray[i],speedYArray[i],type,damage,knockBack, item.owner);
             }
             return false;

@@ -82,14 +82,23 @@
     <Compile Include="Buffs\AngelsBane.cs" />
     <Compile Include="Buffs\CheeseFed.cs" />
     <Compile Include="Buffs\DownFall.cs" />
+    <Compile Include="Buffs\ExtremeRadiation.cs" />
     <Compile Include="Buffs\MegaAgentOfDread.cs" />
     <Compile Include="Buffs\ParryActive.cs" />
+    <Compile Include="Buffs\Radiation.cs" />
     <Compile Include="Buffs\Starlit.cs" />
     <Compile Include="Buffs\UltraAgentOfDread.cs" />
     <Compile Include="CheezeItem.cs" />
     <Compile Include="CheezeMod.cs" />
     <Compile Include="CheezePlayer.cs" />
     <Compile Include="CheezeWorld.cs" />
+    <Compile Include="Items\Weapons\Boomerangs\BonemerangThrowing.cs" />
+    <Compile Include="Items\Weapons\Boomerangs\KaboomerangThrowing.cs" />
+    <Compile Include="Items\Weapons\Boomerangs\StarChakram.cs" />
+    <Compile Include="Items\Weapons\Boomerangs\StarChakramThrowing.cs" />
+    <Compile Include="Items\Weapons\Ratchet\MegaNuke.cs" />
+    <Compile Include="Items\Weapons\Ratchet\UltraNuke.cs" />
+    <Compile Include="Items\Weapons\Swords\BladeOfKusanagi.cs" />
     <Compile Include="PlayerFX.cs" />
     <Compile Include="Dusts\BlueLight.cs" />
     <Compile Include="Dusts\DarkSparkle.cs" />
@@ -183,7 +192,6 @@
     <Compile Include="Items\Weapons\Ammo\Rocket0.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Bonemerang.cs" />
     <Compile Include="Items\Weapons\Boomerangs\Kaboomerang.cs" />
-    <Compile Include="Items\Weapons\Boomerangs\Star Chakram.cs" />
     <Compile Include="Items\Weapons\Bows\AngelBow.cs" />
     <Compile Include="Items\Weapons\Bows\CallistoBow.cs" />
     <Compile Include="Items\Weapons\Bows\DemonCrossbow.cs" />
@@ -347,6 +355,11 @@
     <Compile Include="NPCs\Protopet.cs" />
     <Compile Include="NPCs\Robonoid.cs" />
     <Compile Include="NPCs\Tyhrranoid.cs" />
+    <Compile Include="Projectiles\Boomerang\Bonemerang.cs" />
+    <Compile Include="Projectiles\Boomerang\BonemerangThrowing.cs" />
+    <Compile Include="Projectiles\Boomerang\Kaboomdamage.cs" />
+    <Compile Include="Projectiles\Boomerang\Kaboomerang.cs" />
+    <Compile Include="Projectiles\Boomerang\StarChakram.cs" />
     <Compile Include="Projectiles\Magic\BlueLaserStaff.cs" />
     <Compile Include="Projectiles\Magic\EarthBoulder.cs" />
     <Compile Include="Projectiles\Magic\FireBlast.cs" />
@@ -367,8 +380,8 @@
     <Compile Include="Projectiles\Magic\WindFieldBlast.cs" />
     <Compile Include="Projectiles\Magic\WindFieldCast.cs" />
     <Compile Include="Projectiles\Melee\AdamantHalberd.cs" />
+    <Compile Include="Projectiles\Melee\BladeOfKusanagi.cs" />
     <Compile Include="Projectiles\Melee\BlueLaserArray.cs" />
-    <Compile Include="Projectiles\Melee\Bonemerang.cs" />
     <Compile Include="Projectiles\Melee\CobaltHalberd.cs" />
     <Compile Include="Projectiles\Melee\CopperHalberd.cs" />
     <Compile Include="Projectiles\Melee\EnchantedMythrilHalberd.cs" />
@@ -378,9 +391,6 @@
     <Compile Include="Projectiles\Melee\GreenLaserArray.cs" />
     <Compile Include="Projectiles\Melee\HolyBlast.cs" />
     <Compile Include="Projectiles\Melee\IronHalberd.cs" />
-    <Compile Include="Projectiles\Melee\Kaboom.cs" />
-    <Compile Include="Projectiles\Melee\Kaboomdamage.cs" />
-    <Compile Include="Projectiles\Melee\Kaboomerang.cs" />
     <Compile Include="Projectiles\Melee\LeadHalberd.cs" />
     <Compile Include="Projectiles\Melee\LivingWoodPitchfork.cs" />
     <Compile Include="Projectiles\Melee\MagmaHalberd.cs" />
@@ -424,6 +434,7 @@
     <Compile Include="Projectiles\Ranged\MegaHeavyBouncerFragment.cs" />
     <Compile Include="Projectiles\Ranged\MegaHeavyLancer.cs" />
     <Compile Include="Projectiles\Ranged\MegaMultistar.cs" />
+    <Compile Include="Projectiles\Ranged\MegaNuke.cs" />
     <Compile Include="Projectiles\Ranged\MegaVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\MiniNuke.cs" />
     <Compile Include="Projectiles\Ranged\MultiStar.cs" />
@@ -434,6 +445,7 @@
     <Compile Include="Projectiles\Ranged\UltraHeavyBouncer.cs" />
     <Compile Include="Projectiles\Ranged\UltraHeavyLancer.cs" />
     <Compile Include="Projectiles\Ranged\UltraMultiStar.cs" />
+    <Compile Include="Projectiles\Ranged\UltraNuke.cs" />
     <Compile Include="Projectiles\Ranged\UltraVaporizer.cs" />
     <Compile Include="Projectiles\Ranged\Vaporizer.cs" />
     <Compile Include="Projectiles\Summoning\Agent.cs" />
@@ -507,7 +519,10 @@
     <Content Include="Buffs\BuffTemplate.png" />
     <Content Include="Buffs\CheeseFed.png" />
     <Content Include="Buffs\DownFall.png" />
+    <Content Include="Buffs\ExtremeRadiation.png" />
     <Content Include="Buffs\MegaAgentOfDread.png" />
+    <Content Include="Buffs\ParryActive.png" />
+    <Content Include="Buffs\Radiation.png" />
     <Content Include="Buffs\Starlit.png" />
     <Content Include="Buffs\UltraAgentOfDread.png" />
     <Content Include="build.txt" />
@@ -625,8 +640,11 @@
     <Content Include="Items\Placeable\MegaCorpVendor.png" />
     <Content Include="Items\Weapons\Ammo\Rocket0.png" />
     <Content Include="Items\Weapons\Boomerangs\Bonemerang.png" />
+    <Content Include="Items\Weapons\Boomerangs\BonemerangThrowing.png" />
     <Content Include="Items\Weapons\Boomerangs\Kaboomerang.png" />
+    <Content Include="Items\Weapons\Boomerangs\KaboomerangThrowing.png" />
     <Content Include="Items\Weapons\Boomerangs\StarChakram.png" />
+    <Content Include="Items\Weapons\Boomerangs\StarChakramThrowing.png" />
     <Content Include="Items\Weapons\Bows\AngelBow.png" />
     <Content Include="Items\Weapons\Bows\AngelBow3.png" />
     <Content Include="Items\Weapons\Bows\CallistoBow.png" />
@@ -688,6 +706,7 @@
     <Content Include="Items\Weapons\Ratchet\MegaHeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\MegaHeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\MegaMultistar.png" />
+    <Content Include="Items\Weapons\Ratchet\MegaNuke.png" />
     <Content Include="Items\Weapons\Ratchet\MegaVaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\MiniNuke.png" />
     <Content Include="Items\Weapons\Ratchet\Multistar.png" />
@@ -699,6 +718,7 @@
     <Content Include="Items\Weapons\Ratchet\UltraHeavyBouncer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraHeavyLancer.png" />
     <Content Include="Items\Weapons\Ratchet\UltraMultiStar.png" />
+    <Content Include="Items\Weapons\Ratchet\UltraNuke.png" />
     <Content Include="Items\Weapons\Ratchet\UltraVaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\Vaporizer.png" />
     <Content Include="Items\Weapons\Ratchet\Walloper.png" />
@@ -730,6 +750,7 @@
     <Content Include="Items\Weapons\Swords\AdminSword.png" />
     <Content Include="Items\Weapons\Swords\AngelSword.png" />
     <Content Include="Items\Weapons\Swords\Baconomnomnom.png" />
+    <Content Include="Items\Weapons\Swords\BladeOfKusanagi.png" />
     <Content Include="Items\Weapons\Swords\BlueLasersaber.png" />
     <Content Include="Items\Weapons\Swords\Cheeselicious.png" />
     <Content Include="Items\Weapons\Swords\ChronicleSword.png" />
@@ -797,6 +818,11 @@
     <Content Include="NPCs\Protopet.png" />
     <Content Include="NPCs\Robonoid.png" />
     <Content Include="NPCs\Tyhrranoid.png" />
+    <Content Include="Projectiles\Boomerang\Bonemerang.png" />
+    <Content Include="Projectiles\Boomerang\BonemerangThrowing.png" />
+    <Content Include="Projectiles\Boomerang\Kaboomdamage.png" />
+    <Content Include="Projectiles\Boomerang\Kaboomerang.png" />
+    <Content Include="Projectiles\Boomerang\StarChakram.png" />
     <Content Include="Projectiles\Magic\BlueLaserStaff.png" />
     <Content Include="Projectiles\Magic\EarthBoulder.png" />
     <Content Include="Projectiles\Magic\FireBlast.png" />
@@ -817,8 +843,8 @@
     <Content Include="Projectiles\Magic\WindFieldBlast.png" />
     <Content Include="Projectiles\Magic\WindFieldCast.png" />
     <Content Include="Projectiles\Melee\AdamantHalberd.png" />
+    <Content Include="Projectiles\Melee\BladeOfKusanagi.png" />
     <Content Include="Projectiles\Melee\BlueLaserArray.png" />
-    <Content Include="Projectiles\Melee\Bonemerang.png" />
     <Content Include="Projectiles\Melee\CobaltHalberd.png" />
     <Content Include="Projectiles\Melee\CopperHalberd.png" />
     <Content Include="Projectiles\Melee\EnchantedMythrilHalberd.png" />
@@ -828,9 +854,6 @@
     <Content Include="Projectiles\Melee\GreenLaserArray.png" />
     <Content Include="Projectiles\Melee\HolyBlast.png" />
     <Content Include="Projectiles\Melee\IronHalberd.png" />
-    <Content Include="Projectiles\Melee\Kaboom.png" />
-    <Content Include="Projectiles\Melee\Kaboomdamage.png" />
-    <Content Include="Projectiles\Melee\Kaboomerang.png" />
     <Content Include="Projectiles\Melee\LeadHalberd.png" />
     <Content Include="Projectiles\Melee\LivingWoodPitchfork.png" />
     <Content Include="Projectiles\Melee\MagmaHalberd.png" />
@@ -875,6 +898,7 @@
     <Content Include="Projectiles\Ranged\MegaHeavyBouncerFragment.png" />
     <Content Include="Projectiles\Ranged\MegaHeavyLancer.png" />
     <Content Include="Projectiles\Ranged\MegaMultistar.png" />
+    <Content Include="Projectiles\Ranged\MegaNuke.png" />
     <Content Include="Projectiles\Ranged\MegaVaporizer.png" />
     <Content Include="Projectiles\Ranged\MiniNuke.png" />
     <Content Include="Projectiles\Ranged\MultiStar.png" />
@@ -885,6 +909,7 @@
     <Content Include="Projectiles\Ranged\UltraHeavyBouncer.png" />
     <Content Include="Projectiles\Ranged\UltraHeavyLancer.png" />
     <Content Include="Projectiles\Ranged\UltraMultiStar.png" />
+    <Content Include="Projectiles\Ranged\UltraNuke.png" />
     <Content Include="Projectiles\Ranged\UltraVaporizer.png" />
     <Content Include="Projectiles\Ranged\Vaporizer.png" />
     <Content Include="Projectiles\Summoning\AgentOfDoom.png" />

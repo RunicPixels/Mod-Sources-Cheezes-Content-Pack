@@ -60,6 +60,13 @@ namespace CheezeMod.Projectiles.Ranged
             }
             if (Main.rand.Next(1) == 0)
             {
+                int num2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, 226, projectile.velocity.X, projectile.velocity.Y);
+                Main.dust[num2].noGravity = true;
+                Main.dust[num2].velocity *= 0.18f;
+                Main.dust[num2].scale = 1.2f;
+            }
+            if (Main.rand.Next(1) == 0)
+            {
                 int num2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, mod.DustType("WhiteLightCircle"), projectile.velocity.X, projectile.velocity.Y);
                 Main.dust[num2].noGravity = true;
                 Main.dust[num2].velocity *= 0f;
@@ -103,11 +110,11 @@ namespace CheezeMod.Projectiles.Ranged
                 Main.dust[num2].noGravity = true;
                 Main.dust[num2].velocity *= 0.3f;
             }
-            int num4 = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X / 100, projectile.velocity.Y / 100, ProjectileID.VortexBeaterRocket, (int)((float)projectile.damage * 0.5f), projectile.knockBack, projectile.owner);
+            int num4 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y-20, 0, 0, ProjectileID.VortexBeaterRocket, (int)((float)projectile.damage * 0.5f), projectile.knockBack, projectile.owner);
             Main.projectile[num4].penetrate = 5;
             Main.projectile[num4].width = 80;
             Main.projectile[num4].height = 80;
-            Main.projectile[num4].timeLeft = 20;
+            Main.projectile[num4].timeLeft = 1;
             Main.projectile[num4].alpha = 255;
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 14);
         }

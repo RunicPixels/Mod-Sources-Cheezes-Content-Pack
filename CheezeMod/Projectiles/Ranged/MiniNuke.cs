@@ -73,9 +73,9 @@ namespace CheezeMod.Projectiles.Ranged
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 62, 1.2f);
             projectile.velocity.X = 0;
             projectile.velocity.Y = 0;
-            int gore1 = Gore.NewGore(new Vector2(projectile.position.X-25, projectile.position.Y-155) - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/MiniNuke"));
+            int gore1 = Gore.NewGore(new Vector2(projectile.position.X-25, projectile.position.Y-145) - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/MiniNuke"));
             Main.gore[gore1].rotation = 0f;
-            Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/DreadBomb"));
+            Gore.NewGore(projectile.position - projectile.Size, new Vector2(0, 0), mod.GetGoreSlot("Gores/Explosions/DreadBomb3"));
             Lighting.AddLight(projectile.position, 2.2f, 2f, 1f);
             projectile.position.X = projectile.position.X + (float)(projectile.width / 2);
             projectile.position.Y = projectile.position.Y + (float)(projectile.height / 2);

@@ -4,9 +4,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CheezeMod.Projectiles.Melee
+namespace CheezeMod.Projectiles.Boomerang
 {
-    public class StarChakram : ModProjectile
+    public class StarChakramThrowing : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -14,7 +14,7 @@ namespace CheezeMod.Projectiles.Melee
             projectile.width = 20;
             projectile.height = 20;
             projectile.scale = 1.3f;
-            projectile.melee = true;
+            projectile.thrown = true;
             projectile.friendly = true;
             projectile.penetrate = 12;
             projectile.timeLeft = 600;

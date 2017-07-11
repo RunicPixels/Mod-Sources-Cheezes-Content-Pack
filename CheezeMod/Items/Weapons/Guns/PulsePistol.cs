@@ -6,7 +6,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-
 namespace CheezeMod.Items.Weapons.Guns
 {
     public class PulsePistol : ModItem
@@ -15,10 +14,11 @@ namespace CheezeMod.Items.Weapons.Guns
         int maxMagazineSize = 20;
         int DefaultUseTime = 4;
         int ReloadTime = 50;
+        string toolTip;
         bool shotPastReload = false;
         public override void SetDefaults()
         {
-
+            toolTip = "Originating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.";
             item.damage = 32;
             item.ranged = true;
             item.width = 44;
@@ -40,9 +40,8 @@ namespace CheezeMod.Items.Weapons.Guns
 
         public override void SetStaticDefaults()
         {
-            SetMagazineToolTip();
             DisplayName.SetDefault("Pulse Pistol");
-            Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.");
+            Tooltip.SetDefault(toolTip);
         }
 
 
@@ -81,7 +80,7 @@ namespace CheezeMod.Items.Weapons.Guns
             speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
             speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
             magazineSize--;
-            SetMagazineToolTip();
+            SetMagazineToolTip(player);
             if (type == ProjectileID.Bullet)
             {
                 type = mod.ProjectileType("PulseGun");
@@ -118,17 +117,24 @@ namespace CheezeMod.Items.Weapons.Guns
             item.reuseDelay = ReloadTime;
             magazineSize = maxMagazineSize;
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PistolReload");
-            SetMagazineToolTip();
+            SetMagazineToolTip(player);
         }
-        public void SetMagazineToolTip()
+        public void SetMagazineToolTip(Player player)
         {
+            Rectangle rect = player.getRect();
+            rect.Height = 0;
+            rect.Width = 0;
+            rect.X += 14;
+            rect.Y += 30;
             if (magazineSize >= 21)
             {
-                Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click.Only consumes ammo half of the time.\n"+(magazineSize-20).ToString() + "/" + maxMagazineSize.ToString() + " magazine left.");
+                CombatText.NewText(rect,
+                    Color.Cyan, (magazineSize - 20).ToString() + "/" + maxMagazineSize.ToString());
             }
-            else
+            else if(magazineSize > -1)
             {
-                Tooltip.SetDefault("Originating by Tracer from Overwatch, rapidly fires in a spread.\nOriginating by Tracer from Overwatch, rapidly fires in a spread.\nHas to reload every 20 shots or with right click. Only consumes ammo half of the time.\n"+magazineSize.ToString() + " / " + maxMagazineSize.ToString() + " magazine left.");
+                CombatText.NewText(rect,
+                    Color.Cyan, magazineSize.ToString() + " / " + maxMagazineSize.ToString());
             }
         }
     }

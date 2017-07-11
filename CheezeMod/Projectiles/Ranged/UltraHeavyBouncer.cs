@@ -39,9 +39,9 @@ namespace CheezeMod.Projectiles.Ranged
         public override void Kill(int timeLeft)
         {
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 14);
-            for (int i = 0; i <= 1 +Main.rand.Next(2); i++)
+            for (int i = 0; i < 1 +Main.rand.Next(2); i++)
             {
-                Projectile.NewProjectile(projectile.position.X, projectile.position.Y, (projectile.oldVelocity.X * 1f) / 4 - 2 + Main.rand.Next(4), (projectile.oldVelocity.Y * 1f) / 2 - 1 - Main.rand.Next(4), mod.ProjectileType("MegaHeavyBouncer"), (int)(projectile.damage * 0.75f), projectile.knockBack / 2, projectile.owner);
+                Projectile.NewProjectile(projectile.position.X, projectile.position.Y, (projectile.oldVelocity.X * 1f) / 4 - 2 + Main.rand.Next(4), (projectile.oldVelocity.Y * 1f) / 2 - 1 - Main.rand.Next(4), mod.ProjectileType("MegaHeavyBouncer"), (int)(projectile.damage * 0.9f), projectile.knockBack / 2, projectile.owner);
             }
             for (int i = 0; i < Main.rand.Next(4) + 4; i++)
             {

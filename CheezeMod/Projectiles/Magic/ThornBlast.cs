@@ -50,7 +50,7 @@ namespace CheezeMod.Projectiles.Magic
             double[] Angle = { baseAngle + 0 + Main.rand.NextFloat() * spread, baseAngle + 1 + Main.rand.NextFloat() * spread, baseAngle + +2 * spread + Main.rand.NextFloat(), baseAngle + +3 + Main.rand.NextFloat() * spread, baseAngle + +4 + Main.rand.NextFloat() * spread, baseAngle + +5 + Main.rand.NextFloat() * spread, baseAngle + +6 + Main.rand.NextFloat() * spread, baseAngle + +7 + Main.rand.NextFloat() * spread };
             float[] speedXArray = { baseSpeed * (float)Math.Sin(Angle[0]), baseSpeed * (float)Math.Sin(Angle[1]), baseSpeed * (float)Math.Sin(Angle[2]), baseSpeed * (float)Math.Sin(Angle[3]), baseSpeed * (float)Math.Sin(Angle[4]), baseSpeed * (float)Math.Sin(Angle[5]), baseSpeed * (float)Math.Sin(Angle[6]), baseSpeed * (float)Math.Sin(Angle[7]) };
             float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]), baseSpeed * (float)Math.Cos(Angle[1]), baseSpeed * (float)Math.Cos(Angle[2]), baseSpeed * (float)Math.Cos(Angle[3]), baseSpeed * (float)Math.Cos(Angle[4]), baseSpeed * (float)Math.Cos(Angle[5]), baseSpeed * (float)Math.Cos(Angle[6]), baseSpeed * (float)Math.Cos(Angle[7]) };
-            for (int i = 0; i <= speedXArray.Length; i++)
+            for (int i = 0; i < speedXArray.Length; i++)
             {
                 Projectile.NewProjectile(projectile.position.X, projectile.position.Y, speedXArray[i], speedYArray[i], ProjectileID.HornetStinger, projectile.damage/3, projectile.knockBack/2, projectile.owner);
             }

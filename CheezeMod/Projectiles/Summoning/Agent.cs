@@ -206,5 +206,16 @@ namespace CheezeMod.Projectiles.Summoning
 			fallThrough = true;
             return true;
 		}
+        public static bool CompareY(float npc, float projectile)
+        {
+            if (npc > projectile)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 	}
 }
