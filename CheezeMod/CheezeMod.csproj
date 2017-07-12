@@ -510,6 +510,7 @@
     <Compile Include="Tiles\MegaCorpVendor.cs" />
     <Compile Include="Tiles\StarlightBar.cs" />
     <Compile Include="Tiles\StarlightOre.cs" />
+    <Compile Include="UI\AmmoUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Buffs\AgentofDoom.png" />

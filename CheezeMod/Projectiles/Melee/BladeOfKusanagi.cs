@@ -14,7 +14,7 @@ namespace CheezeMod.Projectiles.Melee
             projectile.width = 162;
             projectile.height = 98;
             projectile.scale = 1f;
-            projectile.timeLeft = 15;
+            projectile.timeLeft = 18;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = false;
@@ -59,12 +59,19 @@ namespace CheezeMod.Projectiles.Melee
                     }
                     projectile.velocity = vector13; // At last, set the velocity of this projectile to the 'vector13'. This is later used to set the rotation of the projectile correctly.
                 }
-                else
-                {
-                    projectile.Kill(); // Yeahh, so we destroy the projectile here if the item is not being used.
-                }
             }
-            projectile.rotation = projectile.velocity.ToRotation() + rotationCorrection; // Assigns the rotation
+            else
+            {
+                projectile.Kill(); // Yeahh, so we destroy the projectile here if the item is not being used.
+            }
+            if (cheezePlayer.cutUp)
+            {
+                projectile.rotation = projectile.velocity.ToRotation() + rotationCorrection - 0.25f;// Assigns the rotation
+            }
+            else
+            {
+                projectile.rotation = projectile.velocity.ToRotation() + rotationCorrection + 0.25f; // Assigns the rotation
+            }
             float projectileCenterX = (int)player.Center.X - (projectile.width / 2);
             float projectileCenterY = (int)player.Center.Y - (projectile.height / 2);
 
@@ -73,7 +80,12 @@ namespace CheezeMod.Projectiles.Melee
             projectile.position.X = projectileCenterX + (projectileOffsetX - projectileCenterX) * (float)Math.Cos(projectile.rotation); // Assigns the x position
             projectile.position.Y = projectileCenterY + (projectileOffsetX - projectileCenterX) * (float)Math.Sin(projectile.rotation); // Assigns the y position
 
-            
+            player.itemTime = 6;// Hmm yeah, not really know what I should explain about this...
+            player.itemAnimation = 6;
+
+            player.ChangeDir(projectile.direction); // Makes sure that the owner of this projectile isfacing the same way that the projectile is (so that you don't get a situation in which
+                                              // the projectile is on the left side of the player while the player is still facing the right.
+
         }
 
         public override void ModifyDamageHitbox(ref Rectangle hitbox)
@@ -95,13 +107,13 @@ namespace CheezeMod.Projectiles.Melee
             {
                 int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 160);
             }
-            projectile.alpha = 75;
+            projectile.alpha = 25;
             if (cheezePlayer.cutUp == false) {
-                if (projectile.timeLeft < 5)
+                if (projectile.timeLeft < 6)
                 {
                     projectile.frame = 2;
                 }
-                else if (projectile.timeLeft < 10)
+                else if (projectile.timeLeft < 12)
                 {
                     projectile.frame = 1;
                 }
@@ -112,11 +124,11 @@ namespace CheezeMod.Projectiles.Melee
             }
             else
             {
-                if (projectile.timeLeft < 5)
+                if (projectile.timeLeft < 6)
                 {
                     projectile.frame = 5;
                 }
-                else if (projectile.timeLeft < 10)
+                else if (projectile.timeLeft < 12)
                 {
                     projectile.frame = 4;
                 }
@@ -130,6 +142,7 @@ namespace CheezeMod.Projectiles.Melee
 
         public override void Kill(int timeLeft)
         {
+            projectile.hide = true;
             Player player = Main.player[projectile.owner];
             Point playerCentre = player.Center.ToTileCoordinates();
             CheezePlayer cheezePlayer = ((CheezePlayer)player.GetModPlayer(mod, "CheezePlayer"));

@@ -18,8 +18,8 @@ namespace CheezeMod.Items.Weapons.Swords
             item.noMelee = true;
 			item.width = 58;
 			item.height = 64;
-			item.useAnimation = 14;
-            item.useTime = 14;
+            item.useTime = 18;
+            item.useAnimation  = 19;
             item.channel = true;
             item.useStyle = 1;
             item.noUseGraphic = true;

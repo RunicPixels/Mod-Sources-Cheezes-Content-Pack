@@ -7,10 +7,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using CheezeMod.Items;
 using CheezeMod.NPCs;
+using CheezeMod.UI;
 using System.Drawing;
 using System.Linq;
 using System.IO;
 using Terraria.Localization;
+using System.Collections.Generic;
+using Terraria.UI;
 
 namespace CheezeMod
 {
@@ -25,6 +28,48 @@ namespace CheezeMod
                 AutoloadSounds = true
             };
         }
+        // UI
+        #region UI
+        public UserInterface customResources;
+        public AmmoUI ammoUI;
+
+        public override void Load()
+        {
+            if (Main.dedServ)
+            {
+                customResources = new UserInterface();
+                ammoUI = new AmmoUI();
+                AmmoUI.visible = true;
+                customResources.SetState(ammoUI);
+            }
+        }
+
+        public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+        {
+            int vanillaResourceBar = layers.FindIndex(layer => layer.Name.Equals("Resource Bars"));
+            if (vanillaResourceBar != -1)
+            {
+                    //Add you own layer
+                    layers.Insert(vanillaResourceBar, new LegacyGameInterfaceLayer("CustomBars: Custom Resource Bar", delegate
+                    {
+                        if (AmmoUI.visible)
+                        {
+                            customResources.Update(Main._drawInterfaceGameTime);
+                            ammoUI.Draw(Main.spriteBatch);
+                        }
+                        return true;
+                    }, InterfaceScaleType.UI)
+                    );
+            }
+            if (AmmoUI.visible)
+            {
+                //Update CustomBars
+                customResources.Update(Main._drawInterfaceGameTime);
+                ammoUI.Draw(Main.spriteBatch);
+            }
+
+        }
+        #endregion
         // MATH and DRAWING //
         #region MathInfo
         public static int BooleanToInt(bool parameter)
