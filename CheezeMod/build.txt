@@ -1,7 +1,7 @@
 author = Cheezegami
-version = 1.1.2.01
+version = 1.1.2.4
 displayName = Cheeze's Content Pack
-homepage = http://forums.terraria.org/index.php?threads/cheezes-content-pack.40676/
+homepage = https://github.com/Cheezegami/Mod-Sources-Cheezes-Content-Pack/
 hideCode = false
 hideResources = false
 includeSource = true

@@ -10,7 +10,6 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 	{
 		public override void SetDefaults()
 		{
-            item.CloneDefaults(ItemID.Bananarang);
 			item.damage = 69;
 			item.thrown = true;
 			item.width = 36;

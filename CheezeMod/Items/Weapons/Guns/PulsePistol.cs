@@ -77,8 +77,8 @@ namespace CheezeMod.Items.Weapons.Guns
                 return false;
             }
             float spread = 17f; // 17 degrees
-            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
             magazineSize--;
             SetMagazineToolTip(player);
             if (type == ProjectileID.Bullet)

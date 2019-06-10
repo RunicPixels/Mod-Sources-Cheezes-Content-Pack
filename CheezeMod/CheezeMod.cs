@@ -19,6 +19,7 @@ namespace CheezeMod
 {
     public class CheezeMod : Mod
     {
+        public enum Direction { X, Y}
         public CheezeMod()
         {
             Properties = new ModProperties()
@@ -78,7 +79,7 @@ namespace CheezeMod
             else return 0;
         }
 
-        public static float CalculateSpread(float spreadInput, float speedX, float speedY, char XorY)
+        public static float CalculateSpread(float spreadInput, float speedX, float speedY, Direction XorY)
         {
             float spread = spreadInput * 0.0174f; // degrees converted to radians
             float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
@@ -87,13 +88,17 @@ namespace CheezeMod
             float randomSpeed = Main.rand.NextFloat() * 0.05f + 0.975f;
             speedX = baseSpeed * randomSpeed * (float)Math.Sin(randomAngle);
             speedY = baseSpeed * randomSpeed * (float)Math.Cos(randomAngle);
-            if (XorY == 'X')
+            if (XorY == Direction.X)
             {
                 return speedX;
             }
-            else
+            else if(XorY == Direction.Y)
             {
                 return speedY;
+            }
+            else
+            {
+                return 0f;
             }
         }
 

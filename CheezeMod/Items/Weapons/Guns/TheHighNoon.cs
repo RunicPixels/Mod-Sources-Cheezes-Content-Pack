@@ -84,8 +84,8 @@ namespace CheezeMod.Items.Weapons.Guns
             if (player.altFunctionUse == 2)
             {
                 spread = 20f; // 20 degrees
-                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
+                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
             }
             magazineSize--;
             SetMagazineToolTip(player);

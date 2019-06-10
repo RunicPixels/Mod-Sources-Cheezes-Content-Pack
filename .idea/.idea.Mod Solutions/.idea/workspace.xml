@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a169c84-ecd7-48b7-b5ba-e32fbe6d7d7c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/Mod Solutions/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Mod Solutions/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/CheezeMod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/CheezeMod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/Bonemerang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/Bonemerang.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/BonemerangThrowing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/BonemerangThrowing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/Kaboomerang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/Kaboomerang.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/KaboomerangThrowing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/KaboomerangThrowing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/StarChakram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/StarChakram.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/StarChakramThrowing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Boomerangs/StarChakramThrowing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/CallistoBow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/CallistoBow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/DemonCrossbow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/DemonCrossbow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TendonCrossbow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TendonCrossbow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TrueVolcanoCrossbow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TrueVolcanoCrossbow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/VolcanoCrossbow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/VolcanoCrossbow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/PulsePistol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/PulsePistol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/TheHighNoon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/TheHighNoon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/ChaosTheory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/ChaosTheory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GraniteRod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GraniteRod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GuardianStaff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GuardianStaff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/HistoricStaff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/HistoricStaff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/StarBlitz.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/StarBlitz.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueChaosTheory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueChaosTheory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueGraniteRod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueGraniteRod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzCannon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzCannon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzEruptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzEruptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BlitzGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BombGlove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/BombGlove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Bouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Bouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDread.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDread.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GoldBombGlove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GoldBombGlove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GravityBomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GravityBomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyBouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyBouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyLancer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyLancer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Lancer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Lancer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaBombGlove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaBombGlove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaGloveOfDread.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaGloveOfDread.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyBouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyBouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyLancer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyLancer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Swords/ChronicleSword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Swords/ChronicleSword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Swords/NietonoNoShana.png" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Swords/NietonoNoShana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Swords/NietonoNoShana2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Thrown/BoneKunai.png" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Thrown/BoneKunai.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Thrown/ChlorophyteKunai.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Items/Weapons/Thrown/ChlorophyteKunai.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/CheezeGlobalNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/CheezeGlobalNPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/DragonEye.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/DragonEye.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/Eyebat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/Eyebat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/MoltenEye.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/MoltenEye.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/Protopet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/Protopet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/Robonoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/Robonoid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/NPCs/Tyhrranoid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/NPCs/Tyhrranoid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/Projectiles/Thrown/BoneKunai.png" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/Projectiles/Thrown/BoneKunai.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/build.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/build.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheezeMod/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/CheezeMod/icon.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <marker date="1560200401074" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200401074" expanded="true" signature="148:1880" ph="{...}" />
+                <marker date="1560200401074" expanded="true" signature="188:1878" ph="{...}" />
+                <marker date="1560200401074" expanded="true" signature="228:866" ph="{...}" />
+                <marker date="1560200401074" expanded="true" signature="912:1111" ph="{...}" />
+                <marker date="1560200401074" expanded="true" signature="1155:1579" ph="{...}" />
+                <marker date="1560200401074" expanded="true" signature="1771:1872" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+              <folding>
+                <marker date="1560200429143" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200429143" expanded="true" signature="148:2154" ph="{...}" />
+                <marker date="1560200429143" expanded="true" signature="183:2152" ph="{...}" />
+                <marker date="1560200429143" expanded="true" signature="266:924" ph="{...}" />
+                <marker date="1560200429143" expanded="true" signature="974:1194" ph="{...}" />
+                <marker date="1560200429143" expanded="true" signature="1238:1664" ph="{...}" />
+                <marker date="1560200429143" expanded="true" signature="1847:2146" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding>
+                <marker date="1560200447744" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200447744" expanded="true" signature="148:2059" ph="{...}" />
+                <marker date="1560200447744" expanded="true" signature="183:2057" ph="{...}" />
+                <marker date="1560200447744" expanded="true" signature="266:934" ph="{...}" />
+                <marker date="1560200447744" expanded="true" signature="980:1156" ph="{...}" />
+                <marker date="1560200447744" expanded="true" signature="1200:1569" ph="{...}" />
+                <marker date="1560200447744" expanded="true" signature="1752:2051" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+              <folding>
+                <marker date="1560200495624" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200495624" expanded="true" signature="148:2978" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="195:2976" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="286:997" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="1043:1312" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="1356:1787" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="1970:2970" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="2109:2913" ph="{...}" />
+                <marker date="1560200495624" expanded="true" signature="2422:2634" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+              <folding>
+                <marker date="1560200621418" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200621418" expanded="true" signature="148:2386" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="192:2384" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="241:996" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="1042:1217" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="1261:1628" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="1811:2257" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="2146:2222" ph="{...}" />
+                <marker date="1560200621418" expanded="true" signature="2308:2378" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+              <folding>
+                <marker date="1560200537066" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200537066" expanded="true" signature="148:2225" ph="{...}" />
+                <marker date="1560200537066" expanded="true" signature="192:2223" ph="{...}" />
+                <marker date="1560200537066" expanded="true" signature="232:970" ph="{...}" />
+                <marker date="1560200537066" expanded="true" signature="1016:1264" ph="{...}" />
+                <marker date="1560200537066" expanded="true" signature="1308:1754" ph="{...}" />
+                <marker date="1560200537066" expanded="true" signature="1937:2217" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+              <folding>
+                <marker date="1560200583179" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200583179" expanded="true" signature="148:2075" ph="{...}" />
+                <marker date="1560200583179" expanded="true" signature="192:2073" ph="{...}" />
+                <marker date="1560200583179" expanded="true" signature="232:831" ph="{...}" />
+                <marker date="1560200583179" expanded="true" signature="877:1089" ph="{...}" />
+                <marker date="1560200583179" expanded="true" signature="1133:1569" ph="{...}" />
+                <marker date="1560200583179" expanded="true" signature="1728:2067" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+              <folding>
+                <marker date="1560200597930" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200597930" expanded="true" signature="148:2450" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="191:2448" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="231:826" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="872:1196" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="1240:1681" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="1865:2318" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="2155:2283" ph="{...}" />
+                <marker date="1560200597930" expanded="true" signature="2370:2442" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="784">
+              <caret line="54" column="92" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
+              <folding>
+                <marker date="1560200608899" expanded="false" signature="6:105" ph="..." />
+                <marker date="1560200608899" expanded="true" signature="148:2150" ph="{...}" />
+                <marker date="1560200608899" expanded="true" signature="184:2148" ph="{...}" />
+                <marker date="1560200608899" expanded="true" signature="224:883" ph="{...}" />
+                <marker date="1560200608899" expanded="true" signature="933:1162" ph="{...}" />
+                <marker date="1560200608899" expanded="true" signature="1206:1627" ph="{...}" />
+                <marker date="1560200608899" expanded="true" signature="1810:2142" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GraniteRod.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/ChaosTheory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueGraniteRod.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueChaosTheory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/PulsePistol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GoldBombGlove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaBombGlove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/TheHighNoon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyBouncer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TendonCrossbow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GravityBomb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/DemonCrossbow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaGloveOfDread.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Lancer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/VolcanoCrossbow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TrueVolcanoCrossbow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyLancer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyBouncer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyLancer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GuardianStaff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/HistoricStaff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/StarBlitz.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDread.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/DemonCrossbow.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TendonCrossbow.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TrueVolcanoCrossbow.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/VolcanoCrossbow.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/PulsePistol.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/TheHighNoon.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/ChaosTheory.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GraniteRod.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GuardianStaff.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/HistoricStaff.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/StarBlitz.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueChaosTheory.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueGraniteRod.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDoom.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDread.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GoldBombGlove.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GravityBomb.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyBouncer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyLancer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Lancer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaBombGlove.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaGloveOfDread.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyBouncer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyLancer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs" />
+        <option value="$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Weapons" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Weapons" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Bows" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Weapons" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Guns" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Weapons" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Magic" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Mod Solutions" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CheezeMod" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Items" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Weapons" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Ratchet" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a169c84-ecd7-48b7-b5ba-e32fbe6d7d7c" name="Default Changelist" comment="" />
+      <created>1560184810401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560184810401</updated>
+      <workItem from="1560184821205" duration="1977000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1977000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/DemonCrossbow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="64" column="93" selection-start-line="64" selection-start-column="93" selection-end-line="64" selection-end-column="93" />
+          <folding>
+            <marker date="1560199879453" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199879453" expanded="true" signature="145:2589" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="185:2587" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="225:814" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="860:1079" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="1123:1800" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="1984:2469" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="2253:2430" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="2350:2416" ph="{...}" />
+            <marker date="1560199879453" expanded="true" signature="2522:2581" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TendonCrossbow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="64" column="91" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="91" />
+          <folding>
+            <marker date="1560199902100" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199902100" expanded="true" signature="145:2621" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="186:2619" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="226:814" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="860:1074" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="1118:1807" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="1991:2493" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="2281:2458" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="2378:2444" ph="{...}" />
+            <marker date="1560199902100" expanded="true" signature="2545:2613" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/TrueVolcanoCrossbow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="60" column="96" selection-start-line="60" selection-start-column="96" selection-end-line="60" selection-end-column="96" />
+          <folding>
+            <marker date="1560199926539" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199926539" expanded="true" signature="145:2957" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="191:2955" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="231:880" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="926:1151" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="1195:1503" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="1687:2949" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="1738:2880" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="2057:2405" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="2164:2243" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="2308:2387" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="2461:2665" ph="{...}" />
+            <marker date="1560199926539" expanded="true" signature="2568:2647" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Bows/VolcanoCrossbow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+          <folding>
+            <marker date="1560199937734" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199937734" expanded="true" signature="145:3090" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="187:3088" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="227:876" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="922:1151" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="1195:1872" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2056:2933" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2359:2667" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2458:2525" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2586:2653" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2718:2898" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2817:2884" ph="{...}" />
+            <marker date="1560199937734" expanded="true" signature="2985:3082" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/PulsePistol.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+          <folding>
+            <marker date="1560199957961" expanded="false" signature="6:182" ph="..." />
+            <marker date="1560199957961" expanded="true" signature="222:4703" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="263:4701" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="499:1385" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="1435:1548" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="1592:1965" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="2149:3138" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="2239:2334" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="2351:2515" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="2547:2671" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3020:3103" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3197:3480" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3254:3382" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3399:3457" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3532:3690" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3574:3632" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="3732:4057" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="4111:4695" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="4313:4482" ph="{...}" />
+            <marker date="1560199957961" expanded="true" signature="4521:4685" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Guns/TheHighNoon.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+          <folding>
+            <marker date="1560199974357" expanded="false" signature="6:145" ph="..." />
+            <marker date="1560199974357" expanded="true" signature="185:4342" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="226:4340" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="436:1241" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="1287:1560" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="1604:2033" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="2192:3213" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="2281:2376" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="2393:2557" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="2589:2713" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="2840:3110" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="3272:3317" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="3360:3685" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="3739:4334" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="3940:4115" ph="{...}" />
+            <marker date="1560199974357" expanded="true" signature="4154:4324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/ChaosTheory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding>
+            <marker date="1560199987103" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199987103" expanded="true" signature="146:2900" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="187:2898" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="236:878" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="924:1160" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="1203:1637" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="1821:2892" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="2105:2318" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="2363:2493" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="2538:2676" ph="{...}" />
+            <marker date="1560199987103" expanded="true" signature="2693:2857" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GraniteRod.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
+          <folding>
+            <marker date="1560199999000" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560199999000" expanded="true" signature="146:1556" ph="{...}" />
+            <marker date="1560199999000" expanded="true" signature="186:1554" ph="{...}" />
+            <marker date="1560199999000" expanded="true" signature="235:922" ph="{...}" />
+            <marker date="1560199999000" expanded="true" signature="968:1080" ph="{...}" />
+            <marker date="1560199999000" expanded="true" signature="1265:1548" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/GuardianStaff.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
+          <folding>
+            <marker date="1560200009122" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200009122" expanded="true" signature="146:2436" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="189:2434" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="238:1011" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="1057:1274" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="1459:1738" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="1781:2067" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="2128:2428" ph="{...}" />
+            <marker date="1560200009122" expanded="true" signature="2206:2418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/HistoricStaff.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="48" column="92" selection-start-line="48" selection-start-column="92" selection-end-line="48" selection-end-column="92" />
+          <folding>
+            <marker date="1560200020639" expanded="false" signature="6:122" ph="..." />
+            <marker date="1560200020639" expanded="true" signature="163:2795" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="206:2793" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="255:1048" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="1094:1368" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="1553:1832" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="1875:2162" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="2223:2587" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="2301:2546" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="2640:2691" ph="{...}" />
+            <marker date="1560200020639" expanded="true" signature="2736:2787" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/StarBlitz.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="50" column="79" lean-forward="true" selection-start-line="50" selection-start-column="79" selection-end-line="50" selection-end-column="79" />
+          <folding>
+            <marker date="1560200036918" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200036918" expanded="true" signature="146:1841" ph="{...}" />
+            <marker date="1560200036918" expanded="true" signature="185:1839" ph="{...}" />
+            <marker date="1560200036918" expanded="true" signature="234:871" ph="{...}" />
+            <marker date="1560200036918" expanded="true" signature="917:1029" ph="{...}" />
+            <marker date="1560200036918" expanded="true" signature="1073:1368" ph="{...}" />
+            <marker date="1560200036918" expanded="true" signature="1552:1833" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueChaosTheory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
+          <folding>
+            <marker date="1560200047832" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200047832" expanded="true" signature="146:3641" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="191:3639" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="240:886" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="932:1215" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="1400:3289" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="1826:1963" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="2008:2099" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="2144:2287" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="2304:3254" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="2938:3240" ph="{...}" />
+            <marker date="1560200047832" expanded="true" signature="3331:3633" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Magic/TrueGraniteRod.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
+          <folding>
+            <marker date="1560200144651" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200144651" expanded="true" signature="146:1575" ph="{...}" />
+            <marker date="1560200144651" expanded="true" signature="190:1573" ph="{...}" />
+            <marker date="1560200144651" expanded="true" signature="239:924" ph="{...}" />
+            <marker date="1560200144651" expanded="true" signature="970:1099" ph="{...}" />
+            <marker date="1560200144651" expanded="true" signature="1284:1567" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDoom.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <marker date="1560200083590" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200083590" expanded="true" signature="148:1747" ph="{...}" />
+            <marker date="1560200083590" expanded="true" signature="186:1745" ph="{...}" />
+            <marker date="1560200083590" expanded="true" signature="226:951" ph="{...}" />
+            <marker date="1560200083590" expanded="true" signature="997:1164" ph="{...}" />
+            <marker date="1560200083590" expanded="true" signature="1208:1511" ph="{...}" />
+            <marker date="1560200083590" expanded="true" signature="1694:1739" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GloveOfDread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <marker date="1560200089278" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200089278" expanded="true" signature="148:1859" ph="{...}" />
+            <marker date="1560200089278" expanded="true" signature="187:1857" ph="{...}" />
+            <marker date="1560200089278" expanded="true" signature="227:956" ph="{...}" />
+            <marker date="1560200089278" expanded="true" signature="1002:1218" ph="{...}" />
+            <marker date="1560200089278" expanded="true" signature="1262:1623" ph="{...}" />
+            <marker date="1560200089278" expanded="true" signature="1806:1851" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GoldBombGlove.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="55" column="92" lean-forward="true" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+          <folding>
+            <marker date="1560200144668" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200144668" expanded="true" signature="148:2226" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="188:2224" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="228:834" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="880:1059" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="1103:1471" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="1654:2098" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="1989:2063" ph="{...}" />
+            <marker date="1560200144668" expanded="true" signature="2149:2218" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/GravityBomb.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <marker date="1560200169262" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200169262" expanded="true" signature="148:1761" ph="{...}" />
+            <marker date="1560200169262" expanded="true" signature="186:1759" ph="{...}" />
+            <marker date="1560200169262" expanded="true" signature="226:892" ph="{...}" />
+            <marker date="1560200169262" expanded="true" signature="938:1117" ph="{...}" />
+            <marker date="1560200169262" expanded="true" signature="1161:1471" ph="{...}" />
+            <marker date="1560200169262" expanded="true" signature="1654:1753" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyBouncer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <marker date="1560200216391" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200216391" expanded="true" signature="148:1958" ph="{...}" />
+            <marker date="1560200216391" expanded="true" signature="187:1956" ph="{...}" />
+            <marker date="1560200216391" expanded="true" signature="248:846" ph="{...}" />
+            <marker date="1560200216391" expanded="true" signature="892:1071" ph="{...}" />
+            <marker date="1560200216391" expanded="true" signature="1115:1477" ph="{...}" />
+            <marker date="1560200216391" expanded="true" signature="1660:1950" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/HeavyLancer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+          <folding>
+            <marker date="1560200237794" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200237794" expanded="true" signature="148:2281" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="186:2279" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="260:855" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="901:1144" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="1188:1550" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="1734:2149" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="1992:2114" ph="{...}" />
+            <marker date="1560200237794" expanded="true" signature="2201:2273" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/Lancer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <marker date="1560200271553" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200271553" expanded="true" signature="148:2225" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="181:2223" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="269:864" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="910:1139" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="1183:1499" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="1683:2093" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="1941:2058" ph="{...}" />
+            <marker date="1560200271553" expanded="true" signature="2145:2217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaBombGlove.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+          <folding>
+            <marker date="1560200303876" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200303876" expanded="true" signature="148:2283" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="188:2281" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="263:869" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="915:1089" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="1133:1558" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="1741:2155" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="2044:2120" ph="{...}" />
+            <marker date="1560200303876" expanded="true" signature="2206:2275" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaGloveOfDread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="58" column="92" selection-start-line="58" selection-start-column="92" selection-end-line="58" selection-end-column="92" />
+          <folding>
+            <marker date="1560200317172" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200317172" expanded="true" signature="148:2156" ph="{...}" />
+            <marker date="1560200317172" expanded="true" signature="191:2154" ph="{...}" />
+            <marker date="1560200317172" expanded="true" signature="231:968" ph="{...}" />
+            <marker date="1560200317172" expanded="true" signature="1014:1220" ph="{...}" />
+            <marker date="1560200317172" expanded="true" signature="1264:1685" ph="{...}" />
+            <marker date="1560200317172" expanded="true" signature="1868:2148" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyBouncer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <marker date="1560200353063" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200353063" expanded="true" signature="148:2083" ph="{...}" />
+            <marker date="1560200353063" expanded="true" signature="193:2081" ph="{...}" />
+            <marker date="1560200353063" expanded="true" signature="275:872" ph="{...}" />
+            <marker date="1560200353063" expanded="true" signature="918:1122" ph="{...}" />
+            <marker date="1560200353063" expanded="true" signature="1166:1585" ph="{...}" />
+            <marker date="1560200353063" expanded="true" signature="1768:2075" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaHeavyLancer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1560200386145" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200386145" expanded="true" signature="148:2376" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="190:2374" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="251:846" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="892:1176" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="1220:1641" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="1825:2244" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="2083:2209" ph="{...}" />
+            <marker date="1560200386145" expanded="true" signature="2296:2368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaMultistar.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <marker date="1560200401074" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200401074" expanded="true" signature="148:1880" ph="{...}" />
+            <marker date="1560200401074" expanded="true" signature="188:1878" ph="{...}" />
+            <marker date="1560200401074" expanded="true" signature="228:866" ph="{...}" />
+            <marker date="1560200401074" expanded="true" signature="912:1111" ph="{...}" />
+            <marker date="1560200401074" expanded="true" signature="1155:1579" ph="{...}" />
+            <marker date="1560200401074" expanded="true" signature="1771:1872" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MegaNuke.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+          <folding>
+            <marker date="1560200429143" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200429143" expanded="true" signature="148:2154" ph="{...}" />
+            <marker date="1560200429143" expanded="true" signature="183:2152" ph="{...}" />
+            <marker date="1560200429143" expanded="true" signature="266:924" ph="{...}" />
+            <marker date="1560200429143" expanded="true" signature="974:1194" ph="{...}" />
+            <marker date="1560200429143" expanded="true" signature="1238:1664" ph="{...}" />
+            <marker date="1560200429143" expanded="true" signature="1847:2146" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/MiniNuke.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <marker date="1560200447744" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200447744" expanded="true" signature="148:2059" ph="{...}" />
+            <marker date="1560200447744" expanded="true" signature="183:2057" ph="{...}" />
+            <marker date="1560200447744" expanded="true" signature="266:934" ph="{...}" />
+            <marker date="1560200447744" expanded="true" signature="980:1156" ph="{...}" />
+            <marker date="1560200447744" expanded="true" signature="1200:1569" ph="{...}" />
+            <marker date="1560200447744" expanded="true" signature="1752:2051" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBlitzEruptor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <marker date="1560200495624" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200495624" expanded="true" signature="148:2978" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="195:2976" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="286:997" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="1043:1312" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="1356:1787" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="1970:2970" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="2109:2913" ph="{...}" />
+            <marker date="1560200495624" expanded="true" signature="2422:2634" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraBombGlove.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+          <folding>
+            <marker date="1560200621418" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200621418" expanded="true" signature="148:2386" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="192:2384" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="241:996" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="1042:1217" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="1261:1628" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="1811:2257" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="2146:2222" ph="{...}" />
+            <marker date="1560200621418" expanded="true" signature="2308:2378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraGloveOfDread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+          <folding>
+            <marker date="1560200537066" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200537066" expanded="true" signature="148:2225" ph="{...}" />
+            <marker date="1560200537066" expanded="true" signature="192:2223" ph="{...}" />
+            <marker date="1560200537066" expanded="true" signature="232:970" ph="{...}" />
+            <marker date="1560200537066" expanded="true" signature="1016:1264" ph="{...}" />
+            <marker date="1560200537066" expanded="true" signature="1308:1754" ph="{...}" />
+            <marker date="1560200537066" expanded="true" signature="1937:2217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyBouncer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+          <folding>
+            <marker date="1560200583179" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200583179" expanded="true" signature="148:2075" ph="{...}" />
+            <marker date="1560200583179" expanded="true" signature="192:2073" ph="{...}" />
+            <marker date="1560200583179" expanded="true" signature="232:831" ph="{...}" />
+            <marker date="1560200583179" expanded="true" signature="877:1089" ph="{...}" />
+            <marker date="1560200583179" expanded="true" signature="1133:1569" ph="{...}" />
+            <marker date="1560200583179" expanded="true" signature="1728:2067" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraHeavyLancer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+          <folding>
+            <marker date="1560200597930" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200597930" expanded="true" signature="148:2450" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="191:2448" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="231:826" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="872:1196" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="1240:1681" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="1865:2318" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="2155:2283" ph="{...}" />
+            <marker date="1560200597930" expanded="true" signature="2370:2442" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheezeMod/Items/Weapons/Ratchet/UltraNuke.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="54" column="92" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
+          <folding>
+            <marker date="1560200608899" expanded="false" signature="6:105" ph="..." />
+            <marker date="1560200608899" expanded="true" signature="148:2150" ph="{...}" />
+            <marker date="1560200608899" expanded="true" signature="184:2148" ph="{...}" />
+            <marker date="1560200608899" expanded="true" signature="224:883" ph="{...}" />
+            <marker date="1560200608899" expanded="true" signature="933:1162" ph="{...}" />
+            <marker date="1560200608899" expanded="true" signature="1206:1627" ph="{...}" />
+            <marker date="1560200608899" expanded="true" signature="1810:2142" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

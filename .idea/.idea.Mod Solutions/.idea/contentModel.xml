@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ronald\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ronald\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Mod Solutions.-520376235.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources" t="IncludeFlat">
+      <e p="CheezeMod" t="IncludeRecursive">
+        <e p="Angle.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Buffs" t="Include">
+          <e p="AgentOfDoom.cs" t="Include" />
+          <e p="AgentofDoom.png" t="Include" />
+          <e p="AgentOfDread.cs" t="Include" />
+          <e p="AgentOfDread.png" t="Include" />
+          <e p="AngelsBane.cs" t="Include" />
+          <e p="AngelsBane.png" t="Include" />
+          <e p="BlankDebuff.png" t="Include" />
+          <e p="BuffTemplate.png" t="Include" />
+          <e p="CheeseFed.cs" t="Include" />
+          <e p="CheeseFed.png" t="Include" />
+          <e p="DownFall.cs" t="Include" />
+          <e p="DownFall.png" t="Include" />
+          <e p="ExtremeRadiation.cs" t="Include" />
+          <e p="ExtremeRadiation.png" t="Include" />
+          <e p="MegaAgentOfDread.cs" t="Include" />
+          <e p="MegaAgentOfDread.png" t="Include" />
+          <e p="ParryActive.cs" t="Include" />
+          <e p="ParryActive.png" t="Include" />
+          <e p="Radiation.cs" t="Include" />
+          <e p="Radiation.png" t="Include" />
+          <e p="Starlit.cs" t="Include" />
+          <e p="Starlit.png" t="Include" />
+          <e p="UltraAgentOfDread.cs" t="Include" />
+          <e p="UltraAgentOfDread.png" t="Include" />
+        </e>
+        <e p="build.txt" t="Include" />
+        <e p="CheezeItem.cs" t="Include" />
+        <e p="CheezeMod.cs" t="Include" />
+        <e p="CheezeMod.csproj" t="IncludeRecursive" />
+        <e p="CheezePlayer.cs" t="Include" />
+        <e p="CheezeWorld.cs" t="Include" />
+        <e p="description.txt" t="Include" />
+        <e p="Dusts" t="Include">
+          <e p="BlueLight.cs" t="Include" />
+          <e p="BlueLight.png" t="Include" />
+          <e p="DarkSparkle.cs" t="Include" />
+          <e p="DarkSparkle.png" t="Include" />
+          <e p="GraniteDust.cs" t="Include" />
+          <e p="GraniteDust.png" t="Include" />
+          <e p="GreenLight.cs" t="Include" />
+          <e p="GreenLight.png" t="Include" />
+          <e p="LiquidCursedFlame.cs" t="Include" />
+          <e p="LiquidCursedFlame.png" t="Include" />
+          <e p="LiquidGravity.cs" t="Include" />
+          <e p="LiquidGravity.png" t="Include" />
+          <e p="LiquidIchor.cs" t="Include" />
+          <e p="LiquidIchor.png" t="Include" />
+          <e p="LiquidNitrogen.cs" t="Include" />
+          <e p="LiquidNitrogen.png" t="Include" />
+          <e p="OrangeLight.cs" t="Include" />
+          <e p="OrangeLight.png" t="Include" />
+          <e p="PurpleLight.cs" t="Include" />
+          <e p="PurpleLight.png" t="Include" />
+          <e p="RedLight.cs" t="Include" />
+          <e p="RedLight.png" t="Include" />
+          <e p="RedSparkle.cs" t="Include" />
+          <e p="RedSparkle.png" t="Include" />
+          <e p="ShortSparkle.cs" t="Include" />
+          <e p="ShortSparkle.png" t="Include" />
+          <e p="Sparkle.cs" t="Include" />
+          <e p="Sparkle.png" t="Include" />
+          <e p="WhiteLightCircle.cs" t="Include" />
+          <e p="WhiteLightCircle.png" t="Include" />
+          <e p="YellowLight.cs" t="Include" />
+          <e p="YellowLight.png" t="Include" />
+        </e>
+        <e p="Gores" t="Include">
+          <e p="Bone" t="Include">
+            <e p="BoneFishHead.png" t="Include" />
+            <e p="BoneTail.png" t="Include" />
+          </e>
+          <e p="Explosions" t="Include">
+            <e p="DreadBomb.cs" t="Include" />
+            <e p="DreadBomb.png" t="Include" />
+            <e p="GravityBomb.cs" t="Include" />
+            <e p="GravityBomb.png" t="Include" />
+            <e p="MiniNuke.cs" t="Include" />
+            <e p="MiniNuke.png" t="Include" />
+          </e>
+          <e p="Granite" t="Include">
+            <e p="GraniteArm.png" t="Include" />
+            <e p="GraniteHead.png" t="Include" />
+          </e>
+          <e p="Magmatic" t="Include">
+            <e p="MoltenBody.png" t="Include" />
+            <e p="MoltenEye.png" t="Include" />
+            <e p="MoltenTail.png" t="Include" />
+          </e>
+          <e p="Mechanic" t="Include">
+            <e p="RobonoidArm.png" t="Include" />
+            <e p="RobonoidBelly.png" t="Include" />
+            <e p="RobonoidEye.png" t="Include" />
+          </e>
+          <e p="Organic" t="Include">
+            <e p="DragonEye.png" t="Include" />
+            <e p="DragonEyeBody.png" t="Include" />
+            <e p="DragonEyeTail.png" t="Include" />
+            <e p="ThyrranoidArm.png" t="Include" />
+            <e p="ThyrranoidBelly.png" t="Include" />
+            <e p="ThyrranoidEye.png" t="Include" />
+          </e>
+        </e>
+        <e p="Items" t="Include">
+          <e p="Accessory" t="Include">
+            <e p="GoreNecklace.cs" t="Include" />
+            <e p="GoreNecklace.png" t="Include" />
+            <e p="GoreNecklace_Neck.png" t="Include" />
+            <e p="MentalNecklace.cs" t="Include" />
+            <e p="MentalNecklace.png" t="Include" />
+            <e p="MentalNecklace_Neck.png" t="Include" />
+            <e p="PeisionNecklace.cs" t="Include" />
+            <e p="PeisionNecklace.png" t="Include" />
+            <e p="PeisionNecklace_Neck.png" t="Include" />
+            <e p="StarlightNecklace.cs" t="Include" />
+            <e p="StarlightNecklace.png" t="Include" />
+            <e p="StarlightNecklace_Neck.png" t="Include" />
+            <e p="StarlightVeil.cs" t="Include" />
+            <e p="StarlightVeil.png" t="Include" />
+            <e p="StarlightVeil_Neck.png" t="Include" />
+          </e>
+          <e p="Armor" t="Include">
+            <e p="CobaltCowl.cs" t="Include" />
+            <e p="CobaltCowl.png" t="Include" />
+            <e p="CobaltCowl_Head.png" t="Include" />
+            <e p="PalladiumHat.cs" t="Include" />
+            <e p="PalladiumHat.png" t="Include" />
+            <e p="PalladiumHat_Head.png" t="Include" />
+            <e p="StarlightBreastplate.cs" t="Include" />
+            <e p="StarlightBreastplate.png" t="Include" />
+            <e p="StarlightBreastplate_Arms.png" t="Include" />
+            <e p="StarlightBreastplate_Body.png" t="Include" />
+            <e p="StarlightBreastplate_FemaleBody.png" t="Include" />
+            <e p="StarlightHelmet.cs" t="Include" />
+            <e p="StarlightHelmet.png" t="Include" />
+            <e p="StarlightHelmet_Head.png" t="Include" />
+            <e p="StarlightLeggings.cs" t="Include" />
+            <e p="StarlightLeggings.png" t="Include" />
+            <e p="StarlightLeggings_Legs.png" t="Include" />
+          </e>
+          <e p="Blocks" t="Include">
+            <e p="DoubleStackedCrimstoneBlock.cs" t="Include" />
+            <e p="DoubleStackedCrimstoneBlock.png" t="Include" />
+            <e p="DoubleStackedDirtBlock.cs" t="Include" />
+            <e p="DoubleStackedDirtBlock.png" t="Include" />
+            <e p="DoubleStackedEbonstoneBlock.cs" t="Include" />
+            <e p="DoubleStackedEbonstoneBlock.png" t="Include" />
+            <e p="DoubleStackedGel.cs" t="Include" />
+            <e p="DoubleStackedGel.png" t="Include" />
+            <e p="DoubleStackedIceBlock.cs" t="Include" />
+            <e p="DoubleStackedIceBlock.png" t="Include" />
+            <e p="DoubleStackedMudBlock.cs" t="Include" />
+            <e p="DoubleStackedMudBlock.png" t="Include" />
+            <e p="DoubleStackedPearlstoneBlock.cs" t="Include" />
+            <e p="DoubleStackedPearlstoneBlock.png" t="Include" />
+            <e p="DoubleStackedSandBlock.cs" t="Include" />
+            <e p="DoubleStackedSandBlock.png" t="Include" />
+            <e p="DoubleStackedSnowBlock.cs" t="Include" />
+            <e p="DoubleStackedSnowBlock.png" t="Include" />
+            <e p="DoubleStackedStoneBlock.cs" t="Include" />
+            <e p="DoubleStackedStoneBlock.png" t="Include" />
+            <e p="DoubleStackedWood.cs" t="Include" />
+            <e p="DoubleStackedWood.png" t="Include" />
+            <e p="StackedCrimstoneBlock.cs" t="Include" />
+            <e p="StackedCrimstoneBlock.png" t="Include" />
+            <e p="StackedDirtBlock.cs" t="Include" />
+            <e p="StackedDirtBlock.png" t="Include" />
+            <e p="StackedEbonstoneBlock.cs" t="Include" />
+            <e p="StackedEbonstoneBlock.png" t="Include" />
+            <e p="StackedGel.cs" t="Include" />
+            <e p="StackedGel.png" t="Include" />
+            <e p="StackedIceBlock.cs" t="Include" />
+            <e p="StackedIceBlock.png" t="Include" />
+            <e p="StackedMudBlock.cs" t="Include" />
+            <e p="StackedMudBlock.png" t="Include" />
+            <e p="StackedPearlstoneBlock.cs" t="Include" />
+            <e p="StackedPearlstoneBlock.png" t="Include" />
+            <e p="StackedSandBlock.cs" t="Include" />
+            <e p="StackedSandBlock.png" t="Include" />
+            <e p="StackedSnowBlock.cs" t="Include" />
+            <e p="StackedSnowBlock.png" t="Include" />
+            <e p="StackedStoneBlock.cs" t="Include" />
+            <e p="StackedStoneBlock.png" t="Include" />
+            <e p="StackedWood.cs" t="Include" />
+            <e p="StackedWood.png" t="Include" />
+          </e>
+          <e p="Consumables" t="Include">
+            <e p="BossSummons" t="Include">
+              <e p="TestSummon.cs" t="Include" />
+              <e p="TestSummon.png" t="Include" />
+            </e>
+            <e p="Cheese.cs" t="Include" />
+            <e p="Cheese.png" t="Include" />
+          </e>
+          <e p="Materials" t="Include">
+            <e p="AmethystLens.cs" t="Include" />
+            <e p="AmethystLens.png" t="Include" />
+            <e p="AngelEssence.cs" t="Include" />
+            <e p="AngelEssence.png" t="Include" />
+            <e p="DiamondLens.cs" t="Include" />
+            <e p="DiamondLens.png" t="Include" />
+            <e p="EmeraldLens.cs" t="Include" />
+            <e p="EmeraldLens.png" t="Include" />
+            <e p="FlameWing.cs" t="Include" />
+            <e p="FlameWing.png" t="Include" />
+            <e p="GraniteShard.cs" t="Include" />
+            <e p="GraniteShard.png" t="Include" />
+            <e p="GuardianEssence.cs" t="Include" />
+            <e p="GuardianEssence.png" t="Include" />
+            <e p="HallowedBolt.cs" t="Include" />
+            <e p="HallowedBolt.png" t="Include" />
+            <e p="HellstoneBolt.cs" t="Include" />
+            <e p="HellstoneBolt.png" t="Include" />
+            <e p="HistoricEssence.cs" t="Include" />
+            <e p="HistoricEssence.png" t="Include" />
+            <e p="IronBolt.cs" t="Include" />
+            <e p="IronBolt.png" t="Include" />
+            <e p="LuminiteBolt.cs" t="Include" />
+            <e p="LuminiteBolt.png" t="Include" />
+            <e p="MeteoriteBolt.cs" t="Include" />
+            <e p="MeteoriteBolt.png" t="Include" />
+            <e p="Mushwood.cs" t="Include" />
+            <e p="Mushwood.png" t="Include" />
+            <e p="ObsidianString.cs" t="Include" />
+            <e p="ObsidianString.png" t="Include" />
+            <e p="RavagedHeroBow.cs" t="Include" />
+            <e p="RavagedHeroBow.png" t="Include" />
+            <e p="RelicFragment.cs" t="Include" />
+            <e p="RelicFragment.png" t="Include" />
+            <e p="RubyLens.cs" t="Include" />
+            <e p="RubyLens.png" t="Include" />
+            <e p="SapphireLens.cs" t="Include" />
+            <e p="SapphireLens.png" t="Include" />
+            <e p="ShipWreckage.cs" t="Include" />
+            <e p="ShipWreckage.png" t="Include" />
+            <e p="StarlightBar.cs" t="Include" />
+            <e p="StarlightBar.png" t="Include" />
+            <e p="StarlightOre.cs" t="Include" />
+            <e p="StarlightOre.png" t="Include" />
+            <e p="TopazLens.cs" t="Include" />
+            <e p="TopazLens.png" t="Include" />
+            <e p="TornHeroBook.cs" t="Include" />
+            <e p="TornHeroBook.png" t="Include" />
+          </e>
+          <e p="Placeable" t="Include">
+            <e p="Banner" t="Include">
+              <e p="BonefishBanner.cs" t="Include" />
+              <e p="BonefishBanner.png" t="Include" />
+              <e p="GraniteWandererBanner.cs" t="Include" />
+              <e p="GraniteWandererBanner.png" t="Include" />
+              <e p="ProtopetBanner.cs" t="Include" />
+              <e p="ProtopetBanner.png" t="Include" />
+              <e p="RobonoidBanner.cs" t="Include" />
+              <e p="RobonoidBanner.png" t="Include" />
+              <e p="TyhrranoidBanner.cs" t="Include" />
+              <e p="TyhrranoidBanner.png" t="Include" />
+            </e>
+            <e p="MegaCorpVendor.cs" t="Include" />
+            <e p="MegaCorpVendor.png" t="Include" />
+          </e>
+          <e p="Vanilla" t="Include">
+            <e p="Beenade.cs" t="Include" />
+            <e p="BouncyGrenade.cs" t="Include" />
+            <e p="Grenade.cs" t="Include" />
+            <e p="HappyGrenade.cs" t="Include" />
+            <e p="Shuriken.cs" t="Include" />
+            <e p="StickyGrenade.cs" t="Include" />
+          </e>
+          <e p="Weapons" t="Include">
+            <e p="Ammo" t="Include">
+              <e p="Rocket0.cs" t="Include" />
+              <e p="Rocket0.png" t="Include" />
+            </e>
+            <e p="Boomerangs" t="Include">
+              <e p="Bonemerang.cs" t="Include" />
+              <e p="Bonemerang.png" t="Include" />
+              <e p="BonemerangThrowing.cs" t="Include" />
+              <e p="BonemerangThrowing.png" t="Include" />
+              <e p="Kaboomerang.cs" t="Include" />
+              <e p="Kaboomerang.png" t="Include" />
+              <e p="KaboomerangThrowing.cs" t="Include" />
+              <e p="KaboomerangThrowing.png" t="Include" />
+              <e p="StarChakram.cs" t="Include" />
+              <e p="StarChakram.png" t="Include" />
+              <e p="StarChakramThrowing.cs" t="Include" />
+              <e p="StarChakramThrowing.png" t="Include" />
+            </e>
+            <e p="Bows" t="Include">
+              <e p="AngelBow.cs" t="Include" />
+              <e p="AngelBow.png" t="Include" />
+              <e p="AngelBow3.png" t="Include" />
+              <e p="CallistoBow.cs" t="Include" />
+              <e p="CallistoBow.png" t="Include" />
+              <e p="DemonCrossbow.cs" t="Include" />
+              <e p="DemonCrossbow.png" t="Include" />
+              <e p="GuardianBow.cs" t="Include" />
+              <e p="GuardianBow.png" t="Include" />
+              <e p="HistoricBow.cs" t="Include" />
+              <e p="HistoricBow.png" t="Include" />
+              <e p="MushWoodBow.cs" t="Include" />
+              <e p="MushwoodBow.png" t="Include" />
+              <e p="TendonCrossbow.cs" t="Include" />
+              <e p="TendonCrossbow.png" t="Include" />
+              <e p="TrueVolcanoCrossbow.cs" t="Include" />
+              <e p="TrueVolcanoCrossbow.png" t="Include" />
+              <e p="VolcanoCrossbow.cs" t="Include" />
+              <e p="VolcanoCrossbow.png" t="Include" />
+            </e>
+            <e p="Guns" t="Include">
+              <e p="CursedPiratePistol.cs" t="Include" />
+              <e p="CursedPiratePistol.png" t="Include" />
+              <e p="GoldenPiratePistol.cs" t="Include" />
+              <e p="GoldenPiratePistol.png" t="Include" />
+              <e p="PearlPiratePistol.cs" t="Include" />
+              <e p="PearlPiratePistol.png" t="Include" />
+              <e p="PulsePistol.cs" t="Include" />
+              <e p="PulsePistol.png" t="Include" />
+              <e p="TheHighNoon.cs" t="Include" />
+              <e p="TheHighNoon.png" t="Include" />
+            </e>
+            <e p="Magic" t="Include">
+              <e p="ChaosTheory.cs" t="Include" />
+              <e p="ChaosTheory.png" t="Include" />
+              <e p="GraniteRod.cs" t="Include" />
+              <e p="GraniteRod.png" t="Include" />
+              <e p="GuardianStaff.cs" t="Include" />
+              <e p="GuardianStaff.png" t="Include" />
+              <e p="GuardianWand.cs" t="Include" />
+              <e p="GuardianWand.png" t="Include" />
+              <e p="HistoricStaff.cs" t="Include" />
+              <e p="HistoricStaff.png" t="Include" />
+              <e p="HistoricWand.cs" t="Include" />
+              <e p="HistoricWand.png" t="Include" />
+              <e p="StarBlitz.cs" t="Include" />
+              <e p="StarBlitz.png" t="Include" />
+              <e p="ThornBlast.cs" t="Include" />
+              <e p="ThornBlast.png" t="Include" />
+              <e p="TrueChaosTheory.cs" t="Include" />
+              <e p="TrueChaosTheory.png" t="Include" />
+              <e p="TrueGraniteRod.cs" t="Include" />
+              <e p="TrueGraniteRod.png" t="Include" />
+            </e>
+            <e p="Other" t="Include">
+              <e p="GuardianKnuckle.cs" t="Include" />
+              <e p="GuardianKnuckle.png" t="Include" />
+              <e p="GuardianKnuckle_HandsOn.png" t="Include" />
+              <e p="HistoricKnuckle.cs" t="Include" />
+              <e p="HistoricKnuckle.png" t="Include" />
+              <e p="HistoricKnuckle_HandsOn.png" t="Include" />
+              <e p="MahoganyBlowpipe.cs" t="Include" />
+              <e p="MahoganyBlowpipe.png" t="Include" />
+              <e p="OnePunchGlove.cs" t="Include" />
+              <e p="OnePunchGlove.png" t="Include" />
+              <e p="OnePunchGlove_HandsOff.png" t="Include" />
+              <e p="OnePunchGlove_HandsOn.png" t="Include" />
+              <e p="SaxtonHalesFist.cs" t="Include" />
+              <e p="SaxtonHalesFist.png" t="Include" />
+              <e p="SaxtonHalesFist_HandsOff.png" t="Include" />
+              <e p="SaxtonHalesFist_HandsOn.png" t="Include" />
+            </e>
+            <e p="Ratchet" t="Include">
+              <e p="BlitzCannon.cs" t="Include" />
+              <e p="blitzcannon.png" t="Include" />
+              <e p="BlitzEruptor.cs" t="Include" />
+              <e p="BlitzEruptor.png" t="Include" />
+              <e p="BlitzGun.cs" t="Include" />
+              <e p="BlitzGun.png" t="Include" />
+              <e p="BombGlove.cs" t="Include" />
+              <e p="BombGlove.png" t="Include" />
+              <e p="Bouncer.cs" t="Include" />
+              <e p="Bouncer.png" t="Include" />
+              <e p="Chopper.cs" t="Include" />
+              <e p="Chopper.png" t="Include" />
+              <e p="GloveOfDoom.cs" t="Include" />
+              <e p="GloveOfDoom.png" t="Include" />
+              <e p="GloveOfDread.cs" t="Include" />
+              <e p="GloveOfDread.png" t="Include" />
+              <e p="GoldBombGlove.cs" t="Include" />
+              <e p="GoldBombGlove.png" t="Include" />
+              <e p="GoldWalloper.cs" t="Include" />
+              <e p="GoldWalloper.png" t="Include" />
+              <e p="GravityBomb.cs" t="Include" />
+              <e p="GravityBomb.png" t="Include" />
+              <e p="HeavyBouncer.cs" t="Include" />
+              <e p="HeavyBouncer.png" t="Include" />
+              <e p="HeavyLancer.cs" t="Include" />
+              <e p="HeavyLancer.png" t="Include" />
+              <e p="Lancer.cs" t="Include" />
+              <e p="Lancer.png" t="Include" />
+              <e p="LavaGun.cs" t="Include" />
+              <e p="LavaGun.png" t="Include" />
+              <e p="LiquidCursedFlameGun.cs" t="Include" />
+              <e p="LiquidCursedFlameGun.png" t="Include" />
+              <e p="LiquidGravityGun.cs" t="Include" />
+              <e p="LiquidGravityGun.png" t="Include" />
+              <e p="LiquidIchorGun.cs" t="Include" />
+              <e p="LiquidIchorGun.png" t="Include" />
+              <e p="LiquidNitrogenGun.cs" t="Include" />
+              <e p="LiquidNitrogenGun.png" t="Include" />
+              <e p="MegaBombGlove.cs" t="Include" />
+              <e p="MegaBombGlove.png" t="Include" />
+              <e p="MegaGloveOfDread.cs" t="Include" />
+              <e p="MegaGloveOfDread.png" t="Include" />
+              <e p="MegaGoldWalloper.cs" t="Include" />
+              <e p="MegaGoldWalloper.png" t="Include" />
+              <e p="MegaHeavyBouncer.cs" t="Include" />
+              <e p="MegaHeavyBouncer.png" t="Include" />
+              <e p="MegaHeavyLancer.cs" t="Include" />
+              <e p="MegaHeavyLancer.png" t="Include" />
+              <e p="MegaMultistar.cs" t="Include" />
+              <e p="MegaMultistar.png" t="Include" />
+              <e p="MegaNuke.cs" t="Include" />
+              <e p="MegaNuke.png" t="Include" />
+              <e p="MegaVaporizer.cs" t="Include" />
+              <e p="MegaVaporizer.png" t="Include" />
+              <e p="MiniNuke.cs" t="Include" />
+              <e p="MiniNuke.png" t="Include" />
+              <e p="Multistar.cs" t="Include" />
+              <e p="Multistar.png" t="Include" />
+              <e p="PulseRifle.cs" t="Include" />
+              <e p="PulseRifle.png" t="Include" />
+              <e p="UltraBlitzEruptor.cs" t="Include" />
+              <e p="UltraBlitzEruptor.png" t="Include" />
+              <e p="UltraBombGlove.cs" t="Include" />
+              <e p="UltraBombGlove.png" t="Include" />
+              <e p="UltraGloveOfDread.cs" t="Include" />
+              <e p="UltraGloveOfDread.png" t="Include" />
+              <e p="UltraGoldWalloper.cs" t="Include" />
+              <e p="UltraGoldWalloper.png" t="Include" />
+              <e p="UltraHeavyBouncer.cs" t="Include" />
+              <e p="UltraHeavyBouncer.png" t="Include" />
+              <e p="UltraHeavyLancer.cs" t="Include" />
+              <e p="UltraHeavyLancer.png" t="Include" />
+              <e p="UltraMultiStar.cs" t="Include" />
+              <e p="UltraMultiStar.png" t="Include" />
+              <e p="UltraNuke.cs" t="Include" />
+              <e p="UltraNuke.png" t="Include" />
+              <e p="UltraVaporizer.cs" t="Include" />
+              <e p="UltraVaporizer.png" t="Include" />
+              <e p="Vaporizer.cs" t="Include" />
+              <e p="Vaporizer.png" t="Include" />
+              <e p="Walloper.cs" t="Include" />
+              <e p="Walloper.png" t="Include" />
+            </e>
+            <e p="Spears" t="Include">
+              <e p="AdamantHalberd.cs" t="Include" />
+              <e p="AdamantHalberd.png" t="Include" />
+              <e p="CobaltHalberd.cs" t="Include" />
+              <e p="CobaltHalberd.png" t="Include" />
+              <e p="CopperHalberd.cs" t="Include" />
+              <e p="CopperHalberd.png" t="Include" />
+              <e p="EnchantedMythrilHalberd.cs" t="Include" />
+              <e p="EnchantedMythrilHalberd.png" t="Include" />
+              <e p="EnchantedOrichalcumHalberd.cs" t="Include" />
+              <e p="EnchantedOrichalcumHalberd.png" t="Include" />
+              <e p="GoldHalberd.cs" t="Include" />
+              <e p="GoldHalberd.png" t="Include" />
+              <e p="GraniteLance.cs" t="Include" />
+              <e p="GraniteLance.png" t="Include" />
+              <e p="IronHalberd.cs" t="Include" />
+              <e p="IronHalberd.png" t="Include" />
+              <e p="LeadHalberd.cs" t="Include" />
+              <e p="LeadHalberd.png" t="Include" />
+              <e p="LivingWoodPitchfork.cs" t="Include" />
+              <e p="LivingWoodPitchfork.png" t="Include" />
+              <e p="MagmaHalberd.cs" t="Include" />
+              <e p="MagmaHalberd.png" t="Include" />
+              <e p="MushwoodPitchfork.cs" t="Include" />
+              <e p="MushwoodPitchfork.png" t="Include" />
+              <e p="PalladiumHalberd.cs" t="Include" />
+              <e p="PalladiumHalberd.png" t="Include" />
+              <e p="PlatinumHalberd.cs" t="Include" />
+              <e p="PlatinumHalberd.png" t="Include" />
+              <e p="SilverHalberd.cs" t="Include" />
+              <e p="SilverHalberd.png" t="Include" />
+              <e p="SkullHalberd.cs" t="Include" />
+              <e p="SkullHalberd.png" t="Include" />
+              <e p="StarlightHalberd.cs" t="Include" />
+              <e p="StarlightHalberd.png" t="Include" />
+              <e p="TinHalberd.cs" t="Include" />
+              <e p="TinHalberd.png" t="Include" />
+              <e p="TitaniumHalberd.cs" t="Include" />
+              <e p="TitaniumHalberd.png" t="Include" />
+              <e p="TrueSkullHalberd.png" t="Include" />
+              <e p="Tualang.cs" t="Include" />
+              <e p="Tualang.png" t="Include" />
+              <e p="TungstenHalberd.cs" t="Include" />
+              <e p="TungstenHalberd.png" t="Include" />
+              <e p="WoodenPitchfork.cs" t="Include" />
+              <e p="WoodenPitchfork.png" t="Include" />
+            </e>
+            <e p="Sticks" t="Include">
+              <e p="GuardianStick.cs" t="Include" />
+              <e p="GuardianStick.png" t="Include" />
+              <e p="HistoricStick.cs" t="Include" />
+              <e p="HistoricStick.png" t="Include" />
+            </e>
+            <e p="Swords" t="Include">
+              <e p="AdminSword.cs" t="Include" />
+              <e p="AdminSword.png" t="Include" />
+              <e p="AngelSword.cs" t="Include" />
+              <e p="AngelSword.png" t="Include" />
+              <e p="Baconomnomnom.cs" t="Include" />
+              <e p="Baconomnomnom.png" t="Include" />
+              <e p="BladeOfKusanagi.cs" t="Include" />
+              <e p="BladeOfKusanagi.png" t="Include" />
+              <e p="BlueLasersaber.cs" t="Include" />
+              <e p="BlueLasersaber.png" t="Include" />
+              <e p="Cheeselicious.cs" t="Include" />
+              <e p="Cheeselicious.png" t="Include" />
+              <e p="ChronicleSword.cs" t="Include" />
+              <e p="ChronicleSword.png" t="Include" />
+              <e p="Gradience.cs" t="Include" />
+              <e p="Gradience.png" t="Include" />
+              <e p="GreenLasersaber.cs" t="Include" />
+              <e p="GreenLasersaber.png" t="Include" />
+              <e p="GuardianBigSword.cs" t="Include" />
+              <e p="GuardianBigSword.png" t="Include" />
+              <e p="GuardianSword.cs" t="Include" />
+              <e p="GuardianSword.png" t="Include" />
+              <e p="Hercules.cs" t="Include" />
+              <e p="Hercules.png" t="Include" />
+              <e p="HistoricBigSword.cs" t="Include" />
+              <e p="HistoricBigSword.png" t="Include" />
+              <e p="HistoricSword.cs" t="Include" />
+              <e p="HistoricSword.png" t="Include" />
+              <e p="NietonoNoShana.cs" t="Include" />
+              <e p="NietonoNoShana.png" t="Include" />
+              <e p="PurpleLaserSaber.cs" t="Include" />
+              <e p="PurpleLasersaber.png" t="Include" />
+              <e p="RedLaserSaber.cs" t="Include" />
+              <e p="RedLasersaber.png" t="Include" />
+              <e p="StoneBroadsword.cs" t="Include" />
+              <e p="StoneBroadsword.png" t="Include" />
+              <e p="SunStrike.cs" t="Include" />
+              <e p="SunStrike.png" t="Include" />
+              <e p="SwordOfTheSilverSword.cs" t="Include" />
+              <e p="SwordOfTheSilverSword.png" t="Include" />
+              <e p="WhiteLasersaber.cs" t="Include" />
+              <e p="WhiteLasersaber.png" t="Include" />
+              <e p="YellowLasersaber.cs" t="Include" />
+              <e p="YellowLasersaber.png" t="Include" />
+            </e>
+            <e p="Thrown" t="Include">
+              <e p="AdamantiteKunai.cs" t="Include" />
+              <e p="AdamantiteKunai.png" t="Include" />
+              <e p="BoneKunai.cs" t="Include" />
+              <e p="BoneKunai.png" t="Include" />
+              <e p="ChlorophyteKunai.cs" t="Include" />
+              <e p="ChlorophyteKunai.png" t="Include" />
+              <e p="CobaltKunai.cs" t="Include" />
+              <e p="CobaltKunai.png" t="Include" />
+              <e p="CopperKunai.cs" t="Include" />
+              <e p="CopperKunai.png" t="Include" />
+              <e p="GoldKunai.cs" t="Include" />
+              <e p="GoldKunai.png" t="Include" />
+              <e p="HallowedKunai.cs" t="Include" />
+              <e p="HallowedKunai.png" t="Include" />
+              <e p="HellstoneKunai.cs" t="Include" />
+              <e p="HellstoneKunai.png" t="Include" />
+              <e p="IronKunai.cs" t="Include" />
+              <e p="IronKunai.png" t="Include" />
+              <e p="LeadKunai.cs" t="Include" />
+              <e p="LeadKunai.png" t="Include" />
+              <e p="LeafKunai.cs" t="Include" />
+              <e p="LeafKunai.png" t="Include" />
+              <e p="MeteoriteKunai.cs" t="Include" />
+              <e p="MeteoriteKunai.png" t="Include" />
+              <e p="MythrilKunai.cs" t="Include" />
+              <e p="MythrilKunai.png" t="Include" />
+              <e p="OrichalcumKunai.cs" t="Include" />
+              <e p="OrichalcumKunai.png" t="Include" />
+              <e p="PalladiumKunai.cs" t="Include" />
+              <e p="PalladiumKunai.png" t="Include" />
+              <e p="PlatinumKunai.cs" t="Include" />
+              <e p="PlatinumKunai.png" t="Include" />
+              <e p="SilverKunai.cs" t="Include" />
+              <e p="SilverKunai.png" t="Include" />
+              <e p="StarlightKunai.cs" t="Include" />
+              <e p="StarlightKunai.png" t="Include" />
+              <e p="StoneKunai.cs" t="Include" />
+              <e p="StoneKunai.png" t="Include" />
+              <e p="TinKunai.cs" t="Include" />
+              <e p="TinKunai.png" t="Include" />
+              <e p="TitaniumKunai.cs" t="Include" />
+              <e p="TitaniumKunai.png" t="Include" />
+              <e p="TungstenKunai.cs" t="Include" />
+              <e p="TungstenKunai.png" t="Include" />
+              <e p="WoodenKunai.cs" t="Include" />
+              <e p="WoodenKunai.png" t="Include" />
+            </e>
+            <e p="Tools" t="Include">
+              <e p="AngelAxe.cs" t="Include" />
+              <e p="AngelAxe.png" t="Include" />
+              <e p="AngelPickaxe.cs" t="Include" />
+              <e p="AngelPickaxe.png" t="Include" />
+              <e p="GuardianAmbidextrousAxe.cs" t="Include" />
+              <e p="GuardianAmbidextrousAxe.png" t="Include" />
+              <e p="GuardianAxe.cs" t="Include" />
+              <e p="GuardianAxe.png" t="Include" />
+              <e p="GuardianPickaxe.cs" t="Include" />
+              <e p="GuardianPickaxe.png" t="Include" />
+              <e p="HistoricAmbidextrousAxe.cs" t="Include" />
+              <e p="HistoricAmbidextrousAxe.png" t="Include" />
+              <e p="HistoricAxe.cs" t="Include" />
+              <e p="HistoricAxe.png" t="Include" />
+              <e p="HistoricPickaxe.cs" t="Include" />
+              <e p="HistoricPickaxe.png" t="Include" />
+              <e p="PearlwoodAxe.cs" t="Include" />
+              <e p="PearlwoodAxe.png" t="Include" />
+              <e p="Relaxe.cs" t="Include" />
+              <e p="Relaxe.png" t="Include" />
+              <e p="StarlightHammer.cs" t="Include" />
+              <e p="StarlightHammer.png" t="Include" />
+              <e p="StarlightPaxel.cs" t="Include" />
+              <e p="StarlightPaxel.png" t="Include" />
+              <e p="TempoAccelerator.cs" t="Include" />
+              <e p="TempoAccelerator.png" t="Include" />
+            </e>
+            <e p="UseStyles" t="Include">
+              <e p="FistStyle.cs" t="Include" />
+            </e>
+            <e p="Yoyo" t="Include">
+              <e p="GuardianYoyo.cs" t="Include" />
+              <e p="GuardianYoyo.png" t="Include" />
+              <e p="HistoricYoyo.cs" t="Include" />
+              <e p="HistoricYoyo.png" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="NPCs" t="Include">
+          <e p="Bonefish.cs" t="Include" />
+          <e p="Bonefish.png" t="Include" />
+          <e p="Bosses" t="Include">
+            <e p="Susano.cs" t="Include" />
+            <e p="Susano.png" t="Include" />
+          </e>
+          <e p="CheezeGlobalNPC.cs" t="Include" />
+          <e p="DragonEye.cs" t="Include" />
+          <e p="DragonEye.png" t="Include" />
+          <e p="Eyebat.cs" t="Include" />
+          <e p="Eyebat.png" t="Include" />
+          <e p="Friendly" t="Include">
+            <e p="MartianTrader.cs" t="Include" />
+            <e p="MartianTrader.png" t="Include" />
+            <e p="MartianTrader_Head.png" t="Include" />
+          </e>
+          <e p="GraniteWanderer.cs" t="Include" />
+          <e p="GraniteWanderer.png" t="Include" />
+          <e p="MoltenEye.cs" t="Include" />
+          <e p="MoltenEye.png" t="Include" />
+          <e p="Protopet.cs" t="Include" />
+          <e p="Protopet.png" t="Include" />
+          <e p="Robonoid.cs" t="Include" />
+          <e p="Robonoid.png" t="Include" />
+          <e p="Tyhrranoid.cs" t="Include" />
+          <e p="Tyhrranoid.png" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="PlayerFX.cs" t="Include" />
+        <e p="Projectiles" t="Include">
+          <e p="Boomerang" t="Include">
+            <e p="Bonemerang.cs" t="Include" />
+            <e p="Bonemerang.png" t="Include" />
+            <e p="BonemerangThrowing.cs" t="Include" />
+            <e p="BonemerangThrowing.png" t="Include" />
+            <e p="Kaboomdamage.cs" t="Include" />
+            <e p="Kaboomdamage.png" t="Include" />
+            <e p="Kaboomerang.cs" t="Include" />
+            <e p="Kaboomerang.png" t="Include" />
+            <e p="StarChakram.cs" t="Include" />
+            <e p="StarChakram.png" t="Include" />
+          </e>
+          <e p="Magic" t="Include">
+            <e p="BlueLaserStaff.cs" t="Include" />
+            <e p="BlueLaserStaff.png" t="Include" />
+            <e p="EarthBoulder.cs" t="Include" />
+            <e p="EarthBoulder.png" t="Include" />
+            <e p="FireBlast.cs" t="Include" />
+            <e p="FireBlast.png" t="Include" />
+            <e p="FlameGeyser.cs" t="Include" />
+            <e p="FlameGeyser.png" t="Include" />
+            <e p="HealDown.cs" t="Include" />
+            <e p="HealDown.png" t="Include" />
+            <e p="HugeEarthBoulder.cs" t="Include" />
+            <e p="HugeEarthBoulder.png" t="Include" />
+            <e p="InfernoFireBlast.cs" t="Include" />
+            <e p="InfernoFireBlast.png" t="Include" />
+            <e p="LightningBolt.cs" t="Include" />
+            <e p="LightningBolt.png" t="Include" />
+            <e p="MiniFireBlast.cs" t="Include" />
+            <e p="MiniFireBlast.png" t="Include" />
+            <e p="PsychicBomb.cs" t="Include" />
+            <e p="PsychicBomb.png" t="Include" />
+            <e p="SpiritBomb.cs" t="Include" />
+            <e p="SpiritBomb.png" t="Include" />
+            <e p="SprayWaterBlast.cs" t="Include" />
+            <e p="SprayWaterBlast.png" t="Include" />
+            <e p="StarStorm.cs" t="Include" />
+            <e p="StarStorm.png" t="Include" />
+            <e p="StarStorm4.cs" t="Include" />
+            <e p="StarStorm4.png" t="Include" />
+            <e p="ThornBlast.cs" t="Include" />
+            <e p="ThornBlast.png" t="Include" />
+            <e p="WaterBlast.cs" t="Include" />
+            <e p="WaterBlast.png" t="Include" />
+            <e p="WindBlast.cs" t="Include" />
+            <e p="WindBlast.png" t="Include" />
+            <e p="WindFieldBlast.cs" t="Include" />
+            <e p="WindFieldBlast.png" t="Include" />
+            <e p="WindFieldCast.cs" t="Include" />
+            <e p="WindFieldCast.png" t="Include" />
+          </e>
+          <e p="Melee" t="Include">
+            <e p="AdamantHalberd.cs" t="Include" />
+            <e p="AdamantHalberd.png" t="Include" />
+            <e p="BladeOfKusanagi.cs" t="Include" />
+            <e p="BladeOfKusanagi.png" t="Include" />
+            <e p="BlueLaserArray.cs" t="Include" />
+            <e p="BlueLaserArray.png" t="Include" />
+            <e p="CobaltHalberd.cs" t="Include" />
+            <e p="CobaltHalberd.png" t="Include" />
+            <e p="CopperHalberd.cs" t="Include" />
+            <e p="CopperHalberd.png" t="Include" />
+            <e p="EnchantedMythrilHalberd.cs" t="Include" />
+            <e p="EnchantedMythrilHalberd.png" t="Include" />
+            <e p="EnchantedOrichalcumHalberd.cs" t="Include" />
+            <e p="EnchantedOrichalcumHalberd.png" t="Include" />
+            <e p="GoldHalberd.cs" t="Include" />
+            <e p="GoldHalberd.png" t="Include" />
+            <e p="GraniteLance.cs" t="Include" />
+            <e p="GraniteLance.png" t="Include" />
+            <e p="GreenLaserArray.cs" t="Include" />
+            <e p="GreenLaserArray.png" t="Include" />
+            <e p="HolyBlast.cs" t="Include" />
+            <e p="HolyBlast.png" t="Include" />
+            <e p="IronHalberd.cs" t="Include" />
+            <e p="IronHalberd.png" t="Include" />
+            <e p="LeadHalberd.cs" t="Include" />
+            <e p="LeadHalberd.png" t="Include" />
+            <e p="LivingWoodPitchfork.cs" t="Include" />
+            <e p="LivingWoodPitchfork.png" t="Include" />
+            <e p="MagmaHalberd.cs" t="Include" />
+            <e p="MagmaHalberd.png" t="Include" />
+            <e p="Mushroom.cs" t="Include" />
+            <e p="Mushroom.png" t="Include" />
+            <e p="MushwoodPitchfork.cs" t="Include" />
+            <e p="MushwoodPitchfork.png" t="Include" />
+            <e p="PalladiumHalberd.cs" t="Include" />
+            <e p="PalladiumHalberd.png" t="Include" />
+            <e p="PlatinumHalberd.cs" t="Include" />
+            <e p="PlatinumHalberd.png" t="Include" />
+            <e p="PurpleLaserArray.cs" t="Include" />
+            <e p="PurpleLaserArray.png" t="Include" />
+            <e p="RedLaserArray.cs" t="Include" />
+            <e p="RedLaserArray.png" t="Include" />
+            <e p="SilverHalberd.cs" t="Include" />
+            <e p="SilverHalberd.png" t="Include" />
+            <e p="SkullHalberd.cs" t="Include" />
+            <e p="SkullHalberd.png" t="Include" />
+            <e p="StarChakram.cs" t="Include" />
+            <e p="StarChakram.png" t="Include" />
+            <e p="StarlightHalberd.cs" t="Include" />
+            <e p="StarlightHalberd.png" t="Include" />
+            <e p="StarStorm2.cs" t="Include" />
+            <e p="StarStorm2.png" t="Include" />
+            <e p="SunStrike.cs" t="Include" />
+            <e p="SunStrike.png" t="Include" />
+            <e p="TinHalberd.cs" t="Include" />
+            <e p="TinHalberd.png" t="Include" />
+            <e p="TitaniumHalberd.cs" t="Include" />
+            <e p="TitaniumHalberd.png" t="Include" />
+            <e p="Tualang.cs" t="Include" />
+            <e p="Tualang.png" t="Include" />
+            <e p="TungstenHalberd.cs" t="Include" />
+            <e p="TungstenHalberd.png" t="Include" />
+            <e p="WhiteLaserArray.cs" t="Include" />
+            <e p="WhiteLaserArray.png" t="Include" />
+            <e p="WoodenPitchfork.cs" t="Include" />
+            <e p="WoodenPitchfork.png" t="Include" />
+            <e p="YellowLaserArray.cs" t="Include" />
+            <e p="YellowLaserArray.png" t="Include" />
+          </e>
+          <e p="NPCs" t="Include">
+            <e p="BlueLaserNPC.cs" t="Include" />
+            <e p="BlueLaserNPC.png" t="Include" />
+          </e>
+          <e p="Ranged" t="Include">
+            <e p="BlitzCannon.cs" t="Include" />
+            <e p="blitzcannon.png" t="Include" />
+            <e p="BlitzEruptor.cs" t="Include" />
+            <e p="BlitzEruptor.png" t="Include" />
+            <e p="BlitzGun.cs" t="Include" />
+            <e p="BlitzGun.png" t="Include" />
+            <e p="Bouncer.cs" t="Include" />
+            <e p="Bouncer.png" t="Include" />
+            <e p="Bouncer2.png" t="Include" />
+            <e p="BouncerFragment.cs" t="Include" />
+            <e p="BouncerFragment.png" t="Include" />
+            <e p="Chopper.cs" t="Include" />
+            <e p="Chopper.png" t="Include" />
+            <e p="GravityBomb.cs" t="Include" />
+            <e p="GravityBomb.png" t="Include" />
+            <e p="HeavyBouncer.cs" t="Include" />
+            <e p="HeavyBouncer.png" t="Include" />
+            <e p="HeavyBouncerFragment.cs" t="Include" />
+            <e p="HeavyBouncerFragment.png" t="Include" />
+            <e p="HeavyLancer.cs" t="Include" />
+            <e p="HeavyLancer.png" t="Include" />
+            <e p="Lancer.cs" t="Include" />
+            <e p="Lancer.png" t="Include" />
+            <e p="LavaGun.cs" t="Include" />
+            <e p="LavaGun.png" t="Include" />
+            <e p="LiquidCursedFlameGun.cs" t="Include" />
+            <e p="LiquidCursedFlameGun.png" t="Include" />
+            <e p="LiquidGravityGun.cs" t="Include" />
+            <e p="LiquidGravityGun.png" t="Include" />
+            <e p="LiquidIchorGun.cs" t="Include" />
+            <e p="LiquidIchorGun.png" t="Include" />
+            <e p="LiquidNitrogenGun.cs" t="Include" />
+            <e p="LiquidNitrogenGun.png" t="Include" />
+            <e p="MegaHeavyBouncer.cs" t="Include" />
+            <e p="MegaHeavyBouncer.png" t="Include" />
+            <e p="MegaHeavyBouncerFragment.cs" t="Include" />
+            <e p="MegaHeavyBouncerFragment.png" t="Include" />
+            <e p="MegaHeavyLancer.cs" t="Include" />
+            <e p="MegaHeavyLancer.png" t="Include" />
+            <e p="MegaMultistar.cs" t="Include" />
+            <e p="MegaMultistar.png" t="Include" />
+            <e p="MegaNuke.cs" t="Include" />
+            <e p="MegaNuke.png" t="Include" />
+            <e p="MegaVaporizer.cs" t="Include" />
+            <e p="MegaVaporizer.png" t="Include" />
+            <e p="MiniNuke.cs" t="Include" />
+            <e p="MiniNuke.png" t="Include" />
+            <e p="Multistar.cs" t="Include" />
+            <e p="Multistar.png" t="Include" />
+            <e p="PulseGun.cs" t="Include" />
+            <e p="PulseGun.png" t="Include" />
+            <e p="PulseRifle.cs" t="Include" />
+            <e p="PulseRifle.png" t="Include" />
+            <e p="Rocket0.cs" t="Include" />
+            <e p="Rocket0.png" t="Include" />
+            <e p="UltraBlitzEruptor.cs" t="Include" />
+            <e p="UltraBlitzEruptor.png" t="Include" />
+            <e p="UltraHeavyBouncer.cs" t="Include" />
+            <e p="UltraHeavyBouncer.png" t="Include" />
+            <e p="UltraHeavyLancer.cs" t="Include" />
+            <e p="UltraHeavyLancer.png" t="Include" />
+            <e p="UltraMultiStar.cs" t="Include" />
+            <e p="UltraMultiStar.png" t="Include" />
+            <e p="UltraNuke.cs" t="Include" />
+            <e p="UltraNuke.png" t="Include" />
+            <e p="UltraVaporizer.cs" t="Include" />
+            <e p="UltraVaporizer.png" t="Include" />
+            <e p="Vaporizer.cs" t="Include" />
+            <e p="Vaporizer.png" t="Include" />
+          </e>
+          <e p="Summoning" t="Include">
+            <e p="Agent.cs" t="Include" />
+            <e p="AgentOfDoom.cs" t="Include" />
+            <e p="AgentofDoom.png" t="Include" />
+            <e p="AgentOfDread.cs" t="Include" />
+            <e p="AgentOfDread.png" t="Include" />
+            <e p="DreadBomb.cs" t="Include" />
+            <e p="DreadBomb.png" t="Include" />
+            <e p="DreadLaser.cs" t="Include" />
+            <e p="DreadLaser.png" t="Include" />
+            <e p="DreadNuke.cs" t="Include" />
+            <e p="DreadNuke.png" t="Include" />
+            <e p="HoverShooter.cs" t="Include" />
+            <e p="MegaAgentOfDread.cs" t="Include" />
+            <e p="MegaAgentOfDread.png" t="Include" />
+            <e p="MegaDreadLaser.cs" t="Include" />
+            <e p="MegaDreadLaser.png" t="Include" />
+            <e p="Minion.cs" t="Include" />
+            <e p="UltraAgentOfDread.cs" t="Include" />
+            <e p="UltraAgentOfDread.png" t="Include" />
+            <e p="UltraDreadLaser.cs" t="Include" />
+            <e p="UltraDreadLaser.png" t="Include" />
+          </e>
+          <e p="Thrown" t="Include">
+            <e p="AdamantiteKunai.cs" t="Include" />
+            <e p="AdamantiteKunai.png" t="Include" />
+            <e p="BoneKunai.cs" t="Include" />
+            <e p="BoneKunai.png" t="Include" />
+            <e p="ChlorophyteKunai.cs" t="Include" />
+            <e p="ChlorophyteKunai.png" t="Include" />
+            <e p="CobaltKunai.cs" t="Include" />
+            <e p="CobaltKunai.png" t="Include" />
+            <e p="CopperKunai.cs" t="Include" />
+            <e p="CopperKunai.png" t="Include" />
+            <e p="GoldKunai.cs" t="Include" />
+            <e p="GoldKunai.png" t="Include" />
+            <e p="HallowedKunai.cs" t="Include" />
+            <e p="HallowedKunai.png" t="Include" />
+            <e p="HellstoneKunai.cs" t="Include" />
+            <e p="HellstoneKunai.png" t="Include" />
+            <e p="IronKunai.cs" t="Include" />
+            <e p="IronKunai.png" t="Include" />
+            <e p="LeadKunai.cs" t="Include" />
+            <e p="LeadKunai.png" t="Include" />
+            <e p="LeafKunai.cs" t="Include" />
+            <e p="LeafKunai.png" t="Include" />
+            <e p="MeteoriteKunai.cs" t="Include" />
+            <e p="MeteoriteKunai.png" t="Include" />
+            <e p="MythrilKunai.cs" t="Include" />
+            <e p="MythrilKunai.png" t="Include" />
+            <e p="OrichalcumKunai.cs" t="Include" />
+            <e p="OrichalcumKunai.png" t="Include" />
+            <e p="PalladiumKunai.cs" t="Include" />
+            <e p="PalladiumKunai.png" t="Include" />
+            <e p="PlatinumKunai.cs" t="Include" />
+            <e p="PlatinumKunai.png" t="Include" />
+            <e p="SilverKunai.cs" t="Include" />
+            <e p="SilverKunai.png" t="Include" />
+            <e p="StarlightKunai.cs" t="Include" />
+            <e p="StarlightKunai.png" t="Include" />
+            <e p="StarStorm3.cs" t="Include" />
+            <e p="StarStorm3.png" t="Include" />
+            <e p="StoneKunai.cs" t="Include" />
+            <e p="StoneKunai.png" t="Include" />
+            <e p="TinKunai.cs" t="Include" />
+            <e p="TinKunai.png" t="Include" />
+            <e p="TitaniumKunai.cs" t="Include" />
+            <e p="TitaniumKunai.png" t="Include" />
+            <e p="TungstenKunai.cs" t="Include" />
+            <e p="TungstenKunai.png" t="Include" />
+            <e p="WoodenKunai.cs" t="Include" />
+            <e p="WoodenKunai.png" t="Include" />
+          </e>
+          <e p="Yoyo" t="Include">
+            <e p="GuardianYoyo.cs" t="Include" />
+            <e p="GuardianYoyo.png" t="Include" />
+            <e p="HistoricYoyo.cs" t="Include" />
+            <e p="HistoricYoyo.png" t="Include" />
+          </e>
+        </e>
+        <e p="ProjFX.cs" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="Sounds" t="Include">
+          <e p="Custom" t="Include">
+            <e p="Wind2.cs" t="Include" />
+            <e p="Wind2.wav" t="Include" />
+          </e>
+          <e p="Item" t="Include">
+            <e p="BahSwing.cs" t="Include" />
+            <e p="BahSwing.wav" t="Include" />
+            <e p="Chopper.cs" t="Include" />
+            <e p="Chopper.wav" t="Include" />
+            <e p="Fire.cs" t="Include" />
+            <e p="Fire.wav" t="Include" />
+            <e p="GravityBomb.cs" t="Include" />
+            <e p="GravityBomb.wav" t="Include" />
+            <e p="LavaGun.cs" t="Include" />
+            <e p="LavaGun.wav" t="Include" />
+            <e p="LiquidNitrogenGun.cs" t="Include" />
+            <e p="LiquidNitrogenGun.wav" t="Include" />
+            <e p="Moo.cs" t="Include" />
+            <e p="Moo.wav" t="Include" />
+            <e p="Moo2.cs" t="Include" />
+            <e p="Moo2.wav" t="Include" />
+            <e p="MooSwing.cs" t="Include" />
+            <e p="MooSwing.wav" t="Include" />
+            <e p="PistolReload.cs" t="Include" />
+            <e p="PistolReload.wav" t="Include" />
+            <e p="PsyBomb.cs" t="Include" />
+            <e p="PsyBomb.wav" t="Include" />
+            <e p="SaxtonHaleJump01.cs" t="Include" />
+            <e p="SaxtonHaleJump01.wav" t="Include" />
+            <e p="SaxtonHaleJump02.cs" t="Include" />
+            <e p="SaxtonHaleJump02.wav" t="Include" />
+            <e p="SaxtonHaleJump03.cs" t="Include" />
+            <e p="SaxtonHaleJump03.wav" t="Include" />
+            <e p="SaxtonHaleJump04.cs" t="Include" />
+            <e p="SaxtonHaleJump04.wav" t="Include" />
+            <e p="Wind.cs" t="Include" />
+            <e p="Wind.wav" t="Include" />
+          </e>
+          <e p="NPCHit" t="Include">
+            <e p="ThyrranoidHit.cs" t="Include" />
+            <e p="ThyrranoidHit.wav" t="Include" />
+          </e>
+          <e p="NPCkilled" t="Include">
+            <e p="ThyrranoidDie.cs" t="Include" />
+            <e p="ThyrranoidDie.wav" t="Include" />
+          </e>
+        </e>
+        <e p="Tiles" t="Include">
+          <e p="CheezeMonsterBanner.cs" t="Include" />
+          <e p="CheezeMonsterBanner.png" t="Include" />
+          <e p="MegaCorpVendor.cs" t="Include" />
+          <e p="MegaCorpVendor.png" t="Include" />
+          <e p="StarlightBar.cs" t="Include" />
+          <e p="StarlightBar.png" t="Include" />
+          <e p="StarlightOre.cs" t="Include" />
+          <e p="StarlightOre.png" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="AmmoUI.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Mod Solutions.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

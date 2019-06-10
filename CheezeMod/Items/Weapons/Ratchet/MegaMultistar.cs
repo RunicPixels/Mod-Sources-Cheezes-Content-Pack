@@ -28,7 +28,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.crit = 8;
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/Chopper");
             item.autoReuse = true;
-			item.shoot = 10; //idk why but all the guns in the vanilla source have this
+			item.shoot = 10;
 			item.shootSpeed = 8f;
 			item.useAmmo = ProjectileID.Shuriken;
         }

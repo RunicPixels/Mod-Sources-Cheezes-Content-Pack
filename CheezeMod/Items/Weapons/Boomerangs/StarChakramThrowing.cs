@@ -10,7 +10,6 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 	{
 		public override void SetDefaults()
 		{
-            item.CloneDefaults(ItemID.ThornChakram);
 			item.damage = 24;
 			item.thrown = true;
 			item.width = 28;

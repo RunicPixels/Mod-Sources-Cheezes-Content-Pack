@@ -42,8 +42,8 @@ namespace CheezeMod.Items.Weapons.Magic
             float spread = 2f; // 2 degrees
             float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
             double baseAngle = Math.Atan2(speedX, speedY);
-            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+            speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
+            speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
             if (Main.rand.Next(4) == 0)
             {
                 type = mod.ProjectileType("HugeEarthBoulder");
@@ -67,7 +67,7 @@ namespace CheezeMod.Items.Weapons.Magic
                 float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]), baseSpeed * (float)Math.Cos(Angle[1]), baseSpeed * (float)Math.Cos(Angle[2]) };
                 for (int i = 0; i < speedXArray.Length; i++)
                 {
-                    int projectile = Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], mod.ProjectileType("WindBlast"), (int)(damage * 0.65), knockBack, item.owner);
+                    int projectile = Projectile.NewProjectile(position.X, position.Y, speedXArray[i], speedYArray[i], mod.ProjectileType("WindBlast"), (int)(damage * 0.65), knockBack, Main.myPlayer);
                     Main.projectile[projectile].netUpdate = true;
                 }
             }

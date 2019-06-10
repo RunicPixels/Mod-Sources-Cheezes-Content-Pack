@@ -8,6 +8,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 {
     public class UltraBlitzEruptor : ModItem
     {
+        float spread = 25f; // 25 degrees
         public override void SetDefaults()
         {
 
@@ -52,14 +53,13 @@ namespace CheezeMod.Items.Weapons.Ratchet
         }
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            float spread = 25f; // 25 degrees
             float baseX = speedX;
             float baseY = speedY;
             for (int i = 0; i <= 5 + Main.rand.Next(5); i++)
             {
 
-                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
+                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
                 if (type == ProjectileID.Bullet || type == mod.ProjectileType("UltraBlitzEruptor"))
                 {
                     type = mod.ProjectileType("UltraBlitzEruptor");
@@ -67,7 +67,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
                     speedY *= 6f;
                     damage *= (int)1.1;
                 }
-                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
                 Main.projectile[projectile].netUpdate = true;
                 speedX = baseX;
                 speedY = baseY;

@@ -10,7 +10,6 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 	{
 		public override void SetDefaults()
 		{
-            item.CloneDefaults(ItemID.Bananarang);
 			item.damage = 69;
 			item.melee = true;
 			item.width = 36;
@@ -33,7 +32,7 @@ namespace CheezeMod.Items.Weapons.Boomerangs
 
     public override void SetStaticDefaults()
     {
-      DisplayName.SetDefault("Kaboomerang");
+      DisplayName.SetDefault("Kaboomerang[Melee]");
       Tooltip.SetDefault("A true lihzahrd has some explosive instincts.\nExplodes on hit, can stack up to 2 times.");
     }
 

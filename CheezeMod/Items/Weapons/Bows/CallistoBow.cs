@@ -44,7 +44,7 @@ namespace CheezeMod.Items.Weapons.Bows
             if(Main.rand.Next(3) == 0)
             {
                 float speedMod = 0.7f + Main.rand.NextFloat() * 0.5f;
-                Projectile.NewProjectile(position.X-(speedX*2), position.Y- (speedY * 2), speedX *speedMod, speedY* speedMod, type, damage, knockBack, item.owner);
+                Projectile.NewProjectile(position.X-(speedX*2), position.Y- (speedY * 2), speedX *speedMod, speedY* speedMod, type, damage, knockBack, Main.myPlayer);
             }
             return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
         }

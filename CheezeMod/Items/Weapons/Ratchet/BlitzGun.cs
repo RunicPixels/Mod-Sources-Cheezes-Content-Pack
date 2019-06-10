@@ -56,8 +56,8 @@ namespace CheezeMod.Items.Weapons.Ratchet
             for (int i = 0; i <= 3 + Main.rand.Next(2); i++)
             {
 
-                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y'); ;
+                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X); ;
+                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y); ;
                 if (type == ProjectileID.Bullet || type == mod.ProjectileType("BlitzGun"))
                 {
                     type = mod.ProjectileType("BlitzGun");
@@ -65,7 +65,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
                     speedY *= 6f;
                     damage *= (int)1.3;
                 }
-                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
                 Main.projectile[projectile].netUpdate = true;
                 speedX = baseX;
                 speedY = baseY;

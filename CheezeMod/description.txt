@@ -14,7 +14,25 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 
 NOTE: Update 1.1.2 for tModLoader 0.10.0.2 has just come out! If you see or find anything odd be sure to tell me!
 
+Feel free to donate Ethereum to 0x7086C605A431ff8077a6378f79Ce32E125F1B000
+or donate Bitcoin to 1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD
+
 Changelog:
+v1.1.2.5 - Resprite
+Resprited several items to be more visually appealing
+
+v1.1.2.4 - GitHub integration
+The same as the previous version with some back-end changes to make the mod more open source reliable.
+
+v1.1.2.3 - Minor Fixes
+Hopefully finally fixed mobs spawning at wrong heights.
+Built for 0.10.1
+Icon Fixed.
+
+v1.1.2.2 - Hotfixes
+Changed Eyebats to only spawn in night.
+Fixed Relic Fragment not dropping.
+
 v1.1.2.1 - Icon Testing
 Made an Icon and a few minor fixes.
 

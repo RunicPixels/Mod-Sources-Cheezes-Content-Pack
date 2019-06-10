@@ -58,7 +58,7 @@ namespace CheezeMod.Items.Weapons.Swords
             float[] speedXArray = { baseSpeed * (float)Math.Sin(Angle[0]) , baseSpeed * (float)Math.Sin(Angle[1]) , baseSpeed * (float)Math.Sin(Angle[2]) };
             float[] speedYArray = { baseSpeed * (float)Math.Cos(Angle[0]) , baseSpeed * (float)Math.Cos(Angle[1]) , baseSpeed * (float)Math.Cos(Angle[2]) };
             for(int i = 0;i < speedXArray.Length; i++) {
-                Projectile.NewProjectile(position.X, position.Y, speedXArray[i],speedYArray[i],type,damage,knockBack, item.owner);
+                Projectile.NewProjectile(position.X, position.Y, speedXArray[i],speedYArray[i],type,damage,knockBack, Main.myPlayer);
             }
             return false;
         }

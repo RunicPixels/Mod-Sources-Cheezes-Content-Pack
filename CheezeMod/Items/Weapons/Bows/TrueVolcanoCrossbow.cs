@@ -57,8 +57,8 @@ namespace CheezeMod.Items.Weapons.Bows
             for (int i = 0; i < 3; i++)
             {
                 float spread = 16f; // 16 degrees
-                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, 'X');
-                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, 'Y');
+                speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
+                speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
                 if (type == 1) // If normal wooden arrow
                 {
                     if (Main.rand.Next(3) <= 0) // 1/3 chance to become a hellfire arrow
@@ -78,7 +78,7 @@ namespace CheezeMod.Items.Weapons.Bows
                         type = 41;
                     }
                 }
-                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, item.owner);
+                int projectile = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
                 Main.projectile[projectile].netUpdate = true;
             }
             ConsumeAmmo(player);
