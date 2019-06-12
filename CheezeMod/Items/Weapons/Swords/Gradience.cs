@@ -8,21 +8,25 @@ namespace CheezeMod.Items.Weapons.Swords
 {
 	public class Gradience : ModItem
 	{
+		private Vector2 speed = new Vector2(0,0);
+		private int type = 0;
+		private int projectileDamage = 10;
+		private float projectileKnockBack = 2f;
 		public override void SetDefaults()
 		{
 
-			item.damage = 30;
+			item.damage = 20;
 			item.melee = true;
-			item.width = 60;
-			item.height = 72;
+			item.width = 44;
+			item.height = 54;
 
 
-            item.useTime = 42;
-			item.useAnimation = 42;
+            item.useTime = 32;
+			item.useAnimation = 32;
 			item.useStyle = 1;
 			item.knockBack = 10;
 			item.value = 50000;
-            item.scale = 0.9f;
+            item.scale = 1f;
 			item.rare = 3;
             item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
@@ -55,14 +59,15 @@ namespace CheezeMod.Items.Weapons.Swords
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
-            if (Main.rand.Next(3) == 0)
-            {
-                int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, mod.DustType("DarkSparkle"));
-            }
+	        Lighting.AddLight(new Vector2(player.position.X, player.position.Y), 0f, 0.65f, 0.65f);
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
-		{
+        {
+	        speed = Vector2.Normalize(target.position - player.position) * 5f;
+	        type = mod.ProjectileType("BlueLaserArray");
+	        Shoot(player, ref player.position, ref speed.X, ref speed.Y, ref type, ref projectileDamage,
+		        ref projectileKnockBack);
             player.AddBuff(114, 200); // 114 is Endurance
         }
 	}
