@@ -19,6 +19,7 @@ namespace CheezeMod.Items.Weapons.Spears
             item.scale = 1.1f;
 			item.maxStack = 1;
 
+			item.autoReuse = HalberdProperties.DoOutReUse;
 			item.useTime = 42;
 			item.useAnimation = 42;
 			item.knockBack = 5f;

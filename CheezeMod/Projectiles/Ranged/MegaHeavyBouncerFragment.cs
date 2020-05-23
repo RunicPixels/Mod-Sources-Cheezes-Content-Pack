@@ -23,6 +23,12 @@ namespace CheezeMod.Projectiles.Ranged
             
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mega Heavy Bouncer");

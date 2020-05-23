@@ -19,12 +19,12 @@ namespace CheezeMod.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.GetModPlayer<CheezePlayer>(mod).angelsBane = true;
+			player.GetModPlayer<CheezePlayer>().angelsBane = true;
 		}
 
 		public override void Update(NPC npc, ref int buffIndex)
 		{
-			npc.GetGlobalNPC<CheezeGlobalNPC>(mod).angelsBane = true;
+			npc.GetGlobalNPC<CheezeGlobalNPC>().angelsBane = true;
 		}
 	}
 }

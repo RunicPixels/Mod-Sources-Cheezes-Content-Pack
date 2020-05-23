@@ -18,15 +18,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
             item.scale = 0.75f;
 
 
-            item.useTime = 35;
-            item.useAnimation = 35;
+            item.useTime = 42;
+            item.useAnimation = 42;
 			item.useStyle = 1;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;
 			item.value = 39000;
             item.rare = CheezeItem.ratchetRarity[0];
             item.UseSound = SoundID.Item19;
-			item.autoReuse = false;
+			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 3f;
 			item.useAmmo = ProjectileID.Grenade;
@@ -35,7 +35,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
     public override void SetStaticDefaults()
     {
       DisplayName.SetDefault("Bomb Glove");
-      Tooltip.SetDefault("Uses grenades, has a 20% chance not to consume ammo.\nOriginally from Ratchet and Clank.");
+      Tooltip.SetDefault("Throw grenades with increased velocity, has a 20% chance not to consume ammo.\nOriginally from Ratchet and Clank. \n*NOTE : If Grenades are buggy, craft them into ammo at the MegaCorp Vendor!");
     }
 
 
@@ -53,7 +53,24 @@ namespace CheezeMod.Items.Weapons.Ratchet
             float spread = 1f; // 1 degrees 
             speedX = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.X);
             speedY = CheezeMod.CalculateSpread(spread, speedX, speedY, CheezeMod.Direction.Y);
-            damage = (int)(damage * 0.6f);
+            switch (type)
+            {
+	            case ProjectileID.Grenade:
+		            type = mod.ProjectileType("BombGloveGrenade");
+		            break;
+	            case ProjectileID.StickyGrenade:
+		            type = mod.ProjectileType("BombGloveStickyGrenade");
+		            break;
+	            case ProjectileID.BouncyGrenade:
+		            type = mod.ProjectileType("BombGloveBouncyGrenade");
+		            break;
+	            case ProjectileID.Beenade:
+		            type = mod.ProjectileType("BombGloveBeenade");
+		            break;
+	            default:
+		            break;
+            }
+
             return true;
         }
         public override bool ConsumeAmmo(Player p)

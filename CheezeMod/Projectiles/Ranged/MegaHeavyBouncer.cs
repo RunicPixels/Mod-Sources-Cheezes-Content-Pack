@@ -36,6 +36,12 @@ namespace CheezeMod.Projectiles.Ranged
             }
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void Kill(int timeLeft)
         {
             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 14);

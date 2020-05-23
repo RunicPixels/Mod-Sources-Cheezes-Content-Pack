@@ -114,7 +114,7 @@ namespace CheezeMod.Items.Weapons.Other
                 player.velocity.Y -= 7.7f;
                 player.justJumped = true;
                 braveJumpTimer = -360;
-                if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>(mod).weaponDash = 10;
+                if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>().weaponDash = 10;
                 return player.dashDelay == 0;
  
             }

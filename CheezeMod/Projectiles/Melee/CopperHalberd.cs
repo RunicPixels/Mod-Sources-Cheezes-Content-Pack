@@ -15,7 +15,7 @@ namespace CheezeMod.Projectiles.Melee
             projectile.height = 20;
 			projectile.scale = 1.1f;
 			projectile.aiStyle = 19;
-			projectile.timeLeft = 90;
+			projectile.timeLeft = 60;
 			projectile.friendly = true;
 			projectile.hostile = false;
 			projectile.tileCollide = false;
@@ -32,6 +32,12 @@ namespace CheezeMod.Projectiles.Melee
             DisplayName.SetDefault("Copper Halberd");
         }
 
+        public override bool PreAI()
+        {
+	        projectile.spriteDirection = projectile.direction;
+	        return base.PreAI();
+        }
+        
         public override void AI()
         {
 			//Spear code

@@ -36,6 +36,12 @@ namespace CheezeMod.Projectiles.Thrown
             }
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void Kill(int timeLeft)
         {
             for (int k = 0; k < 2; k++)

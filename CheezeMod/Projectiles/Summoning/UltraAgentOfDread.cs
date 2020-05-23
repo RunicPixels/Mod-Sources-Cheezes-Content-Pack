@@ -50,7 +50,7 @@ namespace CheezeMod.Projectiles.Summoning
         public override bool PreAI()
         {
             Player player = Main.player[projectile.owner];
-            CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
+            CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>();
             if (player.dead)
             {
                 modPlayer.agentUltraDreadMinion = false;
@@ -67,7 +67,7 @@ namespace CheezeMod.Projectiles.Summoning
         {
 
 			Player player = Main.player[projectile.owner];
-			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
+			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>();
 			if (player.dead)
 			{
 				modPlayer.agentUltraDreadMinion = false;

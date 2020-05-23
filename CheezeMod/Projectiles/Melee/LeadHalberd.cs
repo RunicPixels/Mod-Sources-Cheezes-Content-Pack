@@ -31,6 +31,12 @@ namespace CheezeMod.Projectiles.Melee
         {
             DisplayName.SetDefault("Lead Halberd");
         }
+        
+        public override bool PreAI()
+        {
+	        projectile.spriteDirection = projectile.direction;
+	        return base.PreAI();
+        }
 
         public override void AI()
         {

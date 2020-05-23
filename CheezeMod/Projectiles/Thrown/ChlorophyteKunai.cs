@@ -26,6 +26,11 @@ namespace CheezeMod.Projectiles.Thrown
             DisplayName.SetDefault("Chlorophyte Kunai");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.4f, 0.8f, 0.4f);

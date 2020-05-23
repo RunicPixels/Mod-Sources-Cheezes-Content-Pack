@@ -26,6 +26,12 @@ namespace CheezeMod.Projectiles.Ranged
             DisplayName.SetDefault("Ultra Multistar");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             projectile.rotation += (float)projectile.direction * 0.4f;

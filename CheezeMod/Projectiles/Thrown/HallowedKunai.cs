@@ -25,6 +25,12 @@ namespace CheezeMod.Projectiles.Thrown
         {
             DisplayName.SetDefault("Hallowed Kunai");
         }
+        
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
 
         public override void AI()
         {

@@ -26,6 +26,12 @@ namespace CheezeMod.Projectiles.Thrown
             DisplayName.SetDefault("Adamantite Kunai");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);

@@ -28,6 +28,12 @@ namespace CheezeMod.Projectiles.Ranged
             DisplayName.SetDefault("Mega Vaporizer");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.8f, 0.3f, 1.2f);

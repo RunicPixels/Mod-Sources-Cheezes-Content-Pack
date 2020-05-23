@@ -32,6 +32,12 @@ namespace CheezeMod.Projectiles.Melee
             DisplayName.SetDefault("Palladium Halberd");
         }
 
+        public override bool PreAI()
+        {
+	        projectile.spriteDirection = projectile.direction;
+	        return base.PreAI();
+        }
+        
         public override void AI()
         {
 			//Spear code
@@ -51,7 +57,7 @@ namespace CheezeMod.Projectiles.Melee
             }
             else
             {
-                projectile.ai[0] += 0.6f; //How far the spear goes
+                projectile.ai[0] += 0.7f; //How far the spear goes
             }
 
             //Kill projectile if item is done being animated

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Ronald\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ronald\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Mod Solutions.-520376235.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ronald\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ronald\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Mod Solutions.-520376235.00" t="ExcludeRecursive" />
     <e p="C:\Users\Ronald\Documents\My Games\Terraria\ModLoader\Mod Sources" t="IncludeFlat">
       <e p="CheezeMod" t="IncludeRecursive">
         <e p="Angle.cs" t="Include" />
@@ -10,7 +10,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Buffs" t="Include">
           <e p="AgentOfDoom.cs" t="Include" />
-          <e p="AgentofDoom.png" t="Include" />
+          <e p="AgentOfDoom.png" t="Include" />
           <e p="AgentOfDread.cs" t="Include" />
           <e p="AgentOfDread.png" t="Include" />
           <e p="AngelsBane.cs" t="Include" />
@@ -20,10 +20,10 @@
           <e p="CheeseFed.cs" t="Include" />
           <e p="CheeseFed.png" t="Include" />
           <e p="DownFall.cs" t="Include" />
-          <e p="DownFall.png" t="Include" />
+          <e p="Downfall.png" t="Include" />
           <e p="ExtremeRadiation.cs" t="Include" />
           <e p="ExtremeRadiation.png" t="Include" />
-          <e p="MegaAgentOfDread.cs" t="Include" />
+          <e p="MegaAgentofDread.cs" t="Include" />
           <e p="MegaAgentOfDread.png" t="Include" />
           <e p="ParryActive.cs" t="Include" />
           <e p="ParryActive.png" t="Include" />
@@ -31,21 +31,27 @@
           <e p="Radiation.png" t="Include" />
           <e p="Starlit.cs" t="Include" />
           <e p="Starlit.png" t="Include" />
+          <e p="SunStruck.png" t="Include" />
+          <e p="TrulySunStruck.png" t="Include" />
           <e p="UltraAgentOfDread.cs" t="Include" />
           <e p="UltraAgentOfDread.png" t="Include" />
         </e>
         <e p="build.txt" t="Include" />
+        <e p="CheezeConfig.cs" t="Include" />
         <e p="CheezeItem.cs" t="Include" />
         <e p="CheezeMod.cs" t="Include" />
         <e p="CheezeMod.csproj" t="IncludeRecursive" />
         <e p="CheezePlayer.cs" t="Include" />
         <e p="CheezeWorld.cs" t="Include" />
         <e p="description.txt" t="Include" />
+        <e p="description2.txt" t="Include" />
         <e p="Dusts" t="Include">
           <e p="BlueLight.cs" t="Include" />
           <e p="BlueLight.png" t="Include" />
           <e p="DarkSparkle.cs" t="Include" />
           <e p="DarkSparkle.png" t="Include" />
+          <e p="ExtremeRadiation.cs" t="Include" />
+          <e p="ExtremeRadiation.png" t="Include" />
           <e p="GraniteDust.cs" t="Include" />
           <e p="GraniteDust.png" t="Include" />
           <e p="GreenLight.cs" t="Include" />
@@ -62,6 +68,8 @@
           <e p="OrangeLight.png" t="Include" />
           <e p="PurpleLight.cs" t="Include" />
           <e p="PurpleLight.png" t="Include" />
+          <e p="Radiation.cs" t="Include" />
+          <e p="Radiation.png" t="Include" />
           <e p="RedLight.cs" t="Include" />
           <e p="RedLight.png" t="Include" />
           <e p="RedSparkle.cs" t="Include" />
@@ -83,10 +91,24 @@
           <e p="Explosions" t="Include">
             <e p="DreadBomb.cs" t="Include" />
             <e p="DreadBomb.png" t="Include" />
+            <e p="DreadBomb2.cs" t="Include" />
+            <e p="DreadBomb2.png" t="Include" />
+            <e p="DreadBomb3.cs" t="Include" />
+            <e p="DreadBomb3.png" t="Include" />
+            <e p="DreadBomb4.cs" t="Include" />
+            <e p="DreadBomb4.png" t="Include" />
+            <e p="DreadNuke.cs" t="Include" />
+            <e p="DreadNuke.png" t="Include" />
             <e p="GravityBomb.cs" t="Include" />
             <e p="GravityBomb.png" t="Include" />
+            <e p="MegaNuke.cs" t="Include" />
+            <e p="MegaNuke.png" t="Include" />
             <e p="MiniNuke.cs" t="Include" />
             <e p="MiniNuke.png" t="Include" />
+            <e p="MiniNukeBackup.png" t="Include" />
+            <e p="MiniNukeBackup2.png" t="Include" />
+            <e p="UltraNuke.cs" t="Include" />
+            <e p="UltraNuke.png" t="Include" />
           </e>
           <e p="Granite" t="Include">
             <e p="GraniteArm.png" t="Include" />
@@ -106,11 +128,20 @@
             <e p="DragonEye.png" t="Include" />
             <e p="DragonEyeBody.png" t="Include" />
             <e p="DragonEyeTail.png" t="Include" />
+            <e p="EyebatHead.png" t="Include" />
+            <e p="EyebatTail.png" t="Include" />
+            <e p="EyebatWing.png" t="Include" />
+            <e p="ProtoFur.png" t="Include" />
+            <e p="ProtoOrb.png" t="Include" />
+            <e p="ProtoTeeth.png" t="Include" />
             <e p="ThyrranoidArm.png" t="Include" />
             <e p="ThyrranoidBelly.png" t="Include" />
             <e p="ThyrranoidEye.png" t="Include" />
           </e>
         </e>
+        <e p="icon.png" t="Include" />
+        <e p="icon2.png" t="Include" />
+        <e p="icon3.png" t="Include" />
         <e p="Items" t="Include">
           <e p="Accessory" t="Include">
             <e p="GoreNecklace.cs" t="Include" />
@@ -207,6 +238,8 @@
             <e p="AmethystLens.png" t="Include" />
             <e p="AngelEssence.cs" t="Include" />
             <e p="AngelEssence.png" t="Include" />
+            <e p="Antimatter.cs" t="Include" />
+            <e p="Antimatter.png" t="Include" />
             <e p="DiamondLens.cs" t="Include" />
             <e p="DiamondLens.png" t="Include" />
             <e p="EmeraldLens.cs" t="Include" />
@@ -251,13 +284,26 @@
             <e p="TopazLens.png" t="Include" />
             <e p="TornHeroBook.cs" t="Include" />
             <e p="TornHeroBook.png" t="Include" />
+            <e p="TwinklingStone.cs" t="Include" />
+            <e p="TwinklingStone.png" t="Include" />
+            <e p="VikingAxeHead.aseprite" t="Include" />
+            <e p="VikingAxeHead.cs" t="Include" />
+            <e p="VikingAxeHead.png" t="Include" />
+            <e p="VikingHammerHead.cs" t="Include" />
+            <e p="VikingHammerHead.png" t="Include" />
           </e>
           <e p="Placeable" t="Include">
             <e p="Banner" t="Include">
               <e p="BonefishBanner.cs" t="Include" />
               <e p="BonefishBanner.png" t="Include" />
+              <e p="DragonEyeBanner.cs" t="Include" />
+              <e p="DragonEyeBanner.png" t="Include" />
+              <e p="EyebatBanner.cs" t="Include" />
+              <e p="EyebatBanner.png" t="Include" />
               <e p="GraniteWandererBanner.cs" t="Include" />
               <e p="GraniteWandererBanner.png" t="Include" />
+              <e p="MoltenEyeBanner.cs" t="Include" />
+              <e p="MoltenEyeBanner.png" t="Include" />
               <e p="ProtopetBanner.cs" t="Include" />
               <e p="ProtopetBanner.png" t="Include" />
               <e p="RobonoidBanner.cs" t="Include" />
@@ -278,6 +324,24 @@
           </e>
           <e p="Weapons" t="Include">
             <e p="Ammo" t="Include">
+              <e p="BombGloveBeenade.cs" t="Include" />
+              <e p="BombGloveBeenade.png" t="Include" />
+              <e p="BombGloveBouncyGrenade.cs" t="Include" />
+              <e p="BombGloveBouncyGrenade.png" t="Include" />
+              <e p="BombGloveGrenade.cs" t="Include" />
+              <e p="BombGloveGrenade.png" t="Include" />
+              <e p="BombGloveStickyGrenade.cs" t="Include" />
+              <e p="BombGloveStickyGrenade.png" t="Include" />
+              <e p="EndlessBombGloveBeenade.cs" t="Include" />
+              <e p="EndlessBombGloveBeenade.png" t="Include" />
+              <e p="EndlessBombGloveBouncyGrenade.cs" t="Include" />
+              <e p="EndlessBombGloveBouncyGrenade.png" t="Include" />
+              <e p="EndlessBombGloveGrenade.cs" t="Include" />
+              <e p="EndlessBombGloveGrenade.png" t="Include" />
+              <e p="EndlessBombGloveStickyGrenade.cs" t="Include" />
+              <e p="EndlessBombGloveStickyGrenade.png" t="Include" />
+              <e p="EndlessRocket0.cs" t="Include" />
+              <e p="EndlessRocket0.png" t="Include" />
               <e p="Rocket0.cs" t="Include" />
               <e p="Rocket0.png" t="Include" />
             </e>
@@ -288,6 +352,7 @@
               <e p="BonemerangThrowing.png" t="Include" />
               <e p="Kaboomerang.cs" t="Include" />
               <e p="Kaboomerang.png" t="Include" />
+              <e p="KaboomerangOld.png" t="Include" />
               <e p="KaboomerangThrowing.cs" t="Include" />
               <e p="KaboomerangThrowing.png" t="Include" />
               <e p="StarChakram.cs" t="Include" />
@@ -313,6 +378,7 @@
               <e p="TendonCrossbow.png" t="Include" />
               <e p="TrueVolcanoCrossbow.cs" t="Include" />
               <e p="TrueVolcanoCrossbow.png" t="Include" />
+              <e p="TrueVolcanoCrossbow2.png" t="Include" />
               <e p="VolcanoCrossbow.cs" t="Include" />
               <e p="VolcanoCrossbow.png" t="Include" />
             </e>
@@ -329,6 +395,8 @@
               <e p="TheHighNoon.png" t="Include" />
             </e>
             <e p="Magic" t="Include">
+              <e p="ArcaneOrb.cs" t="Include" />
+              <e p="ArcaneOrb.png" t="Include" />
               <e p="ChaosTheory.cs" t="Include" />
               <e p="ChaosTheory.png" t="Include" />
               <e p="GraniteRod.cs" t="Include" />
@@ -357,7 +425,7 @@
               <e p="HistoricKnuckle.cs" t="Include" />
               <e p="HistoricKnuckle.png" t="Include" />
               <e p="HistoricKnuckle_HandsOn.png" t="Include" />
-              <e p="MahoganyBlowpipe.cs" t="Include" />
+              <e p="MahoganyBlowPipe.cs" t="Include" />
               <e p="MahoganyBlowpipe.png" t="Include" />
               <e p="OnePunchGlove.cs" t="Include" />
               <e p="OnePunchGlove.png" t="Include" />
@@ -370,17 +438,20 @@
             </e>
             <e p="Ratchet" t="Include">
               <e p="BlitzCannon.cs" t="Include" />
-              <e p="blitzcannon.png" t="Include" />
+              <e p="BlitzCannon.png" t="Include" />
               <e p="BlitzEruptor.cs" t="Include" />
               <e p="BlitzEruptor.png" t="Include" />
               <e p="BlitzGun.cs" t="Include" />
               <e p="BlitzGun.png" t="Include" />
+              <e p="BlitzGunOld.png" t="Include" />
               <e p="BombGlove.cs" t="Include" />
               <e p="BombGlove.png" t="Include" />
               <e p="Bouncer.cs" t="Include" />
               <e p="Bouncer.png" t="Include" />
+              <e p="BouncerOld.png" t="Include" />
               <e p="Chopper.cs" t="Include" />
               <e p="Chopper.png" t="Include" />
+              <e p="ChopperOld.png" t="Include" />
               <e p="GloveOfDoom.cs" t="Include" />
               <e p="GloveOfDoom.png" t="Include" />
               <e p="GloveOfDread.cs" t="Include" />
@@ -389,44 +460,60 @@
               <e p="GoldBombGlove.png" t="Include" />
               <e p="GoldWalloper.cs" t="Include" />
               <e p="GoldWalloper.png" t="Include" />
+              <e p="GoldWalloper2.png" t="Include" />
               <e p="GravityBomb.cs" t="Include" />
               <e p="GravityBomb.png" t="Include" />
+              <e p="GravityBombOud.png" t="Include" />
               <e p="HeavyBouncer.cs" t="Include" />
               <e p="HeavyBouncer.png" t="Include" />
               <e p="HeavyLancer.cs" t="Include" />
               <e p="HeavyLancer.png" t="Include" />
+              <e p="HeavyLancerOld.png" t="Include" />
               <e p="Lancer.cs" t="Include" />
               <e p="Lancer.png" t="Include" />
+              <e p="Lancer2.png" t="Include" />
               <e p="LavaGun.cs" t="Include" />
               <e p="LavaGun.png" t="Include" />
+              <e p="LavaGun2.png" t="Include" />
               <e p="LiquidCursedFlameGun.cs" t="Include" />
               <e p="LiquidCursedFlameGun.png" t="Include" />
+              <e p="LiquidCursedFlameGun2.png" t="Include" />
               <e p="LiquidGravityGun.cs" t="Include" />
               <e p="LiquidGravityGun.png" t="Include" />
+              <e p="LiquidGravityGun2.png" t="Include" />
               <e p="LiquidIchorGun.cs" t="Include" />
               <e p="LiquidIchorGun.png" t="Include" />
+              <e p="LiquidIchorGun2.png" t="Include" />
               <e p="LiquidNitrogenGun.cs" t="Include" />
               <e p="LiquidNitrogenGun.png" t="Include" />
+              <e p="LiquidNitrogenGun2.png" t="Include" />
               <e p="MegaBombGlove.cs" t="Include" />
               <e p="MegaBombGlove.png" t="Include" />
               <e p="MegaGloveOfDread.cs" t="Include" />
               <e p="MegaGloveOfDread.png" t="Include" />
               <e p="MegaGoldWalloper.cs" t="Include" />
               <e p="MegaGoldWalloper.png" t="Include" />
+              <e p="MegaGoldWalloper2.png" t="Include" />
               <e p="MegaHeavyBouncer.cs" t="Include" />
               <e p="MegaHeavyBouncer.png" t="Include" />
               <e p="MegaHeavyLancer.cs" t="Include" />
               <e p="MegaHeavyLancer.png" t="Include" />
+              <e p="MegaHeavyLancerOld.png" t="Include" />
               <e p="MegaMultistar.cs" t="Include" />
               <e p="MegaMultistar.png" t="Include" />
+              <e p="MegaMultistarOld.png" t="Include" />
               <e p="MegaNuke.cs" t="Include" />
               <e p="MegaNuke.png" t="Include" />
+              <e p="MegaNukeOld.png" t="Include" />
               <e p="MegaVaporizer.cs" t="Include" />
               <e p="MegaVaporizer.png" t="Include" />
               <e p="MiniNuke.cs" t="Include" />
               <e p="MiniNuke.png" t="Include" />
+              <e p="MiniNukeOud.png" t="Include" />
               <e p="Multistar.cs" t="Include" />
               <e p="Multistar.png" t="Include" />
+              <e p="Multistar2.png" t="Include" />
+              <e p="MultistarOld.png" t="Include" />
               <e p="PulseRifle.cs" t="Include" />
               <e p="PulseRifle.png" t="Include" />
               <e p="UltraBlitzEruptor.cs" t="Include" />
@@ -437,20 +524,26 @@
               <e p="UltraGloveOfDread.png" t="Include" />
               <e p="UltraGoldWalloper.cs" t="Include" />
               <e p="UltraGoldWalloper.png" t="Include" />
+              <e p="UltraGoldWalloper2.png" t="Include" />
               <e p="UltraHeavyBouncer.cs" t="Include" />
               <e p="UltraHeavyBouncer.png" t="Include" />
               <e p="UltraHeavyLancer.cs" t="Include" />
               <e p="UltraHeavyLancer.png" t="Include" />
+              <e p="UltraHeavyLancerOld.png" t="Include" />
+              <e p="UltraHeavyLancerOud.png" t="Include" />
               <e p="UltraMultiStar.cs" t="Include" />
-              <e p="UltraMultiStar.png" t="Include" />
+              <e p="UltraMultistar.png" t="Include" />
+              <e p="UltraMultistarOld.png" t="Include" />
               <e p="UltraNuke.cs" t="Include" />
               <e p="UltraNuke.png" t="Include" />
+              <e p="UltraNukeOld.png" t="Include" />
               <e p="UltraVaporizer.cs" t="Include" />
               <e p="UltraVaporizer.png" t="Include" />
               <e p="Vaporizer.cs" t="Include" />
               <e p="Vaporizer.png" t="Include" />
               <e p="Walloper.cs" t="Include" />
               <e p="Walloper.png" t="Include" />
+              <e p="Walloper2.png" t="Include" />
             </e>
             <e p="Spears" t="Include">
               <e p="AdamantHalberd.cs" t="Include" />
@@ -465,8 +558,10 @@
               <e p="EnchantedOrichalcumHalberd.png" t="Include" />
               <e p="GoldHalberd.cs" t="Include" />
               <e p="GoldHalberd.png" t="Include" />
+              <e p="GoldHalberd2.png" t="Include" />
               <e p="GraniteLance.cs" t="Include" />
               <e p="GraniteLance.png" t="Include" />
+              <e p="HalberdProperties.cs" t="Include" />
               <e p="IronHalberd.cs" t="Include" />
               <e p="IronHalberd.png" t="Include" />
               <e p="LeadHalberd.cs" t="Include" />
@@ -481,6 +576,7 @@
               <e p="PalladiumHalberd.png" t="Include" />
               <e p="PlatinumHalberd.cs" t="Include" />
               <e p="PlatinumHalberd.png" t="Include" />
+              <e p="PlatinumHalberd2.png" t="Include" />
               <e p="SilverHalberd.cs" t="Include" />
               <e p="SilverHalberd.png" t="Include" />
               <e p="SkullHalberd.cs" t="Include" />
@@ -518,10 +614,17 @@
               <e p="BlueLasersaber.png" t="Include" />
               <e p="Cheeselicious.cs" t="Include" />
               <e p="Cheeselicious.png" t="Include" />
+              <e p="CheeseliciousOld.png" t="Include" />
               <e p="ChronicleSword.cs" t="Include" />
               <e p="ChronicleSword.png" t="Include" />
+              <e p="ChronicleSword2.png" t="Include" />
               <e p="Gradience.cs" t="Include" />
               <e p="Gradience.png" t="Include" />
+              <e p="Gradience2.png" t="Include" />
+              <e p="Gradience3.png" t="Include" />
+              <e p="Gradience4.png" t="Include" />
+              <e p="Gradience5.png" t="Include" />
+              <e p="GradienceOld.png" t="Include" />
               <e p="GreenLasersaber.cs" t="Include" />
               <e p="GreenLasersaber.png" t="Include" />
               <e p="GuardianBigSword.cs" t="Include" />
@@ -536,16 +639,23 @@
               <e p="HistoricSword.png" t="Include" />
               <e p="NietonoNoShana.cs" t="Include" />
               <e p="NietonoNoShana.png" t="Include" />
+              <e p="NietonoNoShanaOld.png" t="Include" />
+              <e p="NietonoNoShanaOld2.png" t="Include" />
               <e p="PurpleLaserSaber.cs" t="Include" />
               <e p="PurpleLasersaber.png" t="Include" />
               <e p="RedLaserSaber.cs" t="Include" />
               <e p="RedLasersaber.png" t="Include" />
+              <e p="Shinkutama.png" t="Include" />
+              <e p="StoneBroadsword - Copy.png" t="Include" />
               <e p="StoneBroadsword.cs" t="Include" />
               <e p="StoneBroadsword.png" t="Include" />
               <e p="SunStrike.cs" t="Include" />
               <e p="SunStrike.png" t="Include" />
+              <e p="SunStrike2.png" t="Include" />
               <e p="SwordOfTheSilverSword.cs" t="Include" />
               <e p="SwordOfTheSilverSword.png" t="Include" />
+              <e p="TrueSunStrike.cs" t="Include" />
+              <e p="TrueSunStrike.png" t="Include" />
               <e p="WhiteLasersaber.cs" t="Include" />
               <e p="WhiteLasersaber.png" t="Include" />
               <e p="YellowLasersaber.cs" t="Include" />
@@ -556,6 +666,7 @@
               <e p="AdamantiteKunai.png" t="Include" />
               <e p="BoneKunai.cs" t="Include" />
               <e p="BoneKunai.png" t="Include" />
+              <e p="BoneKunai2.png" t="Include" />
               <e p="ChlorophyteKunai.cs" t="Include" />
               <e p="ChlorophyteKunai.png" t="Include" />
               <e p="CobaltKunai.cs" t="Include" />
@@ -626,6 +737,11 @@
               <e p="StarlightPaxel.png" t="Include" />
               <e p="TempoAccelerator.cs" t="Include" />
               <e p="TempoAccelerator.png" t="Include" />
+              <e p="VikingAxe.cs" t="Include" />
+              <e p="VikingAxe.png" t="Include" />
+              <e p="VikingHammer.aseprite" t="Include" />
+              <e p="VikingHammer.cs" t="Include" />
+              <e p="VikingHammer.png" t="Include" />
             </e>
             <e p="UseStyles" t="Include">
               <e p="FistStyle.cs" t="Include" />
@@ -644,6 +760,8 @@
           <e p="Bosses" t="Include">
             <e p="Susano.cs" t="Include" />
             <e p="Susano.png" t="Include" />
+            <e p="Susano_Head_Boss - Copy.png" t="Include" />
+            <e p="Susano_Head_Boss.png" t="Include" />
           </e>
           <e p="CheezeGlobalNPC.cs" t="Include" />
           <e p="DragonEye.cs" t="Include" />
@@ -666,7 +784,13 @@
           <e p="Tyhrranoid.cs" t="Include" />
           <e p="Tyhrranoid.png" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net45" t="Include">
+              <e p="CheezeMod.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="PlayerFX.cs" t="Include" />
         <e p="Projectiles" t="Include">
           <e p="Boomerang" t="Include">
@@ -674,12 +798,14 @@
             <e p="Bonemerang.png" t="Include" />
             <e p="BonemerangThrowing.cs" t="Include" />
             <e p="BonemerangThrowing.png" t="Include" />
-            <e p="Kaboomdamage.cs" t="Include" />
-            <e p="Kaboomdamage.png" t="Include" />
             <e p="Kaboomerang.cs" t="Include" />
             <e p="Kaboomerang.png" t="Include" />
+            <e p="KaboomerangThrowing.cs" t="Include" />
+            <e p="KaboomerangThrowing.png" t="Include" />
             <e p="StarChakram.cs" t="Include" />
             <e p="StarChakram.png" t="Include" />
+            <e p="StarChakramThrowing.cs" t="Include" />
+            <e p="StarChakramThrowing.png" t="Include" />
           </e>
           <e p="Magic" t="Include">
             <e p="BlueLaserStaff.cs" t="Include" />
@@ -768,8 +894,6 @@
             <e p="SilverHalberd.png" t="Include" />
             <e p="SkullHalberd.cs" t="Include" />
             <e p="SkullHalberd.png" t="Include" />
-            <e p="StarChakram.cs" t="Include" />
-            <e p="StarChakram.png" t="Include" />
             <e p="StarlightHalberd.cs" t="Include" />
             <e p="StarlightHalberd.png" t="Include" />
             <e p="StarStorm2.cs" t="Include" />
@@ -797,7 +921,7 @@
           </e>
           <e p="Ranged" t="Include">
             <e p="BlitzCannon.cs" t="Include" />
-            <e p="blitzcannon.png" t="Include" />
+            <e p="BlitzCannon.png" t="Include" />
             <e p="BlitzEruptor.cs" t="Include" />
             <e p="BlitzEruptor.png" t="Include" />
             <e p="BlitzGun.cs" t="Include" />
@@ -858,7 +982,7 @@
             <e p="UltraHeavyLancer.cs" t="Include" />
             <e p="UltraHeavyLancer.png" t="Include" />
             <e p="UltraMultiStar.cs" t="Include" />
-            <e p="UltraMultiStar.png" t="Include" />
+            <e p="UltraMultistar.png" t="Include" />
             <e p="UltraNuke.cs" t="Include" />
             <e p="UltraNuke.png" t="Include" />
             <e p="UltraVaporizer.cs" t="Include" />
@@ -869,7 +993,7 @@
           <e p="Summoning" t="Include">
             <e p="Agent.cs" t="Include" />
             <e p="AgentOfDoom.cs" t="Include" />
-            <e p="AgentofDoom.png" t="Include" />
+            <e p="AgentOfDoom.png" t="Include" />
             <e p="AgentOfDread.cs" t="Include" />
             <e p="AgentOfDread.png" t="Include" />
             <e p="DreadBomb.cs" t="Include" />
@@ -879,11 +1003,12 @@
             <e p="DreadNuke.cs" t="Include" />
             <e p="DreadNuke.png" t="Include" />
             <e p="HoverShooter.cs" t="Include" />
-            <e p="MegaAgentOfDread.cs" t="Include" />
+            <e p="MegaAgentofDread.cs" t="Include" />
             <e p="MegaAgentOfDread.png" t="Include" />
             <e p="MegaDreadLaser.cs" t="Include" />
             <e p="MegaDreadLaser.png" t="Include" />
             <e p="Minion.cs" t="Include" />
+            <e p="UltraAgentOfDread - Copy.png" t="Include" />
             <e p="UltraAgentOfDread.cs" t="Include" />
             <e p="UltraAgentOfDread.png" t="Include" />
             <e p="UltraDreadLaser.cs" t="Include" />
@@ -892,6 +1017,14 @@
           <e p="Thrown" t="Include">
             <e p="AdamantiteKunai.cs" t="Include" />
             <e p="AdamantiteKunai.png" t="Include" />
+            <e p="BombGloveBeenade.cs" t="Include" />
+            <e p="BombGloveBeenade.png" t="Include" />
+            <e p="BombGloveBouncyGrenade.cs" t="Include" />
+            <e p="BombGloveBouncyGrenade.png" t="Include" />
+            <e p="BombGloveGrenade.cs" t="Include" />
+            <e p="BombGloveGrenade.png" t="Include" />
+            <e p="BombGloveStickyGrenade.cs" t="Include" />
+            <e p="BombGloveStickyGrenade.png" t="Include" />
             <e p="BoneKunai.cs" t="Include" />
             <e p="BoneKunai.png" t="Include" />
             <e p="ChlorophyteKunai.cs" t="Include" />
@@ -947,6 +1080,9 @@
           </e>
         </e>
         <e p="ProjFX.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
         <e p="README.md" t="Include" />
         <e p="Sounds" t="Include">
           <e p="Custom" t="Include">
@@ -991,7 +1127,7 @@
             <e p="ThyrranoidHit.cs" t="Include" />
             <e p="ThyrranoidHit.wav" t="Include" />
           </e>
-          <e p="NPCkilled" t="Include">
+          <e p="NPCKilled" t="Include">
             <e p="ThyrranoidDie.cs" t="Include" />
             <e p="ThyrranoidDie.wav" t="Include" />
           </e>
@@ -999,6 +1135,7 @@
         <e p="Tiles" t="Include">
           <e p="CheezeMonsterBanner.cs" t="Include" />
           <e p="CheezeMonsterBanner.png" t="Include" />
+          <e p="MegaCorpVendor - Copy.png" t="Include" />
           <e p="MegaCorpVendor.cs" t="Include" />
           <e p="MegaCorpVendor.png" t="Include" />
           <e p="StarlightBar.cs" t="Include" />

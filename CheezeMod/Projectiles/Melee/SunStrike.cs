@@ -30,6 +30,12 @@ namespace CheezeMod.Projectiles.Melee
             projectile.width = 50;
             projectile.height = 50;
         }
+        
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
 
         public override void AI()
         {

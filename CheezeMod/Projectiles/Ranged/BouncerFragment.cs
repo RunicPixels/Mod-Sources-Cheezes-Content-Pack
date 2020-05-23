@@ -27,6 +27,12 @@ namespace CheezeMod.Projectiles.Ranged
             DisplayName.SetDefault("Bouncer");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             if (Main.rand.Next(20) == 0)

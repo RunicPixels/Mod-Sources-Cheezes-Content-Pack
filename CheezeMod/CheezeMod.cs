@@ -21,13 +21,17 @@ namespace CheezeMod
     {
         public enum Direction { X, Y}
         public CheezeMod()
-        {
+        { 
             Properties = new ModProperties()
             {
                 Autoload = true,
                 AutoloadGores = true,
                 AutoloadSounds = true
             };
+            if (CheezeConfig.Instance == null)
+            {
+                CheezeConfig.Instance = new CheezeConfig();
+            }
         }
         // UI
         #region UI
@@ -156,7 +160,7 @@ namespace CheezeMod
                 }
                 else
                 {
-                    Main.player[sender].GetModPlayer<PlayerFX>(this).weaponDash = dash;
+                    Main.player[sender].GetModPlayer<PlayerFX>().weaponDash = dash;
                     // Main.NewText("Set player " + Main.player[sender].name + " weapon dash to " + dash);
                 }
             }
@@ -690,7 +694,7 @@ namespace CheezeMod
 
             // Other Mods Used //
 
-            if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
+            if (ModLoader.Mods.Select(m => m.Name).Contains("ThoriumMod"))
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ItemID.PiggyBank);

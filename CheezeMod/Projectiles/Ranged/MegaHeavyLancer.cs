@@ -23,6 +23,12 @@ namespace CheezeMod.Projectiles.Ranged
             aiType = ProjectileID.Bullet;
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mega Heavy Lancer shot");

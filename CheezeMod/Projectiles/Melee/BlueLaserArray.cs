@@ -31,6 +31,12 @@ namespace CheezeMod.Projectiles.Melee
             return true;
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0f, 0f, 1f);

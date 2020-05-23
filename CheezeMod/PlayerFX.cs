@@ -691,7 +691,7 @@ namespace CheezeMod
 
                     // Add 5 sec parry buff and short invincibility
                     Items.Weapons.UseStyles.FistStyle.provideImmunity(player, 20);
-                    player.AddBuff(mod.BuffType<Buffs.ParryActive>(), 300, false);
+                    player.AddBuff(ModContent.BuffType<Buffs.ParryActive>(), 300, false);
 
                     if (DEBUG_PARRYFISTS) Main.NewText(string.Concat("Parried! : ", parryTime, "/", parryActive, "/", parryTimeMax));
                     CheezeMod.NetUpdateParry(mod, this);

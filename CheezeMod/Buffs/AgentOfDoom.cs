@@ -15,7 +15,7 @@ namespace CheezeMod.Buffs
 
         public override void Update(Player player, ref int buffIndex)
 		{
-			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
+			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>();
 			if (player.ownedProjectileCounts[mod.ProjectileType("AgentOfDoom")] > 0)
 			{
 				modPlayer.agentMinion = true;

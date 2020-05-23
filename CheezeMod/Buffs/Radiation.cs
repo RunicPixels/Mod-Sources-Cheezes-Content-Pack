@@ -19,12 +19,12 @@ namespace CheezeMod.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.GetModPlayer<CheezePlayer>(mod).radiation = true;
+			player.GetModPlayer<CheezePlayer>().radiation = true;
 		}
 
 		public override void Update(NPC npc, ref int buffIndex)
 		{
-			npc.GetGlobalNPC<CheezeGlobalNPC>(mod).radiation = true;
+			npc.GetGlobalNPC<CheezeGlobalNPC>().radiation = true;
 		}
 	}
 }

@@ -29,6 +29,12 @@ namespace CheezeMod.Projectiles.Ranged
             DisplayName.SetDefault("Ultra Blitz Eruption");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             if (extraUpdate)

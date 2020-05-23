@@ -11,7 +11,7 @@ namespace CheezeMod.Items.Weapons.Swords
         public override void SetDefaults()
         {
 
-            item.damage = 10;
+            item.damage = 9;
             item.melee = true;
             item.width = 32;
             item.height = 32;
@@ -28,7 +28,7 @@ namespace CheezeMod.Items.Weapons.Swords
 
     public override void SetStaticDefaults()
     {
-      DisplayName.SetDefault("Stone Broadsword");
+      DisplayName.SetDefault("Stone Club");
       Tooltip.SetDefault("");
     }
 
@@ -37,6 +37,7 @@ namespace CheezeMod.Items.Weapons.Swords
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.StoneBlock, 7);
+            recipe.AddRecipeGroup("CheezeMod:AnyWood", 3);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

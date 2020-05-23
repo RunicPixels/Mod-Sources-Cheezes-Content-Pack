@@ -12,14 +12,31 @@ As of right now the mod includes several tools, an armor set, a few new armor pa
 • Several Quality of Life improvements.
 • A little bit of cross content with other mods, more in the future.
 
-NOTE: Update 1.1.2 for tModLoader 0.10.0.2 has just come out! If you see or find anything odd be sure to tell me!
+NOTE: Update 1.1.4.2 for tModLoader 0.11.7.2 has just come out! If you see or find anything odd be sure to tell me!
 
 Feel free to donate Ethereum to 0x7086C605A431ff8077a6378f79Ce32E125F1B000
 or donate Bitcoin to 1CGDXuJHvyC3SLk2JEs4Q6hCULtHCTzxgD
 
 Changelog:
-v1.1.2.5 - Resprite
-Resprited several items to be more visually appealing
+v1.1.4.2 Hotfix
+Updated to 0.11.7.2
+
+v1.1.4.1 Hotfix
+Fixed Tyrranoid sound not using the updated file.
+
+v1.1.4 - Quality Improvements
+Updated Megacorp Vendor to have a bigger contrast in the overworld sprite.
+Reduced Tyrranoid Noise
+Updated a few sprites
+
+v1.1.3 - 0.11 Support, Quality Improvements!
+Resprited a bunch of items to be more visually appealing
+Added Infinite Ammo variants and config.
+Created a new Icon.
+Fixed minor bugs.
+Added Viking Axe & Hammer
+Added True Sun Strike
+Some balance changes.
 
 v1.1.2.4 - GitHub integration
 The same as the previous version with some back-end changes to make the mod more open source reliable.

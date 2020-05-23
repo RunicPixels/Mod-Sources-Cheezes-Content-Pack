@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using System.Linq;
 using CheezeMod;
@@ -175,6 +176,19 @@ namespace CheezeMod.NPCs
                 }
             }
 
+            // Ice
+
+            if (npc.type == NPCID.UndeadViking)
+            {
+                if (Main.rand.NextFloat(1f) > 0.95f)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("VikingHammerHead"), 1);
+                }
+                if (Main.rand.NextFloat(1f) > 0.95f)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("VikingAxeHead"), 1);
+                }
+            }
             // Marble
 
             if (npc.type == NPCID.Medusa || npc.type == NPCID.GreekSkeleton)
@@ -319,7 +333,7 @@ namespace CheezeMod.NPCs
             #region Bosses
             if (Main.expertMode == false)
             {
-                if (!ModLoader.GetLoadedMods().Contains("QualityOfLifeStandard"))
+                if (!ModLoader.Mods.Select(m => m.Name).Contains("QualityOfLifeStandard"))
                 {
                     if (npc.type == NPCID.KingSlime)
                     {

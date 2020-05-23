@@ -1,5 +1,5 @@
 author = Cheezegami
-version = 1.1.2.4
+version = 1.1.4.2
 displayName = Cheeze's Content Pack
 homepage = https://github.com/Cheezegami/Mod-Sources-Cheezes-Content-Pack/
 hideCode = false

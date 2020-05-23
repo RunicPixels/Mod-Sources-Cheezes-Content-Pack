@@ -24,6 +24,12 @@ namespace CheezeMod.Projectiles.Melee
             DisplayName.SetDefault("Purple Laser");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 1f, 0f, 1f);

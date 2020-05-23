@@ -29,7 +29,7 @@ namespace CheezeMod
                     projectile.aiStyle == 84 ||
                     projectile.aiStyle == 85) continue;
 
-                PlayerFX pFX = player.GetModPlayer<PlayerFX>(mod);
+                PlayerFX pFX = player.GetModPlayer<PlayerFX>();
                 if (!pFX.CanReflectProjectiles) continue;
                 Player pOwner = Main.player[projectile.owner];
 
@@ -43,7 +43,7 @@ namespace CheezeMod
                 {
                     // Can reflect
 
-                    // Is close enough
+                    // Is close enoughplayer.GetModPlayer<CheezePlayer>();
                     if (Vector2.Distance(projectile.Center, player.Center) <= shieldDist +
                         Vector2.Distance(default(Vector2), projectile.velocity * 2.5f))
                     {
@@ -125,7 +125,7 @@ namespace CheezeMod
             if (projectile.npcProj || projectile.hostile) return;
             if (projectile.position == projectile.oldPosition) return;
 
-            PlayerFX p = Main.player[projectile.owner].GetModPlayer<PlayerFX>(mod);
+            PlayerFX p = Main.player[projectile.owner].GetModPlayer<PlayerFX>();
             if (p.lunarMagicVisual && projectile.magic)
             {
                 Dust d = Main.dust[Dust.NewDust(

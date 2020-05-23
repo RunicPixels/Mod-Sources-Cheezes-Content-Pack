@@ -11,15 +11,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 
-			item.damage = 36;
+			item.damage = 31;
 			item.ranged = true;
 			item.width = 50;
             item.scale = 0.8f;
 			item.height = 38;
 
 
-            item.useTime = 34;
-            item.useAnimation = 34;
+            item.useTime = 29;
+            item.useAnimation = 29;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;
@@ -34,7 +34,7 @@ namespace CheezeMod.Items.Weapons.Ratchet
 
     public override void SetStaticDefaults()
     {
-      DisplayName.SetDefault("Blitz Eruptor");
+      DisplayName.SetDefault("Mega Blitz Eruptor");
       Tooltip.SetDefault("Is able to inflict enemies with cursed or shadow flames, converts normal bullets into Mega Blitz Eruptor shots.\nInspired by from Ratchet and Clank: Going Commando.");
     }
 

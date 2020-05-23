@@ -30,6 +30,12 @@ namespace CheezeMod.Projectiles.Ranged
             DisplayName.SetDefault("Ultra Heavy Lancer Shot");
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             if(projectile.timeLeft == 300)

@@ -35,6 +35,12 @@ namespace CheezeMod.Projectiles.Ranged
             return true;
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             bool waterFlag = Collision.WetCollision(projectile.position, projectile.width, projectile.height);

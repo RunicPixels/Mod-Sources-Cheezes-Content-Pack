@@ -25,6 +25,7 @@ namespace CheezeMod.Items.Weapons.Spears
             item.UseSound = SoundID.Item1;
 			item.noMelee = true;
 			item.noUseGraphic = true;
+			item.autoReuse = HalberdProperties.DoOutReUse;
 			item.useTurn = true;
 			item.useStyle = 5;
             item.value = 10000;

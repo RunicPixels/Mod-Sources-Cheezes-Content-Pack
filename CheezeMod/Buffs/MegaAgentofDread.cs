@@ -15,7 +15,7 @@ namespace CheezeMod.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>(mod);
+			CheezePlayer modPlayer = player.GetModPlayer<CheezePlayer>();
 			if (player.ownedProjectileCounts[mod.ProjectileType("MegaAgentOfDread")] > 0)
 			{
 				modPlayer.agentMegaDreadMinion = true;

@@ -32,6 +32,12 @@ namespace CheezeMod.Projectiles.Melee
             DisplayName.SetDefault("Mushwood Pitchfork");
         }
 
+        public override bool PreAI()
+        {
+	        projectile.spriteDirection = projectile.direction;
+	        return base.PreAI();
+        }
+        
         public override void AI()
         {
 			//Spear code

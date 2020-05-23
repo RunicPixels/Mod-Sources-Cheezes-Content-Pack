@@ -28,6 +28,13 @@ namespace CheezeMod.Projectiles.Ranged
         {
             DisplayName.SetDefault("Blitz Shot");
         }
+        
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             if (extraUpdate)

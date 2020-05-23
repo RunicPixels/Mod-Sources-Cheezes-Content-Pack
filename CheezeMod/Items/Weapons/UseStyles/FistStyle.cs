@@ -611,7 +611,7 @@ namespace CheezeMod.Items.Weapons.UseStyles
         {
             parryCooldownSave = parryCooldown;
 
-            PlayerFX pfx = player.GetModPlayer<PlayerFX>(mod);
+            PlayerFX pfx = player.GetModPlayer<PlayerFX>();
             if (player.itemAnimation == 0 && pfx.parryTime == 0)
             {
                 pfx.parryTimeMax = parryWindow + parryCooldown;
@@ -627,7 +627,7 @@ namespace CheezeMod.Items.Weapons.UseStyles
 
         public int HoldItemOnParryFrame(Player player, Mod mod, bool OnlyFirstFrame, string buffDescription = "")
         {
-            int parryIndex = player.FindBuffIndex(mod.BuffType<Buffs.ParryActive>());
+            int parryIndex = player.FindBuffIndex(ModContent.BuffType<Buffs.ParryActive>());
             if (parryIndex >= 0)
             {
                 if (player.buffTime[parryIndex] != 300 && OnlyFirstFrame)

@@ -35,6 +35,12 @@ namespace CheezeMod.Projectiles.Ranged
             return true;
         }
 
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
+        
         public override void AI()
         {
             Lighting.AddLight(new Vector2(projectile.position.X, projectile.position.Y), 0.1f, 1f, 0.1f);

@@ -11,15 +11,15 @@ namespace CheezeMod.Items.Weapons.Ratchet
 		public override void SetDefaults()
 		{
 
-			item.damage = 19;
+			item.damage = 18;
 			item.ranged = true;
 			item.width = 50;
             item.scale = 0.8f;
 			item.height = 38;
 
 
-            item.useTime = 40;
-            item.useAnimation = 40;
+            item.useTime = 37;
+            item.useAnimation = 37;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 5;

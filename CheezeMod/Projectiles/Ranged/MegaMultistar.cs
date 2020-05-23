@@ -20,6 +20,12 @@ namespace CheezeMod.Projectiles.Ranged
             projectile.penetrate = 2;
             aiType = ProjectileID.Shuriken;
         }
+        
+        public override bool PreAI()
+        {
+            projectile.spriteDirection = projectile.direction;
+            return base.PreAI();
+        }
 
         public override void SetStaticDefaults()
         {

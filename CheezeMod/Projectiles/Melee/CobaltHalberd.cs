@@ -15,7 +15,7 @@ namespace CheezeMod.Projectiles.Melee
             projectile.height = 20;
 			projectile.scale = 1.1f;
 			projectile.aiStyle = 19;
-			projectile.timeLeft = 90;
+			projectile.timeLeft = 40;
 			projectile.friendly = true;
 			projectile.hostile = false;
 			projectile.tileCollide = false;
@@ -32,6 +32,13 @@ namespace CheezeMod.Projectiles.Melee
             DisplayName.SetDefault("Cobalt Halberd");
         }
 
+        public override bool PreAI()
+        {
+	        projectile.spriteDirection = projectile.direction = (projectile.velocity.X > 0).ToDirectionInt();
+	        projectile.rotation = projectile.velocity.ToRotation() + (projectile.spriteDirection == 1 ? 0f : MathHelper.Pi);
+	        return base.PreAI();
+        }
+        
         public override void AI()
         {
 			//Spear code
@@ -51,7 +58,7 @@ namespace CheezeMod.Projectiles.Melee
             }
             else
             {
-                projectile.ai[0] += 0.6f; //How far the spear goes
+                projectile.ai[0] += 0.7f; //How far the spear goes
             }
 
             //Kill projectile if item is done being animated
@@ -59,6 +66,9 @@ namespace CheezeMod.Projectiles.Melee
 			{
 				projectile.Kill();
 			}
+
+
+            
 		}
     }
 }

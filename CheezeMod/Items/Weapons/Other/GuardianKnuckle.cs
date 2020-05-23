@@ -62,7 +62,7 @@ namespace CheezeMod.Items.Weapons.Other
 
         public override bool AltFunctionUse(Player player)
         {
-            if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>(mod).weaponDash = 1;
+            if (player.dashDelay == 0) player.GetModPlayer<PlayerFX>().weaponDash = 1;
             return player.dashDelay == 0;
         }
 
